@@ -1,0 +1,81 @@
+.search-btn {
+    transform: translate(-70px, 25px);
+}
+
+.search-left-cont,
+.search-right-cont {
+    display: none;
+}
+
+.pkg-search-form {
+    width: 50%;
+}
+
+
+/* .steps-for-visa li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+    color: #fff;
+} */
+
+/* .steps-for-visa li:before {
+    content: "\25BA \0020";
+    font-size: 14px;
+    position: absolute;
+    top: 2px;
+    left: -10px;
+    color: #fff;
+} */
+
+@media only screen and (max-width:600px) {
+
+
+    .search-btn {
+        transform: translate(-20px, 25px);
+    }
+
+    .pkg-search-form {
+        width: 80%;
+        position: absolute;
+    }
+
+
+    .search-left-cont,
+    .search-right-cont {
+        display: block;
+        width: 50px;
+        background-color: #000047;
+
+    }
+
+    .search-left-cont {
+        position: absolute;
+        width: 50%;
+        left: -5px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: -10;
+    }
+
+    .search-right-cont {
+        position: absolute;
+        width: 50%;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 60%;
+        z-index: -10;
+    }
+    
+    .steps-for-visa{
+        position: relative;
+        top: -15px;
+        left: 20px;
+    }
+
+    .pkg-steps-title{
+        position: relative;
+        top: -45px;
+    }
+
+}

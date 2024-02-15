@@ -1,0 +1,36 @@
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+    gap: 3px;
+}
+
+.gallery img{
+    width: 5%;
+    height: 450px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+
+.gallery img:hover{
+    width: 70%;
+    aspect-ratio: 3/2;
+    scale: 1.1;
+}
+
+@media only screen and (max-width: 600px){
+    .gallery img{
+        width: 15%;
+    }
+    .gallery img:hover{
+        width: 50%;
+        aspect-ratio: 1/1;
+        scale: 1.1;
+    }
+}

@@ -1,0 +1,27 @@
+.my-home-intro{
+    position:absolute;
+    top:30%;
+    left: 150px;
+}
+.my-home-intro h1{
+    font-size: 80px;
+}
+
+.my-home-intro h2{
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px){
+    .my-home-intro{
+        position: absolute;
+        top: 42%;
+        left: 0;
+        /* top: 50%; */
+    }
+    .my-home-intro h1{
+        font-size: 45px;
+    }
+    .my-home-intro h2{
+        font-size: 30px;
+    }
+}

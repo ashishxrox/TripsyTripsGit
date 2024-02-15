@@ -1,0 +1,26 @@
+.call-box{
+    position: fixed;
+    z-index: 9999999;
+    bottom: 75px;
+    left: 1350px;
+    width: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    .call-box{
+        position: fixed;
+        z-index: 99999;
+        bottom: 80px;
+        left: 290px;
+    }
+    .call-box-form{
+        position: relative;
+        z-index: 9999999;
+        left: -290px;
+        
+    }
+}

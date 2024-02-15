@@ -1,0 +1,16 @@
+.home-banner{
+    height: 700px;
+    overflow-y: hidden;
+}
+
+.home-banner img{
+    width: 100%;
+    height: 150%;
+}
+
+@media only screen and (max-width:600px){
+    .home-banner img{
+        width: 100%;
+        height: 100%;
+    }
+}

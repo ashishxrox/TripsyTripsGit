@@ -1,0 +1,55 @@
+.search-bar{
+    position: relative;
+    z-index: 99;
+    top: -10px;
+  }
+  
+  @media only screen and (max-width:600px){
+      .search-bar {
+          position: relative;
+          transition: all 1s ease; /* Add transition */
+        }
+        
+
+        
+        .sticky {
+          position: fixed;
+          top: -60px;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+          background-color: #000047; /* Adjust as needed */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+          animation: slideDown 1s ease; /* Add animation */
+        }
+  
+        .sticky h5{
+          visibility: hidden;
+          height: 30px;
+        }
+        .sticky .pkg-search-form{
+          top: 30px;
+          padding: 20px;
+          width: 100%;
+          background-color: #000047;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          
+        }
+        .sticky ul{
+          visibility: hidden;
+          height: 40px;
+        }
+        
+  
+  
+  
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-100%);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+  }

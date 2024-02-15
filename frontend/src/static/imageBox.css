@@ -1,0 +1,22 @@
+.image-box{
+    margin: 20px 0;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+
+@media only screen and (max-width:600px){
+    .image-box{
+        margin: 0;
+    }
+    .image-box img{
+        width: 111%;
+        height: 100%;
+        border-radius: 0;
+        transform: translateX(-25px);
+    }
+}

@@ -1,0 +1,51 @@
+.banner-img {
+    width: 100%;
+    height: 600px;
+  }
+  .sub-title {
+    font-size: 30px;
+    font-family: "DM Serif Display";
+  }
+  .title {
+    font-size: 50px;
+    color: #000047;
+    font-family: "DM Serif Display";
+  }
+
+  .flight-card{
+    background-image: url('./assets/images/flight.jpeg');
+    background-size: cover;
+    background-position: fixed;
+  }
+
+  .hotel-card{
+    background-image: url('./assets/images/hotel.jpeg');
+    background-size: cover;
+    background-position: fixed;
+  }
+
+  .visa-card{
+    background-image: url('./assets/images/visa.jpeg');
+    background-size: cover;
+    background-position: fixed;
+  }
+  .insurance-card{
+    background-image: url('./assets/images/insurance.avif');
+    background-size: cover;
+    background-position: fixed;
+  }
+  .package-card{
+    background-image: url('./assets/images/holiday.jpeg');
+    background-size: cover;
+    background-position: fixed;
+  }
+
+@media only screen and (max-width:600px){
+  .banner-img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+  

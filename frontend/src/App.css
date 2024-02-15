@@ -1,0 +1,17 @@
+.menu-2{
+  display: none;
+}
+
+
+@media only screen and (max-width:600px){
+  .menu-1{
+    display: none;
+  }
+  .menu-2{
+    width: 100%;
+    display: block;
+    
+
+  }
+  
+}

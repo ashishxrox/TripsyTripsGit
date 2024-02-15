@@ -1,0 +1,18 @@
+.visa-type-card-container{
+    transform: translateX(-20px);
+}
+
+.visa-type-title{
+    transform: translate(-16px, -17px);
+}
+
+@media only screen and (max-width:600px) {
+    .visa-type-card-container{
+        transform: translateX(-65px);
+        width: 130%;
+    }
+
+    .visa-type-title{
+        transform: translate(-35px, -15px);
+    }
+}

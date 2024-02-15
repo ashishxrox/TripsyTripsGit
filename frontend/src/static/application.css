@@ -1,0 +1,92 @@
+*{
+    overflow-x: none;
+}
+
+.row-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row2{
+    width: 100%;
+}
+
+.visa-types{
+    margin-left: 30px;
+}
+
+.row3:nth-child(1){
+    margin-left: 100px;
+}
+
+.row4{
+    width: 80%;
+    margin: 30px 40px;
+}
+.country-header .col3{
+    margin: 0 25px;
+    border-radius: 15px;
+}
+.country-header .col3 h1{
+    font-size: 45px;
+}
+
+.phone-numbers{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .phone-numbers{
+        display: flex;
+        flex-direction: column;
+    }
+    .row-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-1 .myCol-2{
+        display: none;
+    }
+
+    .row2{
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .row3{
+        padding: 0;
+        width: 80%;
+        
+    }
+
+    .row4{
+        width: 100%;
+    }
+
+    .row4 .col5{
+        width: 80%;
+    }
+
+    .country-header .col3{
+        width: 110%;
+        margin: 0;
+        border-radius: 0;
+        transform: translateX(-15px);
+    }
+    .country-header .col3 h1{
+        font-size: 35px;
+    }
+
+    .visa-types{
+        margin-left: 45px;
+    }
+}

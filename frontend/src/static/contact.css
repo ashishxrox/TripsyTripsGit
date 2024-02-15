@@ -1,0 +1,9 @@
+.cont .parent{
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px){
+    .cont .parent{
+        width: 115%;
+    }
+}

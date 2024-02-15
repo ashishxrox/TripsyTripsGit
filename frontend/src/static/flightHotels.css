@@ -1,0 +1,10 @@
+@media only screen and (max-width:600px){
+    .action-boxes .col2 .fa-hotel{
+        color: white;
+        font-size: 100pxs;
+    }
+    
+    .action-boxes .col3{
+        margin-top: 50px;
+    }
+}
