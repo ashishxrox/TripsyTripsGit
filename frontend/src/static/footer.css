@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #fff;
 }
 /* display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "end", margin: "20px 0" */
 
@@ -22,6 +23,7 @@
 
 .imp-link ul li a{
     text-decoration: none;
+    color: #fff;
 }
 
 
@@ -39,4 +41,12 @@
         width: 100%;
         align-items: center;
     }
+
+    .imp-link ul li a{
+        color: #fff;
+    }
+
+    /* .developer-crds h6{
+        font-size: 6px;
+    } */
 }
