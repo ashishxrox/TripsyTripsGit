@@ -45,7 +45,7 @@ const ReqBox = (props) => {
                             {/* <p style={{ fontSize: "16px" }}>Processing Time:</p>
                             <p style={{ fontSize: "16px" }}>Duration:</p>
                             <p style={{ fontSize: "16px" }}>Validity:</p> */}
-                            <p style={{ fontSize: "16px", color:"#000047"}}>Sticker Visa/Non E Visa</p>
+                            <p style={{ fontSize: "16px", color:"#000047"}}>{type.name !== 'Australia Tourist Visa (Subclass 600)' && <span>Sticker Visa/</span>} Non E-Visa</p>
                             <p style={{ fontSize: "16px" }}>Tripsy Trips Service Charge: </p>
                         </div>
                         <div className="card-info-text-right" style={{ textAlign: "right" }}>
