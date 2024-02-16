@@ -48,7 +48,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 14,
-          "processingTime": 2,
+          "processingTime": '1-2',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -71,7 +71,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 120,
           "durationDays": 30,
-          "processingTime": 2,
+          "processingTime": '1-2',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -93,7 +93,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 30,
           "durationDays": 30,
-          "processingTime": 8,
+          "processingTime": '7-8',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -107,7 +107,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 30,
           "durationDays": 30,
-          "processingTime": 3,
+          "processingTime": '2-3',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -137,7 +137,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 30,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '4-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -152,7 +152,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 90,
           "durationDays": 90,
-          "processingTime": 5,
+          "processingTime": '4-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -177,7 +177,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '4-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)"
@@ -190,7 +190,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 1,
+          "processingTime": '1',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)"
@@ -213,7 +213,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 14,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -229,7 +229,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 30,
+          "processingTime": '20-30',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -245,7 +245,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 365,
           "durationDays": 90,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -271,7 +271,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -295,7 +295,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -308,7 +308,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -331,7 +331,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -355,7 +355,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 120,
           "durationDays": 30,
-          "processingTime": 10,
+          "processingTime": '7-10',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -389,7 +389,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -416,7 +416,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 3,
+          "processingTime": '2-3',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -439,7 +439,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 7,
+          "processingTime": '5-7',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -466,7 +466,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 60,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -481,7 +481,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 60,
           "durationDays": 60,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -507,7 +507,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 30,
           "durationDays": 30,
-          "processingTime": 17,
+          "processingTime": '15-17',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -532,7 +532,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 60,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '4-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -557,7 +557,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 60,
           "durationDays": 15,
-          "processingTime": 5,
+          "processingTime": '4-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -581,7 +581,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 180,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -595,7 +595,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 180,
           "durationDays": 30,
-          "processingTime": 1,
+          "processingTime": '1',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -619,7 +619,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 10,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -633,7 +633,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 30,
           "durationDays": 10,
-          "processingTime": 1,
+          "processingTime": '1',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -647,7 +647,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -671,7 +671,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 60,
           "durationDays": 16,
-          "processingTime": 7,
+          "processingTime": '6-7',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -695,7 +695,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 30,
           "durationDays": 30,
-          "processingTime": 7,
+          "processingTime": '5-7',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -719,7 +719,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 365,
           "durationDays": 90,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -734,7 +734,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 14,
-          "processingTime": 7,
+          "processingTime": '5-7',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -758,7 +758,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 5,
+          "processingTime": '3-5',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -783,7 +783,7 @@ const VisaState = (props) => {
           "entry": "Multiple",
           "validityDays": 90,
           "durationDays": 14,
-          "processingTime": 3,
+          "processingTime": '2-3',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -808,7 +808,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 180,
           "durationDays": 30,
-          "processingTime": 2,
+          "processingTime": '1-2',
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
@@ -822,7 +822,7 @@ const VisaState = (props) => {
           "entry": "Single",
           "validityDays": 180,
           "durationDays": 30,
-          "processingTime": 2,
+          "processingTime": '1-2',
           "docsReq": {
             "doc1": "Passport Scan (Front and Back)",
             "doc2": "Passport Size Photo",

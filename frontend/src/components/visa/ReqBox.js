@@ -33,7 +33,7 @@ const ReqBox = (props) => {
                             <p style={{ fontSize: "16px" }}>Total Cost:</p>
                         </div>
                         <div className="card-info-text-right" style={{ textAlign: "right" }}>
-                            <p style={{ fontSize: "16px" }}>Upto Days {type.processingTime}</p>
+                            <p style={{ fontSize: "16px" }}>{type.processingTime} {type.processingTime === '1' ? 'Day' : 'Days'}</p>
                             <p style={{ fontSize: "16px" }}>{type.durationDays} Days</p>
                             <p style={{ fontSize: "16px" }}>{type.validityDays} Days</p>
                             <p style={{ fontSize: "16px" }}>{type.entry}</p>
