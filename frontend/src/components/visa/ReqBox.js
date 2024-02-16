@@ -45,15 +45,14 @@ const ReqBox = (props) => {
                             {/* <p style={{ fontSize: "16px" }}>Processing Time:</p>
                             <p style={{ fontSize: "16px" }}>Duration:</p>
                             <p style={{ fontSize: "16px" }}>Validity:</p> */}
-                            {/* <p style={{ fontSize: "16px" }}>Entry:</p> */}
+                            <p style={{ fontSize: "16px", color:"#000047"}}>Sticker Visa/Non E Visa</p>
                             <p style={{ fontSize: "16px" }}>Tripsy Trips Service Charge: </p>
                         </div>
                         <div className="card-info-text-right" style={{ textAlign: "right" }}>
                             {/* <p style={{ fontSize: "16px" }}>-</p>
                             <p style={{ fontSize: "16px" }}>-</p>
                             <p style={{ fontSize: "16px" }}>-</p> */}
-                            {/* <p style={{ fontSize: "16px" }}>{type.entry}</p> */}
-                            <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold" }}>&#8377;{type.totalCost}</p>
+                            <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"20px"}}>&#8377;{type.totalCost}</p>
                         </div>
                     </div>}
                     <Link to={{
