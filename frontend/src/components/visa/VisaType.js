@@ -38,7 +38,7 @@ const VisaType = () => {
         <h4 style={{padding:"10px 5px", fontSize:"38px", textAlign:"center", fontWeight:"bold"}}>{appType.name} </h4>
         <ReqAccordion docs = {appType.docsReq}/>
       </div>
-      {evisa === 'no' && (
+      {(evisa === 'no' || appType.name === 'Turkey Tourist Visa') && (
         <div style={{textAlign:"center", margin:"50px 0", display:"flex", justifyContent:"center" ,backgroundColor:"#000047"}}>
           <div style={{backgroundColor:"#fff", padding:"20px", color:"#000047", border:"1px solid #000047", borderRadius:"30%", fontWeight:"bold", boxShadow:"5px 5px 15px #000", textShadow:"1px 1px 20px rgba(0,0,71,0.5)"}}>
             <h4>Want to begin your</h4>
@@ -46,30 +46,30 @@ const VisaType = () => {
             </div>
         </div>
       )}
-      {evisa === 'yes' && (<div className="overview-box-div" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", marginBottom:"100px"}}>
+      {(evisa === 'yes' && appType.name !== 'Turkey Tourist Visa')  && (<div className="overview-box-div" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", marginBottom:"100px"}}>
       <OverviewBox type = {appType} ref={overviewRef} evisa={evisa}/>
       </div>
       )}
-      {evisa === 'no' && (   
+      {(evisa === 'no' || appType.name === 'Turkey Tourist Visa') && (   
         <div className="" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"75px", fontWeight:"500", color:"#000047", position:"relative", top:"-55px"}}>
         <i class="fa-solid fa-arrow-down"></i>
         </div>
       )}
-      {evisa === 'no' &&(
+      {(evisa === 'no' || appType.name === 'Turkey Tourist Visa') &&(
         <div className='non-evisa-div' style={{width:"100%", display:"flex", justifyContent:"center",alignItems:"center", margin:"20px 0"}}>
           <NonEvisaForm type = {appType} evisa = {evisa}/>
         </div> 
       )}
       
-      {evisa === 'no' && (   
+      {(evisa === 'no' || appType.name === 'Turkey Tourist Visa') && (   
         <div className="overview-box-div" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"center", backgroundColor:"#E8C81C"}}>
         <Contact ref={contactRef}/>
         </div>
       )}
-      {evisa === 'yes' && <div className="container">
+      {(evisa === 'yes' && appType.name !== 'Turkey Tourist Visa') && <div className="container">
         <Timeline steps = {steps} subtitle = {subtitle}/>
       </div>}
-      {evisa === 'yes' && <div style={{ textAlign: 'center',margin:"20px 0", width:"100%"}}>
+      {(evisa === 'yes' && appType.name !== 'Turkey Tourist Visa') && <div style={{ textAlign: 'center',margin:"20px 0", width:"100%"}}>
         <button onClick={() => {
           if (evisa === 'yes') {
             scrollToComponent(overviewRef);

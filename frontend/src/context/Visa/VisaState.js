@@ -37,47 +37,135 @@ import lanka from '../../static/assets/country/lanka.jpeg'
 
 const VisaState = (props) => {
 
-   const initCountries = [
+   const initCountries = [ 
     {
-      "_id": "65b12e329c1c437d4930fd30",
-      "country": "United Arab Emirates",
+      "_id": "65b2a1d7af8c1506be6a91ad",
+      "country": "Hong Kong",
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "UAE 30 Days Single Entry E-Visa",
+          "name": "Hong Kong E-Visa",
+          "entry": "Multiple",
+          "validityDays": 180,
+          "durationDays": 14,
+          "processingTime": 2,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+          },
+          "totalCost": 555,
+          "_id": "65b2a1d7af8c1506be6a91ae"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/hongKong.373afbd542c098ca8aff.jpeg",
+      "tag": "hongKong"
+    },
+    {
+      "_id": "65b2a842af8c1506be6a91dc",
+      "country": "Sri Lanka",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Sri Lanka Electronic Travel Authorization",
           "entry": "Single",
-          "validityDays": 60,
+          "validityDays": 120,
+          "durationDays": 30,
+          "processingTime": 2,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+          },
+          "totalCost": 599,
+          "_id": "65b2a842af8c1506be6a91dd12"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
+      "tag": "sriLanka"
+    }, {
+      "_id": "65b2b349af8c1506be6a91ec",
+      "country": "Vietnam",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Vietnam E-Visa",
+          "entry": "Single",
+          "validityDays": 30,
+          "durationDays": 30,
+          "processingTime": 8,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo Scan",
+          },
+          "totalCost": 2700,
+          "_id": "65b2b349af8c1506be6a91ed"
+        },
+        {
+          "name": "Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )",
+          "entry": "Single",
+          "validityDays": 30,
+          "durationDays": 30,
+          "processingTime": 3,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo Scan",
+            "doc4": "Flight Tickets Scan"
+          },
+          "totalCost": 9900,
+          "_id": "65b2b349af8c1506be6a91ee"
+        },
+        {
+          "name": "Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )",
+          "entry": "Single",
+          "validityDays": 30,
+          "durationDays": 30,
+          "processingTime": 1,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo Scan",
+            "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
+          },
+          "totalCost": 11800,
+          "_id": "65b2b349af8c1506be6a91ef"
+        },
+        {
+          "name": "Vietnam 30 Days Multiple Entry E-Visa",
+          "entry": "Multiple",
+          "validityDays": 30,
           "durationDays": 30,
           "processingTime": 5,
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card  Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photo Scan",
+            "doc4": "Arrival Flight Tickets (which shows port of entry)Scan"
           },
-          "totalCost": 9500,
-          "_id": "65b12e329c1c437d4930fd31"
+          "totalCost": 10500,
+          "_id": "65b2b349af8c1506be6a91f0"
         },
         {
-          "name": "UAE 60 Days Single Entry E-Visa",
-          "entry": "Single",
-          "validityDays": 60,
-          "durationDays": 60,
+          "name": "Vietnam 90 Days Multiple Entry E-Visa",
+          "entry": "Multiple",
+          "validityDays": 90,
+          "durationDays": 90,
           "processingTime": 5,
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photo Scan",
+            "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
           },
-          "totalCost": 14000,
-          "_id": "65b12e329c1c437d4930fd34"
-        },
-        
+          "totalCost": 12500,
+          "_id": "65b2b349af8c1506be6a91f1"
+        }
       ],
       "__v": 0,
-      "img_url": "../../static/media/dubai.f38768e272d2768f69ed.jpeg",
-      "tag": "dubai"
+      "img_url": "../../static/media/vietnam.7ff659c97f824a13608d.jpeg",
+      "tag": "vietnam"
     },
     {
       "_id": "65b12f829c1c437d4930fd37",
@@ -292,29 +380,6 @@ const VisaState = (props) => {
       "tag": "georgia"
     },
     {
-      "_id": "65b2a1d7af8c1506be6a91ad",
-      "country": "Hong Kong",
-      "eVisa": "yes",
-      "visaType": [
-        {
-          "name": "Hong Kong E-Visa",
-          "entry": "Multiple",
-          "validityDays": 180,
-          "durationDays": 14,
-          "processingTime": 2,
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-          },
-          "totalCost": 555,
-          "_id": "65b2a1d7af8c1506be6a91ae"
-        }
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/hongKong.373afbd542c098ca8aff.jpeg",
-      "tag": "hongKong"
-    },
-    {
       "_id": "65b2a266af8c1506be6a91b0",
       "country": "Indonesia",
       "eVisa": "yes",
@@ -390,6 +455,47 @@ const VisaState = (props) => {
       "__v": 0,
       "img_url": "../../static/media/moldova.6d5aa0ecec7a273038c2.jpeg",
       "tag": "moldova"
+    },
+    {
+      "_id": "65b12e329c1c437d4930fd30",
+      "country": "United Arab Emirates",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "UAE 30 Days Single Entry E-Visa",
+          "entry": "Single",
+          "validityDays": 60,
+          "durationDays": 30,
+          "processingTime": 5,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Pan Card  Scan",
+            "doc4": "Passport Size Photo Scan"
+          },
+          "totalCost": 9500,
+          "_id": "65b12e329c1c437d4930fd31"
+        },
+        {
+          "name": "UAE 60 Days Single Entry E-Visa",
+          "entry": "Single",
+          "validityDays": 60,
+          "durationDays": 60,
+          "processingTime": 5,
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Pan Card Scan",
+            "doc4": "Passport Size Photo Scan"
+          },
+          "totalCost": 14000,
+          "_id": "65b12e329c1c437d4930fd34"
+        },
+        
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/dubai.f38768e272d2768f69ed.jpeg",
+      "tag": "dubai"
     },
     {
       "_id": "65b2a3bfaf8c1506be6a91bc",
@@ -502,44 +608,6 @@ const VisaState = (props) => {
       "__v": 0,
       "img_url": "../../static/media/morocco.d5a254e5df83ba4c57a4.jpeg",
       "tag": "morocco"
-    },
-    {
-      "_id": "65b2a656af8c1506be6a91c9",
-      "country": "New Zealand",
-      "eVisa": "no",
-      "visaType": [
-        {
-          "name": "New Zealand Visa",
-          "entry": "Single",
-          "validityDays": 365,
-          "durationDays": 180,
-          "processingTime": 45,
-          "docsReq": {
-            "doc1": "Passport Scan (Front and Back)",
-            "doc2": "Passport Size Photo",
-            "doc3": "Aadhar Card",
-            "doc4": "Pan Card",
-            "doc5": "Last 2 Years ITR",
-            "doc6": "6 Month Bank Statement(E-Statement only)",
-            "doc7": "Last 3 months Salary Slip(If employed)",
-            "doc8": "Leave Letter from the company(If employed)",
-            "doc9": "Letter of Employement(If employed)",
-            "doc10": "GST Certificate(If self-employed)",
-            "doc11": "Last 6 Months Company Banl account statement(If self-employed)",
-            "doc12": "Covid Vacination Certificate",
-            "doc13": "Marriage Certificate(If Applicable)",
-            "doc14": "All passport Old and New Pages Scannerd copy",
-            "doc15": "Covering Letter(Addressed to New Zealand High Commission in Delhi)",
-            "doc16": "Other Saving and investment",
-            "doc17": "FOrm 54"
-          },
-          "totalCost": 0,
-          "_id": "65b2a656af8c1506be6a91ca"
-        }
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/newZealand.f557fe098cb33cd229df.jpeg",
-      "tag": "newZealand"
     },
     {
       "_id": "65b2a724af8c1506be6a91d1",
@@ -679,68 +747,32 @@ const VisaState = (props) => {
       "__v": 0,
       "img_url": "../../static/media/saudi.d2725bb5e01a14c352a9.jpeg",
       "tag": "saudi"
-    },{
-      "_id": "65b2b20aaf8c1506be6a91e92",
-      "country": "Schengen Area",
-      "eVisa": "no",
-      "visaType": [
-        {
-          "name": "Schengen Tourist Visa",
-          "entry": "Single",
-          "validityDays": 90,
-          "durationDays": 30,
-          "processingTime": 20,
-          "docsReq": {
-            "doc1": "Passport Scan (Front and Back)",
-            "doc2": "Passport Size Photo",
-            "doc3": "Aadhar Card Scan Copy",
-            "doc4": "Pan Card Scan Copy",
-            "doc5": "Last 3 Years ITR (if self funded)",
-            "doc6": "Last 3 months Sallary Slips (if employed)",
-            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
-            "doc8": "Invitation Letter(if any)",
-            "doc9": "NOC for leave from employer(if employed)",
-            "doc10": "Cover Letter for Visa Application",
-            "doc11": "Flight Itinerary",
-            "doc12": "Hotel Booking(if applicable)",
-            "doc13": "All pages passport scan copy",
-            "doc14": "Index 2 of property owned(if any)",
-            "doc15": "Residential proof of inviter(if applicable)",
-            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
-            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
-            "doc18": "Sponsor Last 3 year ITR",
-            "doc19": "Sponsor NOC for sponsoring the trip"
-          },
-          "totalCost": 3000,
-          "_id": "65b2b20aaf8c1506be6a91ea2"
-        }
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/schengen.95146c6ce2f732915e4a.jpeg",
-      "tag": "uk"
-    },{
-      "_id": "65b2a842af8c1506be6a91dc",
-      "country": "Sri Lanka",
+    },
+    {
+      "_id": "65b2b20aaf8c1506be6a91e925",
+      "country": "Qatar",
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Sri Lanka Electronic Travel Authorization",
+          "name": "Qatar E-Visa 30 Days Single Entry",
           "entry": "Single",
-          "validityDays": 120,
+          "validityDays": 90,
           "durationDays": 30,
-          "processingTime": 2,
+          "processingTime": 5,
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo Scan",
           },
-          "totalCost": 599,
-          "_id": "65b2a842af8c1506be6a91dd12"
+          "totalCost": 1765,
+          "_id": "65b2b20aaf8c1506be6a91ea23"
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
-      "tag": "sriLanka"
+      "img_url": "../../static/media/qatar.2a3cf3fba0f649e5dc8c.jpeg",
+      "tag": "qatar"
     },
+    
     {
       "_id": "65b2a8a2af8c1506be6a91e0",
       "country": "Taiwan",
@@ -758,7 +790,7 @@ const VisaState = (props) => {
             "doc3": "Passport Size Photo Scan",
             "doc4": "US/UK/SCHENGEN Visa Scan"
           },
-          "totalCost": 0,
+          "totalCost": 3000,
           "_id": "65b2a8a2af8c1506be6a91e1"
         }
       ],
@@ -783,6 +815,36 @@ const VisaState = (props) => {
             "doc3": "US/UK/SCHENGEN Visa Scan [mandatory for Turkey E-visa]"
           },
           "totalCost": 4500,
+          "_id": "65b2a8f1af8c1506be6a91e4"
+        },
+        {
+          "name": "Turkey Tourist Visa",
+          "entry": "Single",
+          "validityDays": 180,
+          "durationDays": 30,
+          "processingTime": 2,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
           "_id": "65b2a8f1af8c1506be6a91e4"
         }
       ],
@@ -822,7 +884,7 @@ const VisaState = (props) => {
             "doc18": "Sponsor Last 3 year ITR",
             "doc19": "Sponsor NOC for sponsoring the trip"
           },
-          "totalCost": 0,
+          "totalCost": 3000,
           "_id": "65b2ab41af8c1506be6a91e7"
         }
       ],
@@ -950,113 +1012,84 @@ const VisaState = (props) => {
       "tag": "uk"
     },
     {
-      "_id": "65b2b349af8c1506be6a91ec",
-      "country": "Vietnam",
-      "eVisa": "yes",
+      "_id": "65b2b20aaf8c1506be6a91e92",
+      "country": "Schengen Area",
+      "eVisa": "no",
       "visaType": [
         {
-          "name": "Vietnam E-Visa",
+          "name": "Schengen Tourist Visa",
           "entry": "Single",
-          "validityDays": 30,
-          "durationDays": 30,
-          "processingTime": 8,
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
-          },
-          "totalCost": 2700,
-          "_id": "65b2b349af8c1506be6a91ed"
-        },
-        {
-          "name": "Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )",
-          "entry": "Single",
-          "validityDays": 30,
-          "durationDays": 30,
-          "processingTime": 3,
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
-            "doc4": "Flight Tickets Scan"
-          },
-          "totalCost": 9900,
-          "_id": "65b2b349af8c1506be6a91ee"
-        },
-        {
-          "name": "Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )",
-          "entry": "Single",
-          "validityDays": 30,
-          "durationDays": 30,
-          "processingTime": 1,
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
-            "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
-          },
-          "totalCost": 11800,
-          "_id": "65b2b349af8c1506be6a91ef"
-        },
-        {
-          "name": "Vietnam 30 Days Multiple Entry E-Visa",
-          "entry": "Multiple",
-          "validityDays": 30,
-          "durationDays": 30,
-          "processingTime": 5,
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
-            "doc4": "Arrival Flight Tickets (which shows port of entry)Scan"
-          },
-          "totalCost": 10500,
-          "_id": "65b2b349af8c1506be6a91f0"
-        },
-        {
-          "name": "Vietnam 90 Days Multiple Entry E-Visa",
-          "entry": "Multiple",
           "validityDays": 90,
-          "durationDays": 90,
-          "processingTime": 5,
+          "durationDays": 30,
+          "processingTime": 20,
           "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
-            "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
           },
-          "totalCost": 12500,
-          "_id": "65b2b349af8c1506be6a91f1"
+          "totalCost": 3000,
+          "_id": "65b2b20aaf8c1506be6a91ea2"
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/vietnam.7ff659c97f824a13608d.jpeg",
-      "tag": "vietnam"
+      "img_url": "../../static/media/schengen.95146c6ce2f732915e4a.jpeg",
+      "tag": "uk"
     },
     {
-      "_id": "65b2b20aaf8c1506be6a91e925",
-      "country": "Qatar",
-      "eVisa": "yes",
+      "_id": "65b2a656af8c1506be6a91c9",
+      "country": "New Zealand",
+      "eVisa": "no",
       "visaType": [
         {
-          "name": "Qatar E-Visa 30 Days Single Entry",
+          "name": "New Zealand Visa",
           "entry": "Single",
-          "validityDays": 90,
-          "durationDays": 30,
-          "processingTime": 5,
+          "validityDays": 365,
+          "durationDays": 180,
+          "processingTime": 45,
           "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card",
+            "doc4": "Pan Card",
+            "doc5": "Last 2 Years ITR",
+            "doc6": "6 Month Bank Statement(E-Statement only)",
+            "doc7": "Last 3 months Salary Slip(If employed)",
+            "doc8": "Leave Letter from the company(If employed)",
+            "doc9": "Letter of Employement(If employed)",
+            "doc10": "GST Certificate(If self-employed)",
+            "doc11": "Last 6 Months Company Banl account statement(If self-employed)",
+            "doc12": "Covid Vacination Certificate",
+            "doc13": "Marriage Certificate(If Applicable)",
+            "doc14": "All passport Old and New Pages Scannerd copy",
+            "doc15": "Covering Letter(Addressed to New Zealand High Commission in Delhi)",
+            "doc16": "Other Saving and investment",
+            "doc17": "FOrm 54"
           },
-          "totalCost": 1765,
-          "_id": "65b2b20aaf8c1506be6a91ea23"
+          "totalCost": 0,
+          "_id": "65b2a656af8c1506be6a91ca"
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/qatar.2a3cf3fba0f649e5dc8c.jpeg",
-      "tag": "qatar"
+      "img_url": "../../static/media/newZealand.f557fe098cb33cd229df.jpeg",
+      "tag": "newZealand"
     },
+    
   ]
 
     // eslint-disable-next-line

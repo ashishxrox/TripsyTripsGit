@@ -24,7 +24,7 @@ const ReqBox = (props) => {
             <div className="card visa-type-card" style={{ overflow: "hidden", border: "1px solid #000", width: "20rem", height: '28rem', borderRadius: "10px", boxShadow: "5px 5px 10px #000" }}>
                 <div className="card-body" style={{ textAlign: "center" }}>
                     <h5 className="card-title visa-type-title" style={{ fontSize: "25px", color: "#000047", width: "125%", backgroundColor: "#e9ebf2", padding: "10px 10px", paddingRight: "40px" }}>{type.name}</h5>
-                    {eVisa ==='yes' && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row" }}>
+                    {(eVisa ==='yes' && type.name !== 'Turkey Tourist Visa') && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row" }}>
                         <div className="card-info-text-left" style={{ display: "flex", justifyContent: "center", flexDirection: "column", textAlign: "left" }}>
                             <p style={{ fontSize: "16px" }}>Processing Time:</p>
                             <p style={{ fontSize: "16px" }}>Duration:</p>
@@ -40,7 +40,7 @@ const ReqBox = (props) => {
                             <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold" }}>&#8377;{type.totalCost}</p>
                         </div>
                     </div>}
-                    {eVisa === 'no' && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row"}}>
+                    {(eVisa === 'no' || type.name === 'Turkey Tourist Visa') && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row"}}>
                         <div className="card-info-text-left" style={{ display: "flex", justifyContent: "center", flexDirection: "column", textAlign: "left" }}>
                             {/* <p style={{ fontSize: "16px" }}>Processing Time:</p>
                             <p style={{ fontSize: "16px" }}>Duration:</p>
