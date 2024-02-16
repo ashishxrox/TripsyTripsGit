@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {Link } from 'react-router-dom'
+
 
 import '../../static/footer.css'
 import TandC from '../visa/TandC'
@@ -20,10 +22,10 @@ const Footer = () => {
             </div>
             <div className="imp-link" style={{ display: "flex", justifyContent: "center", flexDirection: "column", margin: "20px 0" }}>
                 <ul style={{ display: "flex", justifyContent: "space-around" }}>
-                    <li><a href='/'> Home | </a></li>
-                    <li><a href='/visa'> Visa | </a></li>
-                    <li><a href='/package'> Package | </a></li>
-                    <li><a href='/about'> About us | </a></li>
+                    <li><Link to='/'> Home | </Link></li>
+                    <li><Link to='/visa'> Visa | </Link></li>
+                    <li><Link to='/package'> Package | </Link></li>
+                    <li><Link to='/about'> About us | </Link></li>
                 </ul>
                 <div className="terms">
                     <span className="tandc-link" onClick={toggleTandC} style={{ color: "#fff", cursor: "pointer" }}>
@@ -36,7 +38,7 @@ const Footer = () => {
                     )}
                 </div>
                 <div className="terms" >
-                    <a href="/policy" style={{color:"#fff"}}> Privacy and Policy</a>
+                    <Link to="/policy" style={{color:"#fff"}}> Privacy and Policy</Link>
                 </div>
             </div>
         </div>

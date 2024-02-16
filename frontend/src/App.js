@@ -91,8 +91,9 @@ const App = () => {
               
             </Routes>
             <CallBox />
+            <Footer/>
           </BrowserRouter>
-          <Footer/>
+          
           
         </VisaState>
         </FormDataState>
