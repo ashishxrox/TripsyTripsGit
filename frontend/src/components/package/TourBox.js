@@ -20,7 +20,7 @@ const CountryBox = (props) => {
                         {/* <Link to={{
                             pathname:`/package/application/${tour.place}`}} state={tour}
                         className="btn btn-primary" style={{backgroundColor:"#000047", color:"#fff", textShadow:"none", border:"1px solid #000047", boxShadow:"2px 2px 5px #000", width:"100%"}}>Apply Now</Link> */}
-                        <PackageForm/>
+                        <PackageForm place={tour.place}/>
                     </div>
             </div>
         </div>
