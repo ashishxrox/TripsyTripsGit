@@ -32,7 +32,7 @@ const PackageForm = ({place}) => {
 
     const onSubmit = (e)=>{
         e.preventDefault();
-        if(data.name && data.email && data.contact && data.departDate && data.returnDate && data.visaName){ 
+        if(data.name && data.email && data.contact && data.departDate && data.returnDate){ 
             setPackageData(data)
         }else{
             alert('Please fill in all the fields.');

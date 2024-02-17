@@ -31,7 +31,7 @@ const InsuranceForm = () => {
         e.preventDefault();
     
         // Perform validation on the form data
-        if (data.name && data.email && data.contact && data.place && data.checkInDate && data.checkOutDate) {
+        if (data.name && data.email ) {
             setInsurance(data); // Set insurance data only if all required fields are filled
         } else {
             // Handle validation failure, you can show an error message or perform any other action
