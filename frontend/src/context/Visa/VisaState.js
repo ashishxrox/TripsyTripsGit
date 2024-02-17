@@ -61,29 +61,7 @@ const VisaState = (props) => {
       "img_url": "../../static/media/hongKong.373afbd542c098ca8aff.jpeg",
       "tag": "hongKong"
     },
-    {
-      "_id": "65b2a842af8c1506be6a91dc",
-      "country": "Sri Lanka",
-      "eVisa": "yes",
-      "visaType": [
-        {
-          "name": "Sri Lanka Electronic Travel Authorization",
-          "entry": "Single",
-          "validityDays": 120,
-          "durationDays": 30,
-          "processingTime": '1-2',
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-          },
-          "totalCost": 599,
-          "_id": "65b2a842af8c1506be6a91dd12"
-        }
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
-      "tag": "sriLanka"
-    }, {
+   {
       "_id": "65b2b349af8c1506be6a91ec",
       "country": "Vietnam",
       "eVisa": "yes",
@@ -284,6 +262,29 @@ const VisaState = (props) => {
       "__v": 0,
       "img_url": "../../static/media/cambodia.48f0b56b307d7d812116.jpeg",
       "tag": "cambodia"
+    },
+    {
+      "_id": "65b2a842af8c1506be6a91dc",
+      "country": "Sri Lanka",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Sri Lanka Electronic Travel Authorization",
+          "entry": "Single",
+          "validityDays": 120,
+          "durationDays": 30,
+          "processingTime": '1-2',
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+          },
+          "totalCost": 599,
+          "_id": "65b2a842af8c1506be6a91dd12"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
+      "tag": "sriLanka"
     },
     {
       "_id": "65b29fc4af8c1506be6a91a3",
