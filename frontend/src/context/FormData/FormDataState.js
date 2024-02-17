@@ -91,7 +91,7 @@ const FormDataState = (props) => {
         console.log(formData)
         console.log(formData.visaName)
         try {
-            const response = await fetch(`http://${apiURL}api/submit-form`, {
+            const response = await fetch(`http://${apiURL}/api/submit-form`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
