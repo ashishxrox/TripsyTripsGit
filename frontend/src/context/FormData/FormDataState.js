@@ -197,7 +197,7 @@ const FormDataState = (props) => {
     // Function to handle Hotel Form
     const handleHotelSubmit = async()=>{
         try {
-            const response = await fetch(`${apiURL}/api/submit-form/hotel`, {
+            const response = await fetch(`http://${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
