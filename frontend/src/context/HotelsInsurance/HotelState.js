@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import HotelContext from './HotelContext'
 
+const apiURL = 'www.api.tripsytrips.com'
+
 const HotelState = () => {
 
     const [hotel, setHotel] = useState({
@@ -18,7 +20,7 @@ const HotelState = () => {
     // Function to handle Hotel Form
     const handleHotelSubmit = async()=>{
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/hotel', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -42,7 +44,7 @@ const HotelState = () => {
     // Function to handle Insurance Form
     const handleInsuranceSubmit = async()=>{
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/insurance', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/insurance`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

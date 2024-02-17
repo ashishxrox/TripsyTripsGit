@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 // import PaymentInterface from '../../components/visa/PaymentInterface';
 import FormDataContext from './FormDataContext';
 
+const apiURL = 'www.api.tripsytrips.com'
+
 const FormDataState = (props) => {
     // Define state variables to hold form data
     const [formData, setFormData] = useState({
@@ -89,7 +91,7 @@ const FormDataState = (props) => {
         console.log(formData)
         console.log(formData.visaName)
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form', {
+            const response = await fetch(`http://${apiURL}api/submit-form`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -124,7 +126,7 @@ const FormDataState = (props) => {
         console.log(formData)
 
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/uploadDocs', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/uploadDocs`, {
                 method: 'POST',
                 body: formData
             });
@@ -143,7 +145,7 @@ const FormDataState = (props) => {
 
     const handleNonEvisaSubmit = async()=>{
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/uploadNonEvisa', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/uploadNonEvisa`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -169,7 +171,7 @@ const FormDataState = (props) => {
     const handleFlightSubmit = async()=>{
         console.log(flight)
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/flight', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/flight`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -195,7 +197,7 @@ const FormDataState = (props) => {
     // Function to handle Hotel Form
     const handleHotelSubmit = async()=>{
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/hotel', {
+            const response = await fetch(`${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -221,7 +223,7 @@ const FormDataState = (props) => {
     // Function to handle Insurance Form
     const handleInsuranceSubmit = async()=>{
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/insurance', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/insurance`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -247,7 +249,7 @@ const FormDataState = (props) => {
     const handlePackageSubmit = async()=>{
         // console.log(packageData)
         try {
-            const response = await fetch('http://localhost:4321/api/submit-form/packages', {
+            const response = await fetch(`http://${apiURL}/api/submit-form/packages`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

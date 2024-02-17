@@ -37,7 +37,7 @@ const FlightBox = ({ data }) => {
                         </div>
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p>Departure Date: {data.departDate}</p>
-                            <p>Arrival Date: {data.arrivalDate}</p>
+                            {data.arrivalDate && <p>Arrival Date: {data.arrivalDate}</p>}
                         </div>
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p>Destination: {data.destination}</p>
