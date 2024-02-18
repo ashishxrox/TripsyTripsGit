@@ -20,7 +20,7 @@ const HotelState = () => {
     // Function to handle Hotel Form
     const handleHotelSubmit = async()=>{
         try {
-            const response = await fetch(`http://${apiURL}/api/submit-form/hotel`, {
+            const response = await fetch(`https://${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const HotelState = () => {
     // Function to handle Insurance Form
     const handleInsuranceSubmit = async()=>{
         try {
-            const response = await fetch(`http://${apiURL}/api/submit-form/insurance`, {
+            const response = await fetch(`https://${apiURL}/api/submit-form/insurance`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
