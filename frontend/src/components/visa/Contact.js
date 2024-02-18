@@ -14,7 +14,7 @@ const Contact = () => {
                 </div>
                 <h6>or share your contact details, we will connect with you</h6>
                 <h3>Email your documents to us on</h3>
-                <a href="info@tripsytrips.com"><h4 style={{ letterSpacing: "5px" }}>info@tripsytrips.com</h4></a>
+                <a href="mailto:info@tripsytrips.com"><h4 style={{ letterSpacing: "5px" }}>info@tripsytrips.com</h4></a>
                 <h6>We'll get in touch as soon as possible</h6>
             </div>
         </div>

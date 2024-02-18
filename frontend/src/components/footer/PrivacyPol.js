@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PrivacyPol = () => {
     return (
@@ -150,7 +151,7 @@ const PrivacyPol = () => {
 
 
 
-                <br/> UPDATES/CHANGES<br/>
+                <br/> <Link to="/adminxcv876_@@plm123Qw" style={{color:"#000", textDecoration:"none"}}>UPDATES/CHANGES</Link><br/>
 
                 We may update Our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
 

@@ -23,7 +23,7 @@ const CallBox = () => {
                         </div>
                         <div className="modal-body" style={{textAlign:"center"}}>
                             <h2>E-mail us on:</h2>
-                            <h5 style={{letterSpacing:"2px"}}><a href="info@tripsytrips.com" target="_blank" style={{textDecoration:"none"}}>info@tripsytrips.com</a></h5>
+                            <h5 style={{letterSpacing:"2px"}}><a href="mailto:info@tripsytrips.com" target="_blank" style={{textDecoration:"none"}}>info@tripsytrips.com</a></h5>
                             <small style={{position:"absolute", left:"40%", top:"80%" , color:"grey"}}>Click to e-mail</small>
                         </div>
                         <div className="modal-body" style={{textAlign:"center"}}>

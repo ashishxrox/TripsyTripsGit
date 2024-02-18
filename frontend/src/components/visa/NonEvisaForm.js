@@ -53,15 +53,16 @@ const NonEvisaForm = ({type, evisa}) => {
                         <form>
                             <div className="modal-body">
                                 
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your information with anyone else.</small>
+                                
+                                   
+                                    <div className="form-group my-3">
+                                        {/* <label htmlFor="name">Full Name:</label> */}
+                                        <input type="text" className="form-control" id="name" name='name' placeholder="Full Name" onChange={onChange} required/>
+                                    </div>
                                     <div className="form-group my-3">
                                         {/* <label htmlFor="exampleInputEmail1">Email address:</label> */}
                                         <input type="email" className="form-control" id="email" name='email' aria-describedby="emailHelp" placeholder="Enter email" onChange={onChange} required/>
                                             
-                                    </div>
-                                    <div className="form-group my-3">
-                                        {/* <label htmlFor="name">Full Name:</label> */}
-                                        <input type="text" className="form-control" id="name" name='name' placeholder="Full Name" onChange={onChange} required/>
                                     </div>
                                     <div className="form-group my-3">
                                         {/* <label htmlFor="exampleInputPassword1">Password</label> */}
