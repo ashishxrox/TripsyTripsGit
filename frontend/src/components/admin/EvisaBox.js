@@ -13,7 +13,7 @@ const EvisaBox = ({ data, docs }) => {
     const handleDownload = async () => {
         try {
             // Send a POST request to the server to create a zip file
-            const response = await axios.post(`https://${apiURL}/api/fetchFormData/download`, filteredDocs, {
+            const response = await axios.post(`http://${apiURL}/api/fetchFormData/download`, filteredDocs, {
                 responseType: 'blob', // Ensure response type is set to blob
             });
 
