@@ -3,7 +3,7 @@ import {Link } from 'react-router-dom'
 
 
 import '../../static/footer.css'
-import TandC from '../visa/TandC'
+// import TandC from '../visa/TandC'
 
 const Footer = () => {
     const [showTandC, setShowTandC] = useState(false);
@@ -28,17 +28,13 @@ const Footer = () => {
                     <li><Link to='/about'> About us | </Link></li>
                 </ul>
                 <div className="terms">
-                    <span className="tandc-link" onClick={toggleTandC} style={{ color: "#fff", cursor: "pointer" }}>
-                        Terms and Conditions
-                    </span>
-                    {showTandC && (
-                        <div className="tandc-popup" style={{ position: "fixed", zIndex: "9999", backgroundColor: "#fff", top: "30%", left: "40%" }}>
-                            <TandC closeBtn={toggleTandC} />
-                        </div>
-                    )}
+                    <Link to="/terms" style={{color:"#fff"}}>Terms and Conditions</Link>
                 </div>
                 <div className="terms" >
                     <Link to="/policy" style={{color:"#fff"}}> Privacy and Policy</Link>
+                </div>
+                <div className="terms" >
+                    <Link to="/refund" style={{color:"#fff"}}> Cancellation and Refund Policy</Link>
                 </div>
             </div>
         </div>

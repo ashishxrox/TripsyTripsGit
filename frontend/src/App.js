@@ -23,6 +23,8 @@ import Dashboard from './components/admin/Dashboard';
 import DashboardState from './context/Dashboard/DashboardState';
 import Footer from './components/footer/Footer';
 import PrivacyPol from './components/footer/PrivacyPol';
+import TermAndCondition from './components/footer/TermAndCondition';
+import Refund from './components/footer/Refund';
 
 const App = () => {
 
@@ -88,6 +90,8 @@ const App = () => {
               <Route exact path="/package" index element={<Package  />} />
               <Route exact path="/payment" index element={<PaymentInterface />} />
               <Route exact path="/policy" index element={<PrivacyPol />} />
+              <Route exact path="/terms" index element={<TermAndCondition />} />
+              <Route exact path="/refund" index element={<Refund />} />
               
             </Routes>
             <CallBox />
