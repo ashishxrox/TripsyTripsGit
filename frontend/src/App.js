@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState,} from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import ReactGA from 'react-ga';
 import './App.css';
 
 import Navbar from './components/navbar/Navbar';
@@ -27,6 +28,8 @@ import TermAndCondition from './components/footer/TermAndCondition';
 import Refund from './components/footer/Refund';
 
 const App = () => {
+
+
 
   const [isLoading, setIsLoading] = useState(null);
 
