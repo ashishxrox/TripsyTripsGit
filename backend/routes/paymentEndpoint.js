@@ -78,10 +78,13 @@ router.post('/', (req, res) => {
 
 const setPayment = async(merchantTransactionId) =>{
     try {
-        const query = await Payment.updateOne(
+        const updatedPayment = await FormData.findOneAndUpdate(
             { uniqueStr: merchantTransactionId }, // Filter condition
-            { $set: { status: 'Payment done' } } // Update operation
+            { $set: { paymentStatus: 'Payment done' } }, // Update operation
+            { new: true } // To return the updated document
         );
+
+        console.log(updatedPayment);
         
     } catch (error) {
         console.error('Error updating payment status:', error);
