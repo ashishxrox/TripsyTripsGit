@@ -8,7 +8,7 @@ const { error } = require('console');
 const FormData = require('../models/FormData')
 
 const API_URL = 'www.api.tripsytrips.com';
-const WEB_URL = 'wwww.tripsytrips.com'|| 'tripsytrips.com';
+const WEB_URL = 'www.tripsytrips.com'|| 'tripsytrips.com';
 
 const router = express.Router();
 
@@ -78,15 +78,11 @@ router.post('/', (req, res) => {
 
 const setPayment = async(merchantTransactionId) =>{
     try {
-        const query = await FormData.findOne({uniqueStr: merchantTransactionId})
-        if(query){
-            query.paymentStatus = "Completed"
-            await query.save();
-            console.log(query)
-        }
-        else{
-            console.log("No Query Found")
-        }
+        const query = await Payment.updateOne(
+            { uniqueStr: merchantTransactionId }, // Filter condition
+            { $set: { status: 'Payment done' } } // Update operation
+        );
+        
     } catch (error) {
         console.error('Error updating payment status:', error);
     }
