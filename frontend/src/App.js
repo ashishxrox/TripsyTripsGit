@@ -26,6 +26,8 @@ import Footer from './components/footer/Footer';
 import PrivacyPol from './components/footer/PrivacyPol';
 import TermAndCondition from './components/footer/TermAndCondition';
 import Refund from './components/footer/Refund';
+import Success from './components/PaymentStatus/Success';
+import Failure from './components/PaymentStatus/Failure';
 
 const App = () => {
 
@@ -95,6 +97,8 @@ const App = () => {
               <Route exact path="/policy" index element={<PrivacyPol />} />
               <Route exact path="/terms" index element={<TermAndCondition />} />
               <Route exact path="/refund" index element={<Refund />} />
+              <Route exact path="/success" index element={<Success />} />
+              <Route exact path="/failure" index element={<Failure />} />
               
             </Routes>
             <CallBox />

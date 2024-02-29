@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import FormDataContext from '../../context/FormData/FormDataContext';
 
+
 import '../../static/userForm.css';
-import PaymentInterface from './PaymentInterface';
+// import PaymentInterface from './PaymentInterface';
 import TandC from './TandC';
 
 
@@ -13,7 +14,7 @@ const UserForm = (props) => {
     const { type, travellerCount, eVisa, cost } = props;
     const visaName = type.name
     const docsReq = type.docsReq;
-    const { setFormData, handleSubmit, uploadDocument } = useContext(FormDataContext);
+    const { setFormData, handleSubmit, uploadDocument} = useContext(FormDataContext);
     const [data, setData] = useState({
         name: '',
         email: '',
@@ -29,7 +30,7 @@ const UserForm = (props) => {
         portOfEntry: ''
     })
     const [documentUniqueStrs, setDocumentUniqueStrs] = useState([]);
-    const [isSubmitted, setSubmitted] = useState(false)
+    
     const [isChecked, setIsChecked] = useState(false);
     const [showTandC, setShowTandC] = useState(false);
 
@@ -46,6 +47,7 @@ const UserForm = (props) => {
         return uniqueStr;
     };
 
+
     // eslint-disable-next-line
     useEffect(() => {
         setData({
@@ -61,7 +63,10 @@ const UserForm = (props) => {
     useEffect(() => {
         if (data.uniqueStr && data.documentUniqueStrs) {
             handleSubmit();
-            setSubmitted(true)
+            // setSubmitted(true)
+            // if(isSubmitted){
+            //     callPhonePePaymentAPI()
+            // }
         }
     }, [data.uniqueStr, handleSubmit]);
 
@@ -146,7 +151,7 @@ const UserForm = (props) => {
             </button>
 
             {/* Modal */}
-            <div
+            {<div
                 className="modal fade"
                 id="staticBackdrop"
                 data-bs-backdrop="static"
@@ -209,15 +214,15 @@ const UserForm = (props) => {
                                 {/* Submit Button */}
                                 <div className="modal-footer" style={{ backgroundColor: "#000047" }}>
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" style={{ backgroundColor: "#fff", color: "#000" }}>Close</button>
-                                    {!isSubmitted && !isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit} disabled>Submit</button>}
-                                    {!isSubmitted && isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit}>Submit</button>}
+                                    {!isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit} disabled>Submit</button>}
+                                    {isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit}>Submit</button>}
                                     {/* {isSubmitted && <PaymentInterface />} */}
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     );
 };

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 // import PaymentInterface from '../../components/visa/PaymentInterface';
 import FormDataContext from './FormDataContext';
 
+import axios from 'axios'
+
 const apiURL = 'www.api.tripsytrips.com'
 
 const FormDataState = (props) => {
@@ -86,7 +88,7 @@ const FormDataState = (props) => {
     // Function to handle E Visa form submission
     const handleSubmit = async () => {
         // event.preventDefault();
-        
+
         // Send form data to the endpoint
         console.log(formData)
         console.log(formData.visaName)
@@ -101,7 +103,10 @@ const FormDataState = (props) => {
             if (response.ok) {
                 // Handle success
                 console.log('Form data submitted successfully');
-                alert("Your application was submitted successfully, we will get in touch with you soon!")
+                alert("Your form was submitted successfully, please complete the payment to proceed further!")
+
+                callPhonePePaymentAPI();
+
                 setSubmitted(true)
             } else {
                 // Handle errors
@@ -114,10 +119,33 @@ const FormDataState = (props) => {
         }
     };
 
+    // Function to call the PhonePe payment API
+
+    const callPhonePePaymentAPI = async () => {
+        try {
+            const response = await axios.post(`https://${apiURL}/api/phonepe`, formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            // console.log(response.data);
+    
+            // Check if response data contains the redirect URL
+            if (response.data && response.data.redirectUrl) {
+                // Open the redirect URL in a new tab/window
+                window.open(response.data.redirectUrl, '_blank');
+            } else {
+                console.error('Redirect URL not found in response data');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     // Function to upload Documents
 
     const uploadDocument = async (file, name, uniqueStr) => {
-        
+
         const formData = new FormData();
         formData.append('documents', file);
         formData.append('name', name);
@@ -143,7 +171,7 @@ const FormDataState = (props) => {
 
     // Function to submit Non E Visa
 
-    const handleNonEvisaSubmit = async()=>{
+    const handleNonEvisaSubmit = async () => {
         try {
             const response = await fetch(`https://${apiURL}/api/submit-form/uploadNonEvisa`, {
                 method: 'POST',
@@ -168,7 +196,7 @@ const FormDataState = (props) => {
     }
 
     // Function to handle Flight Form
-    const handleFlightSubmit = async()=>{
+    const handleFlightSubmit = async () => {
         console.log(flight)
         try {
             const response = await fetch(`https://${apiURL}/api/submit-form/flight`, {
@@ -182,7 +210,7 @@ const FormDataState = (props) => {
                 // Handle success
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
-                
+
             } else {
                 // Handle errors
                 console.error('Failed to submit form data');
@@ -195,7 +223,7 @@ const FormDataState = (props) => {
     }
 
     // Function to handle Hotel Form
-    const handleHotelSubmit = async()=>{
+    const handleHotelSubmit = async () => {
         try {
             const response = await fetch(`https://${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
@@ -208,7 +236,7 @@ const FormDataState = (props) => {
                 // Handle success
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
-                
+
             } else {
                 // Handle errors
                 console.error('Failed to submit form data');
@@ -218,10 +246,10 @@ const FormDataState = (props) => {
             console.error('Error:', error);
             alert("There seems to be some problem, please try again later!");
         }
-        
+
     }
     // Function to handle Insurance Form
-    const handleInsuranceSubmit = async()=>{
+    const handleInsuranceSubmit = async () => {
         try {
             const response = await fetch(`https://${apiURL}/api/submit-form/insurance`, {
                 method: 'POST',
@@ -234,7 +262,7 @@ const FormDataState = (props) => {
                 // Handle success
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
-                
+
             } else {
                 // Handle errors
                 console.error('Failed to submit form data');
@@ -246,7 +274,7 @@ const FormDataState = (props) => {
         }
     }
 
-    const handlePackageSubmit = async()=>{
+    const handlePackageSubmit = async () => {
         // console.log(packageData)
         try {
             const response = await fetch(`https://${apiURL}/api/submit-form/packages`, {
@@ -260,7 +288,7 @@ const FormDataState = (props) => {
                 // Handle success
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
-                
+
             } else {
                 // Handle errors
                 console.error('Failed to submit form data');
@@ -276,30 +304,33 @@ const FormDataState = (props) => {
     // }
 
     return (
-        <FormDataContext.Provider value={{ formData, 
-                                           evisa,
-                                           appType,
-                                           nonEvisa,
-                                           flight,
-                                           hotel,
-                                           insurance,
-                                           packageData,
-                                           setPackageData,
-                                           updateFormData,
-                                           setFormData,
-                                           setEvisa,
-                                           setType,
-                                           handleSubmit, 
-                                           uploadDocument,
-                                           setNonEvisa,
-                                           handleNonEvisaSubmit,
-                                           handleInsuranceSubmit,
-                                           handleFlightSubmit,
-                                           handleHotelSubmit,
-                                           handlePackageSubmit,
-                                           setFlight,
-                                           setHotel,
-                                           setInsurance}}>
+        <FormDataContext.Provider value={{
+            formData,
+            evisa,
+            appType,
+            nonEvisa,
+            flight,
+            hotel,
+            insurance,
+            packageData,
+            isSubmitted,
+            setPackageData,
+            updateFormData,
+            setFormData,
+            setEvisa,
+            setType,
+            handleSubmit,
+            uploadDocument,
+            setNonEvisa,
+            handleNonEvisaSubmit,
+            handleInsuranceSubmit,
+            handleFlightSubmit,
+            handleHotelSubmit,
+            handlePackageSubmit,
+            setFlight,
+            setHotel,
+            setInsurance,
+        }}>
             {props.children}
         </FormDataContext.Provider>
     );

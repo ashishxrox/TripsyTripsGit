@@ -84,7 +84,7 @@ const EvisaBox = ({ data, docs }) => {
                             <p>Place of Entry: {data.portOfEntry}</p>
                         </div>}
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                            <p style={{ color: data.paymentStatus === "Pending" ? "red" : "#3488E8" }}>Payment Status: {data.paymentStatus}</p>
+                            <p style={{ color: data.paymentStatus === "Pending" ? "red" : "green" }}>Payment Status: {data.paymentStatus}</p>
                             <button type="button" class="btn" onClick={handleDownload} style={{ backgroundColor: "#000047", color: "#fff", boxShadow: "2px 2px 10px #000" }}>Download Documents</button>
                             {/* <p>{filteredDocs[0]}</p> */}
                         </div>

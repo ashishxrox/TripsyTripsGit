@@ -4,6 +4,7 @@ const connectToMongo = require('./db')
 const express = require('express')
 const cors = require('cors')
 const app = express()
+
 // const port = 4321
 const port = process.env.PORT || 4321;
 
@@ -20,6 +21,10 @@ app.use('/api/addVisaData', require('./routes/addVisaData.js'))
 app.use('/api/getVisaData', require('./routes/getVisaData.js'))
 app.use('/api/submit-form', require('./routes/getFormData.js'))
 app.use('/api/fetchFormData', require('./routes/fetchFormData.js'))
+
+
+
+app.use('/api/phonepe',require('./routes/paymentEndpoint.js'))
 
 
 

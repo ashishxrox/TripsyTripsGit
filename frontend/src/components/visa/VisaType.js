@@ -13,7 +13,7 @@ const VisaType = () => {
 
   // const location = useLocation()
   // console.log(location)
-  const { evisa, appType} = useContext(FormDataContext)
+  const { evisa, appType, isSubmitted} = useContext(FormDataContext)
 
   
   const subtitle = "By Following these 3 Simple Steps"
@@ -32,7 +32,8 @@ const VisaType = () => {
 
   // console.log(evisa)
   return (
-    <div style={{backgroundColor:"#fff"}}>
+    <>
+    {<div style={{backgroundColor:"#fff"}}>
       {/* This is Visa type {type.name} */}
       <div className="container docs-req-div">
         <h4 style={{padding:"10px 5px", fontSize:"38px", textAlign:"center", fontWeight:"bold"}}>{appType.name} </h4>
@@ -79,7 +80,8 @@ const VisaType = () => {
         }} style={{width:"80%", padding:"5px", border:"1px solid #ffb800", backgroundColor:"#ffb800", borderRadius:"15px", boxShadow:"5px 5px 10px #000", color:"#000",fontWeight:"bold"}}>{evisa === 'yes' ? 'Apply Now' : 'Get in Touch'}</button>
       </div>}
       
-    </div>
+    </div>}
+    </>
   )
 }
 

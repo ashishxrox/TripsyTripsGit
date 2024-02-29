@@ -10,7 +10,7 @@ const CallBox = () => {
         {location.pathname !== '/adminxcv876_@@plm123Qw' && <div className='container call-box'>
 
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ backgroundColor: "#000047", border: "2px solid #000047", boxShadow: "2px 2px 5px #000", fontSize:"35px", borderRadius:"50%"}}>
-            <ion-icon name="chatbubble-ellipses-outline" style={{position:"relative", top:"7px"}}></ion-icon>
+            <i className="fa-brands fa-rocketchat"></i>
             </button>
 
 
