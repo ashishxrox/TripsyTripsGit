@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import FormDataContext from '../../context/FormData/FormDataContext';
 
 
@@ -11,6 +12,8 @@ import TandC from './TandC';
 
 
 const UserForm = (props) => {
+
+    const navigate =useNavigate();
     const { type, travellerCount, eVisa, cost } = props;
     const visaName = type.name
     const docsReq = type.docsReq;
@@ -63,10 +66,7 @@ const UserForm = (props) => {
     useEffect(() => {
         if (data.uniqueStr && data.documentUniqueStrs) {
             handleSubmit();
-            // setSubmitted(true)
-            // if(isSubmitted){
-            //     callPhonePePaymentAPI()
-            // }
+            navigate('/')
         }
     }, [data.uniqueStr, handleSubmit]);
 
