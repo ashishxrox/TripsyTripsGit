@@ -1084,7 +1084,7 @@ const VisaState = (props) => {
             "doc16": "Other Saving and investment",
             "doc17": "FOrm 54"
           },
-          "totalCost": 0,
+          "totalCost": 3000,
           "_id": "65b2a656af8c1506be6a91ca"
         }
       ],

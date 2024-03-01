@@ -5,12 +5,15 @@ const crypto = require('crypto');
 const cors = require('cors'); // Import the cors middleware
 const { appendFile } = require('fs');
 const { error } = require('console');
+const nodemailer = require('nodemailer')
 const FormData = require('../models/FormData')
 
 const API_URL = 'www.api.tripsytrips.com';
-const WEB_URL = 'www.tripsytrips.com'|| 'tripsytrips.com';
+const WEB_URL = 'www.tripsytrips.com' || 'tripsytrips.com';
 
 const router = express.Router();
+
+var eMail = '';
 
 // Test Vars
 const PHONE_HOST_URL = "https://api-preprod.phonepe.com/apis/pg-sandbox";
@@ -23,7 +26,8 @@ router.use(cors());
 
 router.post('/', (req, res) => {
 
-    const { name, contact, totalCost, uniqueStr } = req.body
+    const { name, contact, totalCost, uniqueStr, email } = req.body
+    eMail = email;
 
     const payEndpoint = "pg/v1/pay";
     const merchantTransactionId = uniqueStr;
@@ -76,7 +80,7 @@ router.post('/', (req, res) => {
         });
 });
 
-const setPayment = async(merchantTransactionId) =>{
+const setPayment = async (merchantTransactionId) => {
     try {
         const updatedPayment = await FormData.findOneAndUpdate(
             { uniqueStr: merchantTransactionId }, // Filter condition
@@ -85,9 +89,35 @@ const setPayment = async(merchantTransactionId) =>{
         );
 
         console.log(updatedPayment);
-        
+
     } catch (error) {
         console.error('Error updating payment status:', error);
+    }
+}
+
+
+async function sendConfirmationMail(email) {
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'info@tripsytrips.com', // Your Gmail address
+            pass: 'your_password' // Your Gmail password
+        }
+    });
+
+    // Email content
+    let mailOptions = {
+        from: 'info@tripsytrips.com',
+        to: email,
+        subject: 'Payment Confirmation',
+        text: 'Your payment has been successfully processed.'
+    };
+
+    try {
+        let info = await transporter.sendMail(mailOptions);
+        console.log('Email sent: ' + info.response);
+    } catch (error) {
+        console.log('Error occurred while sending email: ' + error);
     }
 }
 
@@ -113,11 +143,13 @@ router.get('/redirect-url/:merchantTransactionId', (req, res) => {
             },
 
         };
-        axios.request(options).then(async(response) => {
+        axios.request(options).then(async (response) => {
             if (response.data.success === true) {
                 const url = `https://${WEB_URL}/success`;
 
-                setPayment(merchantTransactionId)
+                setPayment(merchantTransactionId);
+                // await sendConfirmationMail(eMail);
+
                 return res.redirect(url)
             } else {
                 const url = `https://${WEB_URL}/failure`
@@ -127,7 +159,7 @@ router.get('/redirect-url/:merchantTransactionId', (req, res) => {
             console.error(error);
         });
     };
-    
+
 })
 
 module.exports = router;

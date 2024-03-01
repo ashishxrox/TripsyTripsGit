@@ -31,7 +31,7 @@ const Footer = () => {
                     <Link to="/terms" style={{color:"#fff"}}>Terms and Conditions</Link>
                 </div>
                 <div className="terms" >
-                    <Link to="/policy" style={{color:"#fff"}}> Privacy and Policy</Link>
+                    <Link to="/policy" style={{color:"#fff"}}> Privacy Policy</Link>
                 </div>
                 <div className="terms" >
                     <Link to="/refund" style={{color:"#fff"}}> Cancellation and Refund Policy</Link>

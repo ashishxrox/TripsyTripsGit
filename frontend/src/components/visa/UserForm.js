@@ -144,7 +144,7 @@ const UserForm = (props) => {
                 className="btn btn-primary apply-btn"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
-                style={{ backgroundColor: "#ffb800", border: "2px solid #ffb800", color: "black" }}
+                style={{ backgroundColor: "#ffb800", border: "2px solid #ffb800", color: "black", fontWeight:"700"}}
             >
                 Apply Now
 
