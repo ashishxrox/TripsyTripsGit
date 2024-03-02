@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import DashboardContext from './DashBoardContext'
 
-const apiURL = 'www.api.tripsytrips.com'
+// production URL
+const apiURL = 'https://www.api.tripsytrips.com'
+
+// Local Host
+const localHost = 'http://localhost:4321'
 
 const DashboardState = (props) => {
 
@@ -16,7 +20,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchNonEvisaData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/nonEvisa`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/nonEvisa`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -34,7 +38,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchPackageData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/packages`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/packages`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -52,7 +56,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchFlightData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/flights`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/flights`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -70,7 +74,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchHotelData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/hotels`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/hotels`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -88,7 +92,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchInsuranceData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/insurance`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/insurance`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -106,7 +110,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchVisaData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/evisa`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/evisa`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -124,7 +128,7 @@ const DashboardState = (props) => {
     useEffect(() => {
         const fetchDocData = async () => {
             try {
-                const response = await fetch(`https://${apiURL}/api/fetchFormData/evisaDocs`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/evisaDocs`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

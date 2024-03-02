@@ -21,6 +21,8 @@ app.use('/api/addVisaData', require('./routes/addVisaData.js'))
 app.use('/api/getVisaData', require('./routes/getVisaData.js'))
 app.use('/api/submit-form', require('./routes/getFormData.js'))
 app.use('/api/fetchFormData', require('./routes/fetchFormData.js'))
+app.use('/api/update', require('./routes/updateData.js'))
+app.use('/api/delete', require('./routes/deleteQueries.js'))
 
 
 

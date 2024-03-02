@@ -4,7 +4,11 @@ import FormDataContext from './FormDataContext';
 
 import axios from 'axios'
 
-const apiURL = 'www.api.tripsytrips.com'
+// production URL
+const apiURL = 'https://www.api.tripsytrips.com'
+
+// Local Host URL
+const localHost = 'http://localhost:4321'
 
 const FormDataState = (props) => {
 
@@ -95,7 +99,7 @@ const FormDataState = (props) => {
         console.log(formData)
         console.log(formData.visaName)
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form`, {
+            const response = await fetch(`${apiURL}/api/submit-form`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -125,7 +129,7 @@ const FormDataState = (props) => {
 
     const callPhonePePaymentAPI = async () => {
         try {
-            const response = await axios.post(`https://${apiURL}/api/phonepe`, formData, {
+            const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -156,7 +160,7 @@ const FormDataState = (props) => {
         console.log(formData)
 
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/uploadDocs`, {
+            const response = await fetch(`${apiURL}/api/submit-form/uploadDocs`, {
                 method: 'POST',
                 body: formData
             });
@@ -175,7 +179,7 @@ const FormDataState = (props) => {
 
     const handleNonEvisaSubmit = async () => {
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/uploadNonEvisa`, {
+            const response = await fetch(`${apiURL}/api/submit-form/uploadNonEvisa`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -201,7 +205,7 @@ const FormDataState = (props) => {
     const handleFlightSubmit = async () => {
         console.log(flight)
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/flight`, {
+            const response = await fetch(`${apiURL}/api/submit-form/flight`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -227,7 +231,7 @@ const FormDataState = (props) => {
     // Function to handle Hotel Form
     const handleHotelSubmit = async () => {
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/hotel`, {
+            const response = await fetch(`${apiURL}/api/submit-form/hotel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -253,7 +257,7 @@ const FormDataState = (props) => {
     // Function to handle Insurance Form
     const handleInsuranceSubmit = async () => {
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/insurance`, {
+            const response = await fetch(`${apiURL}/api/submit-form/insurance`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -279,7 +283,7 @@ const FormDataState = (props) => {
     const handlePackageSubmit = async () => {
         // console.log(packageData)
         try {
-            const response = await fetch(`https://${apiURL}/api/submit-form/packages`, {
+            const response = await fetch(`${apiURL}/api/submit-form/packages`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

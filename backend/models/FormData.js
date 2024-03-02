@@ -55,7 +55,14 @@ const FormDataSchema = new mongoose.Schema({
      createdAt: {
           type: Date,
           default: Date.now
-      }
+      },
+     visaApplied: {
+          type: Boolean,
+          default: false
+     },
+     visaGranted: {
+          type: String
+     }
 });
 
 const FormData = mongoose.model('FormData', FormDataSchema);

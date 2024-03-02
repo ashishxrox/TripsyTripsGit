@@ -8,8 +8,12 @@ const { error } = require('console');
 const nodemailer = require('nodemailer')
 const FormData = require('../models/FormData')
 
-const API_URL = 'www.api.tripsytrips.com';
+// production URL
+const API_URL = 'https://www.api.tripsytrips.com';
 const WEB_URL = 'www.tripsytrips.com' || 'tripsytrips.com';
+
+// Local Host
+const localHost = 'http://localhost:4321'
 
 const router = express.Router();
 
@@ -37,7 +41,7 @@ router.post('/', (req, res) => {
         "merchantUserId": "MUID123",
         "name": name,
         "amount": Number(totalCost) * 100, //in paise
-        "redirectUrl": `https://${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
+        "redirectUrl": `${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
         "redirectMode": "REDIRECT",
         "mobileNumber": contact,
         "paymentInstrument": {
