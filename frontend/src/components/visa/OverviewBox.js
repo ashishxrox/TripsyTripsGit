@@ -38,7 +38,7 @@ const OverviewBox = forwardRef((props, ref) => {
                 <ion-icon name="add-circle-outline" onClick = {handleAdd}></ion-icon>
                 </div>
                 <h3 style={{fontSize:"16px", position:"relative", top:"15px"}}>&#8377;{type.totalCost} x <small> {travellerCount}</small></h3>
-                <h3 style={{fontSize:"20px", position:"relative", top:"15px"}}>&#8377;{type.totalCost * travellerCount}</h3>
+                <h3 style={{fontSize:"24px", fontWeight:"700",position:"relative", top:"15px"}}>&#8377;{type.totalCost * travellerCount}</h3>
               </div>
               <small style={{fontSize:"8px"}}>All Taxes Incl.</small>
               </div>

@@ -96,8 +96,8 @@ const FormDataState = (props) => {
         // event.preventDefault();
 
         // Send form data to the endpoint
-        console.log(formData)
-        console.log(formData.visaName)
+        // console.log(formData)
+        // console.log(formData.visaName)
         try {
             const response = await fetch(`${apiURL}/api/submit-form`, {
                 method: 'POST',

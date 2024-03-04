@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
         "merchantUserId": "MUID123",
         "name": name,
         "amount": Number(totalCost) * 100, //in paise
-        "redirectUrl": `${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
+        "redirectUrl": `${localHost}/api/phonepe/redirect-url/${merchantTransactionId}`,
         "redirectMode": "REDIRECT",
         "mobileNumber": contact,
         "paymentInstrument": {
@@ -103,17 +103,23 @@ const setPayment = async (merchantTransactionId) => {
 async function sendConfirmationMail(email) {
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
         auth: {
-            user: 'info@tripsytrips.com', // Your Gmail address
-            pass: 'your_password' // Your Gmail password
+            user: 'hello@tripsytrips.com', // Your Gmail address
+            pass: 'gjsr ybse pnbb zbdg' // Your Gmail password
         }
     });
 
     // Email content
     let mailOptions = {
-        from: 'info@tripsytrips.com',
+        from: {
+            name: "Tripsy Trips",
+            address: "hello@tripsytrips.com"
+        },
         to: email,
-        subject: 'Payment Confirmation',
+        subject: 'Visa Application Submitted Confirmation',
         text: 'Your payment has been successfully processed.'
     };
 
@@ -152,7 +158,7 @@ router.get('/redirect-url/:merchantTransactionId', (req, res) => {
                 const url = `https://${WEB_URL}/success`;
 
                 setPayment(merchantTransactionId);
-                // await sendConfirmationMail(eMail);
+                await sendConfirmationMail(eMail);
 
                 return res.redirect(url)
             } else {

@@ -61,7 +61,12 @@ const FormDataSchema = new mongoose.Schema({
           default: false
      },
      visaGranted: {
-          type: String
+          type: Boolean,
+          default: false
+     },
+     comment: {
+          type: String,
+          default: " "
      }
 });
 
