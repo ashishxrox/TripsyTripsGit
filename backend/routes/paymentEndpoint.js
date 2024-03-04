@@ -120,7 +120,7 @@ async function sendConfirmationMail(email) {
         },
         to: email,
         subject: 'Visa Application Submitted Confirmation',
-        text: 'Your payment has been successfully processed.'
+        text: 'Thank you for submitting your application. We will verify your document and send you an email once your visa has been applied.'
     };
 
     try {
