@@ -1,6 +1,16 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 const Refund = () => {
+
+    const location = useLocation();
+    useEffect(() => {
+        ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
+        ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
+
+    }, []);
+
     return (
         <div className='container py-5 px-5' style={{ backgroundColor: "#fff" }}>
             <h2 style={{fontSize:"45px"}}>Order Cancellation and Refund</h2>

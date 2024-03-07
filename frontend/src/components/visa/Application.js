@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
 import ImageBox from './ImageBox';
 import Timeline from './Timeline';
 
 import '../../static/application.css'
 import ReqBox from './ReqBox';
+
+import ReactGA from 'react-ga';
+
 
 
 
@@ -14,6 +17,12 @@ const Application = () => {
 
 
     const location = useLocation();
+    useEffect(() => {
+        ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
+        ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
+
+    }, []);
+    
     const country = location.state;
     const steps = [
         { title: "Step 1", description: "Choose your destination and visa" },

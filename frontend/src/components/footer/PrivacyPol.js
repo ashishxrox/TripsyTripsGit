@@ -1,7 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useEffect} from 'react'
+import { Link,useLocation } from 'react-router-dom'
+import ReactGA from 'react-ga';
 
 const PrivacyPol = () => {
+
+    const location = useLocation();
+    useEffect(() => {
+        ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
+        ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
+
+    }, []);
+    
     return (
         <div className="container" style={{ backgroundColor: "#fff", padding: "20px 40px", textAlign:"justify"}}>
             <h3 style={{ fontSize: "32px", color: "#000047" }}>Privacy Policy</h3>

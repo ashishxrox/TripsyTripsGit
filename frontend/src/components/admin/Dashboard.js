@@ -7,9 +7,20 @@ import FlightDash from './FlightDash';
 import HotelDash from './HotelDash';
 import InsuranceDash from './InsuranceDash';
 import Login from './Login'; // Import your Login component
-import axios from 'axios';
+// import axios from 'axios';
+import ReactGA from 'react-ga';
+import { useLocation } from 'react-router-dom'
 
 const Dashboard = () => {
+
+    const location = useLocation()
+
+    useEffect(() => {
+        ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
+        ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
+
+    }, []);
+    
     const [activeItem, setActiveItem] = useState(0);
     const [isLoggedIn, setIsLoggedIn] = useState(false); // Track authentication status
 
@@ -55,8 +66,8 @@ const Dashboard = () => {
     // Render admin dashboard if logged in
     return (
         <div>
-            <div className="logoutBtn container my-3" style={{width:"100%", display:"flex", alignItems:"center", justifyContent:"flex-end"}}>
-                <button onClick={handleLogout} style={{backgroundColor:"#fff", padding:"10px 20px", borderRadius:"15px", border:"2px solid #fff", boxShadow:"2px 2px 10px #000", color:"#000", fontSize:"20px", fontWeight:"500"}}>Logout</button>
+            <div className="logoutBtn container my-3" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                <button onClick={handleLogout} style={{ backgroundColor: "#fff", padding: "10px 20px", borderRadius: "15px", border: "2px solid #fff", boxShadow: "2px 2px 10px #000", color: "#000", fontSize: "20px", fontWeight: "500" }}>Logout</button>
             </div>
             <div className="main-content" style={{ backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "space-around", height: "100vh" }}>
                 <div className="left-side-bar" style={{ flexBasis: "20%", height: "100%" }}>

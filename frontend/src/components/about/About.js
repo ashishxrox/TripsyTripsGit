@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import '../../static/about.css'
 // import Journey from './Journey';
 import OurCulture from './OurCulture';
-import banner from '../../static/assets/aboutImg.jpeg'
+// import banner from '../../static/assets/aboutImg.jpeg'
+import ReactGA from 'react-ga';
+import { useLocation } from 'react-router-dom'
 
 
 const AboutPage = () => {
+
+  const location = useLocation()
+
+  useEffect(() => {
+    ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
+    ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
+
+}, []);
   return (
     <>
       {/* <div className='banner-section'>
