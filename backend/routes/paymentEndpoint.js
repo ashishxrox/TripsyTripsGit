@@ -26,7 +26,7 @@ var eMail = '';
 // const SALT_INDEX = 1;
 
 // PROD VARS
-const PHONE_HOST_URL = "https://api.phonepe.com/apis/hermes";
+const PHONE_HOST_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
 const MERCHANT_ID = "M22FUXBTQXGBE";
 const SALT_KEY = "2926a213-c7e3-4c24-8667-c036bed8646c";
 const SALT_INDEX = 2;
@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
         "name": name,
         "amount": Number(totalCost) * 100, //in paise
         "redirectUrl": `${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
-        "redirectMode": "REDIRECT",
+        "redirectMode": "POST",
         "mobileNumber": contact,
         "paymentInstrument": {
             "type": "PAY_PAGE"
@@ -57,14 +57,14 @@ router.post('/', (req, res) => {
 
     const payload = JSON.stringify(data);
     const payloadMain = Buffer.from(payload).toString('base64');
-    const keyIndex = 1;
+    const keyIndex = 2;
     const string = payloadMain + '/pg/v1/pay' + SALT_KEY;
     const sha256 = crypto.createHash('sha256').update(string).digest('hex');
     const checksum = sha256 + '###' + keyIndex;
 
     const options = {
-        method: 'post',
-        url: `${PHONE_HOST_URL}/${payEndpoint}`,
+        method: 'POST',
+        url: PHONE_HOST_URL,
         headers: {
             accept: 'application/json',
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ router.post('/', (req, res) => {
         })
         .catch(function (error) {
             console.error(error);
-            res.status(500).send('Internal server error'); // Return an error response
+            res.status(500).send('Internal server error',error); // Return an error response
         });
 });
 
@@ -150,7 +150,7 @@ router.get('/redirect-url/:merchantTransactionId', (req, res) => {
 
         const options = {
             method: 'get',
-            url: `${PHONE_HOST_URL}/pg/v1/status/${MERCHANT_ID}/${merchantTransactionId}`,
+            url: `https://api.phonepe.com/apis/hermes/pg/v1/status/${MERCHANT_ID}/${merchantTransactionId}`,
             headers: {
                 accept: 'application/json',
                 'Content-Type': 'application/json',
