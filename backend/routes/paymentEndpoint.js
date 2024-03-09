@@ -20,16 +20,16 @@ const router = express.Router();
 var eMail = '';
 
 // Test Vars
-// const PHONE_HOST_URL = "https://api-preprod.phonepe.com/apis/pg-sandbox";
-// const MERCHANT_ID = "PGTESTPAYUAT";
-// const SALT_KEY = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399";
-// const SALT_INDEX = 1;
+const PHONE_HOST_URL = "https://api-preprod.phonepe.com/apis/pg-sandbox";
+const MERCHANT_ID = "PGTESTPAYUAT";
+const SALT_KEY = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399";
+const SALT_INDEX = 1;
 
 // PROD VARS
-const PHONE_HOST_URL = "https://api.phonepe.com/apis/hermes";
-const MERCHANT_ID = "M22FUXBTQXGBE";
-const SALT_KEY = "2926a213-c7e3-4c24-8667-c036bed8646c";
-const SALT_INDEX = 1;
+// const PHONE_HOST_URL = "https://api.phonepe.com/apis/hermes";
+// const MERCHANT_ID = "M22FUXBTQXGBE";
+// const SALT_KEY = "2926a213-c7e3-4c24-8667-c036bed8646c";
+// const SALT_INDEX = 1;
 
 // Add CORS middleware
 router.use(cors());
