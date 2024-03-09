@@ -129,7 +129,7 @@ const FormDataState = (props) => {
 
     const callPhonePePaymentAPI = async () => {
         try {
-            const response = await axios.post(`${localHost}/api/phonepe`, formData, {
+            const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
