@@ -29,7 +29,7 @@ var eMail = '';
 const PHONE_HOST_URL = "https://api.phonepe.com/apis/hermes";
 const MERCHANT_ID = "M22FUXBTQXGBE";
 const SALT_KEY = "2926a213-c7e3-4c24-8667-c036bed8646c";
-const SALT_INDEX = 1;
+const SALT_INDEX = 2;
 
 // Add CORS middleware
 router.use(cors());
