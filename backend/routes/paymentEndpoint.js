@@ -46,8 +46,8 @@ router.post('/', (req, res) => {
         "merchantTransactionId": merchantTransactionId,
         "merchantUserId": "MUID123",
         "name": name,
-        // "amount": Number(totalCost) * 100, //in paise
-        amount: 1*100,
+        "amount": Number(totalCost) * 100, //in paise
+        // amount: 1*100,
         "redirectUrl": `${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
         "redirectMode": "REDIRECT",
         "mobileNumber": contact,
