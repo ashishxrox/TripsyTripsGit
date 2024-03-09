@@ -46,9 +46,10 @@ router.post('/', (req, res) => {
         "merchantTransactionId": merchantTransactionId,
         "merchantUserId": "MUID123",
         "name": name,
-        "amount": Number(totalCost) * 100, //in paise
+        // "amount": Number(totalCost) * 100, //in paise
+        amount: 1*100,
         "redirectUrl": `${API_URL}/api/phonepe/redirect-url/${merchantTransactionId}`,
-        "redirectMode": "POST",
+        "redirectMode": "REDIRECT",
         "mobileNumber": contact,
         "paymentInstrument": {
             "type": "PAY_PAGE"
@@ -149,7 +150,7 @@ router.get('/redirect-url/:merchantTransactionId', (req, res) => {
         const checksum = sha256 + "###" + SALT_INDEX;
 
         const options = {
-            method: 'get',
+            method: 'GET',
             url: `https://api.phonepe.com/apis/hermes/pg/v1/status/${MERCHANT_ID}/${merchantTransactionId}`,
             headers: {
                 accept: 'application/json',
