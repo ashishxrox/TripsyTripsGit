@@ -60,7 +60,7 @@ const ReqBox = (props) => {
                     }} onClick={handleClick} className="btn btn-light" style={{ width: "100%", padding: "0px 40px", fontSize: "24px", color: "#fff", boxShadow: "5px 5px 10px #000", backgroundColor: "#000047", border: "1px solid #000047" }}>Details</Link>
 
                     <div className="warning" style={{textAlign:"center", padding:"10px 0", fontSize:"12px"}}>
-                        <p style={{textDecoration:"underline"}}>Please dont refresh the page after you click on details.</p>
+                        <p style={{textDecoration:"underline"}}>Please don't refresh the page after you click on details.</p>
                     </div>
                 </div>
             </div>

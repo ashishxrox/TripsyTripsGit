@@ -36,6 +36,20 @@ const UserForm = (props) => {
     
     const [isChecked, setIsChecked] = useState(false);
     const [showTandC, setShowTandC] = useState(false);
+    const [isFormComplete, setIsFormComplete] = useState(false);
+
+
+    useEffect(() => {
+        setIsFormComplete(
+            data.name !== '' &&
+            data.email !== '' &&
+            data.contact !== '' &&
+            data.departDates !== '' &&
+            data.returnDates !== '' &&
+            data.visaName !== '' &&
+            documentUniqueStrs.length === travellerCount * Object.keys(docsReq).length
+        );
+    }, [data, documentUniqueStrs, travellerCount, docsReq]);
 
     const generateUniqueStr = () => {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -118,7 +132,7 @@ const UserForm = (props) => {
                     <br/>
                     {docsReq[key] === 'Passport Scan (Front Page)' && <h6 style={{fontSize:"7px",margin:"0",padding:"0",color:"#808080"}}>Only for Indian national passport with a minimum 6 months of validity*</h6>}
                     {docsReq[key] === 'Passport Scan (Last Page)' && <h6 style={{fontSize:"7px",margin:"0",padding:"0",color:"#808080"}}>Only for Indian national passport with a minimum 6 months of validity*</h6>}
-                    <input type="file" className="form-control" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} />
+                    <input type="file" className="form-control" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} required/>
                 </div>
             ));
             travellers.push(travellerFields);
@@ -214,9 +228,7 @@ const UserForm = (props) => {
                                 {/* Submit Button */}
                                 <div className="modal-footer" style={{ backgroundColor: "#000047" }}>
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" style={{ backgroundColor: "#fff", color: "#000" }}>Close</button>
-                                    {!isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit} disabled>Submit</button>}
-                                    {isChecked && <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit}>Submit</button>}
-                                    {/* {isSubmitted && <PaymentInterface />} */}
+                                    <button type="submit" className="btn btn-primary" style={{ color: "#fff" }} data-bs-dismiss="modal" onClick={onSubmit} disabled={!isFormComplete || !isChecked}>Submit</button>
                                 </div>
                             </form>
                         </div>
