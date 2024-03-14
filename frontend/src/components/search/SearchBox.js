@@ -63,7 +63,7 @@ const SearchBox = ({ onSearch }) => {
                     }),
                     input: (provided) => ({
                         ...provided,
-                        padding: '10px',
+                        padding: searchTerm ? '10px' : '0px'
                     }),
                     menu: (provided) => ({
                         ...provided,
