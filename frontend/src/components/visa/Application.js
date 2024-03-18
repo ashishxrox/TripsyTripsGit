@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import { useLocation } from 'react-router-dom'
+import React, {useEffect, useContext} from 'react'
+import { useLocation,useParams } from 'react-router-dom'
 import ImageBox from './ImageBox';
 import Timeline from './Timeline';
 
@@ -8,6 +8,7 @@ import ReqBox from './ReqBox';
 
 import ReactGA from 'react-ga';
 
+import VisaContext from '../../context/Visa/VisaContext';
 
 
 
@@ -23,7 +24,16 @@ const Application = () => {
 
     }, []);
     
-    const country = location.state;
+    const {countryName} = useParams();
+    console.log(countryName)
+
+    const {countries} = useContext(VisaContext)
+
+    const country = countries.filter(data => data.country === countryName);
+
+    console.log(country)
+
+
     const steps = [
         { title: "Step 1", description: "Choose your destination and visa" },
         { title: "Step 2", description: "Upload required documents and submit" },
@@ -31,97 +41,33 @@ const Application = () => {
     ]
 
     const subtitle = "In Just 3 Simple Steps"
-    // console.log(location)
-    // console.log(country)
 
-    // const visaType = [
-    //     {
-    //         "name": "Abc Visa",
-    //         "entry": "single",
-    //         "validity": 60,
-    //         "duration": 30,
-    //         "processingTime": 5,
-    //         "docsReq": {
-    //             "doc1": "Passport Scan (Front and Back)",
-    //             "doc2": "Pan Card",
-    //             "doc3": "Passport Size Photo"
-    //         },
-    //         "totalCost": "6900"
-    //     },
-    //     {
-    //         "name": "UAE Visa",
-    //         "entry": "single",
-    //         "validity": 60,
-    //         "duration": 30,
-    //         "processingTime": 5,
-    //         "docsReq": {
-    //             "doc1": "Passport Scan (Front and Back)",
-    //             "doc2": "Pan Card",
-    //             "doc3": "Passport Size Photo"
-    //         },
-    //         "totalCost": "6900"
-    //     },
-    //     {
-    //         "name": "XYZ Visa",
-    //         "entry": "single",
-    //         "validity": 60,
-    //         "duration": 30,
-    //         "processingTime": 5,
-    //         "docsReq": {
-    //             "doc1": "Passport Scan (Front and Back)",
-    //             "doc2": "Pan Card",
-    //             "doc3": "Passport Size Photo"
-    //         },
-    //         "totalCost": "6900"
-    //     },
-    //     {
-    //         "name": "PQR Visa",
-    //         "entry": "single",
-    //         "validity": 60,
-    //         "duration": 30,
-    //         "processingTime": 5,
-    //         "docsReq": {
-    //             "doc1": "Passport Scan (Front and Back)",
-    //             "doc2": "Pan Card",
-    //             "doc3": "Passport Size Photo"
-    //         },
-    //         "totalCost": "6900"
-    //     },
-    //     {
-    //         "name": "LMNO Visa",
-    //         "entry": "single",
-    //         "validity": 60,
-    //         "duration": 30,
-    //         "processingTime": 5,
-    //         "docsReq": {
-    //             "doc1": "Passport Scan (Front and Back)",
-    //             "doc2": "Pan Card",
-    //             "doc3": "Passport Size Photo"
-    //         },
-    //         "totalCost": "6900"
-    //     }
-    // ]
-    const visaType = country.visaType
-    const evisa = visaType.eVisa
+    console.log(location)
+
+
+    const visaType = country[0].visaType
+    const evisa = country[0].eVisa
+    console.log(visaType)
+    console.log(evisa)
     return (
         <div>
             <div className="container" style={{ backgroundColor: "#fff" }}>
                 <div className="row-1" >
                     <div className="col1 image-box" style={{ flexBasis: "50%" }}>
-                        <ImageBox url={country.img_url} />
+                        <ImageBox url={country[0].img_url} />
                     </div>
 
                 </div>
                 <div className="row2 country-header">
                     <div className="col3" style={{ textAlign: "center", color: "#fff", textShadow: "2px 2px 5px #000", fontFamily: "Lora", backgroundColor: "#000047", boxShadow: "5px 5px 15px #000" }}>
-                        <h1 style={{}}>Tourist Visa for {country.country}</h1>
+                        <h1 style={{}}>Tourist Visa for {country[0].country}</h1>
                     </div>
                 </div>
 
                 <div className="container row my-5 visa-types" style={{ width: "100%", alignItems: "center" }}>
                     {visaType.map((type, index) => (
                         <div key={index} className="col-md-4 mb-4">
-                            <ReqBox type={type} country={country} />
+                            <ReqBox type={type} country={country[0]} />
                         </div>
                     ))}
                 </div>
@@ -146,6 +92,7 @@ const Application = () => {
                 </div>
             </div>
         </div>
+        
     )
 }
 

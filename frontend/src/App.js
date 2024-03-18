@@ -82,6 +82,11 @@ const App = () => {
                 index
                 element={<Application/>}
               />
+               {/* <Route
+                path={`/visa/application/Vietnam`}
+                index
+                element={<Application/>}
+              /> */}
               <Route
                 path={`/package/application/:countryName`}
                 index
