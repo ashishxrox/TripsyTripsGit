@@ -1,27 +1,33 @@
 const mongoose = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const FlightDataSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required: true
-    },
-    email:{
-        type:String,
-        required: true
-    },
-    contact:{
+    uniqueStr:{
         type: String,
-        required:true
+        default: uuidv4,
+        unqiue: true
     },
-    type:{
+    name: {
         type: String,
         required: true
     },
-    trip:{
-        type:String,
+    email: {
+        type: String,
         required: true
     },
-    departDate:{
+    contact: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: String,
+        required: true
+    },
+    trip: {
+        type: String,
+        required: true
+    },
+    departDate: {
         type: String,
         required: true
     },
@@ -36,10 +42,18 @@ const FlightDataSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-   createdAt: {
-    type: Date,
-    default: Date.now
-}
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    comment: {
+        type: String,
+        default: " "
+    },
+    handle: {
+        type: String,
+        default: " "
+    }
 })
 
 const FlightData = mongoose.model('FlightData', FlightDataSchema);

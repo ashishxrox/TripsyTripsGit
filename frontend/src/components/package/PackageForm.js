@@ -1,11 +1,14 @@
 import React,{useState, useEffect, useContext} from 'react'
 import '../../static/pkgForm.css'
+import { useNavigate } from 'react-router-dom'
 
 import FormDataContext from '../../context/FormData/FormDataContext'
 
 const PackageForm = ({place}) => {
 
-    const {packageData, setPackageData, handlePackageSubmit} = useContext(FormDataContext);
+    const navigate = useNavigate();
+    const { packageData, setPackageData, handlePackageSubmit } = useContext(FormDataContext);
+    const [submit, setSubmit] = useState(false);
 
     const [data, setData] = useState({
         name: '',
@@ -14,30 +17,36 @@ const PackageForm = ({place}) => {
         place: place,
         departDate: '',
         returnDate: ''
-    })
+    });
 
+    const onChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value });
+    };
 
-    const onChange = (e)=>{
-        setData({ ...data, [e.target.name]: e.target.value })
-    }
-    
     useEffect(() => {
-        if (packageData.name) {
-            
+        if (packageData.name && submit) {
+            // Handle package submission
             handlePackageSubmit(packageData)
+            // alert('Done');
+            navigate('/');
 
+            // Reset the submit state
+            setSubmit(false);
         }
-        // eslint-disable-next-line
-    }, [packageData])
+    }, [packageData]);
 
-    const onSubmit = (e)=>{
+    const onSubmit = (e) => {
         e.preventDefault();
-        if(data.name && data.email && data.contact && data.departDate && data.returnDate){ 
-            setPackageData(data)
-        }else{
+        if (data.name && data.email && data.contact && data.departDate && data.returnDate) {
+            // Set the submit state to true when the form is submitted
+            setSubmit(true);
+            setPackageData(data);
+        } else {
             alert('Please fill in all the fields.');
         }
-    }
+    };
+
+
     return (
         <div className="container" style={{width:"100%"}}>
             
@@ -53,7 +62,7 @@ const PackageForm = ({place}) => {
                             <h1 className="modal-title fs-5" id="staticBackdropLabel">Enquire for holiday package</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form>
+                        <form onSubmit={onSubmit}>
                             <div className="modal-body">
 
                                 {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
@@ -82,7 +91,7 @@ const PackageForm = ({place}) => {
                             </div>
                             <div className="modal-footer" style={{backgroundColor:"#000047", color:"#fff"}}>
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" style={{backgroundColor:"#fff", color:"#000"}}>Close</button>
-                                <button type="submit" className="btn btn-primary" data-bs-dismiss="modal" onClick={onSubmit}>Submit</button>
+                                <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">Submit</button>
                             </div>
                         </form>
                     </div>

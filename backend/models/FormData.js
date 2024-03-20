@@ -67,6 +67,10 @@ const FormDataSchema = new mongoose.Schema({
      comment: {
           type: String,
           default: " "
+     },
+     handle: {
+          type: String,
+          default: " "
      }
 });
 

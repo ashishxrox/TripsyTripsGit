@@ -1,34 +1,48 @@
 const mongoose = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const HotelDataSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required: true
-    },
-    email:{
-        type:String,
-        required: true
-    },
-    contact:{
+    uniqueStr: {
         type: String,
-        required:true
+        default: uuidv4,
+        unique: true
     },
-    place:{
-        type:String,
+    name: {
+        type: String,
         required: true
     },
-    checkInDate:{
-        type:String,
+    email: {
+        type: String,
         required: true
     },
-    checkOutDate:{
-        type:String,
+    contact: {
+        type: String,
         required: true
     },
-   createdAt: {
-    type: Date,
-    default: Date.now
-}
+    place: {
+        type: String,
+        required: true
+    },
+    checkInDate: {
+        type: String,
+        required: true
+    },
+    checkOutDate: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    comment: {
+        type: String,
+        default: " "
+    },
+    handle: {
+        type: String,
+        default: " "
+    }
 })
 
 const HotelData = mongoose.model('HotelData', HotelDataSchema);

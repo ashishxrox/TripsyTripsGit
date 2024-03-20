@@ -1,34 +1,48 @@
 const mongoose = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const InsuranceDataSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required: true
-    },
-    email:{
-        type:String,
-        required: true
-    },
-    contact:{
+    uniqueStr:{
         type: String,
-        required:true
+        default: uuidv4,
+        unique: true
     },
-    place:{
-        type:String,
+    name: {
+        type: String,
         required: true
     },
-    departDate:{
-        type:String,
+    email: {
+        type: String,
         required: true
     },
-    returnDate:{
-        type:String,
+    contact: {
+        type: String,
         required: true
     },
-   createdAt: {
-    type: Date,
-    default: Date.now
-}
+    place: {
+        type: String,
+        required: true
+    },
+    departDate: {
+        type: String,
+        required: true
+    },
+    returnDate: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    comment: {
+        type: String,
+        default: " "
+    },
+    handle: {
+        type: String,
+        default: " "
+    }
 })
 
 const InsuranceData = mongoose.model('InsuranceData', InsuranceDataSchema);

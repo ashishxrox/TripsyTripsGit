@@ -11,6 +11,8 @@ const EvisaBox = ({ data, docs }) => {
 
     // const [select, setSelect] = useState(data.visaGranted)
     const [comment, setComment] = useState(data.comment)
+    const [handle, setHandle] = useState(data.handle)
+    const [handleChanged, setHandleChanged] = useState(false);
 
     const filteredDocs = docs.filter(doc => {
         return data.documentUniqueStrs.includes(doc.uniqueStr);
@@ -68,7 +70,7 @@ const EvisaBox = ({ data, docs }) => {
         }
     }
 
-    const changeVisaSent = async ()=>{
+    const changeVisaSent = async () => {
         try {
             const query = await axios.get(`${apiURL}/api/update/setGranted/${data.uniqueStr}`);
             alert("Visa Sent")
@@ -81,7 +83,10 @@ const EvisaBox = ({ data, docs }) => {
         setComment(event.target.value);
     };
 
-    const handleSubmit = async() =>{
+
+    
+
+    const handleSubmit = async () => {
 
         try {
             const query = await axios.get(`${apiURL}/api/update/comment/${data.uniqueStr}/${comment}`)
@@ -91,8 +96,33 @@ const EvisaBox = ({ data, docs }) => {
         }
     }
 
+
+
+    const handleHandledByChange = (event) => {
+        setHandle(event.target.value);
+        setHandleChanged(true); // Set the flag to indicate handle change
+    };
+
+    useEffect(() => {
+        if (handleChanged) {
+            handleHandledBySubmit();
+            setHandleChanged(false); // Reset the flag
+        }
+    }, [handleChanged]);
+
     
-    
+
+
+    const handleHandledBySubmit = async () => {
+        try {
+            const query = await axios.get(`${apiURL}/api/update/handledBy/${data.uniqueStr}/${handle}`)
+            alert(`Client handled by ${handle}`);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
 
 
 
@@ -121,15 +151,15 @@ const EvisaBox = ({ data, docs }) => {
                         {data.visaName === 'Vietnam E-Visa' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p>Place of Entry: {data.portOfEntry}</p>
                         </div>}
-                        
+
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p style={{ color: data.paymentStatus === "Pending" ? "red" : "green" }}>Payment Status: {data.paymentStatus}</p>
                             <button type="button" className="btn" onClick={handleDownload} style={{ backgroundColor: "#000047", color: "#fff", boxShadow: "2px 2px 10px #000" }}>Download Documents</button>
                         </div>
-                        <div className="data-body-right my-2" style={{display:"flex", justifyContent:"space-around", flexDirection:"row"}}>
+                        <div className="data-body-right my-2" style={{ display: "flex", justifyContent: "space-around", flexDirection: "row", alignItems: "center" }}>
                             <div className="form-check form-switch">
-                                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:"#20293a"}}>Visa Applied</label>
-                                <input className="form-check-input" type="checkbox" role="switch" checked={data.visaApplied} onChange={changeState} style={{cursor:"pointer"}}/>
+                                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{ color: "#20293a" }}>Visa Applied</label>
+                                <input className="form-check-input" type="checkbox" role="switch" checked={data.visaApplied} onChange={changeState} style={{ cursor: "pointer" }} />
                             </div>
                             {/* <div className="visaRes">
                                 <select value={data.visaGranted === "" ? select : data.visaGranted} onChange={handleSelectOption} style={{padding:"5px 15px", paddingRight:"10px", border:"2px solid #000", borderColor: data.visaGranted === "Visa Expected"? "#87A922" : "#EE4266",borderRadius:"15px", backgroundColor: data.visaGranted === "Visa Expected"? "#87A922" : "#EE4266", color:"#fff", boxShadow:"2px 2px 5px #000"}}>
@@ -138,13 +168,22 @@ const EvisaBox = ({ data, docs }) => {
                                     <option value="Visa Rejected">Visa Rejected</option>
                                 </select>
                             </div> */}
-                             <div className="form-check form-switch">
-                                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:"#20293a"}}>Visa Sent</label>
-                                <input className="form-check-input" type="checkbox" role="switch" checked={data.visaGranted} onChange={changeVisaSent} style={{cursor:"pointer"}}/>
+                            <div className="form-check form-switch">
+                                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{ color: "#20293a" }}>Visa Sent</label>
+                                <input className="form-check-input" type="checkbox" role="switch" checked={data.visaGranted} onChange={changeVisaSent} style={{ cursor: "pointer" }} />
                             </div>
                             <div className="comment-form">
-                                <input type="text" onChange={handleCommentChange} placeholder={data.comment? data.comment: ""} style={{width:"550px", border:"1px solid #000", borderRadius:"5px", margin:"0 10px", boxShadow:"2px 2px 10px #000", padding:"2px 5px", color:"#000047"}} />
-                                <button onClick={handleSubmit} style={{padding:"2px 15px", borderRadius:"10px", backgroundColor:"#000047", border:"2px solid #000047", color:"#fff", boxShadow:"2px 2px 10px #000"}}>Save</button>
+                                <input type="text" onChange={handleCommentChange} placeholder={data.comment ? data.comment : ""} style={{ width: "550px", border: "1px solid #000", borderRadius: "5px", margin: "0 10px", boxShadow: "2px 2px 10px #000", padding: "2px 5px", color: "#000047" }} />
+                                <button onClick={handleSubmit} style={{ padding: "2px 15px", borderRadius: "10px", backgroundColor: "#000047", border: "2px solid #000047", color: "#fff", boxShadow: "2px 2px 10px #000" }}>Save</button>
+                            </div>
+                            <div className="handledBy">
+                                <select value={handle} onChange={handleHandledByChange}>
+                                    <option value="">Select Handled By</option>
+                                    <option value="GK">GK</option>
+                                    <option value="MD">MD</option>
+                                    <option value="KM">KM</option>
+                                    <option value="KV">KV</option>
+                                </select>
                             </div>
                         </div>
                     </div>
