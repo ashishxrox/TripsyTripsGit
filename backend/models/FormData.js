@@ -74,7 +74,6 @@ const FormDataSchema = new mongoose.Schema({
      },
      mstatus:{
           type: String,
-          required: true
      }
 });
 
