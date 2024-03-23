@@ -139,6 +139,7 @@ const EvisaBox = ({ data, docs }) => {
                         <div className="data-body-left" style={{ display: "flex", justifyContent: "space-between", color: "#20293a" }}>
                             <p>E-mail ID: <a href={`mailto:${data.email}`} style={{ color: "#20293a", textDecoration: "none", cursor: "pointer" }}>{data.email}</a></p>
                             <p>Contact : {data.contact}</p>
+                            <p>Marital Status : {data.mStatus}</p>
                         </div>
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p>Traveller Count: {data.travellerCount}</p>

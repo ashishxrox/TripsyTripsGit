@@ -27,7 +27,8 @@ const FormDataState = (props) => {
         uniqueStr: '',
         visaName: '',
         documentUniqueStrs: [],
-        portOfEntry: ''
+        portOfEntry: '',
+        mstatus: ''
 
     })
 

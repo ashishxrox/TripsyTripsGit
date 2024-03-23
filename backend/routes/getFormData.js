@@ -48,11 +48,14 @@ router.post('/', async (req, res) => {
             departDates,
             returnDates,
             documentUniqueStrs,
-            portOfEntry
+            portOfEntry,
+            mstatus
         } = req.body;
 
-        console.log(name)
-        console.log(email)
+        // console.log(name)
+        // console.log(email)
+        // console.log(mstatus)
+        console.log(req.body)
 
         const date = genDate()
 
@@ -60,23 +63,24 @@ router.post('/', async (req, res) => {
         // console.log(uniqueStr)
 
 
-        const formData = new FormData({
-            name,
-            email,
-            contact,
-            travellerCount,
-            totalCost,
-            eVisa,
-            departDates,
-            returnDates,
-            uniqueStr,
-            visaName,
-            documentUniqueStrs,
-            portOfEntry
-        });
+        // const formData = new FormData({
+        //     name,
+        //     email,
+        //     contact,
+        //     travellerCount,
+        //     totalCost,
+        //     eVisa,
+        //     departDates,
+        //     returnDates,
+        //     uniqueStr,
+        //     visaName,
+        //     documentUniqueStrs,
+        //     portOfEntry,
+        //     mstatus
+        // });
 
 
-        await formData.save();
+        // await formData.save();
 
         res.status(201).send(req.body);
     } catch (error) {
