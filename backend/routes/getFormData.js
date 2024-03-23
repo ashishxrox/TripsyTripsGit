@@ -52,35 +52,32 @@ router.post('/', async (req, res) => {
             mstatus
         } = req.body;
 
-        // console.log(name)
-        // console.log(email)
+        console.log(name)
+        console.log(email)
         // console.log(mstatus)
-        console.log(req.body)
+        // console.log(req.body)
 
         const date = genDate()
 
-        // const uniqueStr = date +name + totalCost + contact + travelDates
-        // console.log(uniqueStr)
+
+        const formData = new FormData({
+            name,
+            email,
+            contact,
+            travellerCount,
+            totalCost,
+            eVisa,
+            departDates,
+            returnDates,
+            uniqueStr,
+            visaName,
+            documentUniqueStrs,
+            portOfEntry,
+            mstatus
+        });
 
 
-        // const formData = new FormData({
-        //     name,
-        //     email,
-        //     contact,
-        //     travellerCount,
-        //     totalCost,
-        //     eVisa,
-        //     departDates,
-        //     returnDates,
-        //     uniqueStr,
-        //     visaName,
-        //     documentUniqueStrs,
-        //     portOfEntry,
-        //     mstatus
-        // });
-
-
-        // await formData.save();
+        await formData.save();
 
         res.status(201).send(req.body);
     } catch (error) {
