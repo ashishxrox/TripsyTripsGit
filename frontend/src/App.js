@@ -28,6 +28,7 @@ import TermAndCondition from './components/footer/TermAndCondition';
 import Refund from './components/footer/Refund';
 import Success from './components/PaymentStatus/Success';
 import Failure from './components/PaymentStatus/Failure';
+import ImageGallery from './components/admin/ImageGallery';
 
 const App = () => {
 
@@ -104,6 +105,7 @@ const App = () => {
               <Route exact path="/refund" index element={<Refund />} />
               <Route exact path="/success" index element={<Success />} />
               <Route exact path="/failure" index element={<Failure />} />
+              {/* <Route exact path="/imgGal" index element={<ImageGallery />} /> */}
               
             </Routes>
             <CallBox />

@@ -45,14 +45,15 @@ const ReqBox = (props) => {
                             {/* <p style={{ fontSize: "16px" }}>Processing Time:</p>
                             <p style={{ fontSize: "16px" }}>Duration:</p>
                             <p style={{ fontSize: "16px" }}>Validity:</p> */}
-                            {type.name !== 'Australia Tourist Visa (Subclass 600)' &&<p style={{ fontSize: "16px", color:"#000047"}}> Sticker Visa/Non E-Visa</p>}
-                            <p style={{ fontSize: "16px" }}>Tripsy Trips Service Charge: </p>
+                            {type.name !== 'Australia Tourist Visa (Subclass 600)' && type.name !== 'Georgia E-Visa'  &&<p style={{ fontSize: "16px", color:"#000047"}}> Sticker Visa/Non E-Visa</p>}
+                            
+                            <p style={{ fontSize: "16px"}}>Tripsy Trips Service Charge: </p>
                         </div>
                         <div className="card-info-text-right" style={{ textAlign: "right" }}>
                             {/* <p style={{ fontSize: "16px" }}>-</p>
                             <p style={{ fontSize: "16px" }}>-</p>
                             <p style={{ fontSize: "16px" }}>-</p> */}
-                            <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"20px"}}>&#8377;{type.totalCost}</p>
+                            <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"0px"}}>&#8377;{type.totalCost}</p>
                         </div>
                     </div>}
                     <Link to={{

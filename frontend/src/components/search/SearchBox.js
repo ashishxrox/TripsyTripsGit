@@ -34,6 +34,8 @@ const options = [
     { value: "Canada", label:"Canada" },
     { value: "Schengen", label:"Schengen" },
     { value: "Sri Lanka", label:"Sri Lanka" },
+    { value: "Tanzania", label:"Tanzania" },
+    { value: "Mongolia", label:"Mongolia" },
 ];
 
 const SearchBox = ({ onSearch }) => {

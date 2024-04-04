@@ -31,7 +31,8 @@ import qatar from '../../static/assets/country/qatar.jpeg'
 import america from '../../static/assets/country/america.jpeg'
 import canada from '../../static/assets/country/canada.jpeg'
 import lanka from '../../static/assets/country/lanka.jpeg'
-
+import tanzania from '../../static/assets/country/tanzania.jpeg'
+import mongolia from '../../static/assets/country/mongolia.jpeg'
 
 
 
@@ -182,6 +183,53 @@ const VisaState = (props) => {
       "__v": 0,
       "img_url": "../../static/media/azerbaijan.1c47e4e6a20702984ed4.jpeg",
       "tag": "azerbaijan"
+    },{
+      "_id": "65b2a1d7af8c1506be6a91ad1w2",
+      "country": "Tanzania",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Tanzania E-Visa",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 90,
+          "processingTime": '10-15',
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo",
+          },
+          "totalCost": 5500,
+          "_id": "65b2a1d7af8c1506be6a91ae1wx1"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/tanzania.c9072cec243d7f862aad.jpeg",
+      "tag": "tanzania"
+    },
+    {
+      "_id": "65b2a1d7af8c1506be6a91ad3w2",
+      "country": "Mongolia",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Mongoloa E-Visa",
+          "entry": "Single",
+          "validityDays": 120,
+          "durationDays": 30,
+          "processingTime": '4-6',
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photo",
+          },
+          "totalCost": 2900,
+          "_id": "65b2a1d7af8c1506be6a91ae3wx1"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/mongolia.da1d9da331c9c5e53067.jpeg",
+      "tag": "Mongolia"
     },
     {
       "_id": "65b130a99c1c437d4930fd3b",
@@ -351,7 +399,7 @@ const VisaState = (props) => {
     {
       "_id": "65b2a166af8c1506be6a91aa",
       "country": "Georgia",
-      "eVisa": "yes",
+      "eVisa": "no",
       "visaType": [
         {
           "name": "Georgia E-Visa",
@@ -1121,7 +1169,7 @@ const VisaState = (props) => {
         jordan,
         kyrgyzstan,
         laos,
-        madagascar,qatar, america,canada, lanka
+        madagascar,qatar, america,canada, lanka, tanzania, mongolia
     ]
     const [countries, setCountries] = useState(initCountries);
     // const [images, setImages] = useState(initImg);

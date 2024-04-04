@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const ImageGallery = () => {
     const [imageUrls, setImageUrls] = useState([]);
 
@@ -23,10 +24,13 @@ const ImageGallery = () => {
 
     return (
         <div className="image-gallery">
-            {imageUrls.map((imageUrl, index) => (
+            {/* {imageUrls.map((imageUrl, index) => (
                 // eslint-disable-next-line
                 <img key={index} src={`http://localhost:4321/${imageUrl.path}`} alt={`Image ${index + 1}`} />
-            ))}
+            ))} */}
+
+            {/* <img src={Tanzania} alt="" /> */}
+
         </div>
     );
 };
