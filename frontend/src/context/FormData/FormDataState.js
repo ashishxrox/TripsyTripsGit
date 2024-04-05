@@ -12,7 +12,7 @@ const localHost = 'http://localhost:4321'
 
 const FormDataState = (props) => {
 
-    
+
     // Define state variables to hold form data
     const [formData, setFormData] = useState({
         name: '',
@@ -108,13 +108,38 @@ const FormDataState = (props) => {
                 body: JSON.stringify(formData)
             });
             if (response.ok) {
+                setSubmitted(true)
                 // Handle success
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/evisa`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: formData.name,
+                            type: 'E-visa'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
+
                 console.log('Form data submitted successfully');
                 alert("Your form was submitted successfully, please complete the payment to proceed further!")
 
                 callPhonePePaymentAPI();
 
-                setSubmitted(true)
+                
+
+
             } else {
                 // Handle errors
                 console.error('Failed to submit form data');
@@ -136,7 +161,7 @@ const FormDataState = (props) => {
                 }
             });
             // console.log(response.data);
-    
+
             // Check if response data contains the redirect URL
             if (response.data && response.data.redirectUrl) {
                 // Open the redirect URL in a new tab/window
@@ -189,6 +214,28 @@ const FormDataState = (props) => {
             });
             if (response.ok) {
                 // Handle success
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/nonevisa`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: nonEvisa.name,
+                            type: 'Non E-Visa'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
+
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
             } else {
@@ -215,6 +262,29 @@ const FormDataState = (props) => {
             });
             if (response.ok) {
                 // Handle success
+
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/flight`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: flight.name,
+                            type: 'flight'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
+
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
 
@@ -241,6 +311,28 @@ const FormDataState = (props) => {
             });
             if (response.ok) {
                 // Handle success
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/hotel`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: hotel.name,
+                            type: 'hotel'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
+
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
 
@@ -267,6 +359,27 @@ const FormDataState = (props) => {
             });
             if (response.ok) {
                 // Handle success
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/insurance`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: insurance.name,
+                            type: 'insurance'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
 
@@ -293,6 +406,28 @@ const FormDataState = (props) => {
             });
             if (response.ok) {
                 // Handle success
+                try {
+                    const notifyResponse = await fetch(`${apiURL}/api/getNotify/package`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: packageData.name,
+                            type: 'package'
+                        })
+                    });
+                    if (notifyResponse.ok) {
+                        console.log('Notification sent successfully');
+                        // Handle notification success if needed
+                    } else {
+                        console.error('Failed to send notification');
+                        // Handle notification failure if needed
+                    }
+                } catch (error) {
+                    console.error('Error sending notification:', error);
+                }
+
                 console.log('Form data submitted successfully');
                 alert("Your application was submitted successfully, we will get in touch with you soon!")
 

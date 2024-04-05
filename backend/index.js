@@ -27,6 +27,7 @@ app.use('/api/delete', require('./routes/deleteQueries.js'))
 
 
 app.use('/api/phonepe',require('./routes/paymentEndpoint.js'))
+app.use('/api/getNotify',require('./routes/getNotify.js'))
 
 
 
