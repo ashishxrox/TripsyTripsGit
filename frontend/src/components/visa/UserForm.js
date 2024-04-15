@@ -198,9 +198,9 @@ const UserForm = (props) => {
                                     <label htmlFor="contact" className="form-label">Contact Number:</label>
                                     <input type="text" className="form-control" id="contact" name='contact' onChange={onChange} required />
                                 </div>
-                                <div className="mb-3" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                                    <label htmlFor="mstatus" className="form-label">Marital status: </label>
-                                    <select name="mstatus" id="mstatus" onChange={onChange} style={{padding:"5px 40px", borderRadius:"5px", border:"1px solid grey"}}>
+                                <div className="mb-3">
+                                    <label htmlFor="mstatus" className="form-label">Marital status: </label> <br />
+                                    <select name="mstatus" id="mstatus" onChange={onChange} style={{padding:"5px 10px", borderRadius:"5px", border:"1px solid grey", width: "100%", textAlign:"left", color:"grey", border:"1px solid grey"}}>
                                         <option value=" ">Select marital status</option>
                                         <option value="Single">Single</option>
                                         <option value="Married">Married</option>
