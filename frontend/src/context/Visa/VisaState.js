@@ -524,7 +524,7 @@ const VisaState = (props) => {
             "doc3": "Pan Card  Scan",
             "doc4": "Passport Size Photo Scan"
           },
-          "totalCost": 8900,
+          "totalCost": 6900,
           "_id": "65b12e329c1c437d4930fd31"
         },
         {
