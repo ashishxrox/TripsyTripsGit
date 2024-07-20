@@ -1,0 +1,45 @@
+.visa-banner{
+    height: 41vh;
+    background-size: 1500px 390px;
+}
+
+.about-title-box{
+    width: 35%;
+}
+
+.visa-title-box{
+    width: 35%;
+}
+.n-visa-title-box{
+    width: 65%;
+}
+
+.visa-title-box h1{
+    font-size: 60px
+}
+
+@media only screen and (max-width:600px){
+    .visa-banner{
+        height: 310px;
+        background-size: cover;
+    }
+
+    .about-title-box{
+        width: 100%;
+    }
+    .visa-title-box{
+        width: 60%;
+    }
+
+    .n-visa-title-box{
+        width: 100%;
+    }
+
+    .visa-title-box h1{
+        font-size: 34px;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    
+    
+}

@@ -1,29 +1,53 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-
-import '../../static/countryBox.css'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../static/countryBox.css';
 
 const CountryBox = (props) => {
-    const { country} = props;
-    // console.log(country.img_url)
-   
+    const { country } = props;
+
+    const overlayStyle = {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        height: "100%",
+        width: "100%",
+        background: "linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0))",
+        zIndex: 2,
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        flexDirection: "column",
+        textAlign: "center",
+        color: "#fff",
+        fontFamily: "Clash Display",
+        fontWeight: "300",
+    };
 
     return (
-        <div className='col-md-3 my-3'>
-            <div className="card country-card" style={{width: "18rem",height:"20rem", boxShadow:"10px 10px 10px", background:"#fff"}}>
-                <img src={country.img_url} className="card-img-top" alt="..." />
-                    <div className="card-body" style={{color: "#000047"}}>
-                        <h5 className="card-title">{country.country}</h5>
-                        {/* <p className="card-text">{country.price}</p> */}
-                        {/* <p className="card-text country-name">Get on, {country.issue_date}</p> */}
-                        <Link to={{
-                            pathname:`/visa/application/${country.country}`}} state={country}
-                        className="btn btn-primary" style={{backgroundColor:"#000047", color:"#fff", textShadow:"none", border:"1px solid #000047", boxShadow:"2px 2px 5px #000", width:"100%"}}>Apply Now</Link>
+        <div className='col-md-3 my-1' style={{height:"450px", overflow:"hidden", borderRadius:"8px"}}>
+            <div className='card-hover'  style={{height:"100%", width:"100%", borderRadius:"8px"}}>
+                <Link to={{ pathname: `/visa/application/${country.country}`, state: country }} state={country} className="card country-card" style={{ width: "19.5rem", height: "26rem", background: "#fff", overflow:"hidden" }}>
+                    <img src={country.img_url} alt={country.country} style={{ height: "100%", width: "100%", borderRadius: "5px", objectFit:"cover" }} />
+                    <div className="overlay py-4" style={overlayStyle}>
+                        <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                        {country.country}
+                        <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                     </div>
+                </Link>
+
+                <div className="visit-btn justify-content-center align-items-center">
+                    <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
+
+                    </div>
+                    <div className="link-container" style={{ position: "absolute", zIndex: "9999" }}>
+                        <Link to={{ pathname: `/visa/application/${country.country}`, state: country }} state={country}  style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "200", fontSize: "24px" }}  >
+                            Visit
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CountryBox
+export default CountryBox;

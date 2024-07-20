@@ -1,93 +1,98 @@
-.container .search-title {
-    font-size: 45px;
-}
-
-.search-btn {
-    transform: translate(-70px, 25px);
-}
-
-.search-left-cont,
-.search-right-cont {
-    display: none;
-}
-
 .search-form {
-    width: 50%;
-}
-
-
-.steps-for-visa li {
-    list-style-type: none;
-    position: relative;
-    padding-left: 15px;
-    color: #fff;
-}
-
-.steps-for-visa li:before {
-    content: "\25BA \0020";
-    font-size: 14px;
-    position: absolute;
-    top: 2px;
-    left: -10px;
-    color: #fff;
-}
-
-@media only screen and (max-width:600px) {
-
-    .container .search-title {
-        margin-top: 50px;
-        transform: translateY(-45px);
-        text-align: center;
-        font-size: 30px;
-    }
-
-    .search-btn {
-        transform: translate(-20px, 25px);
-    }
-
-    .search-form {
-        width: 80%;
-        position: absolute;
-        top: 100px;
-    }
-
-
-    .search-left-cont,
-    .search-right-cont {
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-color: #000047;
-
-    }
-
-    .search-left-cont {
-        position: absolute;
-        width: 50%;
-        left: -5px;
-        bottom: -5px;
-        border-radius: 50%;
-        z-index: -10;
-    }
-
-    .search-right-cont {
-        position: absolute;
-        width: 50%;
-        right: -5px;
-        bottom: -5px;
-        border-radius: 60%;
-        z-index: -99;
-    }
+    position: relative; /* Allow for positioning the search icon */
+    width: 100%;
+  }
+  
+  .search-form .react-select__control {
+    border: none; /* Remove default border */
+    border-radius: 15px; /* Add rounded corners */
+    background-color: white; /* Set white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    padding: 10px 15px; /* Add padding for better spacing */
+  }
+  
+  .search-form .react-select__control--is-focused {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .search-form .react-select__input {
+    font-size: 16px; /* Adjust font size */
+    color: #000047; /* Set text color */
+    padding: 10px 15px; /* Add padding for better spacing */
+  }
+  
+  .search-form .react-select__placeholder {
+    color: #000047; /* Set placeholder text color */
+  }
+  
+  .search-form .react-select__menu {
+    border-radius: 15px; /* Add rounded corners to the dropdown */
     
-    .steps-for-visa{
-        position: relative;
-        top: -15px;
-        left: 20px;
+  }
+  
+  .search-form .react-select__option {
+    color: #000047; /* Set text color */
+    background-color: white; /* Set white background */
+    padding: 8px 1px; /* Add padding for better spacing */
+    
+  }
+  
+  .search-form .react-select__option--is-selected {
+    background-color: #000047; /* Set blue background for selected option */
+    color: white; /* Set white text color */
+  }
+  
+  .search-form .react-select__option--is-focused {
+    background-color: #000047; /* Set blue background for focused option */
+    color: white; /* Set white text color */
+  }
+  
+  .search-form .react-select__single-value {
+    color: #000047; /* Set text color for the selected value */
+  }
+  
+  .search-form .react-select__dropdown-indicator {
+    color: #000047; /* Set search icon color */
+    padding: 8px; /* Add padding for better spacing */
+    transform: translateX(-10px); /* Adjust search icon position */
+  }
+  
+  .search-form .react-select__indicators {
+    border: none; /* Remove border for indicators */
+  }
+
+
+  /* RESPONSIVE DESIGN */
+
+  .fo-cont{
+    width: 820px;
+    flex-direction: row;
+    height: 250px; 
+    margin: 30px;
+    padding: 20px 0;
+  }
+
+  .fo-cont div{
+    width: 100%;
+  }
+  
+
+  @media only screen and (max-width:600px){
+    .search-form{
+      width: 90%;
+      
     }
 
-    .steps-title{
-        position: relative;
-        top: -15px;
+    .fo-cont{
+      width: 100%;
+      flex-direction: column;
+      overflow-x: hidden;
+      height: 400px;
+      margin: 0px;
+      padding: 0px 0;
     }
-
-}
+    .fo-cont div{
+      width: 90%;
+    }
+  
+  }

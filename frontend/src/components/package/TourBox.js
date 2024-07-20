@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import '../../static/tourBox.css'
 import PackageForm from './PackageForm';
@@ -8,36 +8,46 @@ import PackageForm from './PackageForm';
 const CountryBox = (props) => {
     const { tour } = props;
     // console.log(tour)
-   
+    const overlayStyle = {
+        position: "absolute",
+        top: '-10px',
+        left: 0,
+        height: "100%",
+        width: "100%",
+        zIndex: 2,
+        display: "flex",
+        justifyContent: "end",
+        alignItems: "start",
+        flexDirection: "column",
+        textAlign: "center",
+        fontWeight: "500",
+    };
+
 
     return (
-        <div className='col-md-3 my-3'>
-            <div className="card tour-card" style={{width: "18rem",height:"20rem", boxShadow:"10px 10px 10px", background:"#fff"}}>
-                <img src={tour.img_url} className="card-img-top" alt="..." />
-                    <div className="card-body" style={{color: "#000047"}}>
-                        <h5 className="card-title">{tour.place}</h5>
-                        
-                        {/* <Link to={{
-                            pathname:`/package/application/${tour.place}`}} state={tour}
-                        className="btn btn-primary" style={{backgroundColor:"#000047", color:"#fff", textShadow:"none", border:"1px solid #000047", boxShadow:"2px 2px 5px #000", width:"100%"}}>Apply Now</Link> */}
-                        {tour.place === 'Dubai' && <PackageForm dest={'Dubai'}/>}
-                        {tour.place === 'Singapore' && <PackageForm dest={'Singapore'}/>}
-                        {tour.place === 'Malaysia' && <PackageForm dest={'Malaysia'}/>}
-                        {tour.place === 'Bali' && <PackageForm dest={'Bali'}/>}
-                        {tour.place === 'Turkey (Istanbul and Cappadocia)' && <PackageForm dest={'Turkey (Istanbul and Cappadocia)'}/>}
-                        {tour.place === 'Kerala' && <PackageForm dest={'Kerala'}/>}
-                        {tour.place === 'Kashmir' && <PackageForm dest={'Kashmir'}/>}
-                        {tour.place === 'Vietnam' && <PackageForm dest={'Vietnam'}/>}
-                        {tour.place === 'Sri Lanka' && <PackageForm dest={'Sri Lanka'}/>}
-                        {tour.place === 'Thailand' && <PackageForm dest={'Thailand'}/>}
+        <div className='col-12 col-md-6 col-lg-3 mb-5 d-flex justify-content-start align-items-start' style={{ paddingLeft: "0", paddingRight: "0",  }}>
+            <div className="card tour-card d-flex justify-content-around align-items-center" style={{ width: "20rem",height:"32rem", background: "#fff", paddingLeft: "0", paddingRight: "0", overflow:"hidden",border:"0.5px solid #808080" }}>
+                <img src={tour.img_url} alt={tour.place} style={{ height: "70%", width: "100%", borderRadius: "5px", position: "relative", top: "-90px", borderRadius: "3px", objectFit: "cover" }} />
+                <div className=" mx-4" style={overlayStyle}>
+                    
+                    <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "500" }}>{tour.place} Package</h3>
+                    <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}>Rs. 25,000 <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>
+                    <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "250px", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
+                        <Link to={{pathname: `/package/application/${tour.place}`}}  style={{ fontSize: "16px", color: "rgba(2, 71, 134, 1)", textDecoration: "none" }}>See Package</Link>
                     </div>
+                </div>
             </div>
         </div>
     )
 }
 
+
+{/* <Link to={{
+    
+}} state={tour}
+    className="btn btn-primary" style={{ backgroundColor: "#000047", color: "#fff", textShadow: "none", border: "1px solid #000047", boxShadow: "2px 2px 5px #000", width: "100%" }}>Apply Now</Link> */}
 export default CountryBox
 
 
 
- 
+

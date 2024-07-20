@@ -2,8 +2,63 @@
     width: 70%;
 }
 
+.contact-body{
+    flex-direction: row;
+    width: 90%;
+}
+
+.cont-outer{
+    height: 100vh;
+}
+
+.cb-left{
+    padding: 50px;
+}
+
+.contact-desk-text{
+    display: block;
+}
+
+.contact-mob-text{
+    display: none;
+}
+
+.cb-right-row1{
+    flex-direction: row;
+}
+
+
 @media only screen and (max-width: 600px){
     .cont .parent{
         width: 115%;
     }
+
+    .cont-outer{
+        height: 1200px;
+    }
+
+    .contact-body{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .cb-left{
+        padding: 0px;
+    }
+
+    .contact-desk-text{
+        display: none;
+    }
+    
+    .contact-mob-text{
+        display: block;
+    }
+    .cb-right{
+        margin-top: 50px;
+    }
+
+    .cb-right-row1{
+        flex-direction: column;
+    }
+    
 }

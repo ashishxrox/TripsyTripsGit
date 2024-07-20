@@ -5,7 +5,7 @@ const fs = require('fs')
 const NonEvisaFormData = require('../models/NonEvisaModel')
 const PackageData = require('../models/Package')
 const FlightData = require('../models/Flight')
-const HotelData = require('../models/Hotel')
+const ContactData = require('../models/ContactForm')
 const InsuranceData = require('../models/Insurance')
 const FormData = require('../models/FormData')
 const DocumentData = require('../models/CountryImages')
@@ -49,11 +49,11 @@ router.get('/flights', async (req, res) => {
     }
 })
 
-//Route 4: Get Non E Visa Data using: GET "/api/fetchFormData/hotels"
+//Route 4: Get COntact form Data using: GET "/api/fetchFormData/contact"
 
-router.get('/hotels', async (req, res) => {
+router.get('/contact', async (req, res) => {
     try {
-        const data = await HotelData.find({});
+        const data = await ContactData.find({});
         res.send(data);
     } catch (error) {
         console.error('Error fetching data:', error);

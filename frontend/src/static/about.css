@@ -1,50 +1,277 @@
-.banner-img {
-    width: 100%;
-    height: 600px;
-  }
-  .sub-title {
-    font-size: 30px;
-    font-family: "DM Serif Display";
-  }
-  .title {
-    font-size: 50px;
-    color: #000047;
-    font-family: "DM Serif Display";
-  }
+.about-title-box{
+  font-size: 60px;
+  font-weight: 400;
+  width: 35%;
+}
 
-  .flight-card{
-    background-image: url('./assets/images/flight.jpeg');
-    background-size: cover;
-    background-position: fixed;
-  }
+.about-banner{
+  height: 41vh;
+  background-size: 1500px 390px;
+}
+.about-banner .overlay{
+  height: 100%;
+}
 
-  .hotel-card{
-    background-image: url('./assets/images/hotel.jpeg');
-    background-size: cover;
-    background-position: fixed;
-  }
+.about-title-box h1{
+  font-size: 60px;
+  font-weight: 400;
+}
 
-  .visa-card{
-    background-image: url('./assets/images/visa.jpeg');
-    background-size: cover;
-    background-position: fixed;
-  }
-  .insurance-card{
-    background-image: url('./assets/images/insurance.avif');
-    background-size: cover;
-    background-position: fixed;
-  }
-  .package-card{
-    background-image: url('./assets/images/holiday.jpeg');
-    background-size: cover;
-    background-position: fixed;
-  }
+.akm-cont{
+  width: 90%;
+}
+
+.akmr-btn{
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.akmr-btn:hover{
+  border: 1px solid rgba(151, 171, 182, 1);
+  color: rgba(151, 171, 182, 1);
+}
+
+.about-mission{
+  height: 60vh;
+}
+
+.am-cont{
+  flex-direction: row;
+  width: 65%;
+}
+.amc-right{
+  position: absolute;
+  height: 45vh;
+  width: 45%;
+  right: 75px;
+}
+
+.amc-left h2{
+  font-size: 46px;
+}
+
+.about-vision{
+  height: 60vh;
+}
+
+.av-cont{
+  flex-direction: row-reverse;
+  width: 65%;
+}
+
+.avc-right{
+  position: absolute;
+  height: 45vh;
+  width: 45%;
+  left: 75px;
+}
+
+.about-values{
+  height: 65vh;
+}
+
+.av-title{
+  width: 30%;
+}
+
+.av-title h2{
+  font-size: 46px;
+}
+
+.av-boxes{
+  flex-direction: row;
+}
+
+.about-know-more{
+  flex-direction: row;
+  height: 150vh;
+}
+
+.akm-cont{
+  flex-direction: row;
+}
+
+.akm-left h2{
+  font-size: 46px;
+}
+.akm-left{
+  align-items: center;
+  flex-basis: 43%;
+}
+
+.akm-right{
+  flex-basis: 43%;
+}
+
+.akmr-left{
+  width: 100%;
+}
+
+.akmr-right{
+  width: 100%;
+}
+
+.akmr-btn{
+  width: 185px;
+}
+.akm-w-map{
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+}
+
+.ac-title h3{
+  font-size: 46px;
+}
+
+.ac-title {
+  width: 40%;
+}
+
+.aboutLine1{
+  display: block;
+}
+
+.ac-body{
+  flex-direction: row;
+}
+
 
 @media only screen and (max-width:600px){
-  .banner-img {
+  .about-title-box{
+    font-size: 34px;
+    font-weight: 400;
     width: 100%;
-    height: 300px;
+    text-shadow: 2px 2px 5px #000;
   }
+  .about-banner{
+    height: 310px;
+    background-size: contain;
+  }
+  .about-banner .overlay{
+    height: 40%;
+  }
+
+  .about-mission{
+    height: 600px;
+  }
+  .av-cont{
+    flex-direction: column;
+    width: 100%;
+  }
+  .amc-right{
+    position: relative;
+    height: 250px;
+    width: 85%;
+    left: 0px;
+    top: 60px;
+  }
+  .amc-left h2{
+    font-size: 30px;
+    padding: 5px 20px;
+    margin-top: 40px;
+  }
+
+  .amc-left p{
+    padding: 5px 20px;
+  }
+
+  .about-vision{
+    height: 600px;
+  }
+
+  .av-cont{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .am-cont{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .avc-right{
+    position: relative;
+    height: 250px;
+    width: 85%;
+    left: 0px;
+    top: 60px;
+  }
+
+  .about-values{
+    height: 1500px;
+  }
+
+  .av-title{
+    width: 80%;
+  }
+
+  .av-title h2{
+    font-size: 30px;
+  }
+
+  .av-boxes{
+    flex-direction: column;
+  }
+  .av-box1{
+    margin: 20px 0;
+  }
+
+  .about-know-more{
+    flex-direction: column;
+    height: 2000px;
+  }
+  
+  .akm-cont{
+    flex-basis: 50%;
+    flex-direction: column;
+  }
+  .akm-left{
+    align-items: flex-start;
+    flex-basis: 15%;
+  }
+
+  .akm-left h2{
+    font-size: 30px;
+  }
+
+  .akm-right{
+    flex-basis: 85%;
+  }
+
+  .akmr-left{
+    width: 45%;
+  }
+
+  .akmr-right{
+    width: 45%;
+  }
+
+  .akm-cont{
+    width: 100%;
+  }
+  .akmr-btn{
+    width: 145px;
+  }
+  .akm-w-map{
+    position: static;
+    flex-basis: 50%;
+  }
+  .ac-title {
+    width: 100%;
+  }
+  .ac-title h3{
+    font-size: 30px;
+  }
+  .aboutLine1{
+    display: none;
+  }
+  .ac-body{
+    flex-direction: column-reverse;
+  }
+  
 }
 
 

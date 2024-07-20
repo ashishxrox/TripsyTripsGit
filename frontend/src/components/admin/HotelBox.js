@@ -38,7 +38,7 @@ const HotelBox = ({ data }) => {
     const handleSubmit = async () => {
 
         try {
-            const query = await axios.get(`${apiURL}/api/update/hotelcomment/${data.uniqueStr}/${comment}`)
+            const query = await axios.get(`${apiURL}/api/update/contactcomment/${data.uniqueStr}/${comment}`)
             alert("Comment added");
         } catch (error) {
             console.log(error)
@@ -60,7 +60,7 @@ const HotelBox = ({ data }) => {
 
     const handleHandledBySubmit = async () => {
         try {
-            const query = await axios.get(`${apiURL}/api/update/hotelhandledBy/${data.uniqueStr}/${handle}`)
+            const query = await axios.get(`${apiURL}/api/update/contacthandledBy/${data.uniqueStr}/${handle}`)
             alert(`Client handled by ${handle}`);
         } catch (error) {
             console.log(error)
@@ -82,8 +82,8 @@ const HotelBox = ({ data }) => {
                             <p>Contact : {data.contact}</p>
                         </div>
                         <div className="data-body-right" style={{color:"#20293a", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                            <p>Check In Date: {data.checkInDate}</p>
-                            <p>Check Out Date: {data.checkOutDate}</p>
+                            <p>Subject: {data.subject}</p>
+                            <p>Description: {data.description}</p>
                         </div>
                     </div>
                     <div className="data-body-bottom">

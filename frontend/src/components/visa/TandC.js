@@ -6,7 +6,7 @@ const TandC = ({ closeBtn }) => {
         <div className="tandc-container">
             <div className="tandc-box">
                 <button className="close-btn" onClick={closeBtn}>X</button>
-                <h2 style={{width:"95%",backgroundColor:"#000047", padding:"10px 20px", color:"#fff"}}>Terms and Conditions</h2>
+                <h2 style={{width:"95%", padding:"10px 20px", fontFamily:"Clash Display"}}>Terms and Conditions</h2>
                 <ul style={{color:"#000"}}>
                     <li style={{listStyleType:"disc"}}>We are a Visa facilitator only and do not influence any visa delays or immigration issues if
                         occurred.</li>

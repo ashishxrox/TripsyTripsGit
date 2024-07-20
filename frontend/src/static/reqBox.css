@@ -6,6 +6,20 @@
     transform: translate(-16px, -17px);
 }
 
+.vtcbb{
+    background-color: rgba(2, 71, 134, 1);
+    border: 1px solid rgba(2, 71, 134, 1);
+    color: #fff;
+    transition: 1s;
+}
+
+.vtcbb:hover{
+    background-color: rgba(3, 21, 47, 1);
+    border: 1px solid rgba(3, 21, 47, 1);
+    color: #fff;
+    transition: 1s;
+}
+
 @media only screen and (max-width:600px) {
     .visa-type-card-container{
         transform: translateX(-65px);

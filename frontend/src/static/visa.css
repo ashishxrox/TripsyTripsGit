@@ -4,6 +4,93 @@
   top: -10px;
 }
 
+.visa-title{
+  height: 40vh;
+}
+
+
+.head-box{
+  width: 30%;
+}
+.head-box h2{
+  font-size: 46px;
+}
+.headbox-desc{
+  width: 80%;
+}
+
+.v-options-box, .v-options{
+  width: 65%;
+}
+
+.visat-title{
+  height: 25vh;
+}
+
+.vt-head-box{
+  width: 40%;
+  flex-basis: 65%;
+}
+
+.vt-head-box h3{
+  font-size: 46px;
+}
+
+.vt-options-box{
+  width: 20%;
+  flex-basis: 35%;
+}
+
+.vt-options-box h6{
+  font-size: 24px;
+}
+
+@media only screen and (max-width:600px){
+  .visa-title{
+    height: 650px;
+  }
+  .head-box h2{
+    font-size: 30px;
+  }
+  .head-box{
+    width: 100%;
+  }
+  .headbox-desc{
+    width: 100%;
+  }
+
+  .v-options-box{
+    width: 100%;
+  }
+
+  .v-options{
+    width:85%;
+  }
+
+  .visat-title{
+    height: 150px;
+  }
+
+  .vt-head-box{
+    width: 100%;
+    flex-basis: 25%;
+  }
+  .vt-head-box h3{
+    font-size: 30px;
+  }
+
+  .vt-options-box{
+    width: 100%;
+    flex-basis: 15%;
+  }
+  .vt-options-box h6{
+    font-size: 20px;
+  }
+  
+  
+  
+}
+
 @media only screen and (max-width:600px){
     .search-bar {
         position: relative;

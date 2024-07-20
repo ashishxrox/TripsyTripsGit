@@ -1,18 +1,26 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import ReactGA from 'react-ga';
 import { useLocation } from 'react-router-dom'
+import NewsLetter from '../newsLetter/NewsLetter';
 
 
 import Contact from './Contact'
 import FlightHotels from './FlightHotels'
 import HomeBanner from './HomeBanner'
-import HomeIntro from './HomeIntro'
-import NavBox from '../navbar/NavBox'
+import HomeOurPackage from './HomeOurPackage';
+import HomeOurVisa from './HomeOurVisa';
+import HomeOurVisaMob from './HomeOurVisaMob';
+import PlaceToVisit from './PlaceToVisit';
+// import NavBox from '../navbar/NavBox'
 import Reviews from './Reviews'
 
+import '../../static/home.css'
+import HomeRegVisa from './HomeRegVisa';
 
 
-const Home = ({onLoadStart, onLoadComplete}) => {
+
+
+const Home = ({ onLoadStart, onLoadComplete }) => {
 
   const location = useLocation()
 
@@ -20,7 +28,7 @@ const Home = ({onLoadStart, onLoadComplete}) => {
     ReactGA.initialize('G-QTRPBPD2RZ'); // Initialize ReactGA with your Measurement ID
     ReactGA.pageview(window.location.pathname + window.location.search); // Track page views
 
-}, []);
+  }, []);
 
   useEffect(() => {
     // Call onLoadStart when the component starts loading
@@ -34,15 +42,25 @@ const Home = ({onLoadStart, onLoadComplete}) => {
     }, 1000); // Adjust the delay as needed
   }, [onLoadStart, onLoadComplete]);
 
-  
+
   return (
-    <div>
-      <HomeBanner/>
-      <HomeIntro/>
-      <NavBox/>
-      <FlightHotels/>
-      <Reviews/>
-      <Contact/>
+    <div className='main-home-cont'>
+      <HomeBanner />
+
+      {/* <NavBox /> */}
+      <div className='hov-desk'>
+        <HomeOurVisa />
+      </div>
+      <div className="hov-mobile">
+        <HomeOurVisaMob />
+      </div>
+      <HomeRegVisa/>
+
+      <HomeOurPackage />
+      <FlightHotels />
+      <PlaceToVisit />
+      <Reviews />
+      {/* <Contact /> */}
     </div>
   )
 }

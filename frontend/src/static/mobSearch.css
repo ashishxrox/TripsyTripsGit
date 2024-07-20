@@ -1,0 +1,10 @@
+.mob-search-cont{
+    transform: translateY(-250%);
+    transition: 1s;
+    width: 100vw;
+}
+
+.mob-search-cont-drop{
+    transform: translateY(20%);
+    
+}

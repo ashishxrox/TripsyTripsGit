@@ -4,7 +4,7 @@ const Insurance = require('../models/Insurance')
 const Flight = require('../models/Flight')
 const NonEvisaFormData = require('../models/NonEvisaModel')
 const Package = require('../models/Package')
-const HotelData = require('../models/Hotel')
+const ContactData = require('../models/ContactForm')
 
 const router = express.Router();
 
@@ -30,9 +30,9 @@ router.delete('/flight', async(req, res)=>{
     }
 })
 
-router.delete('/hotel', async(req, res)=>{
+router.delete('/contact', async(req, res)=>{
     try {
-        await HotelData.deleteMany({})
+        await ContactData.deleteMany({})
 
         res.status(200).json({message: "All entries deleted"})
     } catch (error) {

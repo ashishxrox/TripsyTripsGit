@@ -1,97 +1,894 @@
 import '../../static/search.css';
+import countryImg from '../../static/assets/country/america.jpeg'
+import { Link } from 'react-router-dom'
+import FormDataContext from '../../context/FormData/FormDataContext'
 
-import React, { useState } from 'react';
+
+import React, { useState, useContext } from 'react';
 import Select from 'react-select';
 
 const options = [
-    { value: "United Arab Emirates", label: "United Arab Emirates" },
-    { value: "Azerbaijan", label: "Azerbaijan" },
-    { value: "United Kingdom", label: "United Kingdom" },
-    { value: "Turkey", label: "Turkey" },
-    { value: "Egypt", label: "Egypt" },
-    { value: "Australia", label: "Australia" },
-    { value: "Ethiopia", label: "Ethiopia" },
-    { value: "Bahrain", label: "Bahrain" },
-    { value: "New Zealand", label: "New Zealand" },
-    { value: "Taiwan", label: "Taiwan" },
-    { value: "Vietnam", label: "Vietnam" },
-    { value: "Saudi Arabia", label: "Saudi Arabia" },
-    { value: "Moldova", label: "Moldova" },
-    { value: "Morocco", label: "Morocco" },
-    { value: "Oman", label: "Oman" },
-    { value: "Russia", label: "Russia" },
-    { value: "Rwanda", label: "Rwanda" },
-    { value: "Cambodia", label: "Cambodia" },
-    { value: "Georgia", label: "Georgia" },
-    { value: "Hong Kong", label: "Hong Kong" },
-    { value: "Indonesia", label: "Indonesia" },
-    { value: "Jordan", label: "Jordan" },
-    { value: "Kyrgyzstan", label: "Kyrgyzstan" },
-    { value: "Laos", label: "Laos" },
-    { value: "Madagascar", label: "Madagascar" },
-    { value: "Qatar", label:"Qatar" },
-    { value: "United States of America", label:"United States of America" },
-    { value: "Canada", label:"Canada" },
-    { value: "Schengen", label:"Schengen" },
-    { value: "Sri Lanka", label:"Sri Lanka" },
-    { value: "Tanzania", label:"Tanzania" },
-    { value: "Mongolia", label:"Mongolia" },
+  {
+    value: "United Arab Emirates",
+    label: "UAE 30 Days Single Entry E-Visa",
+    flag: "uae",
+    category: "E-Visa",
+    img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+    visaType: {
+      name: "UAE 30 Days Single Entry E-Visa",
+      entry: "Single",
+      validityDays: 60,
+      durationDays: 30,
+      processingTime: '3-5',
+      docsReq: {
+        doc1: "Passport Scan (Front Page)",
+        doc2: "Passport Scan (Last Page)",
+        doc3: "Pan Card  Scan",
+        doc4: "Passport Size Photo Scan"
+      },
+      totalCost: 8900,
+      _id: "65b12e329c1c437d4930fd31"
+    },
+  },
+  {
+    value: "United Arab Emirates",
+    label: "UAE 60 Days Single Entry E-Visa",
+    flag: "uae",
+    category: "E-Visa",
+    img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+    visaType: {
+      "name": "UAE 60 Days Single Entry E-Visa",
+      "entry": "Single",
+      "validityDays": 60,
+      "durationDays": 60,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Pan Card Scan",
+        "doc4": "Passport Size Photo Scan"
+      },
+      "totalCost": 14000,
+      "_id": "65b12e329c1c437d4930fd34"
+    },
+  },
+  {
+    value: "Hong Kong",
+    label: "Hong Kong E-Visa",
+    flag: "hk",
+    category: "E-Visa",
+    img_url: "../../static/media/hongKong.a6f8c79a61c063b7ce9d.jpg",
+    visaType: {
+      "name": "Hong Kong E-Visa",
+      "entry": "Multiple",
+      "validityDays": 180,
+      "durationDays": 14,
+      "processingTime": '1-2',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+      },
+      "totalCost": 555,
+      "_id": "65b2a1d7af8c1506be6a91ae"
+    }
+  },
+  {
+    value: "Vietnam",
+    label: "Vietnam E-Visa",
+    flag: "vn",
+    category: "E-Visa",
+    img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+    visaType: {
+      "name": "Vietnam E-Visa",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": '7-8',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+      },
+      "totalCost": 2700,
+      "_id": "65b2b349af8c1506be6a91ed"
+    },
+  },
+  {
+    value: "Vietnam",
+    label: "Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )",
+    flag: "vn",
+    category: "E-Visa",
+    img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+    visaType: {
+      "name": "Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": '2-3',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Flight Tickets Scan"
+      },
+      "totalCost": 9900,
+      "_id": "65b2b349af8c1506be6a91ee"
+    },
+  },
+  {
+    value: "Vietnam",
+    label: "Vietnam 30 Days Single Entry Express E-Visa (1 Working Day)",
+    flag: "vn",
+    category: "E-Visa",
+    img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+    visaType: {
+      "name": "Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": 1,
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
+      },
+      "totalCost": 11800,
+      "_id": "65b2b349af8c1506be6a91ef"
+    },
+  },
+  {
+    value: "Vietnam",
+    label: "Vietnam 30 Days Multiple Entry E-Visa",
+    flag: "vn",
+    category: "E-Visa",
+    img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+    visaType: {
+      "name": "Vietnam 30 Days Multiple Entry E-Visa",
+      "entry": "Multiple",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": '4-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Arrival Flight Tickets (which shows port of entry)Scan"
+      },
+      "totalCost": 10500,
+      "_id": "65b2b349af8c1506be6a91f0"
+    },
+  },
+  {
+    value: "Vietnam",
+    label: "Vietnam 90 Days Multiple Entry E-Visa",
+    flag: "vn",
+    category: "E-Visa",
+    img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+    visaType: {
+      "name": "Vietnam 90 Days Multiple Entry E-Visa",
+      "entry": "Multiple",
+      "validityDays": 90,
+      "durationDays": 90,
+      "processingTime": '4-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
+      },
+      "totalCost": 12500,
+      "_id": "65b2b349af8c1506be6a91f1"
+    }
+  },
+  {
+    value: "Azerbaijan",
+    label: "Asan E-Visa",
+    flag: "az",
+    category: "E-Visa",
+    img_url: "../../static/media/azerbaijan.1c47e4e6a20702984ed4.jpeg",
+    visaType: {
+      "name": "Asan E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '4-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)"
+      },
+      "totalCost": 2590,
+      "_id": "65b12f829c1c437d4930fd38"
+    },
+  },
+  {
+    value: "Azerbaijan",
+    label: "Asan Express E-Visa",
+    flag: "az",
+    category: "E-Visa",
+    img_url: "../../static/media/azerbaijan.1c47e4e6a20702984ed4.jpeg",
+    visaType: {
+      "name": "Asan Express E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '1',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)"
+      },
+      "totalCost": 6212,
+      "_id": "65b12f829c1c437d4930fd39"
+    }
+  },
+  {
+    value: "Tanzania",
+    label: "Tanzania E-Visa",
+    flag: "tz",
+    category: "E-Visa",
+    img_url: "../../static/media/tanzania.c9072cec243d7f862aad.jpeg",
+    visaType: {
+      "name": "Tanzania E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 90,
+      "processingTime": '10-15',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo",
+      },
+      "totalCost": 5500,
+      "_id": "65b2a1d7af8c1506be6a91ae1wx1"
+    }
+  },
+  {
+    value: "Mongoloia",
+    label: "Mongoloia E-Visa",
+    flag: "tz",
+    category: "E-Visa",
+    img_url: "../../static/media/mongolia.da1d9da331c9c5e53067.jpeg",
+    visaType: {
+      "name": "Mongoloa E-Visa",
+      "entry": "Single",
+      "validityDays": 120,
+      "durationDays": 30,
+      "processingTime": '4-6',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo",
+      },
+      "totalCost": 2900,
+      "_id": "65b2a1d7af8c1506be6a91ae3wx1"
+    }
+  },
+  {
+    value: "Bahrain",
+    label: "Bahrain E-Visa",
+    flag: "bh",
+    category: "E-Visa",
+    img_url: "../../static/media/bahrain.3eb986d3dfe0e57cd4d7.jpeg",
+    visaType: {
+      "name": "Bahrain E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 14,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Flight Tickets Scan",
+        "doc4": "Hotel Booking Voucher Scan",
+        "doc5": "Bank Statement of last 6 months(min 1000 USD) Scan"
+      },
+      "totalCost": 2960,
+      "_id": "65b130a99c1c437d4930fd3c"
+    },
+  },
+  {
+    value: "Bahrain",
+    label: "Bahrain 90 Days E-Visa",
+    flag: "bh",
+    category: "E-Visa",
+    img_url: "../../static/media/bahrain.3eb986d3dfe0e57cd4d7.jpeg",
+    visaType: {
+      "name": "Bahrain 90 Days E-Visa",
+      "entry": "Multiple",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '20-30',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Flight Tickets Scan",
+        "doc4": "Hotel Booking Voucher Scan",
+        "doc5": "Bank Statement of last 6 months(min 2500 USD) Scan"
+      },
+      "totalCost": 4843,
+      "_id": "65b130a99c1c437d4930fd3d"
+    },
+  },
+  {
+    value: "Bahrain",
+    label: "Bahrain 1 Year E-Visa",
+    flag: "bh",
+    category: "E-Visa",
+    img_url: "../../static/media/bahrain.3eb986d3dfe0e57cd4d7.jpeg",
+    visaType: {
+      "name": "Bahrain 1 Year E-Visa",
+      "entry": "Multiple",
+      "validityDays": 365,
+      "durationDays": 90,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Flight Tickets Scan",
+        "doc4": "Hotel Booking Voucher Scan",
+        "doc5": "Bank Statement of last 6 months(min 2000 USD) Scan"
+      },
+      "totalCost": 11708,
+      "_id": "65b130a99c1c437d4930fd3e"
+    }
+  },
+  {
+    value: "Cambodia",
+    label: "Cambodia E-Visa",
+    flag: "cm",
+    category: "E-Visa",
+    img_url: "../../static/media/cambodia.48f0b56b307d7d812116.jpeg",
+    visaType: {
+      "name": "Cambodia E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 3500,
+      "_id": "65b29f4caf8c1506be6a91a1"
+    }
+  },
+  {
+    value: "Sri Lanka",
+    label: "Sri Lanka Electronic Travel Authorization",
+    flag: "sl",
+    category: "E-Visa",
+    img_url: "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
+    visaType: {
+      "name": "Sri Lanka Electronic Travel Authorization",
+      "entry": "Single",
+      "validityDays": 120,
+      "durationDays": 30,
+      "processingTime": '1-2',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+      },
+      "totalCost": 1699,
+      "_id": "65b2a842af8c1506be6a91dd12"
+    }
+  },
+  {
+    value: "Egypt",
+    label: "Egypt Single Entry E-Visa",
+    flag: "eg",
+    category: "E-Visa",
+    img_url: "../../static/media/egypt.b0b451973e67d9dc66ba.jpeg",
+    visaType: {
+      "name": "Egypt Single Entry E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+      },
+      "totalCost": 2795,
+      "_id": "65b29fc4af8c1506be6a91a4"
+    },
+  },
+  {
+    value: "Egypt",
+    label: "Egypt Multiple Entry E-Visa",
+    flag: "eg",
+    category: "E-Visa",
+    img_url: "../../static/media/egypt.b0b451973e67d9dc66ba.jpeg",
+    visaType: {
+      "name": "Egypt Multiple Entry E-Visa",
+      "entry": "Multiple",
+      "validityDays": 180,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+      },
+      "totalCost": 4875,
+      "_id": "65b29fc4af8c1506be6a91a5"
+    }
+  },
+  {
+    value: "Ethiopia",
+    label: "Ethiopia E-Visa",
+    flag: "et",
+    category: "E-Visa",
+    img_url: "../../static/media/ethiopia.18d5841b0ade6a659d49.jpeg",
+    visaType: {
+      "name": "Ethiopia E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 7500,
+      "_id": "65b2a00aaf8c1506be6a91a8"
+    }
+  },
+  {
+    value: "Indonesia",
+    label: "Indonesia E-Visa",
+    flag: "idn",
+    category: "E-Visa",
+    img_url: "../../static/media/indonesia.c7d66200bee0189d6d3d.jpeg",
+    visaType: {
+      "name": "Indonesia E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Hotel Address Information Scan",
+        "doc5": "Hotel Postal Code Scan",
+        "doc6": "Flight Tickets Scan"
+      },
+      "totalCost": 3500,
+      "_id": "65b2a266af8c1506be6a91b1"
+    }
+  },
+  {
+    value: "Jordan",
+    label: "Jordan E-Visa",
+    flag: "jd",
+    category: "E-Visa",
+    img_url: "../../static/media/jordan.cd569956c08ebfabd0c9.jpeg",
+    visaType: {
+      "name": "Jordan E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '2-3',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+      },
+      "totalCost": 5500,
+      "_id": "65b2a2adaf8c1506be6a91b4"
+    }
+  },
+  {
+    value: "Moldova",
+    label: "E-Visa",
+    flag: "ml",
+    category: "E-Visa",
+    img_url: "../../static/media/moldova.6d5aa0ecec7a273038c2.jpeg",
+    visaType: {
+      "name": "E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '5-7',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "6 Months Bank Statement Scan",
+        "doc5": "Flight Itinerary Scan",
+        "doc6": "Hotel Booking Voucher Scan"
+      },
+      "totalCost": 5000,
+      "_id": "65b2a311af8c1506be6a91b7"
+    }
+  },
+  {
+    value: "Kyrgzstan",
+    label: "Kyrgyzstan E-Visa",
+    flag: "kry",
+    category: "E-Visa",
+    img_url: "../../static/media/kyrgyzstan.797f4fb7a60b68bde0e7.jpeg",
+    visaType: {
+      "name": "Kyrgyzstan E-Visa",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": '15-17',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "Travel Itinerary Scan"
+      },
+      "totalCost": 14500,
+      "_id": "65b2a3bfaf8c1506be6a91bd"
+    }
+  },
+  {
+    value: "Laos",
+    label: "Laos E-Visa",
+    flag: "lao",
+    category: "E-Visa",
+    img_url: "../../static/media/laos.c549b728380a089b607e.jpeg",
+    visaType: {
+      "name": "Laos E-Visa",
+      "entry": "Single",
+      "validityDays": 60,
+      "durationDays": 30,
+      "processingTime": '4-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "What is your port of Entry(Required as it is mentioned on the E-visa) Scan"
+      },
+      "totalCost": 5000,
+      "_id": "65b2a426af8c1506be6a91c0"
+    }
+  },
+  {
+    value: "Madagascar",
+    label: "Madagascar E-Visa",
+    flag: "mdg",
+    category: "E-Visa",
+    img_url: "../../static/media/madagascar.cdef75e68a3728438dea.jpeg",
+    visaType: {
+      "name": "Madagascar E-Visa",
+      "entry": "Single",
+      "validityDays": 60,
+      "durationDays": 15,
+      "processingTime": '4-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 1500,
+      "_id": "65b2a452af8c1506be6a91c3"
+    }
+  },
+  {
+    value: "Morocco",
+    label: "Morocco E-Visa",
+    flag: "mro",
+    category: "E-Visa",
+    img_url: "../../static/media/morocco.d5a254e5df83ba4c57a4.jpeg",
+    visaType: {
+      "name": "Morocco E-Visa",
+      "entry": "Single",
+      "validityDays": 180,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 7500,
+      "_id": "65b2a4a2af8c1506be6a91c6"
+    },
+  },
+  {
+    value: "Morocco",
+    label: "Morocco E-Visa Express",
+    flag: "mro",
+    category: "E-Visa",
+    img_url: "../../static/media/morocco.d5a254e5df83ba4c57a4.jpeg",
+    visaType: {
+      "name": "Morocco E-Visa Express",
+      "entry": "Single",
+      "validityDays": 180,
+      "durationDays": 30,
+      "processingTime": '1',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 10900,
+      "_id": "65b2a4a2af8c1506be6a91c7"
+    }
+  },
+  {
+    value: "Oman",
+    label: "Oman 10 Day E-Visa",
+    flag: "omn",
+    category: "E-Visa",
+    visaType: {
+      "name": "Oman 10 Day E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 10,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 2500,
+      "_id": "65b2a724af8c1506be6a91d2"
+    },
+  },
+  {
+    value: "Oman",
+    label: "Oman 10 Day Express E-Visa",
+    flag: "omn",
+    category: "E-Visa",
+    img_url: "../../static/media/oman.86993fea95cd810bfc7f.jpeg",
+    visaType: {
+      "name": "Oman 10 Day Express E-Visa",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 10,
+      "processingTime": '1',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 3700,
+      "_id": "65b2a724af8c1506be6a91d3"
+    },
+  },
+  {
+    value: "Oman",
+    label: "Oman 30 Day E-Visa",
+    flag: "omn",
+    category: "E-Visa",
+    img_url: "../../static/media/oman.86993fea95cd810bfc7f.jpeg",
+    visaType: {
+      "name": "Oman 30 Day E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 5990,
+      "_id": "65b2a724af8c1506be6a91d4"
+    }
+  },
+  {
+    value: "Russia",
+    label: "Russian E-Visa",
+    flag: "rsa",
+    category: "E-Visa",
+    img_url: "../../static/media/russia.75a073ad7df17090fa1a.jpeg",
+    visaType: {
+      "name": "Russian E-Visa",
+      "entry": "Single",
+      "validityDays": 60,
+      "durationDays": 16,
+      "processingTime": '6-7',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 5550,
+      "_id": "65b2a789af8c1506be6a91d7"
+    }
+  },
+  {
+    value: "Rwanda",
+    label: "Rwanda E-Visa",
+    flag: "rwd",
+    category: "E-Visa",
+    img_url: "../../static/media/rwanda.e3f0a3372e85adfb4a5f.jpeg",
+    visaType: {
+      "name": "Rwanda E-Visa",
+      "entry": "Single",
+      "validityDays": 30,
+      "durationDays": 30,
+      "processingTime": '5-7',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 4900,
+      "_id": "65b2a7b2af8c1506be6a91da"
+    }
+  },
+  {
+    value: "Saudi Arabia",
+    label: "Saudi Arabia E-Visa Multiple Entry",
+    flag: "sab",
+    category: "E-Visa",
+    img_url: "../../static/media/saudi.d2725bb5e01a14c352a9.jpeg",
+    visaType: {
+      "name": "Saudi Arabia E-Visa Multiple Entry",
+      "entry": "Multiple",
+      "validityDays": 365,
+      "durationDays": 90,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+        "doc4": "US/UK/SCHENGEN Visa Scan"
+      },
+      "totalCost": 11900,
+      "_id": "65b2a842af8c1506be6a91dd"
+    },
+  },
+  {
+    value: "Saudi Arabia",
+    label: "Umrah E-Visa",
+    flag: "sab",
+    category: "E-Visa",
+    img_url: "../../static/media/saudi.d2725bb5e01a14c352a9.jpeg",
+    visaType: {
+      "name": "Umrah E-Visa",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 14,
+      "processingTime": '5-7',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan"
+      },
+      "totalCost": 15500,
+      "_id": "65b2a842af8c1506be6a91de"
+    }
+  },
+  {
+    value: "Qatar",
+    label: "Qatar E-Visa 30 Days Single Entry",
+    flag: "qtr",
+    category: "E-Visa",
+    img_url: "../../static/media/qatar.2a3cf3fba0f649e5dc8c.jpeg",
+    visaType: {
+      "name": "Qatar E-Visa 30 Days Single Entry",
+      "entry": "Single",
+      "validityDays": 90,
+      "durationDays": 30,
+      "processingTime": '3-5',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "Passport Size Photo Scan",
+      },
+      "totalCost": 1765,
+      "_id": "65b2b20aaf8c1506be6a91ea23"
+    }
+  },
+
 ];
 
-const SearchBox = ({ onSearch }) => {
-    const [searchTerm, setSearchTerm] = useState('');
 
-    const handleSearchChange = (selectedOption) => {
-        setSearchTerm(selectedOption ? selectedOption.value : '');
-        onSearch(selectedOption ? selectedOption.value : '');
-    };
 
-    return (
-        <div className="search-form" style={{}}>
-            <Select
-                placeholder="Search..."
-                options={options}
-                value={options.find(option => option.value === searchTerm)}
-                onChange={handleSearchChange}
-                isClearable
-                isSearchable
-                styles={{
-                    control: (provided) => ({
-                        ...provided,
-                        width: '100%',
-                        minHeight: '40px',
-                        border: '2px solid #000047',
-                        borderRadius: '15px',
-                    }),
-                    input: (provided) => ({
-                        ...provided,
-                        padding: searchTerm ? '10px' : '0px'
-                    }),
-                    menu: (provided) => ({
-                        ...provided,
-                        marginTop: '2px',
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                        zIndex: 9999, // Increased z-index
-                    }),
-                    option: (provided, state) => ({
-                        ...provided,
-                        backgroundColor: state.isSelected ? '#000047' : 'white',
-                        color: state.isSelected ? 'white' : '#000047',
-                        cursor: 'pointer',
-                        zIndex: 9999999, // Increased z-index
-                    }),
-                }}
-                components={{
-                    IndicatorSeparator: () => null, // Hide the indicator separator
-                    DropdownIndicator: () => (
-                        <div style={{ padding: '8px', cursor: 'pointer' }}>
-                            <ion-icon name="search-outline" style={{ fontSize: '30px', color: '#000047', transform:"translateX(-10px)"}}></ion-icon>
-                        </div>
-                    ),
-                }}
-            />
+
+const SearchBox = ({ onSearch}) => {
+  const { setEvisa, setType, appType } = useContext(FormDataContext)
+  const [searchTerm, setSearchTerm] = useState(null);
+
+
+
+  const handleClick = (type, category) => {
+    if (category === 'E-Visa') {
+      setEvisa("yes")
+    }
+    setType(type)
+    setSearchTerm('')
+    console.log(appType)
+
+  }
+
+
+  const formatOptions = ({ label, value, category, visaType,img_url }) => (
+    <Link to={{
+      pathname: `/visa/application/${value}/${visaType.name}`,
+    }} onClick={handleClick(visaType)} className="format-options" style={{ textDecoration: "none" }}>
+      <div className='fo-cont d-flex justify-content-start align-items-center' style={{ }}>
+        <div className='d-flex justify-content-center align-items-start flex-column' style={{ flexBasis: "50%", height: "100%" }}>
+          <h5 style={{ color: "rgba(2, 71, 134, 1)", fontSize: "14px", textDecoration: "underline", fontFamily: "Clash Display", letterSpacing: "1px", fontWeight: "500" }}>{category}</h5>
+          <h3 style={{ fontSize: "24px", fontWeight: "500", fontFamily: "Clash Display", fontWeight: "500", color: "#000" }}>{label}</h3>
+          <h5>{value}</h5>
         </div>
-    )
-}
+        <div style={{ flexBasis: "35%", height: "100%", backgroundImage: `url(${img_url})`, backgroundSize: "cover" }}></div>
+      </div>
+    </Link>
+  );
+
+  const handleSearchChange = (selectedOption) => {
+    setSearchTerm(selectedOption ? selectedOption.value : '');
+    if (selectedOption) {
+      setSearchTerm(''); // Reset search term after selection
+    }
+    // onSearch(selectedOption ? selectedOption.value : '');
+  };
+
+  return (
+    <div className="search-form" style={{}}>
+      <Select
+        placeholder="Search..."
+        formatOptionLabel={formatOptions}
+        options={options}
+        value={options.find(option => option.value === searchTerm)}
+        onChange={handleSearchChange}
+        isClearable
+        isSearchable
+        styles={{
+          control: (base) => ({
+            ...base,
+            width: '100%',
+            minHeight: '40px',
+            border: 'none',
+            borderRadius: '15px',
+            padding: '10px 15px',
+            backgroundColor: 'white',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          }),
+          input: (base) => ({
+            ...base,
+            padding: searchTerm ? '10px' : '0px',
+            fontSize: '16px',
+          }),
+          menu: (base) => ({
+            ...base,
+            marginTop: '2px',
+            zIndex: 9999,
+            backgroundColor: 'white',
+            height: '400px',  // Fixed height for the menu
+          }),
+          menuList: (base) => ({
+            ...base,
+            maxHeight: '500px',  // Max height for the menu list
+            overflowY: 'auto',   // Scrollable overflow
+          }),
+          option: (provided, state) => ({
+            ...provided,
+            display: 'flex',
+            alignItems: 'center',
+            padding: '10px 1px',
+            borderBottom: '1px solid #ccc',
+            backgroundColor: state.isSelected ? '#000047' : 'white',
+            // color: state.isSelected ? 'white' : '#000047',
+            cursor: 'pointer',
+            height: "100%",
+          }),
+          singleValue: (base) => ({
+            ...base,
+            color: '#000047',
+            fontSize: '16px',
+          }),
+        }}
+        components={{
+          IndicatorSeparator: () => null,
+          DropdownIndicator: () => (
+            <div style={{ padding: '8px', cursor: 'pointer' }}>
+              <ion-icon name="search-outline" style={{ fontSize: '30px', color: '#000047', transform: "translateX(-10px)" }}></ion-icon>
+            </div>
+          ),
+        }}
+      />
+    </div>
+  );
+};
 
 export default SearchBox;

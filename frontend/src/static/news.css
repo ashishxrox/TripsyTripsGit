@@ -1,0 +1,58 @@
+.subs-btn{
+    cursor: pointer;
+    background-color: rgba(2, 71, 134, 1)
+}
+
+.disabled{
+    background-color: #808080;
+    cursor: no-drop;
+}
+
+.news-msg-box{
+    user-select: none;
+    display: hidden;
+}
+.newsletter{
+    align-items: flex-end;
+}
+
+.newsletter-cont{
+    flex-direction: row;
+}
+
+.nc-right{
+    align-items: flex-start;
+}
+.nc-left{
+    width: 100%;
+}
+
+.nc-left h3{
+    font-size: 45px;
+}
+
+@media only screen and (max-width:600px){
+    .newsletter-cont{
+        flex-direction: column;
+    }
+    .newsletter{
+        align-items: center;
+    }
+    .nc-left{
+        text-align: center;
+    }
+    .nc-right{
+        align-items: center;
+    }
+    .nc-left h3{
+        font-size: 30px;
+        text-align: left;
+    }
+    .nc-left{
+        width: 90%;
+    }
+    .nc-left p{
+        text-align: left;
+    }
+    
+}

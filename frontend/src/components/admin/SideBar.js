@@ -21,7 +21,7 @@ const SideBar = ({activeItem, handleClick}) => {
                     <li className={activeItem === 3 ? 'active' : ''} onClick={() => handleClick(3)}>
                          Flights </li>
                     <li className={activeItem === 4 ? 'active' : ''} onClick={() => handleClick(4)}>
-                         Hotels </li>
+                         Contant Form </li>
                     <li className={activeItem === 5 ? 'active' : ''} onClick={() => handleClick(5)}>
                          Insurances </li>
                 </ul>

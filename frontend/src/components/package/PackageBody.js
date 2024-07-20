@@ -4,18 +4,19 @@ import TourBox from './TourBox';
 
 const VisaBody = () => {
   const context = useContext(PackageContext);
-  
-  const { tours} = context;
+
+  const { tours } = context;
 
   return (
     <>
-    <div className='row py-5' style={{ backgroundColor: "white", paddingLeft: "40px", zIndex:"-99999999"}}>
-      {tours.map((tour, index) => {
-        return <TourBox key={index} tour={tour}/>;
-      })}
-    </div>
+      <div className='row' style={{ backgroundColor: "white", paddingLeft: "40px" }}>
+        {tours.map((tour, index) => {
+          return <TourBox key={index} tour={tour} />;
+        })}
+      </div>
     </>
   );
 }
+
 
 export default VisaBody;

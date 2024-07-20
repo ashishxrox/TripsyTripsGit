@@ -1,10 +1,77 @@
+.action-boxes{
+    height: 87vh;
+}
+
+.other-ser-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: "15%";
+}
+
+.other-ser-title h3{
+    font-size: 46px;
+    font-weight: 500;
+}
+
+.action-boxes .row1{
+    flex-direction: row
+}
+
+.action-boxes .row1 .col1 .card{
+    width: 24rem;
+}
+
+.action-boxes .row1 .col2 .card{
+    width: 24rem;
+}
+
+.action-boxes .row1 .col3 .card{
+    width: 24rem;
+}
+
 @media only screen and (max-width:600px){
-    .action-boxes .col2 .fa-hotel{
-        color: white;
-        font-size: 100pxs;
+
+    .action-boxes{
+        height: 1750px;
+    }
+    .other-ser-title h3{
+        font-size: 30px;
+        font-weight: 500;
+        text-align: left;
+        margin: 0 20px;
+    }
+    .other-ser-title{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-basis: "2%";
+        
+
+    }
+
+    .action-boxes .row1{
+        flex-direction: column
+    }
+    .action-boxes .row1 .col1 .card{
+        width: 22rem;
+    }
+    .action-boxes .row1 .col2 .card{
+        width: 22rem;
     }
     
-    .action-boxes .col3{
-        margin-top: 50px;
+    .action-boxes .row1 .col3 .card{
+        width: 22rem;
     }
+    
+}
+
+.card-btn div{
+    background-color: #fff;
+    transition: 1s;
+}
+
+
+.card-btn div:hover{
+    background-color: rgba(151, 171, 182, 1);
 }

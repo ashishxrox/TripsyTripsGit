@@ -1,0 +1,166 @@
+.hop-main{
+    height: 100vh;
+}
+
+.ptv-main{
+    height: 95vh;
+}
+
+.pack-top{
+    flex-direction: row;
+}
+
+.pt-txt-left h3{
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 57px;
+}
+
+.pt-txt-right p{
+    width: 80%;
+}
+
+.pack-bottom{
+    flex-direction: row;
+    align-items: flex-start;
+}
+.pb-left{
+    flex-direction: column;
+}
+
+.overlay{
+    font-weight: 400;
+    /* font-family: "Clash Display", */
+}
+
+.hov{
+    height: 140vh;
+}
+
+.hov-desk{
+    display: block;
+}
+
+.hov-mobile{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width:600px){
+    .hop-main{
+        height: 1000px;
+    }
+
+    .ptv-main{
+        height: 1000px;
+    }
+
+    .pack-top{
+        flex-direction: column;
+    }
+
+    .pt-txt-left h3{
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 57px;
+        margin-left: 10px;
+    }
+    .pt-txt-right p{
+        width: 100%;
+    }
+    .pack-bottom{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .pb-left{
+        flex-direction: row;
+    }
+
+    .overlay{
+        font-size: 20px;
+        font-weight: 500;
+        /* font-family: sans-serif; */
+        letter-spacing: 2px;
+    }
+
+    .hov{
+        height: 1650px;
+    }
+    .hov-desk{
+        display: none;
+    }
+
+    .hov-mobile{
+        display: block;
+    }
+    .hovm{
+        height: 2000px;
+    }
+}
+
+
+
+.hrvtb-link{
+    background-color:rgba(2, 71, 134, 1);
+    transition: 1s;
+}
+
+.hrvtb-link:hover{
+    background-color:rgba(3, 21, 47, 1);
+
+}
+
+.hrv-main{
+    height: 55vh;
+}
+.hrv-main-cont{
+    height: 80%;
+    width: 85%;
+}
+
+.hrv-top{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-basis: 80%,
+}
+
+.hrvt-box{
+    width: 40%;
+}
+.hrv-bottom-desk{
+    display: flex;
+}
+.hrv-bottom-mob{
+    display: none;
+}
+
+
+@media only screen and (max-width:600px){
+    .hrv-main{
+        height: 600px;
+    }
+    .hrv-main-cont{
+        height: 100%;
+        width: 95%;
+    }
+    .hrv-top{
+        justify-content: center;
+        align-items: center;
+        flex-basis: 60%,
+    }
+    .hrvt-box{
+        align-items: center;
+        width: 95%;
+        text-align: center;
+    }
+
+    .hrv-bottom-desk{
+        display: none;
+    }
+    .hrv-bottom-mob{
+        display: flex;
+    }
+    
+}

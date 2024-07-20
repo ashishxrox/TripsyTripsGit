@@ -6,7 +6,7 @@ const path = require('path');
 const DocumentData = require('../models/CountryImages')
 const NonEvisaFormData = require('../models/NonEvisaModel')
 const FlightData = require('../models/Flight')
-const HotelData = require('../models/Hotel')
+const ContactData = require('../models/ContactForm')
 const InsuranceData = require('../models/Insurance')
 const PackageData = require('../models/Package')
 
@@ -176,23 +176,21 @@ router.post('/flight', async (req, res) => {
 })
 
 // ROUTE: 5 Catch data from Hotel Form
-router.post('/hotel', async (req, res) => {
+router.post('/contact', async (req, res) => {
     try {
         const { name,
             email,
             contact,
-            place,
-            checkInDate,
-            checkOutDate
+            subject,
+            description
          } = req.body
 
-        const data = new HotelData({
+        const data = new ContactData({
             name,
             email,
             contact,
-            place,
-            checkInDate,
-            checkOutDate
+            subject,
+            description
         })
 
         await data.save()

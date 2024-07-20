@@ -1,3 +1,41 @@
 .apply-btn{
     width: 100%;
 }
+
+.btn-disabled{
+    border: 1px solid #808080;
+    background-color: #808080;
+    color: #000;
+}
+
+
+.final-btn{
+    border: 1px solid rgba(2, 71, 134, 1);
+    background-color: rgba(2, 71, 134, 1);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 1s;
+}
+
+.final-btn:hover{
+    border: 1px solid rgba(3, 21, 47, 1);
+    background-color: rgba(3, 21, 47, 1);
+}
+
+.user-form-main{
+    padding: 0 50px;
+}
+
+.user-form-row1{
+    flex-direction: row;
+}
+
+@media only screen and (max-width:600px){
+    .user-form-main{
+        padding: 0 15px;
+    }
+
+    .user-form-row1{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,40 @@
+.carousel-root, .carousel-slider, .slider-wrapper, .slider, .animated{
+  height: 100% !important;
+}
+
+.slide{
+  height: 93% !important;
+}
+
+.carousel .control-arrow {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carousel .control-dots{
+  bottom: 75px;
+}
+
+.carousel .control-arrow:hover {
+  opacity: 0.8;
+}
+
+.carousel .slide {
+  height: 500px; /* Adjust height as needed */
+}
+
+.car-b {
+  /* Add any additional styles you need for the image boxes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.car-b img {
+  width: 100%;
+  height: auto;
+}

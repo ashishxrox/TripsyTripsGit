@@ -42,8 +42,11 @@ const FilghtForm = () => {
 
     return (
         <div style={{ width: "100%", }}>
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flighteModal" style={{ width: "80%", backgroundColor: "#fff", border: "1px solid #fff", color: "#000047", fontSize: "20px", fontWeight: "bold", boxShadow: "5px 5px 15px #000" }}>
-                Enquire
+            <button type="button" className="d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#flighteModal" style={{ cursor: "pointer",height:"50px", width, backgroundColor: "#fff", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px", color: "rgba(2, 71, 134, 1)", fontSize: "16px"  }}>
+               {/* <div className='d-flex justify-content-center align-items-center' >
+                                    <a href="#" style={{ textDecoration: "none", }}>Know More</a>
+                                </div> */}
+                                Know More
             </button>
 
             <div className="modal fade" id="flighteModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{zIndex:'99999999'}}>

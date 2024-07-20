@@ -1,0 +1,39 @@
+
+.cb-btn{
+    background-color: rgba(2, 71, 134, 1);
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.cb-btn:hover{
+    background-color: rgba(3, 21, 47, 1);
+}
+
+
+.visa-drop{
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    width: 150px;
+    transition: 0.5s;
+}
+
+.visa-drop-show{
+    height: 150px;
+    transform: translateX(-25px);
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width:600px){
+
+    .visa-drop-show{
+        height: 200px;
+        width: 85%;
+        border-bottom: 1px solid #808080;
+        border-top: 1px solid #808080;
+        border-radius: 0;
+        margin: 0 25px;
+    }
+}

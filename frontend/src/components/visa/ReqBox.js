@@ -1,69 +1,51 @@
-import React, { useContext } from 'react'
-
+import React, { useContext, useEffect } from 'react'
 import '../../static/reqBox.css'
-
 import { Link } from 'react-router-dom'
-
 import FormDataContext from '../../context/FormData/FormDataContext'
 
 const ReqBox = (props) => {
-
     const { type, country } = props
     const eVisa = country.eVisa
 
     const { setEvisa, setType } = useContext(FormDataContext)
 
+    useEffect(() => {
+        setEvisa(null)
+        setType(null)
+    }, [setEvisa, setType])
+
     const handleClick = () => {
-        setEvisa(eVisa);
+        setEvisa(eVisa)
         setType(type)
     }
 
-    // console.log(eVisa)
     return (
         <div className="container visa-type-card-container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div className="card visa-type-card" style={{ overflow: "hidden", border: "1px solid #000", width: "20rem", height: '28rem', borderRadius: "10px", boxShadow: "5px 5px 10px #000" }}>
-                <div className="card-body" style={{ textAlign: "center" }}>
-                    <h5 className="card-title visa-type-title" style={{ fontSize: "25px", color: "#000047", width: "125%", backgroundColor: "#e9ebf2", padding: "10px 10px", paddingRight: "40px" }}>{type.name}</h5>
-                    {(eVisa ==='yes' && type.name !== 'Turkey Tourist Visa') && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row" }}>
-                        <div className="card-info-text-left" style={{ display: "flex", justifyContent: "center", flexDirection: "column", textAlign: "left" }}>
-                            <p style={{ fontSize: "16px" }}>Processing Time:</p>
-                            <p style={{ fontSize: "16px" }}>Duration:</p>
-                            <p style={{ fontSize: "16px" }}>Validity:</p>
-                            <p style={{ fontSize: "16px" }}>Entry:</p>
-                            <p style={{ fontSize: "16px" }}>Total Cost:</p>
+            <div className="card visa-type-card" style={{ overflow: "hidden", border: "1px solid #000", width: "30rem", height: '28rem', borderRadius: "10px" }}>
+                <div className="d-flex justify-content-center align-items-center flex-column p-2" style={{ textAlign: "left", height: "100%", width: "100%" }}>
+                    <div className="vtc-card-title p-3 d-flex justify-content-between align-items-start flex-column" style={{ flexBasis: "25%", height: "100%", width: "100%" }}>
+                        <h5 style={{ fontSize: "20px", fontWeight: "500" }}>{type.name}</h5>
+                        <div style={{ height: "2px", width: "100%", backgroundColor: "#000" }}></div>
+                    </div>
+                    <div className="vtc-card-body px-2 d-flex justify-content-around align-items-start flex-column" style={{ flexBasis: "55%", height: "100%", width: "100%" }}>
+                        <div>
+                            <p style={{ fontStyle: "italic", fontSize: "16px", fontWeight: "400" }}>Processing Time - {type.processingTime} working {type.processingTime === '1' ? 'day' : 'days'}</p>
+                            <h5 style={{ fontSize: "16px", fontWeight: "500" }}>Duration - {type.durationDays} {type.durationDays === '1' ? 'day' : 'days'} </h5>
+                            <h5 style={{ fontSize: "16px", fontWeight: "500" }}>Validity - {type.validityDays} {type.validityDays === '1' ? 'day' : 'days'} </h5>
+                            <p style={{ fontStyle: "italic", fontSize: "16px", fontWeight: "400" }}>Entry - {type.entry}</p>
                         </div>
-                        <div className="card-info-text-right" style={{ textAlign: "right" }}>
-                            <p style={{ fontSize: "16px" }}>{type.processingTime} {type.processingTime === '1' ? 'Working Day' : 'Working Days'}</p>
-                            <p style={{ fontSize: "16px" }}>{type.durationDays} Days</p>
-                            <p style={{ fontSize: "16px" }}>{type.validityDays} Days</p>
-                            <p style={{ fontSize: "16px" }}>{type.entry}</p>
-                            <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold" }}>&#8377;{type.totalCost}</p>
+                        <div>
+                            <h5 style={{ fontSize: "20px", fontWeight: "500" }}>Rs. {type.totalCost} <span style={{ fontSize: "12px", color:"rgba(3, 21, 47, 1)",fontWeight: "500" }}>/person</span> </h5>
                         </div>
-                    </div>}
-                    {(eVisa === 'no' || type.name === 'Turkey Tourist Visa') && <div className="card-info-text" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row"}}>
-                        <div className="card-info-text-left" style={{ display: "flex", justifyContent: "center", flexDirection: "column", textAlign: "left" }}>
-                            {/* <p style={{ fontSize: "16px" }}>Processing Time:</p>
-                            <p style={{ fontSize: "16px" }}>Duration:</p>
-                            <p style={{ fontSize: "16px" }}>Validity:</p> */}
-                            {type.name !== 'Australia Tourist Visa (Subclass 600)' && type.name !== 'Georgia E-Visa'  &&<p style={{ fontSize: "16px", color:"#000047"}}> Sticker Visa/Non E-Visa</p>}
-                            
-                            <p style={{ fontSize: "16px"}}>Tripsy Trips Service Charge: </p>
-                        </div>
-                        <div className="card-info-text-right" style={{ textAlign: "right" }}>
-                            {/* <p style={{ fontSize: "16px" }}>-</p>
-                            <p style={{ fontSize: "16px" }}>-</p>
-                            <p style={{ fontSize: "16px" }}>-</p> */}
-                            {type.name === 'Australia Tourist Visa (Subclass 600)' && <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"0px"}}>&#8377;{type.totalCost}</p>}
-                            {type.name === 'Georgia E-Visa' && <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"0px"}}>&#8377;{type.totalCost}</p>}
-                           {type.name !== 'Australia Tourist Visa (Subclass 600)' && type.name !== 'Georgia E-Visa' && <p style={{ fontSize: "20px", color: "#3488E8", fontWeight: "bold", position:"relative", top:"20px"}}>&#8377;{type.totalCost}</p>}
-                        </div>
-                    </div>}
-                    <Link to={{
-                        pathname: `/visa/application/${country.country}/${type.name}`
-                    }} onClick={handleClick} className="btn btn-light" style={{ width: "100%", padding: "0px 40px", fontSize: "24px", color: "#fff", boxShadow: "5px 5px 10px #000", backgroundColor: "#000047", border: "1px solid #000047" }}>Details</Link>
+                    </div>
+                    <div className="vtc-card-btn d-flex justify-content-center align-items-center flex-column" style={{ flexBasis: "20%", height: "100%", width: "100%" }}>
+                        <Link to={{
+                            pathname: `/visa/application/${country.country}/${type.name}`
+                        }} onClick={handleClick} className="vtcbb btn btn-light d-flex justify-content-center align-items-center flex-column" style={{ width: "240px", borderRadius:"30px",height:"55px", fontSize: "24px", color: "#fff" }}>Details</Link>
 
-                    <div className="warning" style={{textAlign:"center", padding:"10px 0", fontSize:"12px"}}>
-                        <p style={{textDecoration:"underline"}}>Please don't refresh the page after you click on details.</p>
+                        <div className="warning" style={{ textAlign: "center", padding: "10px 0", fontSize: "10px" }}>
+                            <p style={{ textDecoration: "underline" }}>Please don't refresh the page after you click on details.</p>
+                        </div>
                     </div>
                 </div>
             </div>

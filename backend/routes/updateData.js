@@ -1,6 +1,6 @@
 const express = require('express')
 const FormData = require('../models/FormData')
-const HotelData = require('../models/Hotel')
+const ContactData = require('../models/ContactForm')
 const FlightData = require('../models/Flight')
 const InsuranceData = require('../models/Insurance')
 const NonEvisaFormData = require('../models/NonEvisaModel')
@@ -74,10 +74,10 @@ router.get('/handledBy/:uniqueStr/:handle', async(req,res)=>{
 
 // *****HOTEL******
 
-router.get('/hotelcomment/:uniqueStr/:comment', async(req,res)=>{
+router.get('/contactcomment/:uniqueStr/:comment', async(req,res)=>{
     const {uniqueStr, comment} = req.params
     try {
-        const query = await HotelData.findOneAndUpdate(
+        const query = await ContactData.findOneAndUpdate(
             {uniqueStr: uniqueStr},
             {$set: {comment: comment}},
             {new: true}
@@ -89,11 +89,11 @@ router.get('/hotelcomment/:uniqueStr/:comment', async(req,res)=>{
     }
 })
 
-router.get('/hotelhandledBy/:uniqueStr/:handle', async(req,res)=>{
+router.get('/contacthandledBy/:uniqueStr/:handle', async(req,res)=>{
     const {uniqueStr, handle} = req.params
     console.log(handle)
     try {
-        const query = await HotelData.findOneAndUpdate(
+        const query = await ContactData.findOneAndUpdate(
             {uniqueStr: uniqueStr},
             {$set: {handle: handle}},
             {new: true}

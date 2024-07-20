@@ -1,0 +1,53 @@
+@keyframes keepRotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes upDown{
+    0%,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.scrll-btn-outer{
+    animation: keepRotate 7s linear infinite;
+}
+
+.scroll-arrow svg{
+    position: relative;
+    top: 20px;
+    transition: 0.3s;
+}
+
+.scroll-arrow h4{
+    opacity: 0;
+    text-align: center;
+    transition: 0.5s all;
+    position: relative;
+    left: -35px;
+    top: -10px;
+    text-decoration: none;
+    transform: translateY(-25px);
+}
+
+.scroll-arrow:hover svg{
+    opacity: 0;
+    
+}
+
+.scroll-arrow:hover h4{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.scroll-arrow svg{
+    animation: upDown 1s ease-in-out infinite;
+}

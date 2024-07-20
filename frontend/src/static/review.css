@@ -1,78 +1,372 @@
-.col{
-    background-size: cover;
-    background-position: fixed;
+.col {
+    height: 40vh;
 }
 
-.col2 .parent{
+.col2 .parent {
     height: 750px;
     width: 100%;
 }
 
-.instagram h4{
+.instagram h4 {
     font-size: 45px;
 }
 
-.instagram .row{
+.instagram .row {
     width: 100%;
     height: 100%;
 }
 
-.tripsy-title, .tripsy-insta{
+.tripsy-title,
+.tripsy-insta {
     margin: 25px 600px;
     width: 400px;
     box-shadow: 5px 5px 10px #000;
 }
 
-.tripsy-title p{
+.tripsy-title p {
     padding-top: 20px;
     padding-left: 20px;
     font-size: 100px;
     transform: rotate(-30deg);
 }
 
-.tripsy-insta p{
+.tripsy-insta p {
     padding-top: 20px;
     padding-left: 20px;
     font-size: 100px;
+}
+
+.my-revs {
+    height: 310vh;
+}
+
+.reviews-cont {
+    flex-direction: row;
 }
 
 /* .my-revs .carousel-item{
     min-height: 200px;
 } */
 
-.my-revs .carousel-item .carousel-body{
+.my-revs .carousel-item .carousel-body {
     height: 200px;
 }
 
-.insta-iframe{
+.insta-iframe {
     height: 1000px;
 }
 
-@media only screen and (max-width:600px){
-    .col2 .parent{
+.revs-line {
+    height: 100%;
+    width: 1px;
+}
+
+.rcl-title h3 {
+    font-size: 46px;
+    justify-content: flex-start;
+}
+
+
+.rclb-btn:hover{
+ background: rgba(151, 171, 182, 1);
+}
+
+
+/* #Blog Button */
+.blogs-btn-cont,
+.follow-btn {
+    background-color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.blogs-btn-cont:hover,
+.follow-btn:hover {
+    background-color: rgba(151, 171, 182, 1);
+}
+
+.rcl-content {
+    justify-content: flex-start;
+}
+
+.rcl-btn {
+    justify-content: flex-start;
+}
+
+.rclb-btn {
+    width: 35%;
+}
+
+.rb-ctrl-btn {
+    left: 225px;
+    top: -50px;
+
+}
+.reviews-cont{
+    width: 85%;
+}
+
+.rb-main{
+    width: 600px;
+}
+
+.home-blogs{
+    height: 110vh;
+}
+
+.blogs-title{
+    flex-basis: 10%;
+}
+
+.blogs-title h3{
+    font-size: 46px;
+    font-weight: 500
+    
+}
+
+.blogs-main-content{
+    flex-direction: row;
+}
+
+.bmcl-b-left h4{
+    font-size: 24px;
+}
+
+.bmcl-top{
+    flex-basis: 78%;
+}
+
+.bmcl-bottom{
+    flex-basis: 22%;
+    flex-direction: row;
+}
+
+.bmcl-b-left{
+    justify-content: space-between;
+}
+
+.bmcl-b-right a{
+    display: none;
+}
+
+.bmcl-b-right svg{
+    display: block;
+}
+
+.bmcr-b-left h4{
+    font-size: 24px;
+}
+
+.bmcr-b-left{
+    flex-direction: column;
+}
+.bmcr-bottom{
+    flex-direction: row;
+}
+
+.tripsy-insta-title{
+    flex-direction: row;
+}
+
+.insta-title-left h3{
+    font-size: 46px;
+}
+
+.insta-title-left{
+    width: 55%;
+}
+
+.insta-title-right{
+    width: 25%;
+}
+
+.follow-btn{
+    height: 40%;
+}
+.tripsy-insta-frame iframe{
+    height: 133vh;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    .col2 .parent {
         height: 300px;
         width: 125%;
     }
-    .instagram h4{
+
+    .instagram h4 {
         font-size: 25px;
     }
-    .tripsy-title, .tripsy-insta{
+
+    .tripsy-title,
+    .tripsy-insta {
         margin: 25px 20px;
         padding: 10px;
         width: 350px;
     }
-    .tripsy-title p, .tripsy-insta p{
+
+    .tripsy-title p,
+    .tripsy-insta p {
         padding-top: 20px;
         font-size: 100px;
     }
 
-    .my-revs .carousel-item .carousel-body{
+    .my-revs .carousel-item .carousel-body {
         height: 400px;
     }
 
-    .insta-iframe{
+    .insta-iframe {
         height: 375px;
     }
 
+    .my-revs {
+        height: 3300px;
+    }
+
+    .col {
+        height: 600px;
+    }
+
+    .reviews-cont {
+        flex-direction: column;
+    }
+
+    .revs-line {
+        height: 1px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .rcl-title h3 {
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    .rcl-content {
+        justify-content: center;
+    }
+
+    .rcl-btn {
+        justify-content: center;
+    }
+
+    .rclb-btn {
+        width: 85%;
+    }
+    .rb-ctrl-btn {
+        left: 100px;
+        top: -50px;
+    
+    }
+
+    .reviews-cont{
+        width: 100%;
+    }
+
+    .rb-main{
+        width: 400px;
+    }
+
+    .home-blogs{
+        height: 1800px;
+    }
+    .blogs-title{
+        flex-basis: 5%;
+    }
+    .blogs-title h3{
+        font-size: 30px;
+
+    }
+    .blogs-main-content{
+        flex-direction: column;
+    }
+
+    .blogs-main-content-left{
+        margin: 40px 0;
+    }
+    .bmcl-b-left h4{
+        font-size: 20px;
+    }
+    .bmcl-top{
+        flex-basis: 60%;
+    }
+    .bmcl-bottom{
+        flex-basis: 40%;
+        flex-direction: column;
+    }
+
+    .bmcl-b-left{
+        justify-content: flex-start;
+    }
+
+    .bmcl-b-left div p{
+        font-size: 14px;
+    }
+    .bmcl-b-left div{
+        transform: translateX(-10px);
+    }
+
+    .bmcl-b-right a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(2, 71, 134, 1);
+        width: 80%;
+        height: 65px;
+        border-radius: 30px;
+        color: rgba(2, 71, 134, 1);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .bmcl-b-right svg{
+        display: none;
+    }
+    .bmcr-top{
+        margin-top: 25px;
+    }
+    .bmcr-b-left h4{
+        font-size: 20px;
+    }
+
+    .bmcr-b-left div p{
+        font-size: 14px;
+    }
+
+    .bmcr-b-left div{
+        transform: translateX(-10px);
+    }
+
+    .bmcr-b-left{
+        flex-direction: column;
+    }
+
+    .bmcr-bottom{
+        flex-direction: column;
+    }
+
+    .tripsy-insta-title{
+        flex-direction: column;
+    }
+    .insta-title-left{
+        width: 75%;
+    }
+    .insta-title-left h3{
+        font-size: 30px;
+        text-align: center;
+    }
+    .insta-title-right{
+        width: 50%;
+    }
+
+    .follow-btn{
+        height: 80%;
+    }
+
+    .tripsy-insta-frame iframe{
+        height: 500px;
+    }
 
 }

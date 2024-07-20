@@ -1,16 +1,119 @@
-.home-banner{
-    height: 700px;
-    overflow-y: hidden;
-}
-
-.home-banner img{
+.home-banner {
+    /*   */
+    /* overflow-y: hidden; */
+    height: 120vh;
     width: 100%;
-    height: 150%;
 }
 
-@media only screen and (max-width:600px){
-    .home-banner img{
+.home-banner .img-box {
+    /* position: relative; */
+    height: 63%;
+}
+
+
+.landing-text {
+    width: 65%;
+}
+
+.landing-text h1 {
+    font-weight: 400;
+    font-size: 60px;
+}
+
+@media only screen and (max-width:600px) {
+    .home-banner {
         width: 100%;
+        height: 1500px;
+        overflow: hidden;
+        
+    }
+
+    .home-banner .img-box {
+        /* position: relative; */
+       max-height: 53%;
+    }
+
+
+    .landing-text h1 {
+        font-weight: 500;
+        font-size: 46px;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    .landing-text {
+        width: 75%;
+    }
+}
+
+
+/* #USP BOX */
+.uspBox-main {
+    height: 100%;
+    width: 100%;
+}
+
+.UspBox {
+    bottom: 200px;
+    height: 44%;
+}
+
+.uspContent {
+    flex-direction: row;
+}
+
+
+.uspBtn {
+    background-color: rgba(2, 71, 134, 1);
+    border-radius: 25px;
+    transition: 1s;
+    cursor: pointer;
+    flex-basis: 15%;
+    height: 100%;
+    width: 15%;
+}
+
+.uspBtn:hover {
+    background-color: rgba(3, 21, 47, 1);
+}
+
+.uspTitle {
+    font-size: 34px;
+    font-weight: 400;
+    width: 45%;
+
+}
+
+@media only screen and (max-width:600px) {
+    .uspBox-main {
+        height: 900px;
+    }
+
+    .UspBox {
+        bottom: 350px;
         height: 100%;
+    }
+
+    .uspContent {
+        flex-direction: column;
+    }
+
+    .uspTitle {
+        font-size: 30px;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .uspLine {
+        display: none;
+    }
+
+    .uspBtn {
+        background-color: rgba(2, 71, 134, 1);
+        border-radius: 35px;
+        transition: 1s;
+        cursor: pointer;
+        flex-basis: 8%;
+        height: 100%;
+        width: 80%;
     }
 }

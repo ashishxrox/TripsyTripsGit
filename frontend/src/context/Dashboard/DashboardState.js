@@ -12,7 +12,7 @@ const DashboardState = (props) => {
     const [nonEvisa, setNonEvisa] = useState([])
     const [packages, setPackages] = useState([])
     const [flights, setFlights] = useState([])
-    const [hotels, setHotels] = useState([])
+    const [contact, setContact] = useState([])
     const [insurance, setInsurance] = useState([])
     const [visa, setVisa] = useState([])
     const [docs, setDocs] = useState([])
@@ -72,21 +72,21 @@ const DashboardState = (props) => {
     }, []);
 
     useEffect(() => {
-        const fetchHotelData = async () => {
+        const fetchContactData = async () => {
             try {
-                const response = await fetch(`${apiURL}/api/fetchFormData/hotels`);
+                const response = await fetch(`${apiURL}/api/fetchFormData/contact`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const jsonData = await response.json();
-                setHotels(jsonData);
+                setContact(jsonData);
             } catch (error) {
                 console.error('Error fetching country data:', error);
             }
         };
 
 
-        fetchHotelData();
+        fetchContactData();
     }, []);
 
     useEffect(() => {
@@ -144,7 +144,7 @@ const DashboardState = (props) => {
     }, []);
 
     return (
-        <DashboardContext.Provider value={{ nonEvisa, packages, flights, hotels, insurance, visa, docs}}>
+        <DashboardContext.Provider value={{ nonEvisa, packages, flights, contact, insurance, visa, docs}}>
             {props.children}
         </DashboardContext.Provider>
     )
