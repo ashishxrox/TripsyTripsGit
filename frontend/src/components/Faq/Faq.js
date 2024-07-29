@@ -3,11 +3,11 @@ import '../../static/faq.css'
 
 const Faq = ({ content }) => {
   return (
-    <div className='d-flex faq-cont-outer' style={{ width: "100%", position: "relative", zIndex: "999", top: "275px" }}>
+    <div className='d-flex faq-cont-outer' style={{ width: "100%", position: "relative", zIndex: "999", }}>
       <div className='faq-cont-main d-flex justify-content-center ' style={{ width: "100%", backgroundColor: "rgba(243, 236, 230, 1)" }}>
         <div className="faq-cont d-flex justify-content-center align-items-center flex-column" style={{ height: "80%", width: "90%" }}>
-          <div className="fc-top my-1 d-flex justify-content-between align-items-center" style={{ flexBasis: "90%", height: "100%", width: "100%" }}>
-            <div className="fct-left d-flex justify-content-around align-items-start flex-column" style={{ flexBasis: "34.5%", height: "100%", width: "100%" }}>
+          <div className="fc-top my-1 d-flex align-items-center" style={{ flexBasis: "90%", height: "100%", width: "100%" }}>
+            <div className="fct-left d-flex justify-content-around align-items-start flex-column" style={{ height: "100%", width: "100%" }}>
               <div className='faq-title'>
                 <h3 style={{ fontSize: "46px", fontFamily: "Clash Display", fontWeight: "500" }}>FAQs</h3>
               </div>

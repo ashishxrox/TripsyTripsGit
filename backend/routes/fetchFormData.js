@@ -8,7 +8,8 @@ const FlightData = require('../models/Flight')
 const ContactData = require('../models/ContactForm')
 const InsuranceData = require('../models/Insurance')
 const FormData = require('../models/FormData')
-const DocumentData = require('../models/CountryImages')
+const DocumentData = require('../models/CountryImages');
+const NewsletterData = require('../models/Newsletter');
 
 
 const router = express.Router();
@@ -125,6 +126,19 @@ router.post('/download', (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
+
+//Route 8: Get Newsletter data using: GET "/api/fetchFormData/newsletter"
+
+router.get('/newsletter', async (req, res) => {
+    try {
+        const data = await NewsletterData.find({});
+        res.send(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+})
 
 
 

@@ -95,7 +95,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarSupportedContent">
                         <div className='menu-items-box  d-flex justify-content-center align-items-center' style={{ width: "650px", height: "100px" }}>
                             <ul className=' d-flex justify-content-between align-items-center' style={{ width: "100%", height: "100%", listStyleType: "none", fontFamily: "Inter", fontWeight: "400", fontSize: "16px", lineHeight: "26px", marginBottom:"0" }}>
-                                <li> <Link to="/" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px", cursor: "pointer" }}> Home </Link></li>
+                                <li> <Link to="/" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px", cursor: "pointer", fontFamily:"General Sans" }}> Home </Link></li>
                                 {/* <li> <Link to="/visa" style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>Visas </Link></li> */}
                                 <li>
                                     <p onClick={() => { handleVisaClick() }} style={{ position: "relative", top: "8px", color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px", cursor: "pointer" }}>Visas <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,14 +103,14 @@ const Navbar = () => {
                                     </svg>
                                     </p>
                                     <div className={`visa-drop ${show && "py-3 px-3"} ${show && "visa-drop-show"} d-flex justify-content-end align-items-start flex-column`} style={{ position: "absolute", zIndex: "99" }}>
-                                    <Link to="/visa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000" }}>E-Visa</Link>
-                                        <Link to="/regVisa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000" }}>Sticker/ Non E-Visa</Link>
+                                    <Link to="/visa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000", fontFamily:"General Sans" }}>E-Visa</Link>
+                                        <Link to="/regVisa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000",  fontFamily:"General Sans" }}>Sticker/ Non E-Visa</Link>
                                     </div>
                                 </li>
 
-                                <li> <Link to="/package" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>Packages </Link></li>
-                                <li> <Link to="/about" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>About </Link></li>
-                                <li> <Link to="/blogs" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>Blogs </Link></li>
+                                <li> <Link to="/package" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>Packages </Link></li>
+                                <li> <Link to="/about" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>About </Link></li>
+                                <li> <Link to="/blogs" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>Blogs </Link></li>
                             </ul>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ const Navbar = () => {
 
                         </div>
                         <div className=' cb-btn d-flex justify-content-around align-items-center' style={{ height: "60px", width: "155px", borderRadius: "30px" }}>
-                            <Link to="/contact" onClick={() => { closeVisaDrop() }} style={{ color: "#fff", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>Contact Us</Link>
+                            <Link to="/contact" onClick={() => { closeVisaDrop() }} style={{ color: "#fff", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>Contact Us</Link>
                         </div>
                     </div>
                 </div>

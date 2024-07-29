@@ -34,7 +34,7 @@ const ReviewBox = () => {
                     </div>
 
                     <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4  style={{marginTop:"40px", textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>TANIA S</h4>
+                    <h4 className="rev-slider-title"  style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>TANIA S</h4>
                     <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
 
 
@@ -54,7 +54,7 @@ const ReviewBox = () => {
                     </div>
 
                     <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4 style={{marginTop:"40px", textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Ashish N.</h4>
+                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Ashish N.</h4>
                     <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
 
 
@@ -74,7 +74,7 @@ const ReviewBox = () => {
                     </div>
 
                     <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4 style={{marginTop:"40px", textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Karan M.</h4>
+                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Karan M.</h4>
                     <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
 
 

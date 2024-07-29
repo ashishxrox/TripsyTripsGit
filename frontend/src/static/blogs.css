@@ -1,0 +1,52 @@
+.hero-blog-main{
+    height: 105vh;
+}
+
+.blogs-head-box{
+    margin-top: 40px;
+}
+
+.hbt-right{
+    display: flex;
+}
+
+.b-options{
+    height: 100vh;
+}
+
+.h-blog-tags{
+padding: 0 30px;
+}
+
+.b-options-main{
+    justify-content: center;
+    width:100%;
+}
+
+@media only screen and (max-width:600px){
+    .b-options-main{
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+    .hero-blog-main{
+        height: 550px;
+    }
+    .blogs-head-box{
+        margin-top: 0px;
+    }
+
+    .hbt-right{
+        display: none;
+    }
+
+    .b-options{
+        height: 2800px;
+    }
+
+    .h-blog-tags{
+        padding: 0 15px;
+        }
+
+ 
+    
+}

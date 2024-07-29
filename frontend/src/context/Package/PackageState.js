@@ -38,7 +38,7 @@ const PackageState = (props) => {
                 "Abu Dhabi City tour + Mosque",
                 "Musuem of Future + Dubai Frame"
             ],
-            img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg"
+            img_url: "../../static/media/dubai.ed54eea1d8eab5f08530.jpg"
         },
         {
             place: "Singapore",
@@ -61,7 +61,7 @@ const PackageState = (props) => {
                 "Sunway Lagoon Theme Park",
                 "Genting Island 1 Night"
             ],
-            img_url: "../../static/media/malaysia.f9c543518703d70497e3.jpg"
+            img_url: "../../static/media/malaysia.a22041cc015165647f3d.jpg"
         },
         {
             place: "Bali",
@@ -72,7 +72,7 @@ const PackageState = (props) => {
                 "Bali Pioneer Swing + Rice Terrace",
                 "Teganingan Waterfall + UBUD Art Market"
             ],
-            img_url: "../../static/media/bali.3b9b22af06cf894f365c.jpeg"
+            img_url: "../../static/media/bali.5e9c25855eaaf8c36980.jpeg"
         },
         {
             place: "Turkey",
@@ -83,7 +83,7 @@ const PackageState = (props) => {
                 "City of Cappadocia visit to Goreme open air museum, Dervent Valley, Pastbag Valley",
                 "Spice Bazar + Bosphorus Cruise in Istanbul"
             ],
-            img_url: "../../static/media/turkeyPkg.35da3bba4f6345350c2e.jpg"
+            img_url: "../../static/media/turkeyPkg.01f0720f4b0e1889d3e2.jpg"
         },
         {
             place: "Kerala",
@@ -95,7 +95,7 @@ const PackageState = (props) => {
                 "2N Kovalam",
                 "Includes: All sightseeing, boat rides, tea plantation and others"
             ],
-            img_url: "../../static/media/kerala.8fff81d98ab6050bfb58.jpeg"
+            img_url: "../../static/media/kerala.5ae4050d5bfdd0952c15.jpeg"
         },
         {
             place: "Kashmir",
@@ -107,7 +107,7 @@ const PackageState = (props) => {
                 "Includes: City tour, Shikara Ride in Dal Lake, sightseeing",
                 
             ],
-            img_url: "../../static/media/kashmir.238df277f7d6de4ca932.jpeg"
+            img_url: "../../static/media/kashmir.95f5bac767455419706a.jpeg"
         },
         {
             place: "Vietnam",
@@ -129,7 +129,7 @@ const PackageState = (props) => {
                 "Sri Bhakta Hanuman Temple + Seetha Amman Temple + Ravana Falls + Ravana Cave",
                 "9 Arch Bridge + Little Adams Peak + Galle Fort"
             ],
-            img_url: "../../static/media/lanka.03d1c318b154fc4d785c.jpeg"
+            img_url: "../../static/media/sriLanka.b12c6a89efe54467845e.jpeg"
         },
         {
             place: "Thailand",
@@ -143,7 +143,7 @@ const PackageState = (props) => {
             img_url: "../../static/media/thailand.68b5e7f65f56a0260bf5.jpeg"
         },
         {
-            place: "Leh & Nubra Valley ",
+            place: "Leh & Nubra Valley",
             inclusion: [
                 "Hotel 3 or 4 Star",
                 "2N Bangkok",
@@ -162,7 +162,7 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/meghalaya.c29d9e14ecf36375e707.jpg"
+            img_url: "../../static/media/meghalaya.a2c08d62b67ec5e524c7.jpg"
         },
         {
             place: "Abu Dhabi",
@@ -173,7 +173,7 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/abuDhabi.ee363217d01ecfff3734.jpg"
+            img_url: "../../static/media/abuDhabi.6948664b721063c12774.jpg"
         }
 
 

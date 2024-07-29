@@ -361,7 +361,7 @@ const options = [
       category: "E-Visa",
       img_url: "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
       visaType: {
-        "name": "Sri Lanka Electronic Travel Authorization",
+        "name": "Sri Lanka E-Visa",
         "entry": "Single",
         "validityDays": 120,
         "durationDays": 30,

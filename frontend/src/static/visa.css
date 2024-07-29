@@ -6,6 +6,7 @@
 
 .visa-title{
   height: 40vh;
+  margin: 50px 0;
 }
 
 
@@ -48,6 +49,8 @@
 @media only screen and (max-width:600px){
   .visa-title{
     height: 650px;
+    margin: 20px 0;
+    margin-left: 5px;
   }
   .head-box h2{
     font-size: 30px;
@@ -65,6 +68,10 @@
 
   .v-options{
     width:85%;
+  }
+
+  .visa-main-row{
+    margin-left: -5px;
   }
 
   .visat-title{

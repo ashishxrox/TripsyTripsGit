@@ -1,9 +1,9 @@
 .hop-main{
-    height: 100vh;
+    height: 800px;
 }
 
 .ptv-main{
-    height: 95vh;
+    height: 750px;
 }
 
 .pack-top{
@@ -23,9 +23,14 @@
 .pack-bottom{
     flex-direction: row;
     align-items: flex-start;
+    height: 100%;
 }
 .pb-left{
     flex-direction: column;
+}
+
+.pb-left button{
+    padding: 0;
 }
 
 .overlay{
@@ -34,7 +39,7 @@
 }
 
 .hov{
-    height: 140vh;
+    height: 1200px;
 }
 
 .hov-desk{
@@ -45,20 +50,52 @@
     display: none;
 }
 
+.main-cont-packages{
+    width: 85%;
+    height: 100%;
+}
+
+.pb-right{
+    height: 95%;
+}
+
+#hop-slid-card-img{
+    height: 70%;
+}
+
+.pb-right-2{
+    height: 85%;
+}
+
+.main-cont-places{
+    top:50px ;
+    height: 100%;
+}
+
+.ptvb-left{
+    position: relative;
+    top: -10px;
+}
 
 
 
 @media only screen and (max-width:600px){
     .hop-main{
-        height: 1000px;
+        height: 750px;
     }
+    
 
     .ptv-main{
-        height: 1000px;
+        height: 750px;
     }
 
     .pack-top{
         flex-direction: column;
+    }
+
+    .ptvb-left{
+        position: relative;
+        top: -45px
     }
 
     .pt-txt-left h3{
@@ -66,6 +103,7 @@
         font-weight: 500;
         line-height: 57px;
         margin-left: 10px;
+        margin-bottom: 0;
     }
     .pt-txt-right p{
         width: 100%;
@@ -76,6 +114,10 @@
     }
     .pb-left{
         flex-direction: row;
+    }
+
+    .pb-left button{
+        padding: 0 5px;
     }
 
     .overlay{
@@ -96,7 +138,28 @@
         display: block;
     }
     .hovm{
-        height: 2000px;
+        height: 1600px;
+    }
+
+    .main-cont-packages{
+        width: 90%;
+        height: 90%;
+    }
+
+    .pb-right{
+        height: 100%;
+    }
+
+    #hop-slid-card-img{
+        height: 65%;
+    }
+
+    .pb-right-2{
+        height: 85%;
+    }
+    .main-cont-places{
+        top:20px ;
+        height: 65%;
     }
 }
 
@@ -118,6 +181,9 @@
 .hrv-main-cont{
     height: 80%;
     width: 85%;
+    padding: 0 40px;
+    background-image: url("./assets/homeReg.png");
+    background-size: cover;
 }
 
 .hrv-top{
@@ -144,6 +210,9 @@
     .hrv-main-cont{
         height: 100%;
         width: 95%;
+        padding: 0 15px;
+        background-image: url("./assets/homeRegMob.png");
+        background-size: cover;
     }
     .hrv-top{
         justify-content: center;

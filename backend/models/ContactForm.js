@@ -34,7 +34,11 @@ const ContactDataSchema = new mongoose.Schema({
     handle: {
         type: String,
         default: " "
-    }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
 
 })
 

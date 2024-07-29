@@ -57,7 +57,7 @@ const Visa = () => {
     <div className='d-flex justify-content-center align-items-center flex-column'>
 
       <VisaBanner />
-      <div className="visa-title my-5 d-flex justify-content-start align-items-start flex-column" style={{ width: "85%", backgroundColor: "#fff" }}>
+      <div className="visa-title d-flex justify-content-start align-items-start flex-column" style={{ width: "85%", backgroundColor: "#fff" }}>
         <div className="head-box my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", height: "80%" }}>
           <h2 style={{ fontSize: "46px", fontWeight: "500", fontFamily: "Clash Display" }}>E-Visa in 3 steps</h2>
         </div>

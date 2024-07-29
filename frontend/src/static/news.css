@@ -1,6 +1,8 @@
 .subs-btn{
     cursor: pointer;
-    background-color: rgba(2, 71, 134, 1)
+    background-color: rgba(2, 71, 134, 1);
+    position: static;
+    left: 0;
 }
 
 .disabled{
@@ -14,10 +16,12 @@
 }
 .newsletter{
     align-items: flex-end;
+    height: 100vh;
 }
 
 .newsletter-cont{
     flex-direction: row;
+    width: 85%;
 }
 
 .nc-right{
@@ -34,9 +38,12 @@
 @media only screen and (max-width:600px){
     .newsletter-cont{
         flex-direction: column;
+        width: 100%
     }
     .newsletter{
-        align-items: center;
+        align-items: flex-end;
+        height: 800px;
+        margin-bottom: 25px;
     }
     .nc-left{
         text-align: center;
@@ -54,5 +61,8 @@
     .nc-left p{
         text-align: left;
     }
-    
+    .subs-btn{
+        position: relative;
+        left: -100px;
+    }
 }

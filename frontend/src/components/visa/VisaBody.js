@@ -11,7 +11,7 @@ const VisaBody = ({active}) => {
 
   return (
     <>
-    <div className='row' style={{ backgroundColor: "white", zIndex:"-99999999"}}>
+    <div className='row visa-main-row' style={{ backgroundColor: "white", zIndex:"-99999999"}}>
       {active=== 0 && countries.map((country, index) => {
         // Assuming both countries and images have the same length and corresponding data
         return <CountryBox key={index} country={country}/>;

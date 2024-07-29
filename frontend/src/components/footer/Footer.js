@@ -42,41 +42,41 @@ const Footer = () => {
 
                     </div>
                     <p className='my-3' style={{ fontSize: "18px", fontWeight: "400", color: "#fff" }}>Get in touch with us for any queries</p>
-                    <div className="footer-btn d-flex justify-content-center align-items-center my-2" style={{ height: "60px", width: "210px", border: "1px solid #fff", borderRadius: "30px" }}>
-                        <Link to="/contact" style={{ textDecoration: "none", color: "#fff", fontWeight: "500", fontSize: "16px" }}>Contact Us</Link>
+                    <div className="footer-btn d-flex justify-content-center align-items-center my-2" style={{ height: "55px", width: "145px", border: "1px solid #fff", borderRadius: "30px" }}>
+                        <Link to="/contact" style={{ textDecoration: "none", color: "#fff", fontWeight: "500", fontSize: "16px", fontFamily:"General Sans" }}>Contact Us</Link>
                     </div>
                 </div>
                 <div className='foot-line' style={{ backgroundColor: "#fff" }}></div>
                 <div className="ft-right d-flex justify-content-between align-items-center" style={{ flexBasis: "60%", height: "100%", width: "100%" }}>
-                    <div className="ftr-left d-flex justify-content-around flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
-                        <h4 className='py-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Links</h4>
+                    <div className="ftr-left d-flex justify-content-center flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
+                        <h4 className='pt-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Links</h4>
                         <ul style={{ listStyleType: "none" }}>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#fff" }}>
+                                <Link to="/" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily:"General Sans" }}>
                                     Home
                                 </Link>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <Link to="/visa" style={{ textDecoration: "none", cursor: "pointer", color: "#fff" }}>
+                                <Link to="/visa" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily:"General Sans" }}>
                                 Visa
                                 </Link>
                                 </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <Link to="/package" style={{ textDecoration: "none", cursor: "pointer", color: "#fff" }}>
+                                <Link to="/package" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily:"General Sans" }}>
                                     Package</Link>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <Link to="/about" style={{ textDecoration: "none", cursor: "pointer", color: "#fff" }}>
+                                <Link to="/about" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily:"General Sans" }}>
                                     About Us</Link>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <Link to="/contact" style={{ textDecoration: "none", cursor: "pointer", color: "#fff" }}>Contact Us</Link>
+                                <Link to="/contact" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily:"General Sans" }}>Contact Us</Link>
                             </li>
                         </ul>
                     </div>
-                    <div className="ftr-left d-flex justify-content-around align-items-start flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
-                        <h4 className='py-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Contact Information</h4>
-                        <ul style={{ listStyleType: "none", paddingLeft: "none" }}>
+                    <div className="ftr-left2 d-flex justify-content-center align-items-start flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
+                        <h4 className='pt-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Contact Information</h4>
+                        <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
                                 <a href="tel:+919374859311" style={{ color: '#fff', textDecoration: 'none' }}>+91 9374859311</a>
                             </li>
@@ -94,8 +94,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="ftr-left d-flex justify-content-start flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
-                        <h4 className='py-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Connect with us</h4>
+                    <div className="ftr-left3 d-flex justify-content-start flex-column" style={{ flexBasis: '32%', height: "90%", width: "100%", color: "#fff" }}>
+                        <h4 className='py-3' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Connect with us</h4>
                         <div className="social-icons d-flex justify-content-start align-items-center flex-row" style={{ width: "60%" }}>
                             <div className="si-fb ">
                                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -135,11 +135,21 @@ const Footer = () => {
             <div style={{ height: "2px", width: "100%", backgroundColor: "#fff" }}></div>
             <div className="footer-bottom my-3 d-flex justify-content-between align-items-center" style={{ flexBasis: "8%", height: "100%", width: "90%" }}>
                 <h6 style={{ color: "#fff", fontSize: "16px", fontWeight: "500", textDecoration: "none" }}>All right reserved by Tripsy Trips @2024</h6>
-                <ul style={{ paddingLeft: "0" }}>
+                <ul className='imp-links-foot-desk' style={{ paddingLeft: "0" }}>
                     <Link className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Site Map</Link>
                     <Link to="/refund" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Refund policy</Link>
                     <Link to="/policy" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Privacy policy</Link>
                     <Link to="/terms" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Terms & Condition</Link>
+                </ul>
+                <ul className='imp-links-foot-mob' style={{ paddingLeft: "0" }}>
+                    <div>
+                    <Link className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Site Map</Link>
+                    <Link to="/refund" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Refund policy</Link>
+                    <Link to="/policy" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Privacy policy</Link>
+                    </div>
+                    <div style={{padding:"10px", paddingRight:"35px"}}>
+                    <Link to="/terms" className='mx-3' style={{ color: "#fff", fontWeight: "500", textDecoration: "none" }}>Terms & Condition</Link>
+                    </div>
                 </ul>
             </div>
 

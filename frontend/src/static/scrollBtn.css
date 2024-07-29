@@ -1,53 +1,78 @@
-@keyframes keepRotate{
+@keyframes keepRotate {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
-@keyframes upDown{
-    0%,100% {
+@keyframes upDown {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(10px);
     }
 }
 
-.scrll-btn-outer{
+.scrll-btn-outer {
     animation: keepRotate 7s linear infinite;
+    height: 100px;
+    width: 100px;
 }
 
-.scroll-arrow svg{
+.scroll-arrow {
+    left: -60px;
+}
+
+.scroll-arrow svg {
     position: relative;
     top: 20px;
     transition: 0.3s;
 }
 
-.scroll-arrow h4{
+.scroll-arrow p {
     opacity: 0;
     text-align: center;
     transition: 0.5s all;
     position: relative;
-    left: -35px;
-    top: -10px;
+    left: -15px;
+    top: 15px;
     text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
     transform: translateY(-25px);
 }
 
-.scroll-arrow:hover svg{
-    opacity: 0;
-    
+.scroll-arrow:hover svg {
+    height: 25px;
+    top: 0px;
+
 }
 
-.scroll-arrow:hover h4{
+.scroll-arrow:hover p {
     opacity: 1;
     transform: translateY(0);
+    text-align: center;
 }
 
 
-.scroll-arrow svg{
+.scroll-arrow svg {
     animation: upDown 1s ease-in-out infinite;
+}
+
+@media only screen and (max-width:600px) {
+
+
+    .scroll-arrow {
+        
+        top: 0px;
+    }
+
+
 }

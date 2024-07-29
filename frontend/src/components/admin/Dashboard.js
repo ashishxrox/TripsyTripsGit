@@ -10,6 +10,7 @@ import Login from './Login'; // Import your Login component
 // import axios from 'axios';
 import ReactGA from 'react-ga';
 import { useLocation } from 'react-router-dom'
+import NewsletterDash from './NewsletterDash';
 
 const Dashboard = () => {
 
@@ -80,6 +81,7 @@ const Dashboard = () => {
                     {activeItem === 3 && <FlightDash />}
                     {activeItem === 4 && <HotelDash />}
                     {activeItem === 5 && <InsuranceDash />}
+                    {activeItem === 6 && <NewsletterDash />}
                 </div>
             </div>
         </div>

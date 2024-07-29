@@ -11,7 +11,7 @@ import egypt from '../../static/assets/country/egypt.jpg'
 import ethiopia from '../../static/assets/country/ethiopia.jpeg'
 import georgia from '../../static/assets/country/georgia.jpeg'
 import hongKong from '../../static/assets/country/hongKong.jpeg'
-import indonesia from '../../static/assets/country/indonesia.jpeg'
+import indonesia from '../../static/assets/country/bali.jpeg'
 import jordan from '../../static/assets/country/jordan.jpeg'
 import kyrgyzstan from '../../static/assets/country/kyrgyzstan.jpeg'
 import laos from '../../static/assets/country/laos.jpeg'
@@ -74,7 +74,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/hongKong.a6f8c79a61c063b7ce9d.jpg",
+      "img_url": "../../static/media/hongKong.3684db6e18f3252c13de.jpg",
       "tag": "hongKong"
     },
    {
@@ -333,7 +333,7 @@ const VisaState = (props) => {
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Sri Lanka Electronic Travel Authorization",
+          "name": "Sri Lanka E-Visa",
           "entry": "Single",
           "validityDays": 120,
           "durationDays": 30,
@@ -347,7 +347,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/lanka.0433bf327518b21d8733.jpg",
+      "img_url": "../../static/media/lanka.c643e5df2c166d288f72.jpg",
       "tag": "sriLanka"
     },
     {
@@ -441,7 +441,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/georgia.4914ba7046bfc359d307.jpeg",
+      "img_url": "../../static/media/georgia.e6b5ae595c03f240859c.jpeg",
       "tag": "georgia"
     },
     {
@@ -468,7 +468,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/indonesia.c7d66200bee0189d6d3d.jpeg",
+      "img_url": "../../static/media/bali.5e9c25855eaaf8c36980.jpeg",
       "tag": "indonesia"
     },
     {
@@ -491,7 +491,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/jordan.cd569956c08ebfabd0c9.jpeg",
+      "img_url": "../../static/media/jordan.f0c9f10a66f5f0bf307c.jpeg",
       "tag": "jordan"
     },
     {
@@ -518,7 +518,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/moldova.6d5aa0ecec7a273038c2.jpeg",
+      "img_url": "../../static/media/moldova.bec7372e5859aa8891f7.jpeg",
       "tag": "moldova"
     },
     {
@@ -559,7 +559,7 @@ const VisaState = (props) => {
         
       ],
       "__v": 0,
-      "img_url": "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+      "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
       "tag": "dubai"
     },
     {
@@ -609,7 +609,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/laos.c549b728380a089b607e.jpeg",
+      "img_url": "../../static/media/laos.e6fd221a31f5bce63a8d.jpeg",
       "tag": "laos"
     },
     {
@@ -633,7 +633,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/madagascar.cdef75e68a3728438dea.jpeg",
+      "img_url": "../../static/media/madagascar.8b4676fe954f8bc73b0a.jpeg",
       "tag": "madagascar"
     },
     {
@@ -771,7 +771,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/rwanda.bc6dda4fb8afa6018c81.jpg",
+      "img_url": "../../static/media/rwanda.ba5e930ef020e6ac7668.jpeg",
       "tag": "rwanda"
     },
     {
@@ -911,7 +911,7 @@ const VisaState = (props) => {
         
       ],
       "__v": 0,
-      "img_url": "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+      "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
       "tag": "dubai"
     },
     {
@@ -1052,7 +1052,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/hongKong.a6f8c79a61c063b7ce9d.jpg",
+      "img_url": "../../static/media/hongKong.3684db6e18f3252c13de.jpg",
       "tag": "hongKong"
     },
     {
@@ -1079,7 +1079,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/indonesia.c7d66200bee0189d6d3d.jpeg",
+      "img_url": "../../static/media/bali.5e9c25855eaaf8c36980.jpeg",
       "tag": "indonesia"
     },
     {
@@ -1102,7 +1102,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/jordan.cd569956c08ebfabd0c9.jpeg",
+      "img_url": "../../static/media/jordan.f0c9f10a66f5f0bf307c.jpeg",
       "tag": "jordan"
     },
     {
@@ -1152,7 +1152,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/laos.c549b728380a089b607e.jpeg",
+      "img_url": "../../static/media/laos.e6fd221a31f5bce63a8d.jpeg",
       "tag": "laos"
     },
     {
@@ -1360,7 +1360,7 @@ const VisaState = (props) => {
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Sri Lanka Electronic Travel Authorization",
+          "name": "Sri Lanka E-Visa",
           "entry": "Single",
           "validityDays": 120,
           "durationDays": 30,
@@ -1374,7 +1374,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/lanka.0433bf327518b21d8733.jpg",
+      "img_url": "../../static/media/lanka.c643e5df2c166d288f72.jpg",
       "tag": "sriLanka"
     },
     {
@@ -1482,7 +1482,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/madagascar.cdef75e68a3728438dea.jpeg",
+      "img_url": "../../static/media/madagascar.8b4676fe954f8bc73b0a.jpeg",
       "tag": "madagascar"
     },
     {
@@ -1544,7 +1544,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/rwanda.bc6dda4fb8afa6018c81.jpg",
+      "img_url": "../../static/media/rwanda.ba5e930ef020e6ac7668.jpeg",
       "tag": "rwanda"
     },
     {
@@ -1596,7 +1596,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/moldova.6d5aa0ecec7a273038c2.jpeg",
+      "img_url": "../../static/media/moldova.bec7372e5859aa8891f7.jpeg",
       "tag": "moldova"
     },
     {

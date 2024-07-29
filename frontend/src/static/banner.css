@@ -13,6 +13,7 @@
 
 .landing-text {
     width: 65%;
+    top: 150px;
 }
 
 .landing-text h1 {
@@ -23,14 +24,14 @@
 @media only screen and (max-width:600px) {
     .home-banner {
         width: 100%;
-        height: 1500px;
+        height: 1200px;
         overflow: hidden;
         
     }
 
     .home-banner .img-box {
         /* position: relative; */
-       max-height: 53%;
+       max-height: 33%;
     }
 
 
@@ -42,6 +43,7 @@
 
     .landing-text {
         width: 75%;
+        top: 50px;
     }
 }
 
@@ -83,13 +85,21 @@
 
 }
 
+.uspTitle-desk{
+    display: block;
+}
+
+.uspTitle-mob{
+    display: none;
+}
+
 @media only screen and (max-width:600px) {
     .uspBox-main {
-        height: 900px;
+        height: 775px;
     }
 
     .UspBox {
-        bottom: 350px;
+        bottom: 75px;
         height: 100%;
     }
 
@@ -115,5 +125,14 @@
         flex-basis: 8%;
         height: 100%;
         width: 80%;
+    }
+
+    .uspTitle-desk{
+        display: none;
+    }
+    
+    .uspTitle-mob{
+        display: block;
+        text-align: center;
     }
 }

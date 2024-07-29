@@ -1,5 +1,6 @@
 .action-boxes{
-    height: 87vh;
+    height: 650px;
+    padding: 50px;
 }
 
 .other-ser-title{
@@ -33,7 +34,8 @@
 @media only screen and (max-width:600px){
 
     .action-boxes{
-        height: 1750px;
+        height: 1450px;
+        padding: 0;
     }
     .other-ser-title h3{
         font-size: 30px;
@@ -53,6 +55,17 @@
     .action-boxes .row1{
         flex-direction: column
     }
+
+    .action-boxes .row1 .col1{
+        height: 450px;
+    }
+    .action-boxes .row1 .col2{
+        height: 450px;
+    }
+    .action-boxes .row1 .col3{
+        height: 450px;
+    }
+
     .action-boxes .row1 .col1 .card{
         width: 22rem;
     }
@@ -73,5 +86,5 @@
 
 
 .card-btn div:hover{
-    background-color: rgba(151, 171, 182, 1);
+    background-color: rgba(151, 171, 182, 0.3);
 }

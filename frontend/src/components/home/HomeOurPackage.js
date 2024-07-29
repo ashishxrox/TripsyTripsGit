@@ -1,4 +1,4 @@
-import React, {  useRef, useContext } from 'react'
+import React, { useRef, useContext } from 'react'
 import PackageContext from '../../context/Package/PackageContext';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import '../../static/home.css'
@@ -11,13 +11,13 @@ import '../../static/swipper.css';
 
 import bg from '../../static/assets/clouds.png';
 import { Link } from 'react-router-dom';
-// import Singapore from '../../static/assets/country/singapore.jpeg'
+
 
 const HomeOurPackage = () => {
 
   const context = useContext(PackageContext);
 
-  const {tours} = context
+  const { tours } = context
   const swiperRef = useRef(null);
 
   const overlayStyle = {
@@ -39,9 +39,9 @@ const HomeOurPackage = () => {
 
   return (
     <div className='hop-main d-flex justify-content-center align-items-center my-5' style={{ width: "100%", backgroundColor: "rgba(3, 21, 47, 1)" }}>
-      <div className='d-flex justify-content-center align-items-center' style={{ height: "100%", width: "100%", backgroundImage: `url(${bg})`, backgroundSize:"cover" }}>
+      <div className='d-flex justify-content-center align-items-center' style={{ height: "100%", width: "100%", backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
         <div className="overlay d-flex justify-content-center align-items-center" style={{ height: "100%", width: "100%", backgroundColor: 'rgba(3, 21, 47, 0.8)' }}>
-          <div className="main-cont-packages d-flex justify-content-center align-items-center flex-column" style={{ width: "85%", height: "100%" }}>
+          <div className="main-cont-packages d-flex justify-content-center align-items-center flex-column" style={{}}>
             <div className="pack-top d-flex justify-content-between align-items-center" style={{ flexBasis: "15%", width: "100%", height: "100%" }}>
               <div className="pt-txt-left m-2 d-flex justify-content-start align-items-center" style={{ flexBasis: "30%", height: "100%", width: "100%" }}>
                 <h3 style={{ fontFamily: "Clash Display", color: "#fff" }}>Our Packages</h3>
@@ -51,7 +51,7 @@ const HomeOurPackage = () => {
               </div>
             </div>
             <div className="pack-bottom d-flex justify-content-between" style={{ flexBasis: "70%", width: "100%", height: "100%" }}>
-              <div className="pb-left m-2 d-flex justify-content-center align-items-center" style={{ height: "150px", width: "100px" }}>
+              <div className="pb-left m-2 d-flex justify-content-center align-items-center" style={{ height: "100px", width: "100px", position:"relative", top:"15px" }}>
                 <button onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()} style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
                   <svg width="55" height="54" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="54" height="53" stroke="white" />
@@ -65,13 +65,13 @@ const HomeOurPackage = () => {
                   </svg>
                 </button>
               </div>
-              <div className="pb-right m-2" style={{ height: "95%", width: "100%" }}>
-                <div className="pb-right m-2 d-flex justify-content-center align-items-center" style={{ height: "100%", width: "100%" }}>
+              <div className="pb-right m-2" style={{ width: "100%" }}>
+                <div className="pb-right-1 m-2 d-flex justify-content-center align-items-center" style={{ height: "100%", width: "100%" }}>
                   <Swiper
                     ref={swiperRef}
                     breakpoints={{
                       0: {
-                        slidesPerView: 1,
+                        slidesPerView: 1.4,
                       },
                       601: {
                         slidesPerView: 3.8,
@@ -81,19 +81,23 @@ const HomeOurPackage = () => {
                     className="mySwiper"
                   >
                     {images.map((image, index) => (
-                      <SwiperSlide key={index} style={{backgroundColor:"#fff"}}>
-                        <img src={image.img_url} alt={image.alt} style={{ height: "75%", width: "100%" , position:"relative", top:"-90px", borderRadius:"10px", objectFit:"cover"}} />
+                      <SwiperSlide key={index} style={{ backgroundColor: "#fff" }}>
+                        <img id='hop-slid-card-img' src={image.img_url} alt={image.alt} style={{ width: "100%", position: "relative", top: "-90px", borderRadius: "10px", borderBottomLeftRadius: "0", borderBottomRightRadius: "0", objectFit: "cover" }} />
                         <div className="overlay py-4 my-3" style={overlayStyle}>
-                          <div className='d-flex justify-content-center align-items-start flex-column' style={{width:"90%"}}>
-                          
-                          <h3 style={{color:"#000", fontSize:"20px", fontWeight:"500"}}>{image.place} Package</h3>
-                          <p className='' style={{fontWeight:"500", fontSize:"20px"}}>Rs. 25,000 <span style={{fontSize:"12px", color:"rgba(134, 134, 134, 1)"}}> /person</span> </p>
+                          <div className='d-flex justify-content-center align-items-start flex-column' style={{ width: "90%" }}>
+
+                            <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "500", marginBottom:"0" }}>
+                              {image.place !== "Leh & Nubra Valley"
+                                ? `${image.place} Package`
+                                : "Leh... Package"}
+                            </h3>
+                            <p className='' style={{ fontWeight: "500", fontSize: "20px", marginBottom: "10px" }}>Rs. 25,000 <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>
                           </div>
-                          <div className="hop-btn d-flex align-items-center justify-content-center" style={{height:"55px", width:"85%", borderRadius:"30px",border:"1px solid rgba(2, 71, 134, 1)"}}>
-                            <Link to={{pathname: `/package/application/${image.place}`}} style={{fontSize:"16px", color:"rgba(2, 71, 134, 1)", textDecoration:"none",}}>See Package</Link>
+                          <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "85%", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
+                            <Link to={{ pathname: `/package/application/${image.place}` }} style={{ fontSize: "16px", color: "rgba(2, 71, 134, 1)", textDecoration: "none", }}>See Package</Link>
                           </div>
                         </div>
-                        
+
                       </SwiperSlide>
                     ))}
                   </Swiper>

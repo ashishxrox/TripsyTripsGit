@@ -25,15 +25,24 @@
     border-radius: 5px;
 }
 
+.visa-drop-menu{
+    position: absolute;
+    z-index: 999999;
+}
+
 
 @media only screen and (max-width:600px){
 
     .visa-drop-show{
-        height: 200px;
+        height: 150px;
         width: 85%;
-        border-bottom: 1px solid #808080;
+        
         border-top: 1px solid #808080;
         border-radius: 0;
         margin: 0 25px;
+    }
+    .visa-drop-menu{
+        position: static;
+        z-index: 0;
     }
 }

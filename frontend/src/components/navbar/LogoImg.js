@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LogoImg = () => {
   return (
-    <div className='container' style={{ height: "150px", overflow: "hidden" }}>
+    <div className='container' style={{ height: "150px", overflow: "hidden", width:"175px", position:"relative", top:"-5px" }}>
       <div className="logo-box" style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Link to="/">
         <svg width="107" height="46" viewBox="0 0 107 46" fill="none" xmlns="http://www.w3.org/2000/svg">

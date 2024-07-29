@@ -23,7 +23,7 @@ const HomeOurVisaMob = () => {
     alignItems: "center",
     fontSize: "20px",
     fontWeight: "bold",
-    height: "80%",
+    height: "95%",
     width: "100%",
     position: "relative",  // Ensure position relative for overlay
     borderRadius: "5px",  // Rounded corners
@@ -35,12 +35,14 @@ const HomeOurVisaMob = () => {
     left: 0,
     height: "100%",
     width: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.2)",  // Black tint with opacity
+    backgroundColor: "rgba(0,0,0,0.3)",
+    // backgroundColor: "red",
     zIndex: 2,  // Ensure overlay is above the image
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
     flexDirection: "column",
+    fontSize: "20px",
     textAlign: "center",
     color: "#fff",
     fontFamily: "Clash Display",
@@ -114,12 +116,12 @@ const HomeOurVisaMob = () => {
         <div className="vm-title d-flex justify-content-start align-items-center" style={{ flexBasis: "2%", width: "100%", height: "100%" }}>
           <h1 style={{ fontFamily: "Clash Display", fontSize: "30px", fontWeight: "500", lineHeight: "57px" }}>Our E-Visa</h1>
         </div>
-        <div className="vm-options d-flex justify-content-center align-items-start flex-column py-3" style={{ flexBasis: "5%", width: "70%", height: "100%" }}>
-          <ul className='d-flex justify-content-between align-items-start flex-row' style={{ width: "100%", listStyleType: "none" }}>
-            <li onClick={() => handleActive(0)} style={{ fontWeight: `${active === 0 ? "400" : "200"}`, fontSize: `${active === 0 ? "24px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 0 ? "2px solid #000" : "none"}` }}>All</li>
-            <li onClick={() => handleActive(1)} style={{ fontWeight: `${active === 1 ? "400" : "200"}`, fontSize: `${active === 1 ? "24px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 1 ? "2px solid #000" : "none"}` }}>Asia</li>
-            <li onClick={() => handleActive(2)} style={{ fontWeight: `${active === 2 ? "400" : "200"}`, fontSize: `${active === 2 ? "24px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 2 ? "2px solid #000" : "none"}` }}>Africa</li>
-            <li onClick={() => handleActive(3)} style={{ fontWeight: `${active === 3 ? "400" : "200"}`, fontSize: `${active === 3 ? "24px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 3 ? "2px solid #000" : "none"}` }}>Europe</li>
+        <div className="vm-options d-flex justify-content-center align-items-start flex-column py-3" style={{ flexBasis: "5%", width: "85%", height: "100%" }}>
+          <ul className='d-flex justify-content-between align-items-start flex-row' style={{ width: "100%", listStyleType: "none", paddingLeft: "0" }}>
+            <li onClick={() => handleActive(0)} style={{ fontWeight: `${active === 0 ? "400" : "200"}`, fontSize: "20px", cursor: "pointer", borderBottom: `${active === 0 ? "2px solid #000" : "none"}` }}>All</li>
+            <li onClick={() => handleActive(1)} style={{ fontWeight: `${active === 1 ? "400" : "200"}`, fontSize: "20px", cursor: "pointer", borderBottom: `${active === 1 ? "2px solid #000" : "none"}` }}>Asia</li>
+            <li onClick={() => handleActive(2)} style={{ fontWeight: `${active === 2 ? "400" : "200"}`, fontSize: "20px", cursor: "pointer", borderBottom: `${active === 2 ? "2px solid #000" : "none"}` }}>Africa</li>
+            <li onClick={() => handleActive(3)} style={{ fontWeight: `${active === 3 ? "400" : "200"}`, fontSize: "20px", cursor: "pointer", borderBottom: `${active === 3 ? "2px solid #000" : "none"}` }}>Europe</li>
             {/* <li onClick={handActive(3)} style={{ fontWeight: "400", fontSize: "24px" }}>South America</li> */}
           </ul>
         </div>
@@ -142,7 +144,7 @@ const HomeOurVisaMob = () => {
                   border: "none",
                   backgroundColor: isSelected ? "#000" : "#fff",
                   color: isSelected ? "#fff" : "#808080",
-                  padding: "5px 10px",
+                  padding: "0px 10px",
                   borderRadius: "30px",
                   cursor: "pointer",
                   fontSize: "20px",
@@ -154,25 +156,23 @@ const HomeOurVisaMob = () => {
             )}
           >
             {carouselData.map((page, pageIndex) => (
-              <div key={pageIndex} style={{ display: "grid", gridTemplateColumns: "1fr", gridTemplateRows: "repeat(3, 1fr)", gap: "10px", height: "100%", width: "100%" }}>
+              <div key={pageIndex} style={{ display: "grid", gridTemplateColumns: "1fr", gridTemplateRows: "repeat(3, 1fr)", gap: "0px", height: "100%", width: "100%" }}>
                 {page.map((box, boxIndex) => (
                   <Link className='car-b' key={boxIndex} style={boxStyle} to={{ pathname: `/visa/application/${box.title}` }}>
-                    <div className='card-hover' style={{ height: "100%", width: "100%" }}>
+                    <div className='' style={{ height: "100%", width: "100%" }}>
                       <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                         <img src={box.src} alt={box.alt} style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
-                        <div className="overlay py-4" style={overlayStyle}>
-                          <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                          {box.title}
-                          <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                        </div>
-                      </div>
-                      <div className="visit-btn justify-content-center align-items-center">
-                        <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
-                        </div>
-                        <div className="link-container d-flex justify-content-center align-items-center" style={{ position: "absolute", zIndex: "9999" }}>
-                          <Link to={{ pathname: `/visa/application/${box.title}` }} className='d-flex justify-content-center align-items-center' style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "200", fontSize: "24px" }}>
-                            Visit
-                          </Link>
+                        <div className="overlay py-4 d-flex justify-content-end align-items-center" style={overlayStyle}>
+                          <div className='d-flex justify-content-center align-items-center' style={{ position: "relative", bottom: "15px", left:"5px",fontSize: "20px", fontWeight: "500" }}>
+                            <div style={{ width: "55px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                            {box.title}
+                            <div style={{ width: "55px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                          </div>
+                          <div className="d-flex justify-content-center align-items-center px-5 py-2" style={{ border:"1px solid #fff", borderRadius:"30px", backgroundColor:"rgba(255,255,255,0.1)", fontWeight:"500"}}>
+                            <Link to={{ pathname: `/visa/application/${box.title}` }} className='d-flex justify-content-center align-items-center' style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "500", fontSize: "24px" }}>
+                              Visit
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>

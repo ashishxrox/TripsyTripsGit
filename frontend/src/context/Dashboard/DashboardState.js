@@ -16,6 +16,7 @@ const DashboardState = (props) => {
     const [insurance, setInsurance] = useState([])
     const [visa, setVisa] = useState([])
     const [docs, setDocs] = useState([])
+    const [news, setNews] = useState([])
 
     useEffect(() => {
         const fetchNonEvisaData = async () => {
@@ -90,6 +91,24 @@ const DashboardState = (props) => {
     }, []);
 
     useEffect(() => {
+        const fetchNewsletterData = async () => {
+            try {
+                const response = await fetch(`${apiURL}/api/fetchFormData/newsletter`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const jsonData = await response.json();
+                setNews(jsonData);
+            } catch (error) {
+                console.error('Error fetching country data:', error);
+            }
+        };
+
+
+        fetchNewsletterData();
+    }, []);
+
+    useEffect(() => {
         const fetchInsuranceData = async () => {
             try {
                 const response = await fetch(`${apiURL}/api/fetchFormData/insurance`);
@@ -144,7 +163,7 @@ const DashboardState = (props) => {
     }, []);
 
     return (
-        <DashboardContext.Provider value={{ nonEvisa, packages, flights, contact, insurance, visa, docs}}>
+        <DashboardContext.Provider value={{ nonEvisa, packages, flights, contact, insurance, visa, docs, news}}>
             {props.children}
         </DashboardContext.Provider>
     )

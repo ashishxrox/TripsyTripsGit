@@ -5,6 +5,7 @@ const Flight = require('../models/Flight')
 const NonEvisaFormData = require('../models/NonEvisaModel')
 const Package = require('../models/Package')
 const ContactData = require('../models/ContactForm')
+const NewsletterData = require('../models/Newsletter');
 
 const router = express.Router();
 
@@ -63,6 +64,16 @@ router.delete('/nonevisa', async(req, res)=>{
 router.delete('/package', async(req, res)=>{
     try {
         await Package.deleteMany({})
+
+        res.status(200).json({message: "All entries deleted"})
+    } catch (error) {
+        res.status(500).json({error: "COuld not Delete!", details:error.message})
+    }
+})
+
+router.delete('/newsletter', async(req, res)=>{
+    try {
+        await NewsletterData.deleteMany({})
 
         res.status(200).json({message: "All entries deleted"})
     } catch (error) {

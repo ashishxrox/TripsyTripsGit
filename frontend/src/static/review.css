@@ -68,11 +68,16 @@
 
 
 .rclb-btn:hover{
- background: rgba(151, 171, 182, 1);
+ background: rgba(151, 171, 182, 0.3);
 }
 
 
 /* #Blog Button */
+.blogs-btn{
+    position: relative;
+    top: 65px;
+}
+
 .blogs-btn-cont,
 .follow-btn {
     background-color: #fff;
@@ -82,7 +87,7 @@
 
 .blogs-btn-cont:hover,
 .follow-btn:hover {
-    background-color: rgba(151, 171, 182, 1);
+    background-color: rgba(151, 171, 182, 0.3);
 }
 
 .rcl-content {
@@ -126,6 +131,7 @@
 
 .blogs-main-content{
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .bmcl-b-left h4{
@@ -166,6 +172,7 @@
 
 .tripsy-insta-title{
     flex-direction: row;
+    height: 20vh;
 }
 
 .insta-title-left h3{
@@ -181,18 +188,48 @@
 }
 
 .follow-btn{
-    height: 40%;
+    height: 55px;
 }
 .tripsy-insta-frame iframe{
     height: 133vh;
 }
 
+.rclc-left{
+    align-items: flex-start;
+}
+
+.rev-slider-title{
+    margin-top:40px;
+}
+
+.instagram{
+    margin-top: 50px;
+}
+
+.blogs-main-content-left{
+    flex-basis: 49.5%;
+    height: 100%;
+}
+
+.bmcl-b-left div p, .bmcr-b-left div p{
+    padding: 0 25px;
+}
+
 
 @media only screen and (max-width:600px) {
+
+    .bmcl-b-left div p, .bmcr-b-left div p{
+        padding: 0 15px;
+    }
 
     .col2 .parent {
         height: 300px;
         width: 125%;
+    }
+
+    .blogs-btn {
+        position: relative;
+        top: -60px;
     }
 
     .instagram h4 {
@@ -221,7 +258,7 @@
     }
 
     .my-revs {
-        height: 3300px;
+        height: 2800px;
     }
 
     .col {
@@ -269,7 +306,7 @@
     }
 
     .home-blogs{
-        height: 1800px;
+        height: 1500px;
     }
     .blogs-title{
         flex-basis: 5%;
@@ -280,10 +317,13 @@
     }
     .blogs-main-content{
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .blogs-main-content-left{
-        margin: 40px 0;
+        /* margin: 40px 0; */
+        flex-basis: 30%;
+        height: 400px;
     }
     .bmcl-b-left h4{
         font-size: 20px;
@@ -312,8 +352,8 @@
         justify-content: center;
         align-items: center;
         border: 1px solid rgba(2, 71, 134, 1);
-        width: 80%;
-        height: 65px;
+        width: 95%;
+        height: 55px;
         border-radius: 30px;
         color: rgba(2, 71, 134, 1);
         text-decoration: none;
@@ -349,6 +389,7 @@
 
     .tripsy-insta-title{
         flex-direction: column;
+        height: 150px;
     }
     .insta-title-left{
         width: 75%;
@@ -362,11 +403,23 @@
     }
 
     .follow-btn{
-        height: 80%;
+        height: 55px;
     }
 
     .tripsy-insta-frame iframe{
-        height: 500px;
+        height: 425px;
+    }
+
+    .rcl-title{
+        justify-content: center;
+    }
+
+    .rclc-left{
+        align-items: center;
+    }
+
+    .rev-slider-title{
+        margin-top:10px;
     }
 
 }

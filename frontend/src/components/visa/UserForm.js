@@ -140,29 +140,29 @@ const UserForm = (props) => {
     // Function to render file upload inputs for each document requirement for each traveller
     const renderFileUploads = () => {
         const travellers = [];
-      
+
         for (let i = 1; i <= travellerCount; i++) {
-          const travellerLabel = travellerCount === 1? 'Traveller' : `Traveller ${i}`;
-          const travellerFields = Object.keys(docsReq).map((key, index) => (
-            <div key={`${i}-${index}`} className="col-md-6 mb-3">
-              <label htmlFor={`doc-${i}-${index}`} className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>{docsReq[key]}</label>
-              <input type="file" className="form-control px-4 py-3" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} required />
-            </div>
-          ));
-      
-          travellers.push(
-            <div className='my-4' key={i}>
-              <h3 className='' style={{fontWeight:"500", fontSize:"20px"}}>{travellerLabel} Documents</h3>
-              <p style={{fontWeight:"500", fontSize:"16px", color:"rgba(125, 125, 125, 1)"}}>Only for Indian national passport with a minimum 6 months of validity*</p>
-              <div className="row my-4">
-                {travellerFields}
-              </div>
-            </div>
-          );
+            const travellerLabel = travellerCount === 1 ? 'Traveller' : `Traveller ${i}`;
+            const travellerFields = Object.keys(docsReq).map((key, index) => (
+                <div key={`${i}-${index}`} className="col-md-6 mb-5">
+                    <label htmlFor={`doc-${i}-${index}`} className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>{docsReq[key]}*</label>
+                    <input type="file" className="form-control px-4 py-3" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} required />
+                </div>
+            ));
+
+            travellers.push(
+                <div className='my-4' key={i}>
+                    <h3 className='' style={{ fontWeight: "500", fontSize: "20px" }}>{travellerLabel} Documents</h3>
+                    <p style={{ fontWeight: "500", fontSize: "12px", color: "rgba(125, 125, 125, 1)" }}>Only for Indian national passport with a minimum 6 months of validity*</p>
+                    <div className="row my-4">
+                        {travellerFields}
+                    </div>
+                </div>
+            );
         }
-      
+
         return travellers;
-      };
+    };
 
 
 
@@ -184,30 +184,30 @@ const UserForm = (props) => {
             <div className="">
                 <div className="">
                     <div className="">
-                        <h1 className="my-5"  style={{ color: "#000", fontFamily: "Clash Display", fontSize: "24px", lineHeight: "30px", fontWeight: "500" }}>Application Form for {visaName}</h1>
+                        <h1 className="my-5" style={{ color: "#000", fontFamily: "Clash Display", fontSize: "24px", lineHeight: "30px", fontWeight: "500" }}>Application Form for {visaName}</h1>
                     </div>
                     <div className="">
                         {/* Form */}
                         <h4 className='my-5' style={{ fontWeight: "500", fontSize: "20px", lineHeight: "30px", fontFamily: "Clash Display" }}>Traveller Details</h4>
                         <form encType="multipart/form-data">
                             <div className='user-form-row1 d-flex justify-content-between align-items-center' style={{ width: "100%" }}>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
                                     <label htmlFor="name" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Full Name*</label>
                                     <input type="text" className="form-control px-4 py-3" id="name" name='name' onChange={onChange} placeholder="Your Full Name" required />
                                 </div>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
-                                    <label htmlFor="email" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Email id:</label>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="email" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Email id*</label>
                                     <input type="email" className="form-control px-4 py-3" id="email" name='email' onChange={onChange} placeholder="Your Email Id" required />
                                     {emailError && <div style={{ color: 'red', marginTop: '5px' }}>{emailError}</div>}
                                 </div>
                             </div>
                             <div className='user-form-row1 d-flex justify-content-between align-items-center ' style={{ width: "100%" }}>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
-                                    <label htmlFor="contact" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Contact Number:</label>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="contact" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Contact Number*</label>
                                     <input type="text" className="form-control px-4 py-3" id="contact" name='contact' onChange={onChange} required />
                                 </div>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
-                                    <label htmlFor="mstatus" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Marital status: </label> <br />
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="mstatus" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Marital status* </label> <br />
                                     <select className='px-4 py-3' name="mstatus" id="mstatus" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
                                         <option value=" ">Select marital status</option>
                                         <option value="Single">Single</option>
@@ -222,25 +222,36 @@ const UserForm = (props) => {
                                 </div>
                             </div>
                             <div className='user-form-row1 d-flex justify-content-between align-items-center ' style={{ width: "100%" }}>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
-                                    <label htmlFor="departDates" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Departure Date:</label>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="departDates" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Departure Date*</label>
                                     <input type="date" className="form-control px-4 py-3" id="departDates" name='departDates' onChange={onChange} required />
                                 </div>
-                                <div className="mb-3" style={{ flexBasis: "48%", width: "100%" }}>
-                                    <label htmlFor="returnDates" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Return Date:</label>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="returnDates" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Return Date*</label>
                                     <input type="date" className="form-control px-4 py-3" id="returnDates" name='returnDates' onChange={onChange} required />
                                 </div>
                             </div>
-                            {visaName === 'Vietnam E-Visa' && <div className="mb-3">
-                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?</label>
-                                <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required />
+                            {visaName === 'Vietnam E-Visa' && <div className="mb-5">
+                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
+                                {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <option value=" ">Select Port of Entry</option>
+                                    <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
+                                    <option value="Can Tho International Airport">Can Tho International Airport</option>
+                                    <option value="Cat Bi Int Airport (Hai Phong)">Cat Bi Int Airport (Hai Phong)</option>
+                                    <option value="Da Nang International Airport">Da Nang International Airport</option>
+                                    <option value="Noi Bai Int Airport (Ha Noi)">Noi Bai Int Airport (Ha Noi)</option>
+                                    <option value="Phu Quo International Airport">Phu Quo International Airport</option>
+                                    <option value="Tan Son Nhat Int Airport (Ho Chi Minh City)">Tan Son Nhat Int Airport (Ho Chi Minh City)</option>
+                                    <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
+                                </select>
                                 <small>This is required on your visa, please provide accurate information</small>
                             </div>}
 
                             {renderFileUploads()}
-                            <div className="form-check mb-3">
+                            <div className="form-check mb-5">
                                 <input className="form-check-input" type="checkbox" id="agreeTermsCheckbox" onChange={handleCheckboxChange} checked={isChecked} />
-                                <label className="form-check-label" style={{fontSize:"16px", color:"rgba(134, 134, 134, 1)"}}>
+                                <label className="form-check-label" style={{ fontSize: "16px", color: "rgba(134, 134, 134, 1)" }}>
                                     I agree to the <span className="tandc-link" onClick={toggleTandC} style={{ color: "#3488E8", cursor: "pointer" }}>
                                         Terms and Conditions
                                     </span>
@@ -254,7 +265,7 @@ const UserForm = (props) => {
                             )}
                             {/* Submit Button */}
                             <div className="">
-                                <button type="submit" className={`${!isFormComplete || !isChecked? "btn-disabled": "final-btn"}`} style={{ color: "#fff", height:"45px", width:"125px", borderRadius:"30px" }}  onClick={onSubmit} disabled={!isFormComplete || !isChecked}>Submit</button>
+                                <button type="submit" className={`${!isFormComplete || !isChecked ? "btn-disabled" : "final-btn"}`} style={{ color: "#fff", height: "45px", width: "125px", borderRadius: "30px" }} onClick={onSubmit} disabled={!isFormComplete || !isChecked}>Submit</button>
                             </div>
                         </form>
                     </div>

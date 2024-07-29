@@ -3,7 +3,7 @@ import '../../static/sideBar.css';
 
 
 
-const SideBar = ({activeItem, handleClick}) => {
+const SideBar = ({ activeItem, handleClick }) => {
 
     return (
         <div style={{ backgroundColor: "#20293a", height: "100%", margin: "20px 10px", borderRadius: "15px", boxShadow: "5px 5px 10px #000", overflow: "hidden", display: "flex", flexDirection: "column" }}>
@@ -13,17 +13,19 @@ const SideBar = ({activeItem, handleClick}) => {
             <div className="side-bar-menu" style={{ flexBasis: "80%", height: "100%", }}>
                 <ul style={{ height: "100%", color: "#fff", listStyleType: "none", fontSize: "24px", display: "flex", flexDirection: "column", justifyContent: "space-evenly" }}>
                     <li className={activeItem === 0 ? 'active' : ''} onClick={() => handleClick(0)}>
-                         E Visa </li>
+                        E Visa </li>
                     <li className={activeItem === 1 ? 'active' : ''} onClick={() => handleClick(1)}>
                         Non E Visa </li>
                     <li className={activeItem === 2 ? 'active' : ''} onClick={() => handleClick(2)}>
-                         Packages </li>
+                        Packages </li>
                     <li className={activeItem === 3 ? 'active' : ''} onClick={() => handleClick(3)}>
-                         Flights </li>
+                        Flights </li>
                     <li className={activeItem === 4 ? 'active' : ''} onClick={() => handleClick(4)}>
-                         Contant Form </li>
+                        Contant Form </li>
                     <li className={activeItem === 5 ? 'active' : ''} onClick={() => handleClick(5)}>
-                         Insurances </li>
+                        Insurances </li>
+                    <li className={activeItem === 6 ? 'active' : ''} onClick={() => handleClick(6)}>
+                        Newsletter </li>
                 </ul>
             </div>
         </div>

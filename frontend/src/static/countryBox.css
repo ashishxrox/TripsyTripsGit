@@ -1,8 +1,10 @@
 /* countryBox.css */
 
 .card-hover {
-    overflow: hidden; /* Ensure child elements do not overflow */
-    position: relative; /* Ensure absolute positioning works within this container */
+    overflow: hidden;
+    /* Ensure child elements do not overflow */
+    position: relative;
+    /* Ensure absolute positioning works within this container */
 }
 
 .visit-btn {
@@ -34,7 +36,7 @@
     align-items: center;
 }
 
-.card-hover:hover .visit-btn{
+.card-hover:hover .visit-btn {
     transform: translateY(-20px);
     opacity: 1;
 }
@@ -42,23 +44,41 @@
 .card-hover:hover .visit-btn-bdr {
     animation: rotate 5s linear infinite;
 }
-.card-hover:hover img{
+
+.card-hover:hover img {
     scale: 1;
 }
 
 .card-hover img {
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for scaling */
 }
 
 .card-hover:hover img {
-    transform: scale(1.1); /* Scale up image on hover */
+    transform: scale(1.1);
+    /* Scale up image on hover */
 }
 
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.visa-btn-mob {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .visit-btn  {
+        display: none;
+    }
+
+    .visa-btn-mob {
+        display: flex;
     }
 }

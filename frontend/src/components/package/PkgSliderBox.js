@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import '../../static/package.css'
 
 import Dubai1 from '../../static/assets/pkgSlider/overview/dubai1.jpeg'
 import Dubai2 from '../../static/assets/pkgSlider/overview/dubai2.jpeg'
@@ -112,7 +112,7 @@ const PkgSliderBox = ({place}) => {
 
     const swiperRef = useRef(null);
     return (
-        <div style={{ height: "100%", width: "600px", borderRadius: "0" }}>
+        <div className='pkg-slider-box-main' style={{ height: "100%", borderRadius: "0" }}>
             <Swiper
                 ref={swiperRef}
                 slidesPerView={1}

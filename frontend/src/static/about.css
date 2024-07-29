@@ -74,6 +74,7 @@
 
 .av-title{
   width: 30%;
+  align-items:center;
 }
 
 .av-title h2{
@@ -103,6 +104,7 @@
 
 .akm-right{
   flex-basis: 43%;
+
 }
 
 .akmr-left{
@@ -138,8 +140,38 @@
   flex-direction: row;
 }
 
+.miss-desk{
+  display: block;
+  
+  margin-bottom: 20px;
+}
+
+.amkrlb1{
+  margin: 20px;
+}
+
+.akm-w-map{
+  display: block;
+}
+
+.akm-w-map-mob{
+  display: none;
+}
+
 
 @media only screen and (max-width:600px){
+
+  .akm-w-map{
+    display: none;
+  }
+  
+  .akm-w-map-mob{
+    display: block;
+  }
+
+  .amkrlb1{
+    margin: 30px 20px;
+  }
   .about-title-box{
     font-size: 34px;
     font-weight: 400;
@@ -201,11 +233,13 @@
   }
 
   .about-values{
-    height: 1500px;
+    height: 1400px;
   }
 
   .av-title{
     width: 80%;
+    flex-basis: 5%;
+    align-items: flex-end;
   }
 
   .av-title h2{
@@ -221,16 +255,18 @@
 
   .about-know-more{
     flex-direction: column;
-    height: 2000px;
+    height: 1750px;
   }
   
   .akm-cont{
     flex-basis: 50%;
     flex-direction: column;
+    margin-top: 150px;
   }
   .akm-left{
     align-items: flex-start;
     flex-basis: 15%;
+    margin: 20px;
   }
 
   .akm-left h2{
@@ -239,14 +275,19 @@
 
   .akm-right{
     flex-basis: 85%;
+    
   }
 
   .akmr-left{
     width: 45%;
+    margin: 0 10px;
+    margin-left: 20px;
   }
 
   .akmr-right{
     width: 45%;
+    margin: 0 10px;
+    margin-right: 20px;
   }
 
   .akm-cont{

@@ -7,7 +7,8 @@ const UspBox = () => {
     <div className='d-flex justify-content-center uspBox-main' >
       <div className="UspBox d-flex justify-content-center align-items-center flex-column py-4" style={{ width: "85%", backgroundColor: "#fff", position: "relative", borderRadius: "8px", boxShadow: "2px 2px 30px #808080" }}>
         <div className="uspTitle my-1 d-flex justify-content-center align-items-center" style={{ flexBasis: "15%", height: "100%" }}>
-          <h2 style={{ fontFamily: "Clash Display" }}>Get Your E-Visa in 3 Steps !</h2>
+          <h2 className='uspTitle-desk' style={{ fontFamily: "Clash Display", fontWeight:"400", fontSize:"34px" }}>Get Your E-Visa in 3 Steps !</h2>
+          <h2 className='uspTitle-mob px-2' style={{ fontFamily: "Clash Display", fontWeight:"500", fontSize:"30px" }}>Get Your E-Visa in 3 Steps !</h2>
         </div>
         <div className="uspContent my-1 d-flex justify-content-center align-items-center" style={{ flexBasis: "70%", height: "100%", width: "90%" }}>
           <div className="uc-b1 mx-1 d-flex justify-content-center align-items-center flex-column" style={{ flexBasis: "33%", height: "100%", width: "100%" }}>
@@ -43,8 +44,8 @@ const UspBox = () => {
             <div className="ucb2 d-flex justify-content-center align-items-center" style={{ flexBasis: "20%", height: "100%", width: "100%" }}>
               <h3 style={{ fontFamily: "Clash Display", fontSize: "24px", fontWeight: "500" }}>Quick Processing</h3>
             </div>
-            <div className="ucb3 d-flex justify-content-center align-items-center" style={{ flexBasis: "30%", height: "100%", width: "80%", textAlign: "center" }}>
-              <h6 style={{ fontSize: "16px", lineHeight: "26px", fontWeight: "500" }}>Start exploring sooner with our speedy visa processing.  </h6>
+            <div className="ucb3 d-flex justify-content-center align-items-center" style={{ flexBasis: "30%", height: "100%", width: "100%", textAlign: "center" }}>
+              <h6 style={{ fontSize: "16px", lineHeight: "26px", fontWeight: "500" }}>Start exploring sooner with our speedy digital visa processing.  </h6>
             </div>
           </div>
           <div className='mx-5 uspLine' style={{ height: "75%", width: "1px", backgroundColor: "#000" }}></div>

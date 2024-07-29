@@ -7,11 +7,11 @@ import '../../static/flightHotels.css'
 
 const FlightHotels = () => {
     return (
-        <div className='action-boxes d-flex justify-content-center align-items-center flex-column py-5' style={{ width: "100%", backgroundColor: "#fff" }}>
+        <div className='action-boxes d-flex justify-content-center align-items-center flex-column' style={{ width: "100%", backgroundColor: "#fff" }}>
             <div className="other-ser-title" style={{  width: "100%" }}>
                 <h3 style={{ fontFamily: "Clash Display" }}>Other Services</h3>
             </div>
-            <div className="row1 d-flex justify-content-around align-items-center " style={{ flexBasis: "75%", width: "85%", height: "100%" }}>
+            <div className="row1 d-flex justify-content-around align-items-center " style={{ flexBasis: "75%", width: "90%", height: "100%" }}>
                 <div className="col1">
                     <div className="card my-5" style={{ height: "26rem", textAlign: "center", border: "1px solid black" }}>
                         <div className="card-body d-flex flex-column justify-content-center">
@@ -38,7 +38,7 @@ const FlightHotels = () => {
                                 </p>
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
-                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "40%", height: "65%", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
+                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
                                     <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ const FlightHotels = () => {
                                 </p>
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
-                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "40%", height: "65%", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
+                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
                                     <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ const FlightHotels = () => {
                                 </p>
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
-                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "40%", height: "65%", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
+                                <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
                                     <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>

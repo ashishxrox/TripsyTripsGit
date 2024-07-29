@@ -3,6 +3,11 @@ import axios from 'axios';
 import '../../static/userForm.css';
 
 import '../../static/contact.css'
+// production URL
+const apiURL = 'https://www.api.tripsytrips.com'
+
+// Local Host
+const localHost = 'http://localhost:4321'
 
 const Contact = () => {
 
@@ -25,7 +30,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4321/api/submit-form/contact', formData);
+      const response = await axios.post(`${apiURL}/api/submit-form/contact`, formData);
       console.log('Document uploaded successfully:', response.data);
       alert('Form submitted successfully');
     } catch (error) {

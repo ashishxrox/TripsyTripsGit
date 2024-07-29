@@ -46,7 +46,7 @@ const PlaceToVisit = () => {
     <div className='ptv-main d-flex justify-content-center align-items-center my-4' style={{ width: "100%", backgroundColor: "rgba(3, 21, 47, 1)" }}>
       <div className='d-flex justify-content-center align-items-center' style={{ height: "100%", width: "100%", backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
         <div className="overlay d-flex justify-content-center align-items-center" style={{ height: "100%", width: "100%", backgroundColor: 'rgba(3, 21, 47, 0.8)' }}>
-          <div className="main-cont-packages d-flex justify-content-center align-items-center flex-column" style={{ width: "90%", height: "100%" }}>
+          <div className="main-cont-places d-flex justify-content-center align-items-center flex-column" style={{ width: "90%", position:"relative",}}>
             <div className="pack-top d-flex justify-content-between align-items-center " style={{ flexBasis: "15%", width: "100%", height: "100%" }}>
               <div className="pt-txt-left m-2 d-flex justify-content-start align-items-center" style={{ flexBasis: "30%", height: "100%", width: "100%" }}>
                 <h3 style={{ fontFamily: "Clash Display", color: "#fff" }}>Places to visit</h3>
@@ -55,8 +55,8 @@ const PlaceToVisit = () => {
                 <p style={{ fontWeight: "500", fontSize: "16px", linHeight: "57px", color: "#fff" }}>Explore custom travel packages designed for all types of travelers. Whether you crave adventure or relaxation, our packages offer something unique.  </p>
               </div>
             </div>
-            <div className="pack-bottom d-flex justify-content-between " style={{ flexBasis: "70%", width: "100%", height: "100%" }}>
-              <div className="pb-left m-2 d-flex justify-content-center align-items-center" style={{ height: "150px", width: "100px" }}>
+            <div className="pack-bottom d-flex justify-content-between " style={{ flexBasis: "65%", width: "100%"}}>
+              <div className="pb-left ptvb-left m-2 d-flex justify-content-center align-items-center" style={{ height: "150px", width: "100px"}}>
                 <button onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()} style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
                   <svg width="55" height="54" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="54" height="53" stroke="white" />
@@ -70,13 +70,13 @@ const PlaceToVisit = () => {
                   </svg>
                 </button>
               </div>
-              <div className="pb-right m-2" style={{ height: "95%", width: "100%" }}>
+              <div className="pb-right-2 m-2" style={{  width: "100%" }}>
                 <div className="pb-right m-2 d-flex justify-content-center align-items-center" style={{ height: "85%", width: "100%" }}>
                   <Swiper
                     ref={swiperRef}
                     breakpoints={{
                       0: {
-                        slidesPerView: 1.2,
+                        slidesPerView: 1.5,
                       },
                       601: {
                         slidesPerView: 4.2,

@@ -8,7 +8,8 @@ const NonEvisaFormData = require('../models/NonEvisaModel')
 const FlightData = require('../models/Flight')
 const ContactData = require('../models/ContactForm')
 const InsuranceData = require('../models/Insurance')
-const PackageData = require('../models/Package')
+const PackageData = require('../models/Package');
+const NewsletterData = require('../models/Newsletter');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -254,6 +255,21 @@ router.post('/packages', async(req, res)=>{
         await data.save()
         res.status(201).send('Document uploaded successfully');
 
+    } catch (error) {
+        console.error('Error uploading document:', error);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+router.post('/newsletter', async(req, res)=>{
+    try {
+        const {email} = req.body
+
+        const data = new NewsletterData({
+            email
+        })
+        await data.save()
+        res.status(201).send('Document uploaded successfully');
     } catch (error) {
         console.error('Error uploading document:', error);
         res.status(500).send('Internal Server Error');
