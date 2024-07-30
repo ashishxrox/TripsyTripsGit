@@ -58,7 +58,7 @@ const Home = ({ onLoadStart, onLoadComplete }) => {
 
       <HomeOurPackage />
       <FlightHotels />
-      <PlaceToVisit />
+      {/* <PlaceToVisit /> */}
       <Reviews />
       {/* <Contact /> */}
     </div>
