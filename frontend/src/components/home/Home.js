@@ -48,13 +48,13 @@ const Home = ({ onLoadStart, onLoadComplete }) => {
       <HomeBanner />
 
       {/* <NavBox /> */}
-      <div className='hov-desk'>
+      {/* <div className='hov-desk'>
         <HomeOurVisa />
       </div>
       <div className="hov-mobile">
         <HomeOurVisaMob />
       </div>
-      <HomeRegVisa/>
+      <HomeRegVisa/> */}
 
       <HomeOurPackage />
       <FlightHotels />

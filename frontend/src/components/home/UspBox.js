@@ -67,9 +67,9 @@ const UspBox = () => {
 
           </div>
         </div>
-        <div className="uspBtn my-3 d-flex justify-content-center align-items-center" >
+        {/* <div className="uspBtn my-3 d-flex justify-content-center align-items-center" >
           <Link to='/visa' style={{ color: "#fff", textDecoration: "none" }} href="#">Check out E-Visa</Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )
