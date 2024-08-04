@@ -8,7 +8,7 @@ const HomeBanner = () => {
     const myStyle = {
         // width: "100%",
         // height: "120vh",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff" 
     }
     return (
         <div className="home-banner" style={myStyle}>
