@@ -247,6 +247,70 @@ const UserForm = (props) => {
                                 </select>
                                 <small>This is required on your visa, please provide accurate information</small>
                             </div>}
+                            {visaName === 'Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )' && <div className="mb-5">
+                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
+                                {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <option value=" ">Select Port of Entry</option>
+                                    <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
+                                    <option value="Can Tho International Airport">Can Tho International Airport</option>
+                                    <option value="Cat Bi Int Airport (Hai Phong)">Cat Bi Int Airport (Hai Phong)</option>
+                                    <option value="Da Nang International Airport">Da Nang International Airport</option>
+                                    <option value="Noi Bai Int Airport (Ha Noi)">Noi Bai Int Airport (Ha Noi)</option>
+                                    <option value="Phu Quo International Airport">Phu Quo International Airport</option>
+                                    <option value="Tan Son Nhat Int Airport (Ho Chi Minh City)">Tan Son Nhat Int Airport (Ho Chi Minh City)</option>
+                                    <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
+                                </select>
+                                <small>This is required on your visa, please provide accurate information</small>
+                            </div>}
+                            {visaName === 'Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )' && <div className="mb-5">
+                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
+                                {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <option value=" ">Select Port of Entry</option>
+                                    <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
+                                    <option value="Can Tho International Airport">Can Tho International Airport</option>
+                                    <option value="Cat Bi Int Airport (Hai Phong)">Cat Bi Int Airport (Hai Phong)</option>
+                                    <option value="Da Nang International Airport">Da Nang International Airport</option>
+                                    <option value="Noi Bai Int Airport (Ha Noi)">Noi Bai Int Airport (Ha Noi)</option>
+                                    <option value="Phu Quo International Airport">Phu Quo International Airport</option>
+                                    <option value="Tan Son Nhat Int Airport (Ho Chi Minh City)">Tan Son Nhat Int Airport (Ho Chi Minh City)</option>
+                                    <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
+                                </select>
+                                <small>This is required on your visa, please provide accurate information</small>
+                            </div>}
+                            {visaName === 'Vietnam 30 Days Multiple Entry E-Visa' && <div className="mb-5">
+                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
+                                {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <option value=" ">Select Port of Entry</option>
+                                    <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
+                                    <option value="Can Tho International Airport">Can Tho International Airport</option>
+                                    <option value="Cat Bi Int Airport (Hai Phong)">Cat Bi Int Airport (Hai Phong)</option>
+                                    <option value="Da Nang International Airport">Da Nang International Airport</option>
+                                    <option value="Noi Bai Int Airport (Ha Noi)">Noi Bai Int Airport (Ha Noi)</option>
+                                    <option value="Phu Quo International Airport">Phu Quo International Airport</option>
+                                    <option value="Tan Son Nhat Int Airport (Ho Chi Minh City)">Tan Son Nhat Int Airport (Ho Chi Minh City)</option>
+                                    <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
+                                </select>
+                                <small>This is required on your visa, please provide accurate information</small>
+                            </div>}
+                            {visaName === 'Vietnam 90 Days Multiple Entry E-Visa' && <div className="mb-5">
+                                <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
+                                {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <option value=" ">Select Port of Entry</option>
+                                    <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
+                                    <option value="Can Tho International Airport">Can Tho International Airport</option>
+                                    <option value="Cat Bi Int Airport (Hai Phong)">Cat Bi Int Airport (Hai Phong)</option>
+                                    <option value="Da Nang International Airport">Da Nang International Airport</option>
+                                    <option value="Noi Bai Int Airport (Ha Noi)">Noi Bai Int Airport (Ha Noi)</option>
+                                    <option value="Phu Quo International Airport">Phu Quo International Airport</option>
+                                    <option value="Tan Son Nhat Int Airport (Ho Chi Minh City)">Tan Son Nhat Int Airport (Ho Chi Minh City)</option>
+                                    <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
+                                </select>
+                                <small>This is required on your visa, please provide accurate information</small>
+                            </div>}
 
                             {renderFileUploads()}
                             <div className="form-check mb-5">

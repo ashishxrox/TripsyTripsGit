@@ -4,6 +4,8 @@ const connectToMongo = require('./db')
 const express = require('express')
 const cors = require('cors')
 const app = express()
+const { createPayment, handleResponse } = require('./ccavenue');
+
 
 // const port = 4321
 const port = process.env.PORT || 4321;
@@ -28,6 +30,12 @@ app.use('/api/delete', require('./routes/deleteQueries.js'))
 
 app.use('/api/phonepe',require('./routes/paymentEndpoint.js'))
 app.use('/api/getNotify',require('./routes/getNotify.js'))
+
+// Create Payment Route
+// app.post('/api/payment', createPayment);
+
+// Payment Response Route
+// app.post('/api/payment/response', handleResponse);
 
 
 

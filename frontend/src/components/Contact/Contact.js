@@ -95,6 +95,7 @@ const Contact = () => {
                     </li>
 
                   </ul>
+
                 </div>
               </div>
               <div className="fc-wapp d-flex justify-content-between align-items-center flex-row">
@@ -110,7 +111,9 @@ const Contact = () => {
                 </div>
 
               </div>
-
+              <div className='my-3'>
+                <p> <span style={{fontWeight:"900", fontSize:"24px"}}> Adress:</span> Office 46, 2A, Moldina Road, Manisha Terrace, Camp, Pune, Maharashtra 411001</p>
+              </div>
             </div>
           </div>
         </div>
