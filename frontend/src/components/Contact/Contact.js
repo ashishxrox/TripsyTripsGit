@@ -58,7 +58,7 @@ const Contact = () => {
 
           </div>
           <div className='my-3'>
-                <p> <span style={{fontWeight:"900", fontSize:"24px"}}> Adress:</span> Office 46, 2A, Moldina Road, Manisha Terrace, Camp, Pune, Maharashtra 411001</p>
+                <p> <span style={{fontWeight:"900", fontSize:"24px"}}> Address:</span> Office 46, 2A, Moledina Road, Manisha Terrace, Camp, Pune, Maharashtra 411001</p>
               </div>
           <div style={{ flexBasis: "50%", hieght: "100%", width: "100%" }}>
             <svg width="103" height="16" viewBox="0 0 103 16" fill="none" xmlns="http://www.w3.org/2000/svg">
