@@ -76,9 +76,9 @@ const App = () => {
                         <Hamburger />
                       </div>
                     </div>
-                    {/* <div className="mobile-version-search">
+                    <div className="mobile-version-search">
                       <MobileSearch />
-                    </div> */}
+                    </div>
                   </div>
                   <ScrollToTop />
                   <Routes>

@@ -11,7 +11,7 @@ const port = process.env.PORT || 4321;
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://tripsytrips.com' // Adjust this as needed
+    origin: ['https://tripsytrips.com', 'https://www.tripsytrips.com']
 }));
 
 
