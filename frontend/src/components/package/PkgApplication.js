@@ -218,8 +218,7 @@ const Application = () => {
                         <div className="plc-left mx-1 my-1 " style={{ flexBasis: "30%", height: "98%", width: "100%" }}>
                             <h2 style={{ fontSize: "60px", fontWeight: "400", fontFamily: "Clash Display", color: "#fff" }}>{countryName}</h2>
                             <p className='my-4 py-4' style={{ fontSize: "20px", fontWeight: "500", color: "#fff" }}>{current["intro"]}</p>
-                            {/* <a className='final-btn ' href="https://wa.me/919374859311" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Package</a> */}
-                            <a className='final-btn ' style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Buy Package</a>
+                            <a className='final-btn ' href="https://wa.me/919374859311" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Package</a>
                         </div>
                         <div className="plc-right mx-1 my-2 d-flex justify-content-center align-items-center" style={{ flexBasis: "18%", height: "50%", width: "100%" }}>
                             <a href="#travelOverview" style={{ height: "100%", width: "100%", textDecoration: "none", color: "#fff" }}>

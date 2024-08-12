@@ -97,7 +97,7 @@ const Navbar = () => {
                             <ul className=' d-flex justify-content-between align-items-center' style={{ width: "100%", height: "100%", listStyleType: "none", fontFamily: "Inter", fontWeight: "400", fontSize: "16px", lineHeight: "26px", marginBottom:"0" }}>
                                 <li> <Link to="/" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px", cursor: "pointer", fontFamily:"General Sans" }}> Home </Link></li>
                                 {/* <li> <Link to="/visa" style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px" }}>Visas </Link></li> */}
-                                {/* <li>
+                                <li>
                                     <p onClick={() => { handleVisaClick() }} style={{ position: "relative", top: "8px", color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px", cursor: "pointer" }}>Visas <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6368 8.9638C18.9883 9.31527 18.9883 9.88512 18.6368 10.2366L12.0004 16.873L5.36399 10.2366C5.01252 9.88512 5.01252 9.31527 5.36399 8.9638C5.71547 8.61233 6.28531 8.61233 6.63679 8.9638L12.0004 14.3274L17.364 8.9638C17.7155 8.61233 18.2853 8.61233 18.6368 8.9638Z" fill="#0A1D26" />
                                     </svg>
@@ -106,7 +106,7 @@ const Navbar = () => {
                                     <Link to="/visa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000", fontFamily:"General Sans" }}>E-Visa</Link>
                                         <Link to="/regVisa" onClick={() => { closeVisaDrop() }} className='my-2' style={{ textDecoration: "none", color: "#000",  fontFamily:"General Sans" }}>Sticker/ Non E-Visa</Link>
                                     </div>
-                                </li> */}
+                                </li>
 
                                 <li> <Link to="/package" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>Packages </Link></li>
                                 <li> <Link to="/about" onClick={() => { closeVisaDrop() }} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>About </Link></li>
@@ -116,11 +116,11 @@ const Navbar = () => {
                     </div>
 
                     <div className="contact-btn-box d-flex justify-content-around align-items-center" style={{ height: "100px", width: "250px" }}>
-                        {/* <div style={{ cursor: "pointer" }}>
+                        <div style={{ cursor: "pointer" }}>
                             <Search />
 
 
-                        </div> */}
+                        </div>
                         <div className=' cb-btn d-flex justify-content-around align-items-center' style={{ height: "60px", width: "155px", borderRadius: "30px" }}>
                             <Link to="/contact" onClick={() => { closeVisaDrop() }} style={{ color: "#fff", textDecoration: "none", fontWeight: "400", fontSize: "16px", lineHeight: "26px",  fontFamily:"General Sans" }}>Contact Us</Link>
                         </div>

@@ -24,7 +24,7 @@ const HomeBanner = () => {
             </div>
 
             {/* DIV FOR USP BOX */}
-            {/* <UspBox /> */}
+            <UspBox />
         </div>
     )
 }

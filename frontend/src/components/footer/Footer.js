@@ -56,11 +56,11 @@ const Footer = () => {
                                     Home
                                 </Link>
                             </li>
-                            {/* <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
+                            <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
                                 <Link to="/visa" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily: "General Sans" }}>
                                     Visa
                                 </Link>
-                            </li> */}
+                            </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
                                 <Link to="/package" style={{ textDecoration: "none", cursor: "pointer", color: "#fff", fontFamily: "General Sans" }}>
                                     Package</Link>
