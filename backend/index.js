@@ -4,7 +4,6 @@ const connectToMongo = require('./db')
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const { createPayment, handleResponse } = require('./ccavenue');
 
 
 // const port = 4321

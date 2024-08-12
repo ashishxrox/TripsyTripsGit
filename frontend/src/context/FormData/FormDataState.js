@@ -137,7 +137,7 @@ const FormDataState = (props) => {
 
                 callPhonePePaymentAPI();
 
-                
+
 
 
             } else {
@@ -153,26 +153,73 @@ const FormDataState = (props) => {
 
     // Function to call the PhonePe payment API
 
-    const callPhonePePaymentAPI = async () => {
-        try {
-            const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            // console.log(response.data);
+    const loadScript = (src) => {
+        return new Promise((resolve) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = () => resolve(true);
+          script.onerror = () => resolve(false);
+          document.body.appendChild(script);
+        });
+      };
 
-            // Check if response data contains the redirect URL
-            if (response.data && response.data.redirectUrl) {
-                // Open the redirect URL in a new tab/window
-                window.open(response.data.redirectUrl, '_blank');
-            } else {
-                console.error('Redirect URL not found in response data');
+      const callPhonePePaymentAPI = async () => {
+        try {
+          const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
+      
+          if (!res) {
+            alert('Failed to load Razorpay SDK.');
+            return;
+          }
+      
+          // Fetch payment details from your backend
+          const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
+            headers: {
+              'Content-Type': 'application/json'
             }
+          });
+      
+          if (response.data && response.data.success) {
+            const { orderId, amount, currency, key } = response.data;
+      
+            const options = {
+              key: key, // Razorpay API key
+              amount: amount, // Amount in paise (1 INR = 100 paise)
+              currency: currency,
+              name: "Tripsy Trips", // Your brand or company name
+              description: "Visa Application Fee",
+              order_id: orderId, // Order ID from backend
+              handler: async function (response) {
+                const paymentData = {
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature
+                };
+      
+                // Verify the payment on your backend
+                await axios.post(`${apiURL}/api/phonepe/verify-payment`, paymentData);
+              },
+              prefill: {
+                name: formData.name,
+                email: formData.email,
+                contact: formData.contact
+              },
+              theme: {
+                color: "#3399cc"
+              }
+            };
+      
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open();
+          } else {
+            console.error('Failed to create Razorpay order');
+          }
         } catch (error) {
-            console.error(error);
+          console.error('Error occurred while processing payment:', error);
         }
-    };
+      };
+
+
 
     // Function to upload Documents
 
