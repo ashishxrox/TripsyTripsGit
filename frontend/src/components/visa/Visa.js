@@ -62,17 +62,23 @@ const Visa = () => {
           <h2 style={{ fontSize: "46px", fontWeight: "500", fontFamily: "Clash Display" }}>E-Visa in 3 steps</h2>
         </div>
         <div className="headbox-desc" style={{ flexBasis: "55%", height: "100%" }}>
-          <h6 style={{ fontSize: "20px", fontWeight: "450" }}>Planning a trip to iconic spots like the Burj Khalifa or Baku? Tripsy Trips makes e-visa applications a breeze!</h6>
-          <ol style={{ fontSize: "18px", fontWeight: "500" }}>
-            <li>Select Your Destination & Visa</li>
-            <li>Upload Your Documents </li>
-            <li>Make Your Payment Through Our Secure Portal  </li>
-          </ol>
+          <p style={{ fontSize: "20px", fontWeight: "450" }}>Planning a trip to iconic spots like the Burj Khalifa or Baku? Tripsy Trips makes e-visa applications a breeze!</p>
+          {/* <ol style={{ fontSize: "18px", fontWeight: "500" }}> */}
+          {/* <ol>
+            <li> <h6 style={{ fontSize: "20px", fontWeight: "950" }}>Select Your Destination & Visa</h6> </li>
+            <li> <h6 style={{ fontSize: "20px", fontWeight: "950" }}>Upload Your Documents </h6></li>
+            <li> <h6 style={{ fontSize: "20px", fontWeight: "950" }}>Make Your Payment Through Our Secure Portal  </h6></li>
+          </ol> */}
+          <div style={{paddingLeft:"2rem"}}>
+            <h6 style={{ fontSize: "18px", fontWeight: "700" }}>1. Select Your Destination & Visa</h6>
+            <h6 style={{ fontSize: "18px", fontWeight: "700" }}>2. Upload Your Documents </h6>
+            <h6 style={{ fontSize: "18px", fontWeight: "700" }}>3. Make Your Payment Through Our Secure Portal  </h6>
+          </div>
           <p style={{ fontSize: "18px", fontWeight: "500" }}>Then relax and focus on your vacation outfits while your e-visa is processed!  </p>
         </div>
         <div className="v-options-box my-5" style={{ flexBasis: "5%", height: "100%" }}>
           <div className="v-options d-flex justify-content-center align-items-start flex-column" style={{ flexBasis: "10%", height: "100%" }}>
-            <ul className='d-flex justify-content-between align-items-center flex-row' style={{ width: "100%", listStyleType: "none", paddingLeft: "0", height:"100%" }}>
+            <ul className='d-flex justify-content-between align-items-center flex-row' style={{ width: "100%", listStyleType: "none", paddingLeft: "0", height: "100%" }}>
               <li onClick={() => handleActive(0)} style={{ fontWeight: `${active === 0 ? "400" : "200"}`, fontSize: `${active === 0 ? "20px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 0 ? "2px solid #000" : "none"}` }}>All</li>
               <li onClick={() => handleActive(1)} style={{ fontWeight: `${active === 1 ? "400" : "200"}`, fontSize: `${active === 1 ? "20px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 1 ? "2px solid #000" : "none"}` }}>Asia</li>
               <li onClick={() => handleActive(2)} style={{ fontWeight: `${active === 2 ? "400" : "200"}`, fontSize: `${active === 2 ? "20px" : "20px"}`, cursor: "pointer", borderBottom: `${active === 2 ? "2px solid #000" : "none"}` }}>Africa</li>
