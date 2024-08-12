@@ -145,8 +145,8 @@ const UserForm = (props) => {
             const travellerLabel = travellerCount === 1 ? 'Traveller' : `Traveller ${i}`;
             const travellerFields = Object.keys(docsReq).map((key, index) => (
                 <div key={`${i}-${index}`} className="col-md-6 mb-5">
-                    <label htmlFor={`doc-${i}-${index}`} className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>{docsReq[key]}*</label>
-                    <input type="file" className="form-control px-4 py-3" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} required />
+                    <label htmlFor={`doc-${i}-${index}`} className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>{docsReq[key]}* <small style={{fontSize:'10px', color:"#808080"}}>Only .jpeg, .jpg, .png, .pdf files accepted. </small> </label>
+                    <input type="file" className="form-control px-4 py-3" id={`doc-${i}-${index}`} name="documents" onChange={(e) => handleFileChange(e, i, index)} accept=".jpeg,.jpg,.png,.pdf" required />
                 </div>
             ));
 
@@ -208,7 +208,7 @@ const UserForm = (props) => {
                                 </div>
                                 <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
                                     <label htmlFor="mstatus" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Marital status* </label> <br />
-                                    <select className='px-4 py-3' name="mstatus" id="mstatus" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                    <select className='px-4 py-3' name="mstatus" id="mstatus" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
                                         <option value=" ">Select marital status</option>
                                         <option value="Single">Single</option>
                                         <option value="Married">Married</option>
@@ -234,7 +234,7 @@ const UserForm = (props) => {
                             {visaName === 'Vietnam E-Visa' && <div className="mb-5">
                                 <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
                                 {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
-                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey" }}>
                                     <option value=" ">Select Port of Entry</option>
                                     <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
                                     <option value="Can Tho International Airport">Can Tho International Airport</option>
@@ -250,7 +250,7 @@ const UserForm = (props) => {
                             {visaName === 'Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )' && <div className="mb-5">
                                 <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
                                 {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
-                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey"}}>
                                     <option value=" ">Select Port of Entry</option>
                                     <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
                                     <option value="Can Tho International Airport">Can Tho International Airport</option>
@@ -266,7 +266,7 @@ const UserForm = (props) => {
                             {visaName === 'Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )' && <div className="mb-5">
                                 <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
                                 {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
-                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey" }}>
                                     <option value=" ">Select Port of Entry</option>
                                     <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
                                     <option value="Can Tho International Airport">Can Tho International Airport</option>
@@ -282,7 +282,7 @@ const UserForm = (props) => {
                             {visaName === 'Vietnam 30 Days Multiple Entry E-Visa' && <div className="mb-5">
                                 <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
                                 {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
-                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey" }}>
                                     <option value=" ">Select Port of Entry</option>
                                     <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
                                     <option value="Can Tho International Airport">Can Tho International Airport</option>
@@ -298,7 +298,7 @@ const UserForm = (props) => {
                             {visaName === 'Vietnam 90 Days Multiple Entry E-Visa' && <div className="mb-5">
                                 <label htmlFor="portOfEntry" className="form-label">Which city in Vietnam are you arriving in?*</label>
                                 {/* <input type="text" className="form-control" id="portOfEntry" name='portOfEntry' onChange={onChange} required /> */}
-                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey", border: "1px solid grey" }}>
+                                <select className='px-4 py-3' name='portOfEntry' id="portOfEntry" onChange={onChange} style={{ padding: "5px 10px", borderRadius: "5px", border: "1px solid grey", width: "100%", textAlign: "left", color: "grey" }}>
                                     <option value=" ">Select Port of Entry</option>
                                     <option value="Cam Ranh Int Airport (Khanh Hoa)">Cam Ranh Int Airport (Khanh Hoa)</option>
                                     <option value="Can Tho International Airport">Can Tho International Airport</option>
