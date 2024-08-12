@@ -55,7 +55,7 @@ const HomeOurVisaMob = () => {
       const formatData = [];
       let newArr = [];
       let ctr = 1;
-
+  
       for (let i = 0; i < data.length; i++) {
         if (ctr <= 3) {
           const countryItem = {
@@ -77,25 +77,25 @@ const HomeOurVisaMob = () => {
           ctr = 2;
         }
       }
-
+  
       if (newArr.length > 0) {
         formatData.push(newArr);
       }
-
+  
       return formatData;
     }
-
+  
     let countriesToFormat;
     switch (active) {
       case 0:
         countriesToFormat = [...countries]; // Create a copy of the array
-        if (countriesToFormat.length > 0) {
-          const firstElement = countriesToFormat[0];
-          countriesToFormat.push(firstElement);
-          const secElement = countriesToFormat[1];
-          countriesToFormat.push(secElement);
-          const thirdElement = countriesToFormat[2];
-          countriesToFormat.push(thirdElement); // Add the first element to the end
+        if (countriesToFormat.length > 3) {
+          // Extract the first 3 elements
+          const firstThree = countriesToFormat.slice(0, 3);
+          // Remove the first 3 elements from the array
+          const remainingCountries = countriesToFormat.slice(3);
+          // Append the first 3 elements to the end
+          countriesToFormat = remainingCountries.concat(firstThree);
         }
         break;
       case 1:
@@ -108,12 +108,13 @@ const HomeOurVisaMob = () => {
         countriesToFormat = europeanCountries;
         break;
       default:
-        countriesToFormat = countries; // default to europeanCountries
+        countriesToFormat = countries; // default to countries
     }
-
+  
     setFormattedCountries(formatCountriesData(countriesToFormat));
     // eslint-disable-next-line
   }, [active]);
+  
 
   const carouselData = formattedCountries;
   // console.log(carouselData)
@@ -171,12 +172,12 @@ const HomeOurVisaMob = () => {
                       <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                         <img src={box.src} alt={box.alt} style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                         <div className="overlay py-4 d-flex justify-content-end align-items-center" style={overlayStyle}>
-                          <div className='d-flex justify-content-center align-items-center' style={{ position: "relative", bottom: "15px", left: "5px", fontSize: "20px", fontWeight: "500" }}>
+                          <div className='d-flex justify-content-center align-items-center' style={{ position: "relative", bottom: "15px", left:"5px",fontSize: "20px", fontWeight: "500" }}>
                             <div style={{ width: "55px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             {box.title}
                             <div style={{ width: "55px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                          <div className="d-flex justify-content-center align-items-center px-5 py-2" style={{ border: "1px solid #fff", borderRadius: "30px", backgroundColor: "rgba(255,255,255,0.1)", fontWeight: "500" }}>
+                          <div className="d-flex justify-content-center align-items-center px-5 py-2" style={{ border:"1px solid #fff", borderRadius:"30px", backgroundColor:"rgba(255,255,255,0.1)", fontWeight:"500"}}>
                             <Link to={{ pathname: `/visa/application/${box.title}` }} className='d-flex justify-content-center align-items-center' style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "500", fontSize: "24px" }}>
                               Visit
                             </Link>
