@@ -155,69 +155,80 @@ const FormDataState = (props) => {
 
     const loadScript = (src) => {
         return new Promise((resolve) => {
-          const script = document.createElement('script');
-          script.src = src;
-          script.onload = () => resolve(true);
-          script.onerror = () => resolve(false);
-          document.body.appendChild(script);
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = () => resolve(true);
+            script.onerror = () => resolve(false);
+            document.body.appendChild(script);
         });
-      };
+    };
 
-      const callPhonePePaymentAPI = async () => {
+    const callPhonePePaymentAPI = async () => {
         try {
-          const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
-      
-          if (!res) {
-            alert('Failed to load Razorpay SDK.');
-            return;
-          }
-      
-          // Fetch payment details from your backend
-          const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
-            headers: {
-              'Content-Type': 'application/json'
+            const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
+
+            if (!res) {
+                alert('Failed to load Razorpay SDK.');
+                return;
             }
-          });
-      
-          if (response.data && response.data.success) {
-            const { orderId, amount, currency, key } = response.data;
-      
-            const options = {
-              key: key, // Razorpay API key
-              amount: amount, // Amount in paise (1 INR = 100 paise)
-              currency: currency,
-              name: "Tripsy Trips", // Your brand or company name
-              description: "Visa Application Fee",
-              order_id: orderId, // Order ID from backend
-              handler: async function (response) {
-                const paymentData = {
-                  razorpay_order_id: response.razorpay_order_id,
-                  razorpay_payment_id: response.razorpay_payment_id,
-                  razorpay_signature: response.razorpay_signature
+
+            // Fetch payment details from your backend
+            const response = await axios.post(`${apiURL}/api/phonepe`, formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.data && response.data.success) {
+                const { orderId, amount, currency, key } = response.data;
+
+                const options = {
+                    key: key, // Razorpay API key
+                    amount: amount, // Amount in paise (1 INR = 100 paise)
+                    currency: currency,
+                    name: "Tripsy Trips", // Your brand or company name
+                    description: "Visa Application Fee",
+                    order_id: orderId, // Order ID from backend
+                    handler: async function (response) {
+                        const paymentData = {
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature
+                        };
+
+                        try {
+                            // Verify the payment on your backend
+                            const verifyResponse = await axios.post(`${apiURL}/api/phonepe/verify-payment`, paymentData);
+
+                            if (verifyResponse.data && verifyResponse.data.success) {
+                                alert('Your payment is completed successfully. Please check your registered email; you must have received an email from Tripsy Trips.');
+                            } else {
+                                console.error('Failed to verify payment');
+                            }
+                        } catch (error) {
+                            console.error('Error occurred while verifying payment:', error);
+                        }
+                    },
+                    prefill: {
+                        name: formData.name,
+                        email: formData.email,
+                        contact: formData.contact
+                    },
+                    theme: {
+                        color: "#3399cc"
+                    }
                 };
-      
-                // Verify the payment on your backend
-                await axios.post(`${apiURL}/api/phonepe/verify-payment`, paymentData);
-              },
-              prefill: {
-                name: formData.name,
-                email: formData.email,
-                contact: formData.contact
-              },
-              theme: {
-                color: "#3399cc"
-              }
-            };
-      
-            const paymentObject = new window.Razorpay(options);
-            paymentObject.open();
-          } else {
-            console.error('Failed to create Razorpay order');
-          }
+
+                const paymentObject = new window.Razorpay(options);
+                paymentObject.open();
+            } else {
+                console.error('Failed to create Razorpay order');
+            }
         } catch (error) {
-          console.error('Error occurred while processing payment:', error);
+            console.error('Error occurred while processing payment:', error);
         }
-      };
+    };
+
 
 
 
