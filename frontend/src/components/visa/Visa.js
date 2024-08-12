@@ -62,7 +62,7 @@ const Visa = () => {
           <h2 style={{ fontSize: "46px", fontWeight: "500", fontFamily: "Clash Display" }}>E-Visa in 3 steps</h2>
         </div>
         <div className="headbox-desc" style={{ flexBasis: "55%", height: "100%" }}>
-          <p style={{ fontSize: "20px", fontWeight: "500" }}>Planning a trip to iconic spots like the Burj Khalifa or Baku? Tripsy Trips makes e-visa applications a breeze!</p>
+          <h6 style={{ fontSize: "20px", fontWeight: "450" }}>Planning a trip to iconic spots like the Burj Khalifa or Baku? Tripsy Trips makes e-visa applications a breeze!</h6>
           <ol style={{ fontSize: "18px", fontWeight: "500" }}>
             <li>Select Your Destination & Visa</li>
             <li>Upload Your Documents </li>

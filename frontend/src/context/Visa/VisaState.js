@@ -91,7 +91,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
           },
           "totalCost": 2700,
           "_id": "65b2b349af8c1506be6a91ed"
@@ -105,7 +105,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Flight Tickets Scan"
           },
           "totalCost": 9900,
@@ -120,7 +120,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
           },
           "totalCost": 11800,
@@ -135,7 +135,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry)Scan"
           },
           "totalCost": 10500,
@@ -150,7 +150,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
           },
           "totalCost": 12500,
@@ -317,7 +317,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 3500,
           "_id": "65b29f4caf8c1506be6a91a1"
@@ -400,7 +400,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 7500,
           "_id": "65b2a00aaf8c1506be6a91a8"
@@ -424,7 +424,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Flight Tickets Scan",
             "doc5": "Travel Itinerary Scan",
             "doc6": "Hotel Booking Voucher Scan",
@@ -458,7 +458,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Hotel Address Information Scan",
             "doc5": "Hotel Postal Code Scan",
             "doc6": "Flight Tickets Scan"
@@ -508,7 +508,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "6 Months Bank Statement Scan",
             "doc5": "Flight Itinerary Scan",
             "doc6": "Hotel Booking Voucher Scan"
@@ -536,7 +536,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Pan Card  Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc4": "Passport Size Photograph Scan"
           },
           "totalCost": 8900,
           "_id": "65b12e329c1c437d4930fd31"
@@ -551,7 +551,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Pan Card Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc4": "Passport Size Photograph Scan"
           },
           "totalCost": 14000,
           "_id": "65b12e329c1c437d4930fd34"
@@ -576,7 +576,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Travel Itinerary Scan"
           },
           "totalCost": 14500,
@@ -601,7 +601,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "What is your port of Entry(Required as it is mentioned on the E-visa) Scan"
           },
           "totalCost": 5000,
@@ -626,7 +626,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 1500,
           "_id": "65b2a452af8c1506be6a91c3"
@@ -650,7 +650,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 7500,
           "_id": "65b2a4a2af8c1506be6a91c6"
@@ -664,7 +664,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 10900,
           "_id": "65b2a4a2af8c1506be6a91c7"
@@ -688,7 +688,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 2500,
           "_id": "65b2a724af8c1506be6a91d2"
@@ -702,7 +702,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 3700,
           "_id": "65b2a724af8c1506be6a91d3"
@@ -716,7 +716,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 5990,
           "_id": "65b2a724af8c1506be6a91d4"
@@ -740,7 +740,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 5550,
           "_id": "65b2a789af8c1506be6a91d7"
@@ -764,7 +764,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 4900,
           "_id": "65b2a7b2af8c1506be6a91da"
@@ -788,7 +788,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "US/UK/SCHENGEN Visa Scan"
           },
           "totalCost": 11900,
@@ -803,7 +803,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 15500,
           "_id": "65b2a842af8c1506be6a91de"
@@ -827,7 +827,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
           },
           "totalCost": 1765,
           "_id": "65b2b20aaf8c1506be6a91ea23"
@@ -888,7 +888,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Pan Card  Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc4": "Passport Size Photograph Scan"
           },
           "totalCost": 8900,
           "_id": "65b12e329c1c437d4930fd31"
@@ -903,7 +903,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Pan Card Scan",
-            "doc4": "Passport Size Photo Scan"
+            "doc4": "Passport Size Photograph Scan"
           },
           "totalCost": 14000,
           "_id": "65b12e329c1c437d4930fd34"
@@ -1022,7 +1022,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 3500,
           "_id": "65b29f4caf8c1506be6a91a1"
@@ -1069,7 +1069,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Hotel Address Information Scan",
             "doc5": "Hotel Postal Code Scan",
             "doc6": "Flight Tickets Scan"
@@ -1119,7 +1119,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Travel Itinerary Scan"
           },
           "totalCost": 14500,
@@ -1144,7 +1144,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "What is your port of Entry(Required as it is mentioned on the E-visa) Scan"
           },
           "totalCost": 5000,
@@ -1169,7 +1169,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 2500,
           "_id": "65b2a724af8c1506be6a91d2"
@@ -1183,7 +1183,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 3700,
           "_id": "65b2a724af8c1506be6a91d3"
@@ -1197,7 +1197,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 5990,
           "_id": "65b2a724af8c1506be6a91d4"
@@ -1221,7 +1221,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "US/UK/SCHENGEN Visa Scan"
           },
           "totalCost": 11900,
@@ -1236,7 +1236,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 15500,
           "_id": "65b2a842af8c1506be6a91de"
@@ -1260,7 +1260,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
           },
           "totalCost": 2700,
           "_id": "65b2b349af8c1506be6a91ed"
@@ -1274,7 +1274,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Flight Tickets Scan"
           },
           "totalCost": 9900,
@@ -1289,7 +1289,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
           },
           "totalCost": 11800,
@@ -1304,7 +1304,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry)Scan"
           },
           "totalCost": 10500,
@@ -1319,7 +1319,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "Arrival Flight Tickets (which shows port of entry) Scan"
           },
           "totalCost": 12500,
@@ -1344,7 +1344,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
           },
           "totalCost": 1765,
           "_id": "65b2b20aaf8c1506be6a91ea23"
@@ -1451,7 +1451,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 7500,
           "_id": "65b2a00aaf8c1506be6a91a8"
@@ -1475,7 +1475,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 1500,
           "_id": "65b2a452af8c1506be6a91c3"
@@ -1499,7 +1499,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 7500,
           "_id": "65b2a4a2af8c1506be6a91c6"
@@ -1513,7 +1513,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 10900,
           "_id": "65b2a4a2af8c1506be6a91c7"
@@ -1537,7 +1537,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan"
+            "doc3": "Passport Size Photograph Scan"
           },
           "totalCost": 4900,
           "_id": "65b2a7b2af8c1506be6a91da"
@@ -1586,7 +1586,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "6 Months Bank Statement Scan",
             "doc5": "Flight Itinerary Scan",
             "doc6": "Hotel Booking Voucher Scan"
@@ -1926,7 +1926,7 @@ const VisaState = (props) => {
           "docsReq": {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
-            "doc3": "Passport Size Photo Scan",
+            "doc3": "Passport Size Photograph Scan",
             "doc4": "US/UK/SCHENGEN Visa Scan"
           },
           "totalCost": 3000,
