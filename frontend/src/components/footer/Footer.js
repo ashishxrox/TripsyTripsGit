@@ -78,16 +78,16 @@ const Footer = () => {
                         <h4 className='pt-4' style={{ fontFamily: "Clash Display", fontWeight: "600", fontSize: "22px" }}>Contact Information</h4>
                         <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <a href="tel:+919374859311" style={{ color: '#fff', textDecoration: 'none' }}>+91 9374859311</a>
+                                <a href="tel:+918888877729" style={{ color: '#fff', textDecoration: 'none' }}>+91 8888877729</a>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <a href="tel:+919374859311" style={{ color: '#fff', textDecoration: 'none' }}>+91 9374859311</a>
+                                <a href="tel:+918181816662" style={{ color: '#fff', textDecoration: 'none' }}>+91 8181816662</a>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <a href="tel:+919374859311" style={{ color: '#fff', textDecoration: 'none' }}>+91 9374859311</a>
+                                <a href="tel:+918828066947" style={{ color: '#fff', textDecoration: 'none' }}>+91 8828066947</a>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                                <a href="tel:+919374859311" style={{ color: '#fff', textDecoration: 'none' }}>+91 9374859311</a>
+                                <a href="tel:+918805960110" style={{ color: '#fff', textDecoration: 'none' }}>+91 8805960110</a>
                             </li>
                             <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
                                 <a href="mailto:info@tripsytrips.com" style={{ color: '#fff', textDecoration: 'none' }}>info@tripsytrips.com</a>

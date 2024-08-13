@@ -218,7 +218,7 @@ const Application = () => {
                         <div className="plc-left mx-1 my-1 " style={{ flexBasis: "30%", height: "98%", width: "100%" }}>
                             <h2 style={{ fontSize: "60px", fontWeight: "400", fontFamily: "Clash Display", color: "#fff" }}>{countryName}</h2>
                             <p className='my-4 py-4' style={{ fontSize: "20px", fontWeight: "500", color: "#fff" }}>{current["intro"]}</p>
-                            <a className='final-btn ' href="https://wa.me/919374859311" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Package</a>
+                            <a className='final-btn ' href="https://wa.me/918805960110" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Package</a>
                         </div>
                         <div className="plc-right mx-1 my-2 d-flex justify-content-center align-items-center" style={{ flexBasis: "18%", height: "50%", width: "100%" }}>
                             <a href="#travelOverview" style={{ height: "100%", width: "100%", textDecoration: "none", color: "#fff" }}>
@@ -254,7 +254,7 @@ const Application = () => {
                     <h6 style={{ fontSize: "20px", fontWeight: "500", color: "rgba(116, 138, 152, 1)" }}>Destination - {countryName}</h6>
                     <h3 style={{ fontSize: "46px", fontWeight: "500", fontFamily: "Clash Display" }}>Travel Overview</h3>
                     <p style={{ fontSize: "16px", fontWeight: "500", }}>{current["content"][0]}</p>
-                    <a className='final-btn d-flex justify-content-around align-items-center' href="https://wa.me/919374859311" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Now</a>
+                    <a className='final-btn d-flex justify-content-around align-items-center' href="https://wa.me/918805960110" style={{ width: "164px", height: "54px", padding: "14px 30px", color: "#fff", textDecoration: "none", borderRadius: "30px" }}>Book Now</a>
                 </div>
                 <div className="to-right d-flex justify-content-center align-items-center" style={{ flexBasis: "50%", height: "75%", width: "100%" }}>
                     <PkgSliderBox place={countryName} />

@@ -39,7 +39,7 @@ const FlightHotels = () => {
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
                                 <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
-                                    <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
+                                    <a href="https://wa.me/918181816662" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>
                             {/* <FilghtForm/> */}
@@ -67,7 +67,7 @@ const FlightHotels = () => {
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
                                 <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
-                                    <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
+                                    <a href="https://wa.me/918828066947" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>
                             {/* <HotelsForm/> */}
@@ -106,7 +106,7 @@ const FlightHotels = () => {
                             </div>
                             <div className="card-btn my-1 d-flex justify-content-start align-items-center" style={{ flexBasis: "25%", width: "100%", height: "100%", backgroundColor: "#fff" }}>
                                 <div className='d-flex justify-content-center align-items-center' style={{ cursor: "pointer", width: "174px", height: "55px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
-                                    <a href="https://wa.me/919374859311" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
+                                    <a href="https://wa.me/918888877729" style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>Know More</a>
                                 </div>
                             </div>
                             {/* <InsuranceForm/> */}
