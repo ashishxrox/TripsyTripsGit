@@ -25,7 +25,7 @@ const MobileSearch = () => {
 
             </div>
 
-            <div className={`mob-search-cont ${showSearch && !searchPerformed ? "mob-search-cont-drop" : ""} d-flex justify-content-center align-items-center`} style={{ height: "150px", backgroundColor: "#fff", position: "relative", right: "275px", zIndex: "9999999" }}>
+            <div className={`mob-search-cont ${showSearch && !searchPerformed ? "mob-search-cont-drop" : ""} d-flex justify-content-center align-items-center`} style={{ height: "150px", backgroundColor: "#fff", position: "relative", right: "275px", zIndex: "99999999999" }}>
                 <MobileSearchBox handleSearchPerformed={handleSearchPerformed} />
             </div>
         </div>

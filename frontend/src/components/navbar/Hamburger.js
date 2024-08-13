@@ -69,7 +69,7 @@ const Hamburger = () => {
                             <div className={`visa-drop ${show && "py-3 px-3"} ${show && "visa-drop-show"} d-flex justify-content-center align-items-start flex-column visa-drop-menu`} style={{ }}>
 
                                 <Link to="/visa" className='my-2 py-2' onClick={toggleNav} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "20px", lineHeight: "26px", cursor: "pointer",  }}>E-Visa</Link>
-                                <Link to="/regVisa" className='my-2 py-2' onClick={toggleNav} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "20px", lineHeight: "26px", cursor: "pointer" }}>Regular Visa</Link>
+                                <Link to="/regVisa" className='my-2 py-2' onClick={toggleNav} style={{ color: "#000", textDecoration: "none", fontWeight: "400", fontSize: "20px", lineHeight: "26px", cursor: "pointer" }}>Sticker/ Non E-Visa</Link>
                             </div>
                         </li>
 

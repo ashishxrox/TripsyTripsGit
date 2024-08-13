@@ -39,6 +39,7 @@ import RegVisaType from './components/visa/RegVisaType';
 import Search from './components/search/Search';
 import MobileSearch from './components/search/MobileSearch';
 import FaqState from './context/FaqCont/FaqState';
+import Faq from './components/Faq/FaqAll';
 
 const App = () => {
 
@@ -124,6 +125,7 @@ const App = () => {
                     <Route exact path="/refund" index element={<Refund />} />
                     <Route exact path="/success" index element={<Success />} />
                     <Route exact path="/failure" index element={<Failure />} />
+                    <Route exact path="/faq" index element={<Faq />} />
                     {/* <Route exact path="/imgGal" index element={<ImageGallery />} /> */}
                   </Routes>
                   {/* <CallBox /> */}

@@ -55,7 +55,7 @@ const options = [
     },
     {
       value: "Hong Kong",
-      label: "Hong Kong E-Visa",
+      label: "Hong Kong E-Visa (PAR)",
       flag: "hk",
       category: "E-Visa",
       img_url: "../../static/media/hongKong.3e9e1fe495f28b236f9f.jpeg",

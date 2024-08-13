@@ -60,7 +60,7 @@ const VisaState = (props) => {
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Hong Kong E-Visa",
+          "name": "Hong Kong E-Visa (PAR)",
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 14,
@@ -1062,7 +1062,7 @@ const VisaState = (props) => {
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Hong Kong E-Visa",
+          "name": "Hong Kong E-Visa (PAR)",
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 14,

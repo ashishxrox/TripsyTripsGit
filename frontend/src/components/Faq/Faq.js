@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../../static/faq.css'
 
 const Faq = ({ content }) => {
@@ -15,7 +16,7 @@ const Faq = ({ content }) => {
                 <p>Have some questions ? <br /> Hope these answer them.</p>
               </div>
               <div className='faq-btn d-flex justify-content-center align-items-center' style={{ height: "65px", width: "210px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>
-                See all FAQs
+                <Link to='/faq' style={{textDecoration:"none", color:"rgba(2, 71, 134, 1)"}}>See all FAQs</Link> 
               </div>
               <div className='faq-intro2-desk'>
                 <h5 style={{ fontSize: "20px", letterSpacing: "0.5px", fontWeight: "500" }}>If not, feel free to reach out</h5>
