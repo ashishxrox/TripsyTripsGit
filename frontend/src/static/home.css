@@ -213,6 +213,7 @@
         padding: 0 15px;
         background-image: url("./assets/homeRegMob.png");
         background-size: cover;
+        background-position: center;
     }
     .hrv-top{
         justify-content: center;

@@ -10,10 +10,14 @@ const app = express()
 const port = process.env.PORT || 4321;
 
 app.use(express.json())
+
+// DEPLOYEMENT
 app.use(cors({
     origin: ['https://tripsytrips.com', 'https://www.tripsytrips.com']
 }));
 
+// DEV
+// app.use(cors())
 
 
 app.get('/', (req,res)=>{

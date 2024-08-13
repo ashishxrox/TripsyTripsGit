@@ -179,7 +179,7 @@ const PkWtvSlider = ({ place }) => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[0]})`, backgroundSize: "cover" }}>
+              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[0]})`, backgroundSize: "cover",  backgroundPosition:"center" }}>
                 <div className="overlay d-flex align-items-center justify-content-end flex-column py-3" style={{background: "linear-gradient(to bottom, transparent, rgba())", height:"100%", width:"100%"}}>
                   <div style={{height:"0.5px", width:'50%', backgroundColor:"#fff"}}></div>
                   <p style={{ color: "#fff", marginBottom:"0" }}>{currentPlaceName[0]}</p>
@@ -188,7 +188,7 @@ const PkWtvSlider = ({ place }) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[1]})`, backgroundSize: "cover" }}>
+              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[1]})`, backgroundSize: "cover", backgroundPosition:"center" }}>
               <div className="overlay d-flex align-items-center justify-content-end flex-column py-3" style={{background: "linear-gradient(to bottom, transparent, black)", height:"100%", width:"100%"}}>
                   <div style={{height:"0.5px", width:'50%', backgroundColor:"#fff"}}></div>
                   <p style={{ color: "#fff", marginBottom:"0" }}>{currentPlaceName[1]}</p>
@@ -197,7 +197,7 @@ const PkWtvSlider = ({ place }) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[2]})`, backgroundSize: "cover" }}>
+              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[2]})`, backgroundSize: "cover", backgroundPosition:"center" }}>
               <div className="overlay d-flex align-items-center justify-content-end flex-column py-3" style={{background: "linear-gradient(to bottom, transparent, black)", height:"100%", width:"100%"}}>
                   <div style={{height:"0.5px", width:'50%', backgroundColor:"#fff"}}></div>
                   <p style={{ color: "#fff", marginBottom:"0" }}>{currentPlaceName[2]}</p>
@@ -206,7 +206,7 @@ const PkWtvSlider = ({ place }) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[3]})`, backgroundSize: "cover" }}>
+              <div className='pkg-slider-slide' style={{ height: "411px", backgroundImage: `url(${currentPlace[3]})`, backgroundSize: "cover", backgroundPosition:"center" }}>
               <div className="overlay d-flex align-items-center justify-content-end flex-column py-3" style={{background: "linear-gradient(to bottom, transparent, black)", height:"100%", width:"100%"}}>
                   <div style={{height:"0.5px", width:'50%', backgroundColor:"#fff"}}></div>
                   <p style={{ color: "#fff", marginBottom:"0" }}>{currentPlaceName[3]}</p>

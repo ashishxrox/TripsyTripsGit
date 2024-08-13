@@ -125,22 +125,22 @@ const PkgGallery = ({place}) => {
             >
                 <SwiperSlide className='d-flex justify-content-center flex-column align-items-start' >
                     {/* <img src={singa1} alt="" style={{height:"100%", width:"100%"}} /> */}
-                    <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[0]})`, backgroundSize:"cover"}}></div>
+                    <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[0]})`, backgroundSize:"cover", backgroundPosition:"center"}}></div>
 
 
                 </SwiperSlide>
                 <SwiperSlide className='d-flex justify-content-center flex-column align-items-start' >
                    {/* <img src={singa2} alt=""  style={{height:"100%", width:"100%"}}/> */}
-                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[1]})`, backgroundSize:"cover"}}></div>
+                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[1]})`, backgroundSize:"cover",  backgroundPosition:"center"}}></div>
 
                 </SwiperSlide>
                 <SwiperSlide className='d-flex justify-content-center flex-column align-items-start' >
-                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[2]})`, backgroundSize:"cover"}}></div>
+                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[2]})`, backgroundSize:"cover",  backgroundPosition:"center"}}></div>
 
 
                 </SwiperSlide>
                 <SwiperSlide className='d-flex justify-content-center flex-column align-items-start' >
-                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[3]})`, backgroundSize:"cover"}}></div>
+                   <div style={{height:"100%", width:"100%", backgroundColor:"red", backgroundImage:`url(${currentPlace[3]})`, backgroundSize:"cover",  backgroundPosition:"center"}}></div>
 
 
                 </SwiperSlide>
