@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import '../../static/about.css'
+import { Link } from 'react-router-dom'
 import About1 from '../../static/assets/about1.jpeg'
 import About2 from '../../static/assets/aboutMission.jpeg'
 import OurMission from '../../static/assets/ourMission.jpeg'
@@ -200,7 +201,7 @@ const AboutPage = () => {
                   <h4>E-Visa</h4>
                   <p>Skip the embassy lines with e-visas. Our 3-step process ensures you focus on the excitement of your trip, not the paperwork.  </p>
                 </div>
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}> <Link to="/visa" style={{color:"#fff", textDecoration:"none"}}>Know More</Link>  </div>
 
               </div>
               <div className="amkrlb1 d-flex justify-content-between align-items-start flex-column" style={{ flexBasis: "32%", height: "100%", width: "100%" }}>
@@ -223,7 +224,7 @@ const AboutPage = () => {
 
 
 
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}> <Link to="/package" style={{color:"#fff", textDecoration:"none"}}>Know More</Link></div>
 
               </div>
               <div className="amkrlb1 d-flex justify-content-between align-items-start flex-column" style={{ flexBasis: "32%", height: "100%", width: "100%" }}>
@@ -238,7 +239,7 @@ const AboutPage = () => {
                   <p>Stay protected on your trips with comprehensive insurance options. From medical coverage to trip cancellations, we've got you covered through our trusted partners.  </p>
                 </div>
 
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}><a href="https://wa.me/918888877729" style={{ textDecoration: "none", color: "#fff", fontSize: "16px" }}>Know More</a></div>
 
               </div>
             </div>
@@ -259,11 +260,11 @@ const AboutPage = () => {
                 </svg>
 
                 <div style={{ color: "#fff" }}>
-                  <h4>Regular visa</h4>
+                  <h4>Sticker/ Non E-visa</h4>
                   <p>Our visa services make travel simple. Fast approvals, minimal stress, and expert help from start to finish.  </p>
                 </div>
 
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}><Link to="/regVisa" style={{color:"#fff", textDecoration:"none"}}>Know More</Link></div>
 
               </div>
               <div className="amkrlb1 d-flex justify-content-between align-items-start flex-column" style={{ flexBasis: "32%", height: "100%", width: "100%" }}>
@@ -289,7 +290,7 @@ const AboutPage = () => {
 
 
 
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}><a href="https://wa.me/918181816662" style={{ textDecoration: "none", color: "#fff", fontSize: "16px" }}>Know More</a></div>
 
               </div>
               <div className="amkrlb1 d-flex justify-content-between align-items-start flex-column" style={{ flexBasis: "32%", height: "100%", width: "100%" }}>
@@ -304,7 +305,7 @@ const AboutPage = () => {
                 </div>
 
 
-                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}>Know More</div>
+                <div className='akmr-btn d-flex justify-content-center align-items-center' style={{ height: "65px", borderRadius: "30px" }}><a href="https://wa.me/918828066947" style={{ textDecoration: "none", color: "#fff", fontSize: "16px" }}>Know More</a></div>
 
               </div>
             </div>

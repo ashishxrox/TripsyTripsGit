@@ -87,14 +87,14 @@ const PlaceToVisit = () => {
                   >
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/Sri Lanka`}} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Lanka} alt="Sri Lanka" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             Sri Lanka
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
@@ -110,14 +110,14 @@ const PlaceToVisit = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/Vietnam` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Vietnam} alt="Vietnam" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             Vietnam
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
@@ -133,14 +133,14 @@ const PlaceToVisit = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/Bahrain` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Bahrain} alt="Bahrain" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             Bahrain
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
@@ -156,14 +156,14 @@ const PlaceToVisit = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/Hong Kong` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={HongKong} alt="Hong Kong" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             Hong Kong
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
@@ -179,14 +179,14 @@ const PlaceToVisit = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/United Arab Emirates` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Uae} alt="UAE" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             United Arab Emirates
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>
@@ -202,14 +202,14 @@ const PlaceToVisit = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
-                        <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                        <Link to={{ pathname: `/visa/application/Turkey` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Turkey} alt="Turkey" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
                           <div className="overlay py-4" style={overlayStyle}>
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                             Turkey
                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                           </div>
-                        </div>
+                        </Link>
 
                         <div className="visit-btn justify-content-center align-items-center">
                           <div className='visit-btn-bdr d-flex justify-content-center align-items-center'>

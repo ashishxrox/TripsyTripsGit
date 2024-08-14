@@ -30,6 +30,7 @@ const options = [
       _id: "65b12e329c1c437d4930fd31"
     },
   },
+  
   {
     value: "United Arab Emirates",
     label: "UAE 60 Days Single Entry E-Visa",
@@ -777,6 +778,338 @@ const options = [
       "_id": "65b2b20aaf8c1506be6a91ea23"
     }
   },
+  {
+    value: "Canada",
+    label: "Canada Tourist Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2b20aaf8c1506be6a91e93",
+      "country": "Canada",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "Canada Tourist Visa",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2b20aaf8c1506be6a91ea3"
+        }]
+    }
+  },
+  {
+    value: "United Kingdom",
+    label: "United Kingdom Tourist Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2b20aaf8c1506be6a91e91",
+      "country": "United Kingdom",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "United Kingdom Tourist Visa",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2b20aaf8c1506be6a91ea1"
+        }
+      ],
+    }
+  },
+  {
+    value: "Schengen Area",
+    label: "Schengen Tourist Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2b20aaf8c1506be6a91e92",
+      "country": "Schengen Area",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "Schengen Tourist Visa",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2b20aaf8c1506be6a91ea2"
+        }
+      ],
+    }
+  },
+  {
+    value: "United States of America",
+    label: "United States of America Tourist Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2b20aaf8c1506be6a91e92",
+      "country": "United States of America",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "United States of America Tourist Visa",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2b20aaf8c1506be6a91ea2"
+        }
+      ],
+    }
+  },
+  {
+    value: "Turkey",
+    label: "Turkey E-Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2a8f1af8c1506be6a91e3",
+      "country": "Turkey",
+      "eVisa": "yes",
+      "visaType": [
+        {
+          "name": "Turkey E-Visa",
+          "entry": "Single",
+          "validityDays": 180,
+          "durationDays": 30,
+          "processingTime": '1-2',
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "US/UK/SCHENGEN Visa Scan [mandatory for Turkey E-visa]"
+          },
+          "totalCost": 4500,
+          "_id": "65b2a8f1af8c1506be6a91e4"
+        },
+        {
+          "name": "Turkey Tourist Visa",
+          "entry": "Single",
+          "validityDays": 180,
+          "durationDays": 30,
+          "processingTime": '1-2',
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2a8f1af8c1506be6a91e4"
+        }
+      ],
+    }
+  },
+  {
+    value: "New Zealand",
+    label: "New Zealand Visa",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2a656af8c1506be6a91c9",
+      "country": "New Zealand",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "New Zealand Visa",
+          "entry": "Single",
+          "validityDays": 365,
+          "durationDays": 180,
+          "processingTime": 45,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card",
+            "doc4": "Pan Card",
+            "doc5": "Last 2 Years ITR",
+            "doc6": "6 Month Bank Statement(E-Statement only)",
+            "doc7": "Last 3 months Salary Slip(If employed)",
+            "doc8": "Leave Letter from the company(If employed)",
+            "doc9": "Letter of Employement(If employed)",
+            "doc10": "GST Certificate(If self-employed)",
+            "doc11": "Last 6 Months Company Banl account statement(If self-employed)",
+            "doc12": "Covid Vacination Certificate",
+            "doc13": "Marriage Certificate(If Applicable)",
+            "doc14": "All passport Old and New Pages Scannerd copy",
+            "doc15": "Covering Letter(Addressed to New Zealand High Commission in Delhi)",
+            "doc16": "Other Saving and investment",
+            "doc17": "FOrm 54"
+          },
+          "totalCost": 3000,
+          "_id": "65b2a656af8c1506be6a91ca"
+        }
+      ],
+    }
+  },
+  {
+    value: "Taiwan",
+    label: "TaiwanTAC",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2a8a2af8c1506be6a91e0",
+      "country": "Taiwan",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "TaiwanTAC",
+          "entry": "Multiple",
+          "validityDays": 90,
+          "durationDays": 14,
+          "processingTime": '2-3',
+          "docsReq": {
+            "doc1": "Passport Scan (Front Page)",
+            "doc2": "Passport Scan (Last Page)",
+            "doc3": "Passport Size Photograph Scan",
+            "doc4": "US/UK/SCHENGEN Visa Scan"
+          },
+          "totalCost": 3000,
+          "_id": "65b2a8a2af8c1506be6a91e1"
+        }
+      ],
+    }
+  },
+  {
+    value: "Australia",
+    label: "Australia Tourist Visa (Subclass 600)",
+    category: "Reg-Visa",
+    visaType: {
+      "_id": "65b2ab41af8c1506be6a91e6",
+      "country": "Australia",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "Australia Tourist Visa (Subclass 600)",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2ab41af8c1506be6a91e7"
+        }
+      ],
+    }
+  },
 
 ];
 
@@ -801,9 +1134,11 @@ const SearchBox = ({ onSearch}) => {
 
 
   const formatOptions = ({ label, value, category, visaType,img_url }) => (
+    
     <Link to={{
-      pathname: `/visa/application/${value}/${visaType.name}`,
-    }} onClick={handleClick(visaType)} className="format-options" style={{ textDecoration: "none" }}>
+      pathname: category ==='E-Visa'?`/visa/application/${value}/${visaType.name}`:
+                category === 'Reg-Visa'? `/regvisa/application/${value}/`: `/visa/application/${value}/${visaType.name}`
+    }} state={visaType} onClick={handleClick(visaType)} className="format-options" style={{ textDecoration: "none" }}>
       <div className='fo-cont d-flex justify-content-start align-items-center' style={{ }}>
         <div className='d-flex justify-content-center align-items-start flex-column' style={{ flexBasis: "50%", height: "100%" }}>
           <h5 style={{ color: "rgba(2, 71, 134, 1)", fontSize: "14px", textDecoration: "underline", fontFamily: "Clash Display", letterSpacing: "1px", fontWeight: "500" }}>{category}</h5>
