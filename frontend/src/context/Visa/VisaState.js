@@ -56,11 +56,11 @@ const VisaState = (props) => {
    const initCountries = [ 
     {
       "_id": "65b2a1d7af8c1506be6a91ad",
-      "country": "Hong Kong",
+      "country": "Hong Kong (PAR)",
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Hong Kong E-Visa (PAR)",
+          "name": "Hong Kong E-Visa  (PreArrival Registration)",
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 14,
@@ -1058,11 +1058,11 @@ const VisaState = (props) => {
     },
     {
       "_id": "65b2a1d7af8c1506be6a91ad",
-      "country": "Hong Kong",
+      "country": "Hong Kong (PAR)",
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Hong Kong E-Visa (PAR)",
+          "name": "Hong Kong E-Visa (PreArrival Registration)",
           "entry": "Multiple",
           "validityDays": 180,
           "durationDays": 14,

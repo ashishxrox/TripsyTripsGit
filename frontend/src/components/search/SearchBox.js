@@ -54,13 +54,13 @@ const options = [
     },
   },
   {
-    value: "Hong Kong",
+    value: "Hong Kong (PAR)",
     label: "Hong Kong E-Visa",
     flag: "hk",
     category: "E-Visa",
     img_url: "../../static/media/hongKong.a6f8c79a61c063b7ce9d.jpg",
     visaType: {
-      "name": "Hong Kong E-Visa (PAR)",
+      "name": "Hong Kong E-Visa (Pre-Arrival Registration)",
       "entry": "Multiple",
       "validityDays": 180,
       "durationDays": 14,

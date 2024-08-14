@@ -38,7 +38,8 @@ const PackageState = (props) => {
                 "Abu Dhabi City tour + Mosque",
                 "Musuem of Future + Dubai Frame"
             ],
-            img_url: "../../static/media/dubai.ed54eea1d8eab5f08530.jpg"
+            img_url: "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
+            price: "40,000"
         },
         {
             place: "Singapore",
@@ -50,7 +51,8 @@ const PackageState = (props) => {
                 "Sentosa",
                 "Singapore City Tour"
             ],
-            img_url: "../../static/media/singapore.dbfa9d7ac54be7e4d01d.jpeg"
+            img_url: "../../static/media/singapore.dbfa9d7ac54be7e4d01d.jpeg",
+            price: "30,000/-"
         },
         {
             place: "Malaysia",
@@ -61,7 +63,8 @@ const PackageState = (props) => {
                 "Sunway Lagoon Theme Park",
                 "Genting Island 1 Night"
             ],
-            img_url: "../../static/media/malaysia.a22041cc015165647f3d.jpg"
+            img_url: "../../static/media/malaysia.a22041cc015165647f3d.jpg",
+            price: "30,000"
         },
         {
             place: "Bali",
@@ -72,7 +75,8 @@ const PackageState = (props) => {
                 "Bali Pioneer Swing + Rice Terrace",
                 "Teganingan Waterfall + UBUD Art Market"
             ],
-            img_url: "../../static/media/bali.5e9c25855eaaf8c36980.jpeg"
+            img_url: "../../static/media/bali.5e9c25855eaaf8c36980.jpeg",
+            price: "35,000"
         },
         {
             place: "Turkey",
@@ -83,7 +87,8 @@ const PackageState = (props) => {
                 "City of Cappadocia visit to Goreme open air museum, Dervent Valley, Pastbag Valley",
                 "Spice Bazar + Bosphorus Cruise in Istanbul"
             ],
-            img_url: "../../static/media/turkeyPkg.01f0720f4b0e1889d3e2.jpg"
+            img_url: "../../static/media/turkeyPkg.01f0720f4b0e1889d3e2.jpg",
+            price: "65,000"
         },
         {
             place: "Kerala",
@@ -95,7 +100,8 @@ const PackageState = (props) => {
                 "2N Kovalam",
                 "Includes: All sightseeing, boat rides, tea plantation and others"
             ],
-            img_url: "../../static/media/kerala.5ae4050d5bfdd0952c15.jpeg"
+            img_url: "../../static/media/kerala.5ae4050d5bfdd0952c15.jpeg",
+            price: "10,500"
         },
         {
             place: "Kashmir",
@@ -107,7 +113,8 @@ const PackageState = (props) => {
                 "Includes: City tour, Shikara Ride in Dal Lake, sightseeing",
                 
             ],
-            img_url: "../../static/media/kashmir.95f5bac767455419706a.jpeg"
+            img_url: "../../static/media/kashmir.95f5bac767455419706a.jpeg",
+            price: "23,000"
         },
         {
             place: "Vietnam",
@@ -118,7 +125,8 @@ const PackageState = (props) => {
                 "2N Ho Chi Minh",
                 "Include: City tour, experience the local culture"
             ],
-            img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg"
+            img_url: "../../static/media/vietnam.cc28aa33baa20e59fc12.jpeg",
+            price: "37,500"
         },
         {
             place: "Sri Lanka",
@@ -129,7 +137,8 @@ const PackageState = (props) => {
                 "Sri Bhakta Hanuman Temple + Seetha Amman Temple + Ravana Falls + Ravana Cave",
                 "9 Arch Bridge + Little Adams Peak + Galle Fort"
             ],
-            img_url: "../../static/media/sriLanka.b12c6a89efe54467845e.jpeg"
+            img_url: "../../static/media/sriLanka.b12c6a89efe54467845e.jpeg",
+            price: "24,000"
         },
         {
             place: "Thailand",
@@ -140,7 +149,8 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/thailand.68b5e7f65f56a0260bf5.jpeg"
+            img_url: "../../static/media/thailand.68b5e7f65f56a0260bf5.jpeg",
+            price: "25,000"
         },
         {
             place: "Leh & Nubra Valley",
@@ -151,7 +161,8 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/leh.dfb3becdca44e0abf1a2.jpg"
+            img_url: "../../static/media/leh.dfb3becdca44e0abf1a2.jpg",
+            price: "36,000"
         },
         {
             place: "Meghalaya",
