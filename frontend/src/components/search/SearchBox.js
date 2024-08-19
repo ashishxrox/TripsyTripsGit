@@ -30,7 +30,7 @@ const options = [
       _id: "65b12e329c1c437d4930fd31"
     },
   },
-  
+
   {
     value: "United Arab Emirates",
     label: "UAE 60 Days Single Entry E-Visa",
@@ -777,6 +777,26 @@ const options = [
       "totalCost": 1765,
       "_id": "65b2b20aaf8c1506be6a91ea23"
     }
+  }, {
+    value: "Turkey",
+    label: "Turkey E-Visa",
+    flag: "tur",
+    category: "E-Visa",
+    img_url: "../../static/media/turkey.d1848f14817c46282eda.jpeg",
+    visaType: {
+      "name": "Turkey E-Visa",
+      "entry": "Single",
+      "validityDays": 180,
+      "durationDays": 30,
+      "processingTime": '1-2',
+      "docsReq": {
+        "doc1": "Passport Scan (Front Page)",
+        "doc2": "Passport Scan (Last Page)",
+        "doc3": "US/UK/SCHENGEN Visa Scan [mandatory for Turkey E-visa]"
+      },
+      "totalCost": 4500,
+      "_id": "65b2a8f1af8c1506be6a91e4"
+    }
   },
   {
     value: "Canada",
@@ -947,7 +967,7 @@ const options = [
   },
   {
     value: "Turkey",
-    label: "Turkey E-Visa",
+    label: "Turkey Visa",
     category: "Reg-Visa",
     visaType: {
       "_id": "65b2a8f1af8c1506be6a91e3",
@@ -955,7 +975,7 @@ const options = [
       "eVisa": "yes",
       "visaType": [
         {
-          "name": "Turkey E-Visa",
+          "name": "Turkey Visa",
           "entry": "Single",
           "validityDays": 180,
           "durationDays": 30,
@@ -1116,7 +1136,7 @@ const options = [
 
 
 
-const SearchBox = ({ onSearch}) => {
+const SearchBox = ({ onSearch }) => {
   const { setEvisa, setType, appType } = useContext(FormDataContext)
   const [searchTerm, setSearchTerm] = useState(null);
 
@@ -1133,13 +1153,13 @@ const SearchBox = ({ onSearch}) => {
   }
 
 
-  const formatOptions = ({ label, value, category, visaType,img_url }) => (
-    
+  const formatOptions = ({ label, value, category, visaType, img_url }) => (
+
     <Link to={{
-      pathname: category ==='E-Visa'?`/visa/application/${value}/${visaType.name}`:
-                category === 'Reg-Visa'? `/regvisa/application/${value}/`: `/visa/application/${value}/${visaType.name}`
+      pathname: category === 'E-Visa' ? `/visa/application/${value}/${visaType.name}` :
+        category === 'Reg-Visa' ? `/regvisa/application/${value}/` : `/visa/application/${value}/${visaType.name}`
     }} state={visaType} onClick={handleClick(visaType)} className="format-options" style={{ textDecoration: "none" }}>
-      <div className='fo-cont d-flex justify-content-start align-items-center' style={{ }}>
+      <div className='fo-cont d-flex justify-content-start align-items-center' style={{}}>
         <div className='d-flex justify-content-center align-items-start flex-column' style={{ flexBasis: "50%", height: "100%" }}>
           <h5 style={{ color: "rgba(2, 71, 134, 1)", fontSize: "14px", textDecoration: "underline", fontFamily: "Clash Display", letterSpacing: "1px", fontWeight: "500" }}>{category}</h5>
           <h3 style={{ fontSize: "24px", fontWeight: "500", fontFamily: "Clash Display", fontWeight: "500", color: "#000" }}>{label}</h3>
