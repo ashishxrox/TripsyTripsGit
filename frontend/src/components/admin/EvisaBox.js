@@ -21,7 +21,7 @@ const EvisaBox = ({ data, docs }) => {
     const handleDownload = async () => {
         try {
             // Send a POST request to the server to create a zip file
-            const response = await axios.post(`${apiURL}/api/fetchFormData/download`, filteredDocs, {
+            const response = await axios.post(`${localHost}/api/fetchFormData/download`, filteredDocs, {
                 responseType: 'blob', // Ensure response type is set to blob
             });
 
@@ -63,7 +63,7 @@ const EvisaBox = ({ data, docs }) => {
 
     const changeState = async () => {
         try {
-            const query = await axios.get(`${apiURL}/api/update/${data.uniqueStr}`);
+            const query = await axios.get(`${localHost}/api/update/${data.uniqueStr}`);
             alert("Visa Applied")
         } catch (error) {
             console.log(error)
@@ -72,7 +72,7 @@ const EvisaBox = ({ data, docs }) => {
 
     const changeVisaSent = async () => {
         try {
-            const query = await axios.get(`${apiURL}/api/update/setGranted/${data.uniqueStr}`);
+            const query = await axios.get(`${localHost}/api/update/setGranted/${data.uniqueStr}`);
             alert("Visa Sent")
         } catch (error) {
             console.log(error)
@@ -89,7 +89,7 @@ const EvisaBox = ({ data, docs }) => {
     const handleSubmit = async () => {
 
         try {
-            const query = await axios.get(`${apiURL}/api/update/comment/${data.uniqueStr}/${comment}`)
+            const query = await axios.get(`${localHost}/api/update/comment/${data.uniqueStr}/${comment}`)
             alert("Comment added");
         } catch (error) {
             console.log(error)
@@ -115,7 +115,7 @@ const EvisaBox = ({ data, docs }) => {
 
     const handleHandledBySubmit = async () => {
         try {
-            const query = await axios.get(`${apiURL}/api/update/handledBy/${data.uniqueStr}/${handle}`)
+            const query = await axios.get(`${localHost}/api/update/handledBy/${data.uniqueStr}/${handle}`)
             alert(`Client handled by ${handle}`);
         } catch (error) {
             console.log(error)
@@ -151,6 +151,22 @@ const EvisaBox = ({ data, docs }) => {
                         </div>
                         {data.visaName === 'Vietnam E-Visa' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <p>Place of Entry: {data.portOfEntry}</p>
+                        </div>}
+                        {data.visaName === 'Vietnam 30 Days Single Entry Express E-Visa( 2-3 Working Days )' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <p>Place of Entry: {data.portOfEntry}</p>
+                        </div>}
+                        {data.visaName === 'Vietnam 30 Days Single Entry Express E-Visa (1 Working Day )' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <p>Place of Entry: {data.portOfEntry}</p>
+                        </div>}
+                        {data.visaName === 'Vietnam 30 Days Multiple Entry E-Visa' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <p>Place of Entry: {data.portOfEntry}</p>
+                        </div>}
+                        {data.visaName === 'Vietnam 90 Days Multiple Entry E-Visa' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <p>Place of Entry: {data.portOfEntry}</p>
+                        </div>}
+                        {data.visaName === 'Indonesia E-Visa' && <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <p>Hotel Address Information: {data.hotelAddress}</p>
+                            <p>Hotel Postal Code: {data.hotelPostalCode}</p>
                         </div>}
 
                         <div className="data-body-right" style={{ color: "#20293a", display: "flex", justifyContent: "space-between", alignItems: "center" }}>

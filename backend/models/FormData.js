@@ -52,6 +52,12 @@ const FormDataSchema = new mongoose.Schema({
      portOfEntry:{
           type: String
      },
+     hotelAddress:{
+          type: String
+     },
+     hotelPostalCode:{
+          type: String
+     },
      createdAt: {
           type: Date,
           default: Date.now

@@ -50,6 +50,8 @@ router.post('/', async (req, res) => {
             returnDates,
             documentUniqueStrs,
             portOfEntry,
+            hotelAddress,
+            hotelPostalCode,
             mstatus
         } = req.body;
 
@@ -74,6 +76,8 @@ router.post('/', async (req, res) => {
             visaName,
             documentUniqueStrs,
             portOfEntry,
+            hotelAddress,
+            hotelPostalCode,
             mstatus
         });
 

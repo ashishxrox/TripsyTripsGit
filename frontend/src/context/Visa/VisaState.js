@@ -459,9 +459,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Passport Size Photograph Scan",
-            "doc4": "Hotel Address Information Scan",
-            "doc5": "Hotel Postal Code Scan",
-            "doc6": "Flight Tickets Scan"
+            "doc4": "Flight Tickets Scan"
           },
           "totalCost": 3500,
           "_id": "65b2a266af8c1506be6a91b1"
@@ -1094,9 +1092,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
             "doc3": "Passport Size Photograph Scan",
-            "doc4": "Hotel Address Information Scan",
-            "doc5": "Hotel Postal Code Scan",
-            "doc6": "Flight Tickets Scan"
+            "doc4": "Flight Tickets Scan"
           },
           "totalCost": 3500,
           "_id": "65b2a266af8c1506be6a91b1"

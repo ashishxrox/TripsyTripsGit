@@ -33,6 +33,8 @@ const UserForm = (props) => {
         uniqueStr: '',
         documentUniqueStrs: [],
         portOfEntry: '',
+        hotelAddress: '',
+        hotelPostalCode: '',
         mstatus: ''
     })
     const [documentUniqueStrs, setDocumentUniqueStrs] = useState([]);
@@ -310,6 +312,17 @@ const UserForm = (props) => {
                                     <option value="Van Don Int Airport (Quang Ninh)">Van Don Int Airport (Quang Ninh)</option>
                                 </select>
                                 <small>This is required on your visa, please provide accurate information</small>
+                            </div>}
+
+                            {visaName === 'Indonesia E-Visa' && <div className='user-form-row1 d-flex justify-content-between align-items-center ' style={{ width: "100%" }}>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="hotelAddress" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Hotel Address Information*</label>
+                                    <input type="text" className="form-control px-4 py-3" id="hotelAddress" name='hotelAddress' onChange={onChange} required />
+                                </div>
+                                <div className="mb-5" style={{ flexBasis: "48%", width: "100%" }}>
+                                    <label htmlFor="hotelPostalCode" className="form-label" style={{ fontSize: "16px", fontWeight: "500" }}>Hotel Postal Code*</label>
+                                    <input type="text" className="form-control px-4 py-3" id="hotelPostalCode" name='hotelPostalCode' onChange={onChange} required />
+                                </div>
                             </div>}
 
                             {renderFileUploads()}

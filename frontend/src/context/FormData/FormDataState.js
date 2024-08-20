@@ -28,6 +28,8 @@ const FormDataState = (props) => {
         visaName: '',
         documentUniqueStrs: [],
         portOfEntry: '',
+        hotelAddress: '',
+        hotelPostalCode: '',
         mstatus: ''
 
     })
