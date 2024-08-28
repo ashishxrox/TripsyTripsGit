@@ -9,7 +9,7 @@
 }
 
 .pkg-landing {
-  height: 100vh;
+  height: 775px;
 }
 
 .pl-cont {
@@ -20,7 +20,7 @@
 }
 
 .pkg-nav {
-  height: 11vh;
+  height: 85px;
   width: 60%;
 }
 
@@ -65,7 +65,7 @@
 
 /* TRAVEL OVERVIEW */
 .travel-overview {
-  height: 100vh;
+  height: 750px;
 }
 
 .slider-btn1 {
@@ -79,7 +79,7 @@
 }
 
 .t-inclusion {
-  height: 115vh;
+  height: 1000px;
 }
 
 .include-desk {
@@ -100,7 +100,7 @@
 
 .travel-wtv {
   flex-direction: row;
-  height: 100vh;
+  height: 800px;
   width: 90%;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .travel-special {
-  height: 60vh;
+  height: 500px;
   width: 90%;
   flex-direction: row;
 
@@ -303,7 +303,7 @@
 
 
 .travel-special2 {
-  height: 40vh;
+  height: 300px;
   width: 90%;
 }
 

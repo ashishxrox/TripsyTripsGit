@@ -125,7 +125,7 @@ const Blogs = () => {
   return (
     <div className='d-flex align-items-center justify-content-center flex-column'>
       <BlogBanner />
-      <div className="visa-title my-5 d-flex justify-content-between align-items-start flex-row" style={{ height: "10vh", width: "90%", backgroundColor: "#fff" }}>
+      <div className="visa-title my-5 d-flex justify-content-between align-items-start flex-row" style={{ height: "85px", width: "90%", backgroundColor: "#fff" }}>
 
         <div className="head-box blogs-head-box d-flex justify-content-between align-items-end" style={{}}>
           <h2 style={{ fontFamily: "Clash Display", fontSize: "46px", fontWeight: "500" }}>Things to Know</h2>
