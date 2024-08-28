@@ -5,7 +5,7 @@
 }
 
 .about-banner{
-  height: 41vh;
+  height: 310px;
   background-size: 1500px 390px;
 }
 .about-banner .overlay{
@@ -34,7 +34,7 @@
 }
 
 .about-mission{
-  height: 60vh;
+  height: 400px;
 }
 
 .am-cont{
@@ -43,7 +43,7 @@
 }
 .amc-right{
   position: absolute;
-  height: 45vh;
+  height: 350px;
   width: 45%;
   right: 75px;
 }
@@ -53,7 +53,7 @@
 }
 
 .about-vision{
-  height: 60vh;
+  height: 400px;
 }
 
 .av-cont{
@@ -63,13 +63,13 @@
 
 .avc-right{
   position: absolute;
-  height: 45vh;
+  height: 350px;
   width: 45%;
   left: 75px;
 }
 
 .about-values{
-  height: 65vh;
+  height: 550px;
 }
 
 .av-title{
@@ -87,7 +87,7 @@
 
 .about-know-more{
   flex-direction: row;
-  height: 150vh;
+  height: 1200px;
 }
 
 .akm-cont{

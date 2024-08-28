@@ -67,7 +67,7 @@ const RegVisaType = () => {
           </div> */}
         </div>
       </div>
-      <div className="regVisa-form d-flex justify-content-center align-items-center" style={{ height: "8vh", width: "90%" }}>
+      <div className="regVisa-form d-flex justify-content-center align-items-center" style={{ height: "55px", width: "90%" }}>
       {/* <NonEvisaForm type={country.visaType}/>  */}
       <div className=' d-flex justify-content-center align-items-center'>
         <a href="">Book Appointment</a>

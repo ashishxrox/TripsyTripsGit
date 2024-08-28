@@ -37,7 +37,7 @@
 }
 
 .my-revs {
-    height: 310vh;
+    height: 2400px;
 }
 
 .reviews-cont {
@@ -116,7 +116,7 @@
 }
 
 .home-blogs{
-    height: 110vh;
+    height: 950px;
 }
 
 .blogs-title{
@@ -172,7 +172,7 @@
 
 .tripsy-insta-title{
     flex-direction: row;
-    height: 20vh;
+    height: 150px;
 }
 
 .insta-title-left h3{
@@ -191,7 +191,7 @@
     height: 55px;
 }
 .tripsy-insta-frame iframe{
-    height: 133vh;
+    height: 1050px;
 }
 
 .rclc-left{
