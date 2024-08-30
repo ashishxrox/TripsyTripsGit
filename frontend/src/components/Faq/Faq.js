@@ -16,7 +16,7 @@ const Faq = ({ content }) => {
                 <p>Have some questions ? <br /> Hope these answer them.</p>
               </div>
               <div className='faq-btn d-flex justify-content-center align-items-center' style={{ height: "65px", width: "210px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px", color: "rgba(2, 71, 134, 1)", fontSize: "16px" }}>
-                <Link to='/faq' style={{textDecoration:"none", color:"rgba(2, 71, 134, 1)"}}>See all FAQs</Link> 
+                <Link to='/faq' style={{ textDecoration: "none", color: "rgba(2, 71, 134, 1)" }}>See all FAQs</Link>
               </div>
               <div className='faq-intro2-desk'>
                 <h5 style={{ fontSize: "20px", letterSpacing: "0.5px", fontWeight: "500" }}>If not, feel free to reach out</h5>
@@ -45,13 +45,13 @@ const Faq = ({ content }) => {
                   <div className="fcm-cont mx-3" >
                     <ul style={{ listStyleType: "none", paddingLeft: "none" }}>
                       <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                        <a href="tel:+919374859311" style={{ color: '#000', textDecoration: 'none' }}>+91 9374859311</a>
+                        <a href="tel:+918888877729" style={{ color: '#000', textDecoration: 'none' }}>+91 8888877729</a>
                       </li>
                       <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                        <a href="tel:+919374859311" style={{ color: '#000', textDecoration: 'none' }}>+91 9374859311</a>
+                        <a href="tel:+918181816662" style={{ color: '#000', textDecoration: 'none' }}>+91 8181816662</a>
                       </li>
                       <li className='my-3' style={{ fontWeight: "500", fontSize: "16px" }}>
-                        <a href="tel:+919374859311" style={{ color: '#000', textDecoration: 'none' }}>+91 9374859311</a>
+                        <a href="tel:+918828066947" style={{ color: '#000', textDecoration: 'none' }}>+91 8828066947</a>
                       </li>
 
                     </ul>
@@ -66,7 +66,7 @@ const Faq = ({ content }) => {
 
                   </div>
                   <div className="fcm-cont mx-5">
-                    <a href="https://wa.me/919374859311" style={{ color: '#000', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">+91 9374859311</a>
+                    <a href="https://wa.me/918805960110" style={{ color: '#000', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">+91 8805960110</a>
                   </div>
 
                 </div>
@@ -76,7 +76,7 @@ const Faq = ({ content }) => {
             <div className="fct-right" style={{ flexBasis: "64.5%", height: "100%", width: "100%", overflowY: "auto" }}>
               <div className="accordion" id="accordionExample" style={{ height: "85%", width: "100%" }}>
                 {content.map((item, index) => (
-                  <div key={index} className="accordion-item py-3" style={{ border: "none", borderTop: index === 0? "1px solid #000" : "none", borderBottom: "1px solid #000", borderRadius: "0", backgroundColor: "rgba(243, 236, 230, 1)" }}>
+                  <div key={index} className="accordion-item py-3" style={{ border: "none", borderTop: index === 0 ? "1px solid #000" : "none", borderBottom: "1px solid #000", borderRadius: "0", backgroundColor: "rgba(243, 236, 230, 1)" }}>
                     <h2 className="accordion-header" id={`heading${index}`}>
                       <button
                         style={{ backgroundColor: "rgba(243, 236, 230, 1)" }}

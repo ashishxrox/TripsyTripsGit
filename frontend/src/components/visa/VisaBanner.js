@@ -38,7 +38,7 @@ const VisaBanner = () => {
 
     return (
         <div className="visa-banner my-2 d-flex justify-content-center align-items-center" 
-                style={{ width: "100%", backgroundImage: path === '/visa/application/Hong%20Kong'? `url(${Hong})`:
+                style={{ width: "100%", backgroundImage: path === '/visa/application/Hong%20Kong%20(PAR)'? `url(${Hong})`:
                                                          path === '/visa/application/Vietnam'? `url(${Viet})`: 
                                                          path === '/visa/application/Azerbaijan'? `url(${Azer})`:
                                                          path === '/visa/application/Tanzania'? `url(${Tan})`:

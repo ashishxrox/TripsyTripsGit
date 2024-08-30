@@ -12,7 +12,7 @@ import '../../static/review.css'
 const ReviewBox = () => {
     const swiperRef = useRef(null);
     return (
-        <div className='rb-main' style={{ height: "300px", overflow:"hidden"}}>
+        <div className='rb-main' style={{ height: "300px", overflow: "hidden" }}>
             <Swiper
                 ref={swiperRef}
                 slidesPerView={1}
@@ -33,9 +33,9 @@ const ReviewBox = () => {
 
                     </div>
 
-                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4 className="rev-slider-title"  style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>TANIA S</h4>
-                    <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
+                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>They follow through the service they guarantee. There’s no room for error with this company.Recommend to all who don’t like the hassle of book arrangements. They make it quite easy for you. I would personally recommend Karan there. He helped out with out the details.</p>
+                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Ritika Makhija</h4>
+                    {/* <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5> */}
 
 
                 </SwiperSlide>
@@ -53,9 +53,10 @@ const ReviewBox = () => {
 
                     </div>
 
-                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Ashish N.</h4>
-                    <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
+                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I Recently had the pleasure of booking my dream vacation through an extraordinary travel agency.
+                        From the moment i contacted them to the end of my trip, every detail was handled with utmost professionalism and care.</p>
+                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Rohit Advani</h4>
+                    {/* <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5> */}
 
 
                 </SwiperSlide>
@@ -73,9 +74,12 @@ const ReviewBox = () => {
 
                     </div>
 
-                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all.</p>
-                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Karan M.</h4>
-                    <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5>
+                    <p style={{ textAlign: "left", fontWeight: "500", fontStyle: "16px" }}>Kudos to Khush and her Team,
+                        Booking our trip with u guyz through WhatsApp was like chatting with friends who happen to be travel experts!
+                        The time to understand our preferences, answering all our questions promptly, and crafting an itinerary that felt tailor-made just for us. Thanks to your warmth, attention to detail, and genuine care with absolute professionalism. Cheers!!
+                    </p>
+                    <h4 className="rev-slider-title" style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(10, 29, 38, 1)" }}>Sourav Dutta</h4>
+                    {/* <h5 style={{ textAlign: "left", fontWeight: "600", fontStyle: "20px", color: "rgba(116, 138, 152, 1)" }}>Designation</h5> */}
 
 
                 </SwiperSlide>

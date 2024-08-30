@@ -50,6 +50,8 @@ const Search = () => {
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
+        data-bs-backdrop="true" // Allow modal to close on backdrop click
+        data-bs-keyboard="true" // Allow modal to close on ESC key press
         style={{ background: "transparent" }}
       >
         <div className="modal-dialog">
@@ -102,9 +104,6 @@ const Search = () => {
                   data-bs-dismiss="modal"
                 ></button>
               </div>
-              {/* <h1>
-                this is search
-              </h1> */}
             </div>
           </div>
         </div>

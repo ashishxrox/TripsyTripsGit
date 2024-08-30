@@ -144,7 +144,7 @@ const Reviews = () => {
           </div>
           <div className="insta-title-right d-flex justify-content-end align-items-end" style={{ height: "100%" }}>
             <div className="follow-btn d-flex justify-content-center align-items-center" style={{ width: "200px", border: "1px solid rgba(2, 71, 134, 1)", borderRadius: "30px" }}>
-              <a href="#" style={{ color: "rgba(2, 71, 134, 1)", textDecoration: "none", fontSize: "16px" }}>Follow us for more</a>
+              <a href="https://www.instagram.com/tripsytrips_" target="_blank" style={{ color: "rgba(2, 71, 134, 1)", textDecoration: "none", fontSize: "16px" }}>Follow us for more</a>
             </div>
           </div>
         </div>

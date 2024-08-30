@@ -52,7 +52,7 @@ const PackageState = (props) => {
                 "Singapore City Tour"
             ],
             img_url: "../../static/media/singapore.dbfa9d7ac54be7e4d01d.jpeg",
-            price: "30,000/-"
+            price: "30,000"
         },
         {
             place: "Malaysia",

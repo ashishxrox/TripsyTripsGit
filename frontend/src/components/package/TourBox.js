@@ -31,7 +31,8 @@ const CountryBox = (props) => {
                 <div className=" mx-4" style={overlayStyle}>
                     
                     <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "500" }}>{tour.place} Package</h3>
-                    <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}>Rs. {tour.price} <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>
+                    {tour.price && <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}>Rs. {tour.price} <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>}
+                    {!tour.price && <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}> -<span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> </span> </p>}
                     <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "250px", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
                         <Link to={{pathname: `/package/application/${tour.place}`}}  style={{ fontSize: "16px", color: "rgba(2, 71, 134, 1)", textDecoration: "none" }}>See Package</Link>
                     </div>
