@@ -91,7 +91,8 @@ const HomeOurPackage = () => {
                                 ? `${image.place} Package`
                                 : "Leh... Package"}
                             </h3>
-                            <p className='' style={{ fontWeight: "500", fontSize: "20px", marginBottom: "10px" }}>Rs. 25,000 <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>
+                            {image.price && <p className='' style={{ fontWeight: "500", fontSize: "20px", marginBottom: "10px" }}>{image.price} <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>}
+                            {!image.price && <p className='' style={{ fontWeight: "500", fontSize: "20px", marginBottom: "10px" }}>-<span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> </span> </p>}
                           </div>
                           <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "85%", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
                             <Link to={{ pathname: `/package/application/${image.place}` }} style={{ fontSize: "16px", color: "rgba(2, 71, 134, 1)", textDecoration: "none", }}>See Package</Link>
