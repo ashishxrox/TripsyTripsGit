@@ -32,6 +32,7 @@ import Rwanda from '../../static/assets/country/rwanda.jpeg'
 import Saudi from '../../static/assets/country/saudi.jpeg'
 import Tanzania from '../../static/assets/country/tanzania.jpeg'
 import Laos from '../../static/assets/country/laos.jpeg'
+import Turkey from '../../static/assets/country/turkeyNew.jpg'
 
 
 
@@ -242,7 +243,7 @@ const FullVisaCarousel = () => {
                         </div>
                         <div className="ssc-bottom  d-flex justify-content-between align-items-center flex-row" style={{ flexBasis: "49%", height: "100%", width: "100%" }}>
 
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/Sri Lanka` }} style={boxStyle}>
+                            {/* <Link className="ssct-left " to={{ pathname: `/visa/application/Sri Lanka` }} style={boxStyle}>
                                 <div className="card-hover" style={{ height: "101%", width: "100%" }}>
                                     <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                                         <img
@@ -264,6 +265,43 @@ const FullVisaCarousel = () => {
                                         >
                                             <Link
                                                 to={{ pathname: `/visa/application/Sri Lanka` }}
+                                                className="d-flex justify-content-center align-items-center"
+                                                style={{
+                                                    color: "#fff",
+                                                    textDecoration: "none",
+                                                    fontFamily: "Clash Display",
+                                                    fontWeight: "200",
+                                                    fontSize: "24px",
+                                                }}
+                                            >
+                                                Visit
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link> */}
+                            <Link className="ssct-left " to={{ pathname: `/visa/application/Turkey` }} style={boxStyle}>
+                                <div className="card-hover" style={{ height: "101%", width: "100%" }}>
+                                    <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                                        <img
+                                            src={Turkey}
+                                            alt="Lanka" // Use box.title as the alt text for better accessibility
+                                            style={{ height: "100%", width: "100%", borderRadius: "5px" }}
+                                        />
+                                        <div className="overlay py-4" style={overlayStyle}>
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                            Turkey
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{ left: "85px" }}>
+                                        <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
+                                        <div
+                                            className="link-container d-flex justify-content-center align-items-center"
+                                            style={{ position: "absolute", zIndex: "9999" }}
+                                        >
+                                            <Link
+                                                to={{ pathname: `/visa/application/Turkey` }}
                                                 className="d-flex justify-content-center align-items-center"
                                                 style={{
                                                     color: "#fff",

@@ -24,7 +24,7 @@ const Reviews = () => {
               </div>
               <div className="rcl-content my-3 d-flex  align-items-center" style={{ flexBasis: "60%", height: "100%", width: "100%" }}>
                 <div className="rclc-left mx-1 d-flex justify-content-center flex-column" style={{ flexBasis: "30%", height: "100%", width: "100%", backgroundColor: "#fff" }}>
-                  <h4 style={{ fontFamily: "Clash Display", fontSize: "34px", fontWeight: "500", color: "rgba(116, 138, 152, 1)" }}>100+</h4><h6 style={{ fontSize: "18px", fontWeight: "500" }}>Travellers</h6>
+                  <h4 style={{ fontFamily: "Clash Display", fontSize: "34px", fontWeight: "500", color: "rgba(116, 138, 152, 1)" }}>2000+</h4><h6 style={{ fontSize: "18px", fontWeight: "500" }}>Travellers</h6>
                 </div>
                 <div className="rclc-left mx-1 d-flex justify-content-center flex-column" style={{ flexBasis: "30%", height: "100%", width: "100%", backgroundColor: "#fff" }}>
                   <h4 style={{ fontFamily: "Clash Display", fontSize: "34px", fontWeight: "500", color: "rgba(116, 138, 152, 1)" }}>100+</h4><h6 style={{ fontSize: "18px", fontWeight: "500" }}>Reviews</h6>

@@ -173,7 +173,8 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/meghalaya.a2c08d62b67ec5e524c7.jpg"
+            img_url: "../../static/media/meghalaya.a2c08d62b67ec5e524c7.jpg",
+            price: "40,000"
         },
         {
             place: "Abu Dhabi",
@@ -184,7 +185,8 @@ const PackageState = (props) => {
                 "2N Pattaya"
 
             ],
-            img_url: "../../static/media/abuDhabi.6948664b721063c12774.jpg"
+            img_url: "../../static/media/abuDhabi.6948664b721063c12774.jpg",
+            price: "24,000"
         }
 
 

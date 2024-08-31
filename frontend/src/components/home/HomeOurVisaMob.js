@@ -88,7 +88,7 @@ const HomeOurVisaMob = () => {
     let countriesToFormat;
     switch (active) {
       case 0:
-        countriesToFormat = [...countries.slice(0,-1)]; // Create a copy of the array
+        countriesToFormat = [...countries]; // Create a copy of the array
         if (countriesToFormat.length > 3) {
           // Extract the first 3 elements
           const firstThree = countriesToFormat.slice(0, 3);

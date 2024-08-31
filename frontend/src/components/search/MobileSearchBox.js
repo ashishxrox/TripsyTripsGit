@@ -61,7 +61,7 @@ const options = [
     category: "E-Visa",
     img_url: "../../static/media/hongKong.a6f8c79a61c063b7ce9d.jpg",
     visaType: {
-      "name": "Hong Kong E-Visa (Pre-Arrival Registration)",
+      "name": "Hong Kong E-Visa (PreArrival Registration)",
       "entry": "Multiple",
       "validityDays": 180,
       "durationDays": 14,
@@ -355,26 +355,26 @@ const options = [
       "_id": "65b29f4caf8c1506be6a91a1"
     }
   },
-  {
-    value: "Sri Lanka",
-    label: "Sri Lanka E-Visa",
-    flag: "sl",
-    category: "E-Visa",
-    img_url: "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
-    visaType: {
-      "name": "Sri Lanka E-Visa",
-      "entry": "Single",
-      "validityDays": 120,
-      "durationDays": 30,
-      "processingTime": '1-2',
-      "docsReq": {
-        "doc1": "Passport Scan (Front Page)",
-        "doc2": "Passport Scan (Last Page)",
-      },
-      "totalCost": 1699,
-      "_id": "65b2a842af8c1506be6a91dd12"
-    }
-  },
+  // {
+  //   value: "Sri Lanka",
+  //   label: "Sri Lanka E-Visa",
+  //   flag: "sl",
+  //   category: "E-Visa",
+  //   img_url: "../../static/media/lanka.03d1c318b154fc4d785c.jpeg",
+  //   visaType: {
+  //     "name": "Sri Lanka E-Visa",
+  //     "entry": "Single",
+  //     "validityDays": 120,
+  //     "durationDays": 30,
+  //     "processingTime": '1-2',
+  //     "docsReq": {
+  //       "doc1": "Passport Scan (Front Page)",
+  //       "doc2": "Passport Scan (Last Page)",
+  //     },
+  //     "totalCost": 1699,
+  //     "_id": "65b2a842af8c1506be6a91dd12"
+  //   }
+  // },
   {
     value: "Egypt",
     label: "Egypt Single Entry E-Visa",
