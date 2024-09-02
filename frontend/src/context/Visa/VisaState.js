@@ -860,7 +860,46 @@ const VisaState = (props) => {
       "img_url": "../../static/media/turkey.d1848f14817c46282eda.jpeg",
       "tag": "turkey"
     },
-   
+    {
+      "_id": "65b2ab41af8c1506be6a91e6",
+      "country": "Australia",
+      "eVisa": "no",
+      "visaType": [
+        {
+          "name": "Australia Tourist Visa (Subclass 600)",
+          "entry": "Single",
+          "validityDays": 90,
+          "durationDays": 30,
+          "processingTime": 20,
+          "docsReq": {
+            "doc1": "Passport Scan (Front and Back)",
+            "doc2": "Passport Size Photo",
+            "doc3": "Aadhar Card Scan Copy",
+            "doc4": "Pan Card Scan Copy",
+            "doc5": "Last 3 Years ITR (if self funded)",
+            "doc6": "Last 3 months Sallary Slips (if employed)",
+            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
+            "doc8": "Invitation Letter(if any)",
+            "doc9": "NOC for leave from employer(if employed)",
+            "doc10": "Cover Letter for Visa Application",
+            "doc11": "Flight Itinerary",
+            "doc12": "Hotel Booking(if applicable)",
+            "doc13": "All pages passport scan copy",
+            "doc14": "Index 2 of property owned(if any)",
+            "doc15": "Residential proof of inviter(if applicable)",
+            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
+            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
+            "doc18": "Sponsor Last 3 year ITR",
+            "doc19": "Sponsor NOC for sponsoring the trip"
+          },
+          "totalCost": 3000,
+          "_id": "65b2ab41af8c1506be6a91e7"
+        }
+      ],
+      "__v": 0,
+      "img_url": "../../static/media/australia.5fc0454a5bdcca3e848e.jpeg",
+      "tag": "australia"
+    },
    
    
     
@@ -1942,46 +1981,7 @@ const VisaState = (props) => {
       "tag": "taiwan"
     },
     
-    {
-      "_id": "65b2ab41af8c1506be6a91e6",
-      "country": "Australia",
-      "eVisa": "no",
-      "visaType": [
-        {
-          "name": "Australia Tourist Visa (Subclass 600)",
-          "entry": "Single",
-          "validityDays": 90,
-          "durationDays": 30,
-          "processingTime": 20,
-          "docsReq": {
-            "doc1": "Passport Scan (Front and Back)",
-            "doc2": "Passport Size Photo",
-            "doc3": "Aadhar Card Scan Copy",
-            "doc4": "Pan Card Scan Copy",
-            "doc5": "Last 3 Years ITR (if self funded)",
-            "doc6": "Last 3 months Sallary Slips (if employed)",
-            "doc7": "Last 6 months savings bank account statement(Min Balance of 4-5Lakhs)",
-            "doc8": "Invitation Letter(if any)",
-            "doc9": "NOC for leave from employer(if employed)",
-            "doc10": "Cover Letter for Visa Application",
-            "doc11": "Flight Itinerary",
-            "doc12": "Hotel Booking(if applicable)",
-            "doc13": "All pages passport scan copy",
-            "doc14": "Index 2 of property owned(if any)",
-            "doc15": "Residential proof of inviter(if applicable)",
-            "doc16": "Inviter passport Scan (Front and back)(if Applicable)",
-            "doc17": "Sponsor back statement(Last 6 months)(if sponsored)",
-            "doc18": "Sponsor Last 3 year ITR",
-            "doc19": "Sponsor NOC for sponsoring the trip"
-          },
-          "totalCost": 3000,
-          "_id": "65b2ab41af8c1506be6a91e7"
-        }
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/australia.31d8cc9358b3f7578cbe.png",
-      "tag": "australia"
-    },
+   
     ]
     
 

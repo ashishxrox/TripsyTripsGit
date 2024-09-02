@@ -32,7 +32,8 @@ const RegVisaBanner = () => {
                          `url(${visaBanner})`, backgroundSize:"cover",backgroundRepeat: "no-repeat" }}>
             <div className="overlay d-flex justify-content-center align-items-center" style={{ height: "100%", width: "100%", background: "radial-gradient(circle, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 70%, rgba(0,0,0,0) 100%)" }}>
                 <div className="n-visa-title-box d-flex justify-content-center align-items-center" style={{  height: "40%" }}>
-                    <h1 style={{ fontFamily: "Clash Display", fontWeight: "400", color: "#fff", fontSize:"60px" }}>Non E-Visa / Sticker Visa</h1>
+                    {path !== '/regvisa/application/Australia/' && <h1 style={{ fontFamily: "Clash Display", fontWeight: "400", color: "#fff", fontSize:"60px" }}>Non E-Visa / Sticker Visa</h1>}
+                    {path === '/regvisa/application/Australia/' && <h1 style={{ fontFamily: "Clash Display", fontWeight: "400", color: "#fff", fontSize:"60px" }}>E-Visa</h1>}
                 </div>
             </div>
 

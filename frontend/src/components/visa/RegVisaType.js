@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { useLocation } from 'react-router-dom';
 import RegVisaBanner from './RegVisaBanner'
 
@@ -16,6 +16,7 @@ import Faq from '../Faq/Faq';
 // import NonEvisaForm from './NonEvisaForm';
 
 import FaqContext from '../../context/FaqCont/FaqContext'
+import RegVisaModal from './RegVisaModal';
 
 const RegVisaType = () => {
   const context = useContext(FaqContext)
@@ -23,7 +24,7 @@ const RegVisaType = () => {
 
   const location = useLocation();
   const country = location.state;
-  
+
   const renderDocumentList = () => {
     // Check if docs is not null or undefined
     if (country.visaType[0].docsReq && Object.keys(country.visaType[0].docsReq).length > 0) {
@@ -68,19 +69,20 @@ const RegVisaType = () => {
         </div>
       </div>
       <div className="regVisa-form d-flex justify-content-center align-items-center" style={{ height: "55px", width: "90%" }}>
-      {/* <NonEvisaForm type={country.visaType}/>  */}
-      <div className=' d-flex justify-content-center align-items-center'>
-        <a href="">Book Appointment</a>
+        {/* <NonEvisaForm type={country.visaType}/>  */}
+        <div className=' d-flex justify-content-center align-items-center'>
+          {/* <a href="">Book Appointment</a> */}
+          <RegVisaModal country={country.country} />
+        </div>
       </div>
-      </div>
-      {country.country === 'Canada' && <Faq content = {canFaq? canFaq: genFaq} />}
-      {country.country === 'United Kingdom' && <Faq content = {ukFaq? ukFaq: genFaq} />}
-      {country.country === 'Schengen Area' && <Faq content = {schenFaq? schenFaq: genFaq} />}
-      {country.country === 'United States of America' && <Faq content = {usaFaq? usaFaq: genFaq} />}
-      {country.country === 'Taiwan' && <Faq content = {taiFaq? taiFaq: genFaq} />}
-      {country.country === 'Turkey' && <Faq content = {turFaq? turFaq: genFaq} />}
-      {country.country === 'New Zealand' && <Faq content = {nzFaq? nzFaq: genFaq} />}
-      {country.country === 'Australia' && <Faq content = {ausFaq? ausFaq: genFaq} />}
+      {country.country === 'Canada' && <Faq content={canFaq ? canFaq : genFaq} />}
+      {country.country === 'United Kingdom' && <Faq content={ukFaq ? ukFaq : genFaq} />}
+      {country.country === 'Schengen Area' && <Faq content={schenFaq ? schenFaq : genFaq} />}
+      {country.country === 'United States of America' && <Faq content={usaFaq ? usaFaq : genFaq} />}
+      {country.country === 'Taiwan' && <Faq content={taiFaq ? taiFaq : genFaq} />}
+      {country.country === 'Turkey' && <Faq content={turFaq ? turFaq : genFaq} />}
+      {country.country === 'New Zealand' && <Faq content={nzFaq ? nzFaq : genFaq} />}
+      {country.country === 'Australia' && <Faq content={ausFaq ? ausFaq : genFaq} />}
     </div>
   )
 }

@@ -7,22 +7,32 @@
     flex-direction: row;
 }
 
-.regVisa-form div{
+/* .regVisa-form div{
     background-color: rgba(2, 71, 134, 1);
     height: 100%;
     width: 30%;
     color: #fff;
     border-radius: 30px;
     transition: 1s;
+} */
+
+.regVisa-final-btn{
+    background-color: rgba(2, 71, 134, 1);
+    transition: 1s; 
+}
+
+.regVisa-final-btn:hover{
+    background-color: rgba(3, 21, 47, 1);
+    
 }
 
 .regVisa-form div a{
     color: #fff;
     text-decoration: none;
 }
-.regVisa-form div:hover{
+/* .regVisa-form div:hover{
     background-color: rgba(3, 21, 47, 1);
-}
+} */
 
 @media only screen and (max-width:600px){
     .reg-visa-box-main{

@@ -204,6 +204,7 @@ const FormDataState = (props) => {
 
                             if (verifyResponse.data && verifyResponse.data.success) {
                                 alert('Your payment is completed successfully. Please check your registered email; you must have received an email from Tripsy Trips.');
+                                window.location.href = 'https://tripsytrips.com/thank-you';
                             } else {
                                 console.error('Failed to verify payment');
                             }

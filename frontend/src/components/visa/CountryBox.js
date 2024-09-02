@@ -36,9 +36,9 @@ const CountryBox = (props) => {
                             <div style={{ width: "55px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                         </div>
                         <div className=" justify-content-center align-items-center px-5 py-2 visa-btn-mob" style={{ border: "1px solid #fff", borderRadius: "30px", backgroundColor: "rgba(255,255,255,0.2)", fontWeight: "500" }}>
-                            <Link to={{ pathname: `/visa/application/${country.country}`, state: country }} state={country} style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "200", fontSize: "24px" }}  >
+                            {<Link to={{ pathname: `/visa/application/${country.country}`, state: country }} state={country} style={{ color: "#fff", textDecoration: "none", fontFamily: "Clash Display", fontWeight: "200", fontSize: "24px" }}  >
                                 Visit
-                            </Link>
+                            </Link>}
                         </div>
                     </div>
 

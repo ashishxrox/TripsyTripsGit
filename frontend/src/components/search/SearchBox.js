@@ -1102,7 +1102,7 @@ const options = [
   {
     value: "Australia",
     label: "Australia Tourist Visa (Subclass 600)",
-    category: "Reg-Visa",
+    category: "E-Visa",
     visaType: {
       "_id": "65b2ab41af8c1506be6a91e6",
       "country": "Australia",
@@ -1167,7 +1167,8 @@ const SearchBox = ({ onSearch }) => {
   const formatOptions = ({ label, value, category, visaType, img_url }) => (
 
     <Link to={{
-      pathname: category === 'E-Visa' ? `/visa/application/${value}/${visaType.name}` :
+      pathname: value === "Australia"?`/regvisa/application/${value}/`:
+        category === 'E-Visa' ? `/visa/application/${value}/${visaType.name}` :
         category === 'Reg-Visa' ? `/regvisa/application/${value}/` : `/visa/application/${value}/${visaType.name}`
     }} state={visaType} onClick={handleClick(visaType)} className="format-options" style={{ textDecoration: "none" }}>
       <div className='fo-cont d-flex justify-content-start align-items-center' style={{}}>

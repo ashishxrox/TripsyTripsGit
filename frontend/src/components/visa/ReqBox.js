@@ -39,10 +39,13 @@ const ReqBox = (props) => {
                         </div>
                     </div>
                     <div className="vtc-card-btn d-flex justify-content-center align-items-center flex-column" style={{ flexBasis: "20%", height: "100%", width: "100%" }}>
-                        <Link to={{
+                        {country.country !== "Australia" && <Link to={{
                             pathname: `/visa/application/${country.country}/${type.name}`
-                        }} onClick={handleClick} className="vtcbb btn btn-light d-flex justify-content-center align-items-center flex-column" style={{ width: "240px", borderRadius:"30px",height:"55px", fontSize: "16px", color: "#fff", fontFamily:"General Sans" }}>Apply Now</Link>
-
+                        }} onClick={handleClick} className="vtcbb btn btn-light d-flex justify-content-center align-items-center flex-column" style={{ width: "240px", borderRadius:"30px",height:"55px", fontSize: "16px", color: "#fff", fontFamily:"General Sans" }}>Apply Now</Link>}
+                        
+                        {country.country === "Australia" && <Link to={{
+                            pathname: `/regvisa/application/${country.country}/`
+                        }} state={country} onClick={handleClick} className="vtcbb btn btn-light d-flex justify-content-center align-items-center flex-column" style={{ width: "240px", borderRadius:"30px",height:"55px", fontSize: "16px", color: "#fff", fontFamily:"General Sans" }}>Apply Now</Link>}
                         <div className="warning" style={{ textAlign: "center", padding: "10px 0", fontSize: "10px" }}>
                             <p style={{ textDecoration: "underline" }}>Please don't refresh the page after you click on details.</p>
                         </div>

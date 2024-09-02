@@ -123,7 +123,7 @@ const App = () => {
                     <Route exact path="/policy" index element={<PrivacyPol />} />
                     <Route exact path="/terms" index element={<TermAndCondition />} />
                     <Route exact path="/refund" index element={<Refund />} />
-                    <Route exact path="/success" index element={<Success />} />
+                    <Route exact path="/thank-you" index element={<Success />} />
                     <Route exact path="/failure" index element={<Failure />} />
                     <Route exact path="/faq" index element={<Faq />} />
                     {/* <Route exact path="/imgGal" index element={<ImageGallery />} /> */}
