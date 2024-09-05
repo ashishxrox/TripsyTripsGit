@@ -25,15 +25,19 @@ const CountryBox = (props) => {
 
 
     return (
-        <div className='col-12 col-md-6 col-lg-3 mb-5 d-flex justify-content-start align-items-start' style={{ paddingLeft: "0", paddingRight: "0",  }}>
-            <div className="card tour-card d-flex justify-content-around align-items-center" style={{ width: "20rem",height:"32rem", background: "#fff", paddingLeft: "0", paddingRight: "0", overflow:"hidden",border:"0.5px solid #808080" }}>
+        <div className='col-12 col-md-6 col-lg-3 mb-5 d-flex justify-content-start align-items-start' style={{ }}>
+            <div className="card tour-card d-flex justify-content-around align-items-center" style={{height:"32rem", background: "#fff", paddingLeft: "0", paddingRight: "0", overflow:"hidden",border:"0.5px solid #808080" }}>
                 <img src={tour.img_url} alt={tour.place} style={{ height: "70%", width: "100%", borderRadius: "5px", position: "relative", top: "-90px", borderRadius: "3px", objectFit: "cover" }} />
                 <div className=" mx-4" style={overlayStyle}>
                     
-                    <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "500" }}>{tour.place} Package</h3>
+                <h3 style={{ color: "#000", fontSize: "20px", fontWeight: "500", marginBottom:"0" }}>
+                              {tour.place !== "Leh & Nubra Valley"
+                                ? `${tour.place} Package`
+                                : "Leh & ... Package"}
+                            </h3>
                     {tour.price && <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}>Rs. {tour.price} <span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> /person</span> </p>}
                     {!tour.price && <p className='d-flex align-items-center' style={{ fontWeight: "500", fontSize: "20px" }}> -<span style={{ fontSize: "12px", color: "rgba(134, 134, 134, 1)" }}> </span> </p>}
-                    <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "250px", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
+                    <div className="hop-btn d-flex align-items-center justify-content-center" style={{ height: "55px", width: "80%", borderRadius: "30px", border: "1px solid rgba(2, 71, 134, 1)" }}>
                         <Link to={{pathname: `/package/application/${tour.place}`}}  style={{ fontSize: "16px", color: "rgba(2, 71, 134, 1)", textDecoration: "none" }}>See Package</Link>
                     </div>
                 </div>
