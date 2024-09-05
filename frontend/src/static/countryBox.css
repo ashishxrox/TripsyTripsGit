@@ -12,7 +12,8 @@
     height: 120px;
     position: relative;
     bottom: 300px;
-    left: 90px;
+    left: 50%;
+    transform: translate(-50%, 0);
     border-radius: 50%;
     z-index: 999;
     overflow: hidden;
@@ -37,7 +38,7 @@
 }
 
 .card-hover:hover .visit-btn {
-    transform: translateY(-20px);
+    transform: translate(-50%, -40%);
     opacity: 1;
 }
 

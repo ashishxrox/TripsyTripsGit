@@ -2,16 +2,16 @@
     height: 850px;
 }
 
-.blogs-head-box{
+/* .blogs-head-box{
     margin-top: 40px;
-}
+} */
 
 .hbt-right{
     display: flex;
 }
 
 .b-options{
-    height: 750px;
+    height: 1200px;
 }
 
 .h-blog-tags{

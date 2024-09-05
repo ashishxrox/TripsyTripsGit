@@ -1,8 +1,43 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../../static/faq.css'
 
 const Faq = ({ content }) => {
+
+  const location = useLocation()
+
+  const hongKongFaq = [
+    {
+      // Ques1
+      ques: "What is Hong Kong Pre-Arrival Registration?",
+      ans: "All Indian nationals who intend to visit Hong Kong visa-free are required to apply for Pre-arrival Registration (PAR) effective January 23, 2017, unless they qualify for one of the categories of exemption.  A successful registrant is allowed to visit Hong Kong visa-free for multiple visits during the validity period of the PAR and may stay up to 14 days per each entry."
+    },
+    {
+      // Ques2
+      ques: "What is the Eligibility for Pre-Arrival Registation and other important things to consider before travelling?",
+      ans: "You can apply for pre-arrival registration for visiting if you are:(a) An Indian national holding an Indian passport valid for at least six months; and (b) Intending to visit the HKSAR for a stay not exceeding 14 days.(c) Ensure that you have at least 2 blank pages on your passport when you arrive at Hong Kong Airport  (d) In case you have renewed your passport after obtaining “Notification of Pre-arrival registration” and any particulars that does not match with your current valid passport, you must re-apply for “Pre-arrival Registration” on the strength of the new Passport."  
+    },
+    {
+      // Ques3
+      ques: "Is the issuance of the Hong Kong Pre-arrival Registration notification slip a guarantee of the applicant’s entry to the HKSAR?",
+      ans: "No, the notification slip is not a guarantee of the traveller’s entry to the HKSAR. The registrant is still subject to immigration control under the provisions of the Immigration Ordinance, Chapter 115, Laws of Hong Kong. In general, a person who intends to enter the HKSAR for visit must fulfil normal immigration requirement such as: Valid Passport, Hong Kong PAR notification slip, Confirmed return flight tickets, Sufficient expenses that will cover your expenses during the stay in Hong Kong, Accommodation proof, Demonstrate the intention to return home after the mentioned time of stay, No intention to study or work unless or otherwise mentioned, No record of criminal offenses, Be able to provide any other documents upon request."
+    },
+    {
+      // Ques4
+      ques: "Do I need to take health/travel insurance?",
+      ans: "You are advised to purchase health / travel insurance to cover yourself as medical treatment can be very expensive internationally. Your travel insurance offers protection against unexpected emergencies on international travel such as coverage of medical expenses, flight delay and cancellations, passport and baggage loss or personal accident.  For financial safety and security on your international trip we highly recommend you to purchase travel insurance and avail our special offer."
+
+    },
+  ]
+
+  let faqContent = []
+
+  if(location.pathname === "/visa/application/Hong%20Kong%20(PAR)/Hong%20Kong%20E-Visa%20%20(PreArrival%20Registration)" || location.pathname === "/visa/application/Hong%20Kong%20(PAR)"){
+    faqContent = hongKongFaq.concat(content)
+  }else{
+    faqContent = content
+  }
+  
   return (
     <div className='d-flex faq-cont-outer' style={{ width: "100%", position: "relative", zIndex: "999", }}>
       <div className='faq-cont-main d-flex justify-content-center ' style={{ width: "100%", backgroundColor: "rgba(243, 236, 230, 1)" }}>
@@ -75,7 +110,7 @@ const Faq = ({ content }) => {
             </div>
             <div className="fct-right" style={{ flexBasis: "64.5%", height: "100%", width: "100%", overflowY: "auto" }}>
               <div className="accordion" id="accordionExample" style={{ height: "85%", width: "100%" }}>
-                {content.map((item, index) => (
+                {faqContent.map((item, index) => (
                   <div key={index} className="accordion-item py-3" style={{ border: "none", borderTop: index === 0 ? "1px solid #000" : "none", borderBottom: "1px solid #000", borderRadius: "0", backgroundColor: "rgba(243, 236, 230, 1)" }}>
                     <h2 className="accordion-header" id={`heading${index}`}>
                       <button
