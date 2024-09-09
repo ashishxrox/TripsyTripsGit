@@ -233,14 +233,13 @@
   }
 
   .about-values{
-    height: 1400px;
+    height: 1550px;
   }
 
   .av-title{
     width: 80%;
     flex-basis: 5%;
     align-items: flex-end;
-    margin-top: 150px;
   }
 
   .av-title h2{
