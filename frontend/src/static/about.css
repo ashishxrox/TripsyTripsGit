@@ -240,10 +240,12 @@
     width: 80%;
     flex-basis: 5%;
     align-items: flex-end;
+    margin-top: 150px;
   }
 
   .av-title h2{
     font-size: 30px;
+
   }
 
   .av-boxes{

@@ -47,7 +47,7 @@ const FounderSlider = () => {
 
                                     </div>
                                     <div>
-                                        <p style={{ textAlign: "left", fontSize: "20px", fontFamily: "General Sans" }}>Gaurav Khandelwal is the visionary founder of Tripsy Trips, specializing in the overall travel business. He holds a Bachelor's degree in Business Administration, specializing in International Business, from MIT Pune. With extensive knowledge and hands-on experience in the travel industry, Gaurav has successfully navigated the complexities of travel planning and execution. His expertise ensures that every trip organized by Tripsy Trips is seamless and memorable. Gaurav's passion for travel and his commitment to excellence drive our mission to deliver top-notch travel experiences to our clients.
+                                        <p style={{ textAlign: "left", fontSize: "20px", fontFamily: "General Sans" }}>Gaurav Khandelwal, the visionary founder of Tripsy Trips, specializes in the travel industry. He holds a Bachelor's degree in Business Administration with a focus on International Business from MIT Pune. With extensive experience, Gaurav skillfully navigates the complexities of travel planning and execution, ensuring each trip is seamless and memorable. His passion for travel and commitment to excellence drive the mission of Tripsy Trips to deliver exceptional travel experiences to clients.
                                         </p>
                                     </div>
                                     <div style={{ marginTop: "25px" }}>
