@@ -17,7 +17,7 @@ const FounderSlider = () => {
     const swiperRef = useRef(null);
 
     return (
-        <div className=' d-flex justify-content-between align-items-center flex-column' style={{ height: "85%", width: "90%" }}>
+        <div className='about-ceo-main-cont d-flex justify-content-between align-items-center flex-column' style={{ width: "90%" }}>
             <h2 className='founder-title' style={{ fontWeight: "500", fontFamily: "Clash Display" }}>A Word From Our Founders</h2>
             <div className="founder-slider-cont" style={{ width: "100%" }}>
                 <Swiper
@@ -27,7 +27,7 @@ const FounderSlider = () => {
                     className="mySwiper">
                     <SwiperSlide className='d-flex justify-content-around align-items-center flex-column'>
                         <div style={{ height: "1px", width: "100%", backgroundColor: "rgba(205, 205, 205, 1)" }}></div>
-                        <div className='founder-c-main-div d-flex justify-content-around align-items-center' style={{ height: "95%", width: "100%" }}>
+                        <div className='founder-c-main-div d-flex justify-content-around align-items-center' style={{  width: "100%" }}>
                             <div className='founder-img' style={{ height: "80%", backgroundImage: `url("${Gaurav}")`, backgroundSize: "cover", backgroundPosition: "center" }}>
 
                             </div>

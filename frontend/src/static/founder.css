@@ -20,6 +20,7 @@
 
   .founder-c-main-div{
     flex-direction: row;
+    height: 95%;
   }
 
   .founder-img{
@@ -58,6 +59,10 @@
   .founder-title{
     font-size: 46px;
   }
+
+  .about-ceo-main-cont{
+    height: 85%;
+  }
   
 
   @media only screen and (max-width:600px){
@@ -65,6 +70,7 @@
       height: 95%;
     }
     .founder-c-main-div{
+      height: 100%;
       flex-direction: column;
     }
     .founder-img{
@@ -82,18 +88,23 @@
       left: -15px;
     }
     .founder-ctrl-btn-left{
-      bottom: 650px;
+      bottom: 700px;
       left: -10px;
      
     }
     .founder-ctrl-btn-right{
-      bottom: 650px;
-      right: 20px;
+      bottom: 700px;
+      right: 10px;
      
     }
 
     .founder-title{
       font-size: 30px;
     }
+
+    .about-ceo-main-cont{
+      height: 90%;
+    }
+    
     
   }
