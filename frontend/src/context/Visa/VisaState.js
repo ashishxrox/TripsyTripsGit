@@ -42,6 +42,7 @@ import taiwan from '../../static/assets/country/taiwan.png'
 import turkey from '../../static/assets/country/turkey.png'
 import newZealand from '../../static/assets/country/newZealand.png'
 import australia from '../../static/assets/country/australia.png'
+import australiaBox from '../../static/assets/country/australia.jpg'
 
 
 
@@ -897,7 +898,7 @@ const VisaState = (props) => {
         }
       ],
       "__v": 0,
-      "img_url": "../../static/media/australia.5fc0454a5bdcca3e848e.jpeg",
+      "img_url": "../../static/media/australia.dc6b5379586afad7cfac.jpg",
       "tag": "australia"
     },
    
@@ -931,7 +932,7 @@ const VisaState = (props) => {
         jordan,
         kyrgyzstan,
         laos,
-        madagascar,qatar, america,canada, lanka, tanzania, mongolia
+        madagascar,qatar, america,canada, lanka, tanzania, mongolia, australiaBox
     ]
 
     const asia = [{

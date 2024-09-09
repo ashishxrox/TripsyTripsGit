@@ -12,6 +12,7 @@ import Reliable from '../../static/assets/reliableLogo.png'
 import ReactGA from 'react-ga';
 import Faq from '../Faq/Faq';
 import FaqContext from '../../context/FaqCont/FaqContext';
+import FounderSlider from './FounderSlider';
 
 
 const AboutPage = () => {
@@ -393,8 +394,8 @@ const AboutPage = () => {
         </div>
 
       </div>
-      {/* <div className="about-ceo my-5 d-flex align-items-center justify-content-center" style={{ height: "100vh", width: "100%" }}>
-        <div className="ac-cont d-flex align-items-center justify-content-center flex-column" style={{ height: "85%", width: "90%", backgroundColor: "#fff" }}>
+      <div className="about-ceo my-5 d-flex align-items-center justify-content-center" style={{ width: "100%" }}>
+        {/* <div className="ac-cont d-flex align-items-center justify-content-center flex-column" style={{ height: "85%", width: "90%", backgroundColor: "#fff" }}>
           <div className="ac-title my-2 d-flex align-items-center justify-content-center" style={{ flexBasis: "20%", height: "100%" }}>
             <h3 style={{ fontFamily: "Clash Display", fontWeight: "500" }}>A Word From Our CEO</h3>
           </div>
@@ -409,8 +410,9 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='aboutLine1' style={{ height: "1px", width: "100%", backgroundColor: "#000" }}></div>
-        </div>
-      </div> */}
+        </div> */}
+        <FounderSlider/>
+      </div>
       <Faq content={genFaq} />
     </div>
   )

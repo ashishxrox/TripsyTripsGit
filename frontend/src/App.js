@@ -40,6 +40,7 @@ import Search from './components/search/Search';
 import MobileSearch from './components/search/MobileSearch';
 import FaqState from './context/FaqCont/FaqState';
 import Faq from './components/Faq/FaqAll';
+import ScrollBtn from './components/ScrollBtn';
 
 const App = () => {
 
@@ -82,6 +83,7 @@ const App = () => {
                     </div>
                   </div>
                   <ScrollToTop />
+                  <ScrollBtn/>
                   <Routes>
                     
                     <Route exact path="/adminxcv876_@@plm123Qw" index element={<Dashboard />} />

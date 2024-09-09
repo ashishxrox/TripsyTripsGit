@@ -88,7 +88,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -125,7 +125,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -162,7 +162,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -199,7 +199,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -239,7 +239,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -276,7 +276,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -313,7 +313,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -387,7 +387,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -431,7 +431,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -468,7 +468,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -505,7 +505,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -542,7 +542,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"
@@ -582,7 +582,7 @@ const AsianCarousel = () => {
                                             <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
                                         </div>
                                     </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{left:"85px"}}>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
                                         <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
                                         <div
                                             className="link-container d-flex justify-content-center align-items-center"

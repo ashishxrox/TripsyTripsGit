@@ -315,5 +315,15 @@
   
 }
 
+/* FOUNDER SECTION */
 
-  
+.about-ceo{
+  height: 800px;
+}
+
+
+@media only screen and (max-width:600px){
+  .about-ceo{
+    height: 1200px;
+  }
+}

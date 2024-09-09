@@ -29,10 +29,10 @@ const HomeRegVisa = () => {
                     </div>
                 </div>
                 <div className="hrv-bottom-desk justify-content-end align-items-center" style={{ flexBasis: "15%", height: "100%", width: "100%" }}>
-                    <ul style={{ width: "70%", height: "100%", listStyleType: "none", color: "#fff" }} className='d-flex justify-content-around align-items-center flex-row'>
-                        <li><Link to={{
+                    <ul style={{ width: "60%", height: "100%", listStyleType: "none", color: "#fff" }} className='d-flex justify-content-around align-items-center flex-row'>
+                        {/* <li><Link to={{
                             pathname: "/regvisa/application/Australia/"
-                        }} state={australiaData} style={{ color: "#fff",}}>Australia</Link> </li>
+                        }} state={australiaData} style={{ color: "#fff",}}>Australia</Link> </li> */}
                         <li><Link to={{
                             pathname: "/regvisa/application/Turkey/"
                         }} state={turkeyData} style={{ color: "#fff", }}>Turkey</Link> </li>
@@ -54,9 +54,9 @@ const HomeRegVisa = () => {
                 <div className="hrv-bottom-mob  justify-content-center align-items-center" style={{ flexBasis: "15%", height: "100%", width: "100%" }}>
                     <ul  style={{ width: "100%", height: "100%", listStyleType: "none", color: "#fff" }} className='d-flex justify-content-around align-items-center flex-column'>
                         <div style={{width:"100%", marginRight:"40px"}} className='d-flex justify-content-around align-items-center flex-row'>
-                            <li><Link to={{
+                            {/* <li><Link to={{
                                 pathname: "/regvisa/application/Australia/"
-                            }} state={australiaData} style={{ color: "#fff" }}>Australia</Link> </li>
+                            }} state={australiaData} style={{ color: "#fff" }}>Australia</Link> </li> */}
                             <li><Link to={{
                                 pathname: "/regvisa/application/Turkey/"
                             }} state={turkeyData} style={{ color: "#fff"}}>Turkey</Link> </li>

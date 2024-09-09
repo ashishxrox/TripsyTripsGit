@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../static/countryBox.css';
-// import Abu from '../../static/assets/country/australia.jpeg'
+// import Abu from '../../static/assets/country/australia.jpg'
 
 const CountryBox = (props) => {
     const { country } = props;
