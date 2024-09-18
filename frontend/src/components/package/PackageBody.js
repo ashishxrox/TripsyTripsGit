@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PackageContext from '../../context/Package/PackageContext';
 import TourBox from './TourBox';
+import '../../static/package.css'
 
 const VisaBody = () => {
   const context = useContext(PackageContext);
@@ -9,7 +10,7 @@ const VisaBody = () => {
 
   return (
     <>
-      <div className='row' style={{ backgroundColor: "white", paddingLeft: "40px" }}>
+      <div className='row pkg-body-main' style={{ backgroundColor: "white" }}>
         {tours.map((tour, index) => {
           return <TourBox key={index} tour={tour} />;
         })}

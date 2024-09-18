@@ -28,6 +28,10 @@
   flex-basis: 25%;
 }
 
+.pkg-body-main{
+  padding-left: 40px;
+}
+
 
 
 
@@ -59,6 +63,9 @@
 
   #when-tv {
     width: 135px;
+  }
+  .pkg-body-main{
+    padding-left: 0px;
   }
 }
 
