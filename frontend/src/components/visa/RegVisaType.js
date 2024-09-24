@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import RegVisaBanner from './RegVisaBanner'
 
 import '../../static/regVisa.css'
@@ -15,15 +15,22 @@ import NewZealand from '../../static/assets/country/newZealand.png'
 import Faq from '../Faq/Faq';
 // import NonEvisaForm from './NonEvisaForm';
 
+import VisaContext from '../../context/Visa/VisaContext';
+
 import FaqContext from '../../context/FaqCont/FaqContext'
 import RegVisaModal from './RegVisaModal';
 
 const RegVisaType = () => {
+  const {countryName} = useParams()
+  const Visacontext = useContext(VisaContext);
+  const { regVisaCountries } = Visacontext;
+
   const context = useContext(FaqContext)
   const { genFaq, ausFaq, ukFaq, usaFaq, canFaq, schenFaq, nzFaq, turFaq, taiFaq } = context
 
   const location = useLocation();
-  const country = location.state;
+  const country = regVisaCountries.find(c => c.country.toLowerCase() === countryName.toLowerCase());
+  
 
   const renderDocumentList = () => {
     // Check if docs is not null or undefined

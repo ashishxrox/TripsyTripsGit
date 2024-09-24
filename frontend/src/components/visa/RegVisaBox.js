@@ -4,6 +4,7 @@ import '../../static/regVisa.css'
 
 const RegVisaBox = (props) => {
     const {country} = props
+    // const formattedCountryName = country.country.replace(/\s+/g, '-');
     return (
         <div className="reg-visa-box-main container visa-type-card-container col-md-3 mb-4 my-3" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <div className="card visa-type-card" style={{ overflow: "hidden", border: "1px solid #000", width: "30rem", height: '22rem', borderRadius: "10px" }}>
