@@ -90,23 +90,23 @@ const DashboardState = (props) => {
         fetchContactData();
     }, []);
 
-    useEffect(() => {
-        const fetchNewsletterData = async () => {
-            try {
-                const response = await fetch(`${apiURL}/api/fetchFormData/newsletter`);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const jsonData = await response.json();
-                setNews(jsonData);
-            } catch (error) {
-                console.error('Error fetching country data:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchNewsletterData = async () => {
+    //         try {
+    //             const response = await fetch(`${apiURL}/api/fetchFormData/newsletter`);
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             const jsonData = await response.json();
+    //             setNews(jsonData);
+    //         } catch (error) {
+    //             console.error('Error fetching country data:', error);
+    //         }
+    //     };
 
 
-        fetchNewsletterData();
-    }, []);
+    //     fetchNewsletterData();
+    // }, []);
 
     useEffect(() => {
         const fetchInsuranceData = async () => {
