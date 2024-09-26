@@ -6,29 +6,29 @@ const Success = () => {
   const [isValid, setIsValid] = useState(false);
   const navigate = useNavigate(); 
 
-  // useEffect(() => {
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   const token = urlParams.get('token');
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
 
-  //   if (token) {
-  //     try {
-  //       // Decode and validate token (optionally verify expiration here)
-  //       const decoded = jwtDecode(token);
+    if (token) {
+      try {
+        // Decode and validate token (optionally verify expiration here)
+        const decoded = jwtDecode(token);
 
-  //       // Perform additional checks if necessary
-  //       if (decoded.uniqueStr) {
-  //         setIsValid(true);
-  //       } else {
-  //         throw new Error('Invalid token');
-  //       }
-  //     } catch (error) {
-  //       console.error('Token validation failed:', error);
-  //       navigate('/'); // Redirect to homepage if validation fails
-  //     }
-  //   } else {
-  //     navigate('/'); // Redirect to homepage if token is missing
-  //   }
-  // }, [navigate]);
+        // Perform additional checks if necessary
+        if (decoded.uniqueStr) {
+          setIsValid(true);
+        } else {
+          throw new Error('Invalid token');
+        }
+      } catch (error) {
+        console.error('Token validation failed:', error);
+        navigate('/'); // Redirect to homepage if validation fails
+      }
+    } else {
+      navigate('/'); // Redirect to homepage if token is missing
+    }
+  }, [navigate]);
 
   return (
     isValid ? (

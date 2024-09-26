@@ -110,31 +110,31 @@ router.post('/verify-payment', async (req, res) => {
         await setPayment(uniquestr);
         await sendConfirmationMail(eMail);
         // Generate a JWT token that expires in 10 minutes
-        // const token = jwt.sign({ uniqueStr: uniquestr }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        // res.redirect(`${API_URL}/api/phonepe/thank-you?token=${token}`);
-        // res.redirect(`https://tripsytrips.com/thank-you`);
+        const token = jwt.sign({ uniqueStr: uniquestr }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        res.redirect(`${API_URL}/api/phonepe/thank-you?token=${token}`);
+        res.redirect(`https://tripsytrips.com/thank-you`);
         res.status(200).json({ success: true });
     } else {
         res.status(400).json({ success: false, message: 'Invalid signature' });
     }
 });
 
-// router.get('/thank-you', (req, res) => {
-//     res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
-//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//     const token = req.query.token;
+router.get('/thank-you', (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    const token = req.query.token;
 
-//     if (!token) {
-//         return res.status(403).send('Access denied.');
-//     }
+    if (!token) {
+        return res.status(403).send('Access denied.');
+    }
 
-//     try {
-//         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//         // If the token is valid, let the frontend handle the rest
-//         res.redirect(`https://tripsytrips.com/thank-you?token=${token}`);
-//     } catch (err) {
-//         res.redirect('/');
-//     }
-// });
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        // If the token is valid, let the frontend handle the rest
+        res.redirect(`https://tripsytrips.com/thank-you?token=${token}`);
+    } catch (err) {
+        res.redirect('/');
+    }
+});
 
 module.exports = router;
