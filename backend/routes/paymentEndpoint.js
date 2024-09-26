@@ -27,6 +27,8 @@ var eMail = '';
 var uniquestr = ''
 
 router.post('/', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const { name, contact, totalCost, uniqueStr, email } = req.body;
     eMail = email;
     uniquestr = uniqueStr
@@ -96,6 +98,8 @@ async function sendConfirmationMail(email) {
 }
 
 router.post('/verify-payment', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
     const shasum = crypto.createHmac('sha256', process.env.RAZORPAY_SECRET_KEY);
@@ -108,7 +112,7 @@ router.post('/verify-payment', async (req, res) => {
         // Generate a JWT token that expires in 10 minutes
         // const token = jwt.sign({ uniqueStr: uniquestr }, process.env.JWT_SECRET, { expiresIn: '1h' });
         // res.redirect(`${API_URL}/api/phonepe/thank-you?token=${token}`);
-        res.redirect(`https://tripsytrips.com/thank-you`);
+        // res.redirect(`https://tripsytrips.com/thank-you`);
         res.status(200).json({ success: true });
     } else {
         res.status(400).json({ success: false, message: 'Invalid signature' });
@@ -116,6 +120,8 @@ router.post('/verify-payment', async (req, res) => {
 });
 
 router.get('/thank-you', (req, res) => {
+    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const token = req.query.token;
 
     if (!token) {
