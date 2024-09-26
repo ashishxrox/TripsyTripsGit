@@ -70,7 +70,7 @@ const VisaState = (props) => {
             "doc1": "Passport Scan (Front Page)",
             "doc2": "Passport Scan (Last Page)",
           },
-          "totalCost": 555,
+          "totalCost": 5,
           "_id": "65b2a1d7af8c1506be6a91ae"
         }
       ],
