@@ -106,8 +106,9 @@ router.post('/verify-payment', async (req, res) => {
         await setPayment(uniquestr);
         await sendConfirmationMail(eMail);
         // Generate a JWT token that expires in 10 minutes
-        const token = jwt.sign({ uniqueStr: uniquestr }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        res.redirect(`${API_URL}/api/phonepe/thank-you?token=${token}`);
+        // const token = jwt.sign({ uniqueStr: uniquestr }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        // res.redirect(`${API_URL}/api/phonepe/thank-you?token=${token}`);
+        res.redirect(`https://tripsytrips.com/thank-you`);
         res.status(200).json({ success: true });
     } else {
         res.status(400).json({ success: false, message: 'Invalid signature' });
