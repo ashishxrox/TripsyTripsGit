@@ -203,8 +203,8 @@ const FormDataState = (props) => {
                             const verifyResponse = await axios.post(`${apiURL}/api/phonepe/verify-payment`, paymentData);
 
                             if (verifyResponse.data && verifyResponse.data.success) {
-                                alert('Your payment is completed successfully. Please check your registered email; you must have received an email from Tripsy Trips.');
-                                window.location.href = 'https://tripsytrips.com/thank-you';
+                                // alert('Your payment is completed successfully. Please check your registered email; you must have received an email from Tripsy Trips.');
+                                window.location.href = `https://tripsytrips.com/thank-you/${amount}/${response.razorpay_order_id}`;
                             } else {
                                 console.error('Failed to verify payment');
                             }
