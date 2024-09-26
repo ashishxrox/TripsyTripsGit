@@ -13,6 +13,7 @@ app.use(express.json())
 
 // DEPLOYEMENT
 app.use(cors({
+    mode: 'no-cors',
     origin: ['https://tripsytrips.com', 'https://www.tripsytrips.com', 'http://localhost:3000']
 }));
 
