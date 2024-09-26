@@ -17,7 +17,7 @@ const router = express.Router();
 
 //Route 1: Get Non E Visa Data using: GET "/api/fetchFormData/nonEvisa"
 router.get('/nonEvisa', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await NonEvisaFormData.find({});
@@ -31,7 +31,7 @@ router.get('/nonEvisa', async (req, res) => {
 //Route 2: Get Non E Visa Data using: GET "/api/fetchFormData/packages"
 
 router.get('/packages', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await PackageData.find({});
@@ -45,7 +45,7 @@ router.get('/packages', async (req, res) => {
 //Route 3: Get Non E Visa Data using: GET "/api/fetchFormData/flights"
 
 router.get('/flights', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await FlightData.find({});
@@ -59,7 +59,7 @@ router.get('/flights', async (req, res) => {
 //Route 4: Get COntact form Data using: GET "/api/fetchFormData/contact"
 
 router.get('/contact', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await ContactData.find({});
@@ -73,7 +73,7 @@ router.get('/contact', async (req, res) => {
 //Route 5: Get Non E Visa Data using: GET "/api/fetchFormData/insurance"
 
 router.get('/insurance', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await InsuranceData.find({});
@@ -87,7 +87,7 @@ router.get('/insurance', async (req, res) => {
 //Route 6: Get Non E Visa Data using: GET "/api/fetchFormData/evisa"
 
 router.get('/evisa', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await FormData.find({});
@@ -101,7 +101,7 @@ router.get('/evisa', async (req, res) => {
 //Route 7: Get Non E Visa Document using: GET "/api/fetchFormData/evisaDocs"
 
 router.get('/evisaDocs', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     
     try {
@@ -116,7 +116,7 @@ router.get('/evisaDocs', async (req, res) => {
 //Route 8: Download Non E Visa Document using: GET "/api/fetchFormData/download"
 
 router.post('/download', (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         // Create a new instance of archiver
@@ -148,7 +148,7 @@ router.post('/download', (req, res) => {
 //Route 8: Get Newsletter data using: GET "/api/fetchFormData/newsletter"
 
 router.get('/newsletter', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const data = await NewsletterData.find({});

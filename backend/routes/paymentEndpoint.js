@@ -27,7 +27,7 @@ var eMail = '';
 var uniquestr = ''
 
 router.post('/', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const { name, contact, totalCost, uniqueStr, email } = req.body;
     eMail = email;
@@ -98,7 +98,7 @@ async function sendConfirmationMail(email) {
 }
 
 router.post('/verify-payment', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
+    res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
@@ -119,22 +119,22 @@ router.post('/verify-payment', async (req, res) => {
     }
 });
 
-router.get('/thank-you', (req, res) => {
-    res.header('Access-Control-Allow-Origin', ['https://tripsytrips.com', 'https://www.tripsytrips.com']);
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    const token = req.query.token;
+// router.get('/thank-you', (req, res) => {
+//     res.header('Access-Control-Allow-Origin', 'https://tripsytrips.com');
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//     const token = req.query.token;
 
-    if (!token) {
-        return res.status(403).send('Access denied.');
-    }
+//     if (!token) {
+//         return res.status(403).send('Access denied.');
+//     }
 
-    try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        // If the token is valid, let the frontend handle the rest
-        res.redirect(`https://tripsytrips.com/thank-you?token=${token}`);
-    } catch (err) {
-        res.redirect('/');
-    }
-});
+//     try {
+//         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+//         // If the token is valid, let the frontend handle the rest
+//         res.redirect(`https://tripsytrips.com/thank-you?token=${token}`);
+//     } catch (err) {
+//         res.redirect('/');
+//     }
+// });
 
 module.exports = router;
