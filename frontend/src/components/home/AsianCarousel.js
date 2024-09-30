@@ -74,7 +74,7 @@ const AsianCarousel = () => {
                 <SwiperSlide className='d-flex justify-content-center align-items-center' style={{}}>
                     <div className="swipe-slide-cont d-flex justify-content-between align-items-center flex-column" style={{ height: "95%", width: "100%" }}>
                         <div className="ssc-top d-flex justify-content-between align-items-center flex-row" style={{ flexBasis: "48%", height: "100%", width: "100%" }}>
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/United Arab Emirates` }} style={boxStyle}>
+                            {/* <Link className="ssct-left " to={{ pathname: `/visa/application/United Arab Emirates` }} style={boxStyle}>
                                 <div className="card-hover" style={{ height: "101%", width: "100%" }}>
                                     <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                                         <img
@@ -96,6 +96,43 @@ const AsianCarousel = () => {
                                         >
                                             <Link
                                                 to={{ pathname: `/visa/application/United Arab Emirates` }}
+                                                className="d-flex justify-content-center align-items-center"
+                                                style={{
+                                                    color: "#fff",
+                                                    textDecoration: "none",
+                                                    fontFamily: "Clash Display",
+                                                    fontWeight: "200",
+                                                    fontSize: "24px",
+                                                }}
+                                            >
+                                                Visit
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link> */}
+                            <Link className="ssct-left " to={{ pathname: `/visa/application/Oman` }} style={boxStyle}>
+                                <div className="card-hover" style={{ height: "101%", width: "100%" }}>
+                                    <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                                        <img
+                                            src={Oman}
+                                            alt="Oman" // Use box.title as the alt text for better accessibility
+                                            style={{ height: "100%", width: "100%", borderRadius: "5px" }}
+                                        />
+                                        <div className="overlay py-4" style={overlayStyle}>
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                            Oman
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
+                                        <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
+                                        <div
+                                            className="link-container d-flex justify-content-center align-items-center"
+                                            style={{ position: "absolute", zIndex: "9999" }}
+                                        >
+                                            <Link
+                                                to={{ pathname: `/visa/application/Oman` }}
                                                 className="d-flex justify-content-center align-items-center"
                                                 style={{
                                                     color: "#fff",
@@ -373,6 +410,7 @@ const AsianCarousel = () => {
                                     </div>
                                 </div>
                             </Link> */}
+                            
                             <Link className="ssct-left" to={{ pathname: `/visa/application/Saudi Arabia` }} style={boxStyle}>
                                 <div className="card-hover" style={{ height: "101%", width: "100%" }}>
                                     <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
@@ -568,43 +606,7 @@ const AsianCarousel = () => {
 
                         </div>
                         <div className="ssc-bottom  d-flex justify-content-start align-items-center flex-row" style={{ flexBasis: "49%", height: "100%", width: "100%" }}>
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/Oman` }} style={boxStyle}>
-                                <div className="card-hover" style={{ height: "101%", width: "100%" }}>
-                                    <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
-                                        <img
-                                            src={Oman}
-                                            alt="Oman" // Use box.title as the alt text for better accessibility
-                                            style={{ height: "100%", width: "100%", borderRadius: "5px" }}
-                                        />
-                                        <div className="overlay py-4" style={overlayStyle}>
-                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                                            Oman
-                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                                        </div>
-                                    </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{}}>
-                                        <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
-                                        <div
-                                            className="link-container d-flex justify-content-center align-items-center"
-                                            style={{ position: "absolute", zIndex: "9999" }}
-                                        >
-                                            <Link
-                                                to={{ pathname: `/visa/application/Oman` }}
-                                                className="d-flex justify-content-center align-items-center"
-                                                style={{
-                                                    color: "#fff",
-                                                    textDecoration: "none",
-                                                    fontFamily: "Clash Display",
-                                                    fontWeight: "200",
-                                                    fontSize: "24px",
-                                                }}
-                                            >
-                                                Visit
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
+                            
                             
 
                         </div>

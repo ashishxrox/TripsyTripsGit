@@ -165,7 +165,7 @@ const FullVisaCarousel = () => {
                                 </div>
                             </Link>
 
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/United Arab Emirates` }} style={boxStyle}>
+                            {/* <Link className="ssct-left " to={{ pathname: `/visa/application/United Arab Emirates` }} style={boxStyle}>
                                 <div className="card-hover" style={{ height: "101%", width: "100%" }}>
                                     <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                                         <img
@@ -187,6 +187,43 @@ const FullVisaCarousel = () => {
                                         >
                                             <Link
                                                 to={{ pathname: `/visa/application/United Arab Emirates` }}
+                                                className="d-flex justify-content-center align-items-center"
+                                                style={{
+                                                    color: "#fff",
+                                                    textDecoration: "none",
+                                                    fontFamily: "Clash Display",
+                                                    fontWeight: "200",
+                                                    fontSize: "24px",
+                                                }}
+                                            >
+                                                Visit
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link> */}
+                            <Link className="ssct-left " to={{ pathname: `/visa/application/Saudi Arabia` }} style={boxStyle}>
+                                <div className="card-hover" style={{ height: "101%", width: "100%" }}>
+                                    <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
+                                        <img
+                                            src={Saudi}
+                                            alt="Saudi Arabia" // Use box.title as the alt text for better accessibility
+                                            style={{ height: "100%", width: "100%", borderRadius: "5px" }}
+                                        />
+                                        <div className="overlay py-4" style={overlayStyle}>
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                            Saudi Arabia
+                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="visit-btn justify-content-center align-items-center" style={{ }}>
+                                        <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
+                                        <div
+                                            className="link-container d-flex justify-content-center align-items-center"
+                                            style={{ position: "absolute", zIndex: "9999" }}
+                                        >
+                                            <Link
+                                                to={{ pathname: `/visa/application/Saudi Arabia` }}
                                                 className="d-flex justify-content-center align-items-center"
                                                 style={{
                                                     color: "#fff",
@@ -816,7 +853,7 @@ const FullVisaCarousel = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/Hong Kong` }} style={boxStyle}>
+                            <Link className="ssct-left " to={{ pathname: `/visa/application/Hong Kong (PAR)` }} style={boxStyle}>
                                 <div className="card-hover" style={{ height: "101%", width: "100%" }}>
                                     <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                                         <img
@@ -837,7 +874,7 @@ const FullVisaCarousel = () => {
                                             style={{ position: "absolute", zIndex: "9999" }}
                                         >
                                             <Link
-                                                to={{ pathname: `/visa/application/Hong Kong` }}
+                                                to={{ pathname: `/visa/application/Hong Kong (PAR)` }}
                                                 className="d-flex justify-content-center align-items-center"
                                                 style={{
                                                     color: "#fff",
@@ -1004,43 +1041,7 @@ const FullVisaCarousel = () => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link className="ssct-left " to={{ pathname: `/visa/application/Saudi Arabia` }} style={boxStyle}>
-                                <div className="card-hover" style={{ height: "101%", width: "100%" }}>
-                                    <div className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
-                                        <img
-                                            src={Saudi}
-                                            alt="Saudi Arabia" // Use box.title as the alt text for better accessibility
-                                            style={{ height: "100%", width: "100%", borderRadius: "5px" }}
-                                        />
-                                        <div className="overlay py-4" style={overlayStyle}>
-                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                                            Saudi Arabia
-                                            <div style={{ width: "25px", height: "1px", backgroundColor: "#fff", margin: "0 5px" }}></div>
-                                        </div>
-                                    </div>
-                                    <div className="visit-btn justify-content-center align-items-center" style={{ }}>
-                                        <div className="visit-btn-bdr d-flex justify-content-center align-items-center"></div>
-                                        <div
-                                            className="link-container d-flex justify-content-center align-items-center"
-                                            style={{ position: "absolute", zIndex: "9999" }}
-                                        >
-                                            <Link
-                                                to={{ pathname: `/visa/application/Saudi Arabia` }}
-                                                className="d-flex justify-content-center align-items-center"
-                                                style={{
-                                                    color: "#fff",
-                                                    textDecoration: "none",
-                                                    fontFamily: "Clash Display",
-                                                    fontWeight: "200",
-                                                    fontSize: "24px",
-                                                }}
-                                            >
-                                                Visit
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
+                            
                         </div>
 
                     </div>

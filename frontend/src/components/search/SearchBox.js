@@ -8,51 +8,51 @@ import React, { useState, useContext } from 'react';
 import Select from 'react-select';
 
 const options = [
-  {
-    value: "United Arab Emirates",
-    label: "UAE 30 Days Single Entry E-Visa",
-    flag: "uae",
-    category: "E-Visa",
-    img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
-    visaType: {
-      name: "UAE 30 Days Single Entry E-Visa",
-      entry: "Single",
-      validityDays: 60,
-      durationDays: 30,
-      processingTime: '3-5',
-      docsReq: {
-        doc1: "Passport Scan (Front Page)",
-        doc2: "Passport Scan (Last Page)",
-        doc3: "Pan Card  Scan",
-        doc4: "Passport Size Photo Scan"
-      },
-      totalCost: 8900,
-      _id: "65b12e329c1c437d4930fd31"
-    },
-  },
+  // {
+  //   value: "United Arab Emirates",
+  //   label: "UAE 30 Days Single Entry E-Visa",
+  //   flag: "uae",
+  //   category: "E-Visa",
+  //   img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+  //   visaType: {
+  //     name: "UAE 30 Days Single Entry E-Visa",
+  //     entry: "Single",
+  //     validityDays: 60,
+  //     durationDays: 30,
+  //     processingTime: '3-5',
+  //     docsReq: {
+  //       doc1: "Passport Scan (Front Page)",
+  //       doc2: "Passport Scan (Last Page)",
+  //       doc3: "Pan Card  Scan",
+  //       doc4: "Passport Size Photo Scan"
+  //     },
+  //     totalCost: 8900,
+  //     _id: "65b12e329c1c437d4930fd31"
+  //   },
+  // },
 
-  {
-    value: "United Arab Emirates",
-    label: "UAE 60 Days Single Entry E-Visa",
-    flag: "uae",
-    category: "E-Visa",
-    img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
-    visaType: {
-      "name": "UAE 60 Days Single Entry E-Visa",
-      "entry": "Single",
-      "validityDays": 60,
-      "durationDays": 60,
-      "processingTime": '3-5',
-      "docsReq": {
-        "doc1": "Passport Scan (Front Page)",
-        "doc2": "Passport Scan (Last Page)",
-        "doc3": "Pan Card Scan",
-        "doc4": "Passport Size Photo Scan"
-      },
-      "totalCost": 14000,
-      "_id": "65b12e329c1c437d4930fd34"
-    },
-  },
+  // {
+  //   value: "United Arab Emirates",
+  //   label: "UAE 60 Days Single Entry E-Visa",
+  //   flag: "uae",
+  //   category: "E-Visa",
+  //   img_url: "../../static/media/dubai.dd35c3499559ace4c096.jpg",
+  //   visaType: {
+  //     "name": "UAE 60 Days Single Entry E-Visa",
+  //     "entry": "Single",
+  //     "validityDays": 60,
+  //     "durationDays": 60,
+  //     "processingTime": '3-5',
+  //     "docsReq": {
+  //       "doc1": "Passport Scan (Front Page)",
+  //       "doc2": "Passport Scan (Last Page)",
+  //       "doc3": "Pan Card Scan",
+  //       "doc4": "Passport Size Photo Scan"
+  //     },
+  //     "totalCost": 14000,
+  //     "_id": "65b12e329c1c437d4930fd34"
+  //   },
+  // },
   {
     value: "Hong Kong (PAR)",
     label: "Hong Kong E-Visa",

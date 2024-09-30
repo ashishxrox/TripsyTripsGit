@@ -41,6 +41,7 @@ import MobileSearch from './components/search/MobileSearch';
 import FaqState from './context/FaqCont/FaqState';
 import Faq from './components/Faq/FaqAll';
 import ScrollBtn from './components/ScrollBtn';
+import BlogState from './context/Blogs/BlogState';
 
 const App = () => {
 
@@ -59,6 +60,7 @@ const App = () => {
   return (
     <div>
       <DashboardState>
+        <BlogState>
         <PackageState>
           <FormDataState>
             <VisaState>
@@ -120,7 +122,7 @@ const App = () => {
                     <Route exact path="/package" index element={<Package />} />
                     <Route exact path="/contact" index element={<Contact />} />
                     <Route exact path="/blogs" index element={<Blogs />} />
-                    <Route exact path="/blogs/specBlog" index element={<BlogContent />} />
+                    <Route exact path="/blogs/specBlog/:blog_title" index element={<BlogContent />} />
                     <Route exact path="/payment" index element={<PaymentInterface />} />
                     <Route exact path="/policy" index element={<PrivacyPol />} />
                     <Route exact path="/terms" index element={<TermAndCondition />} />
@@ -144,6 +146,7 @@ const App = () => {
             </VisaState>
           </FormDataState>
         </PackageState>
+        </BlogState>
       </DashboardState>
     </div>
   );

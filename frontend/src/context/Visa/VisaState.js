@@ -521,47 +521,47 @@ const VisaState = (props) => {
       "img_url": "../../static/media/moldova.bec7372e5859aa8891f7.jpeg",
       "tag": "moldova"
     },
-    {
-      "_id": "65b12e329c1c437d4930fd30",
-      "country": "United Arab Emirates",
-      "eVisa": "yes",
-      "visaType": [
-        {
-          "name": "UAE 30 Days Single Entry E-Visa",
-          "entry": "Single",
-          "validityDays": 60,
-          "durationDays": 30,
-          "processingTime": '3-5',
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card  Scan",
-            "doc4": "Passport Size Photograph Scan"
-          },
-          "totalCost": 8900,
-          "_id": "65b12e329c1c437d4930fd31"
-        },
-        {
-          "name": "UAE 60 Days Single Entry E-Visa",
-          "entry": "Single",
-          "validityDays": 60,
-          "durationDays": 60,
-          "processingTime": '3-5',
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card Scan",
-            "doc4": "Passport Size Photograph Scan"
-          },
-          "totalCost": 14000,
-          "_id": "65b12e329c1c437d4930fd34"
-        },
+    // {
+    //   "_id": "65b12e329c1c437d4930fd30",
+    //   "country": "United Arab Emirates",
+    //   "eVisa": "yes",
+    //   "visaType": [
+    //     {
+    //       "name": "UAE 30 Days Single Entry E-Visa",
+    //       "entry": "Single",
+    //       "validityDays": 60,
+    //       "durationDays": 30,
+    //       "processingTime": '3-5',
+    //       "docsReq": {
+    //         "doc1": "Passport Scan (Front Page)",
+    //         "doc2": "Passport Scan (Last Page)",
+    //         "doc3": "Pan Card  Scan",
+    //         "doc4": "Passport Size Photograph Scan"
+    //       },
+    //       "totalCost": 8900,
+    //       "_id": "65b12e329c1c437d4930fd31"
+    //     },
+    //     {
+    //       "name": "UAE 60 Days Single Entry E-Visa",
+    //       "entry": "Single",
+    //       "validityDays": 60,
+    //       "durationDays": 60,
+    //       "processingTime": '3-5',
+    //       "docsReq": {
+    //         "doc1": "Passport Scan (Front Page)",
+    //         "doc2": "Passport Scan (Last Page)",
+    //         "doc3": "Pan Card Scan",
+    //         "doc4": "Passport Size Photograph Scan"
+    //       },
+    //       "totalCost": 14000,
+    //       "_id": "65b12e329c1c437d4930fd34"
+    //     },
         
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
-      "tag": "dubai"
-    },
+    //   ],
+    //   "__v": 0,
+    //   "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
+    //   "tag": "dubai"
+    // },
     {
       "_id": "65b2a3bfaf8c1506be6a91bc",
       "country": "Kyrgzstan",
@@ -936,47 +936,48 @@ const VisaState = (props) => {
         madagascar,qatar, america,canada, lanka, tanzania, mongolia, australiaBox
     ]
 
-    const asia = [{
-      "_id": "65b12e329c1c437d4930fd30",
-      "country": "United Arab Emirates",
-      "eVisa": "yes",
-      "visaType": [
-        {
-          "name": "UAE 30 Days Single Entry E-Visa",
-          "entry": "Single",
-          "validityDays": 60,
-          "durationDays": 30,
-          "processingTime": '3-5',
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card  Scan",
-            "doc4": "Passport Size Photograph Scan"
-          },
-          "totalCost": 8900,
-          "_id": "65b12e329c1c437d4930fd31"
-        },
-        {
-          "name": "UAE 60 Days Single Entry E-Visa",
-          "entry": "Single",
-          "validityDays": 60,
-          "durationDays": 60,
-          "processingTime": '3-5',
-          "docsReq": {
-            "doc1": "Passport Scan (Front Page)",
-            "doc2": "Passport Scan (Last Page)",
-            "doc3": "Pan Card Scan",
-            "doc4": "Passport Size Photograph Scan"
-          },
-          "totalCost": 14000,
-          "_id": "65b12e329c1c437d4930fd34"
-        },
+    const asia = [
+    //   {
+    //   "_id": "65b12e329c1c437d4930fd30",
+    //   "country": "United Arab Emirates",
+    //   "eVisa": "yes",
+    //   "visaType": [
+    //     {
+    //       "name": "UAE 30 Days Single Entry E-Visa",
+    //       "entry": "Single",
+    //       "validityDays": 60,
+    //       "durationDays": 30,
+    //       "processingTime": '3-5',
+    //       "docsReq": {
+    //         "doc1": "Passport Scan (Front Page)",
+    //         "doc2": "Passport Scan (Last Page)",
+    //         "doc3": "Pan Card  Scan",
+    //         "doc4": "Passport Size Photograph Scan"
+    //       },
+    //       "totalCost": 8900,
+    //       "_id": "65b12e329c1c437d4930fd31"
+    //     },
+    //     {
+    //       "name": "UAE 60 Days Single Entry E-Visa",
+    //       "entry": "Single",
+    //       "validityDays": 60,
+    //       "durationDays": 60,
+    //       "processingTime": '3-5',
+    //       "docsReq": {
+    //         "doc1": "Passport Scan (Front Page)",
+    //         "doc2": "Passport Scan (Last Page)",
+    //         "doc3": "Pan Card Scan",
+    //         "doc4": "Passport Size Photograph Scan"
+    //       },
+    //       "totalCost": 14000,
+    //       "_id": "65b12e329c1c437d4930fd34"
+    //     },
         
-      ],
-      "__v": 0,
-      "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
-      "tag": "dubai"
-    },
+    //   ],
+    //   "__v": 0,
+    //   "img_url": "../../static/media/dubai.ed54eea1d8eab5f08530.jpg",
+    //   "tag": "dubai"
+    // },
     {
       "_id": "65b12f829c1c437d4930fd37",
       "country": "Azerbaijan",
