@@ -94,6 +94,18 @@
     display: none;
 }
 
+.bs3-text{
+    width: 60%;
+}
+
+.bs3-img{
+    flex-direction: row;
+}
+
+.bs3-internal-links{
+    flex-direction: row;
+}
+
 @media only screen and (max-width:600px) {
     .b-options-main {
         justify-content: flex-start;
@@ -169,5 +181,14 @@
 .htb-l-tags{
     display: none;
 }
-    
+.bs3-text{
+    width: 95%;
+}
+.bs3-img{
+    flex-direction: column;
+}
+
+.bs3-internal-links{
+    flex-direction: column;
+}
 }
