@@ -25,7 +25,8 @@ const BlogState = (props) => {
                     //     blog_cont: "One of the most striking aspects of India is its incredible diversity. With various religions, languages, and regions, every part of the country has its own distinct festivals and traditions. Event management companies in India must be well-versed in these differences to plan and execute events that resonate with the local culture. Whether it's a grand Indian wedding, a religious festival celebration, or a corporate event, understanding the nuances of regional cultures is crucial."
                     // },
                 ],
-                meta_desc: "Discover all visa-free destinations for Indian passport holders. Plan your next trip with ease and skip the hassle of traditional visa applications. "
+                meta_desc: "Discover all visa-free destinations for Indian passport holders. Plan your next trip with ease and skip the hassle of traditional visa applications. ",
+                link: "/blogs/specBlog/The Complete List of Visa-Free Countries for Indian Passport Holders"
             },
         ]
     const [blogData, setBlog] = useState(initBlogs)

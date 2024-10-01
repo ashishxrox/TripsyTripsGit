@@ -122,7 +122,7 @@ const App = () => {
                     <Route exact path="/package" index element={<Package />} />
                     <Route exact path="/contact" index element={<Contact />} />
                     <Route exact path="/blogs" index element={<Blogs />} />
-                    <Route exact path="/blogs/specBlog/:blog_title" index element={<BlogContent />} />
+                    <Route exact path="/blogs/specBlog/The Complete List of Visa-Free Countries for Indian Passport Holders" index element={<BlogContent />} />
                     <Route exact path="/payment" index element={<PaymentInterface />} />
                     <Route exact path="/policy" index element={<PrivacyPol />} />
                     <Route exact path="/terms" index element={<TermAndCondition />} />

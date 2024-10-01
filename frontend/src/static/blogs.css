@@ -1,4 +1,4 @@
-.hero-blog-main{
+.hero-blog-main {
     height: 850px;
 }
 
@@ -6,47 +6,168 @@
     margin-top: 40px;
 } */
 
-.hbt-right{
+.blog-landing{
+    height: 750px;
+}
+
+.hbt-right {
     display: flex;
 }
 
-.b-options{
+.blog-overlay {
+    align-items: flex-end;
+}
+
+/* .b-options {
     height: 1200px;
+} */
+
+.h-blog-tags {
+    padding: 0 30px;
 }
 
-.h-blog-tags{
-padding: 0 30px;
-}
-
-.b-options-main{
+.b-options-main {
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
 
-@media only screen and (max-width:600px){
-    .b-options-main{
+.bl-cont {
+    flex-direction: row;
+    align-items: end;
+}
+
+.blc-left h1{
+    font-size: 46px;
+}
+
+.blc-right{
+    width: 100%;
+}
+
+.bs1-text{
+    width: 60%;
+}
+
+.bs1-img{
+    width: 80%;
+}
+
+.blog-sec1{
+    height: 750px;
+}
+
+.blog-sec2{
+    height: 750px;
+}
+
+.bs2-img{
+    width: 80%;
+}
+
+.hide{
+    transform: translateX(120%);
+    transition: 0.5s;
+}
+
+.unhide{
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.reach-pkg-btn{
+    display: flex;
+}
+
+.htb-l-tags{
+    display: flex;
+}
+
+.h-blog-text{
+    flex-basis: 25%;
+}
+
+.hbt-left{
+    flex-basis: 40%;
+}
+
+.hbt-l-btn{
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .b-options-main {
         justify-content: flex-start;
         margin-left: 15px;
     }
-    .hero-blog-main{
+
+    .hero-blog-main {
         height: 550px;
     }
-    .blogs-head-box{
+
+    .hbt-l-btn{
+        display: flex;
+    }
+
+    .blogs-head-box {
         margin-top: 0px;
     }
 
-    .hbt-right{
+    .hbt-right {
         display: none;
     }
 
-    .b-options{
-        height: 2800px;
+    .h-blog-tags {
+        padding: 0 15px;
     }
 
-    .h-blog-tags{
-        padding: 0 15px;
-        }
+    .blog-overlay {
+        align-items: flex-start;
+    }
 
- 
+    .bl-cont {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blc-left h1{
+        font-size: 34px;
+    }
+
+    .blc-right{
+        width: 50%;
+    }
+    .blog-landing{
+        height: 650px;
+    }
+    .bs1-text{
+        width: 95%;
+    }
+
+    .reach-pkg-btn{
+        display: none;
+    }
+    .hbt-left{
+        flex-basis: 100%;
+    }
+
+
+.bs1-img{
+    width: 95%;
+}
+
+.blog-sec1{
+    height: 650px;
+}
+
+.blog-sec2{
+    height: 850px;
+}
+
+.bs2-img{
+    width: 95%;
+}
+
+.htb-l-tags{
+    display: none;
+}
     
 }

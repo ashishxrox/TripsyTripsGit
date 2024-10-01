@@ -8,17 +8,20 @@ const HeroBlog = ({data}) => {
   
   return (
     <div className='hero-blog-main d-flex justify-content-center align-items-center flex-column' style={{ width: "90%", border: "1px solid black", borderRadius: "15px" }}>
-      <div className="h-blog-img d-flex justify-content-center align-items-center" style={{ flexBasis: "75%", height: "100%", width: "100%", borderRadius: "15px", overflow: "hidden" }}>
-        <img src={data[0].img_src} style={{ width: "100%", aspectRatio: "" }} alt="" />
+      <div className="h-blog-img d-flex justify-content-center align-items-center" style={{ flexBasis: "75%", height: "100%", width: "100%", borderRadius: "15px", overflow: "hidden", backgroundImage:`url("${data[0].img_src}")`, backgroundSize:"cover", backgroundPosition:"center" }}>
+        {/* <img src={data[0].img_src} style={{ width: "100%", aspectRatio: "" }} alt="" /> */}
       </div>
-      <div className="h-blog-text d-flex justify-content-between align-items-center flex-row my-1 py-4" style={{ flexBasis: "25%", height: "100%", width: "95%" }}>
-        <div className="hbt-left d-flex justify-content-around align-items-start flex-column" style={{ flexBasis: "40%", height: "100%", width: "100%", }}>
+      <div className="h-blog-text d-flex justify-content-between align-items-center flex-row my-1 py-4" style={{ height: "100%", width: "95%" }}>
+        <div className="hbt-left d-flex justify-content-around align-items-start flex-column" style={{ height: "100%", width: "100%", }}>
           <h4 style={{ fontFamily: "Clash Display", fontSize: "24px", fontWeight: "500" }}>{data[0].title}</h4>
-          <div className='d-flex justify-content-between align-items-center flex-row'>
+          <div className='justify-content-between align-items-center flex-row htb-l-tags'>
             <div className='h-blog-tags d-flex justify-content-center align-items-center' style={{  borderRadius: "30px", height: "45px", backgroundColor: "rgba(243, 236, 230, 1)", fontSize: "16px", fontWeight: "500", fontFamily:"General Sans" }}>Travel</div>
             <div className='h-blog-tags d-flex justify-content-center align-items-center mx-3' style={{  borderRadius: "30px", height: "45px", backgroundColor: "rgba(243, 236, 230, 1)", fontSize: "16px", fontWeight: "500", fontFamily:"General Sans" }}>Nature</div>
             <div className=' h-blog-tags d-flex justify-content-center align-items-center' style={{borderRadius: "30px", height: "45px", backgroundColor: "rgba(243, 236, 230, 1)", fontSize: "16px", fontWeight: "500", fontFamily:"General Sans" }}>Environment</div>
           </div>
+          <Link to={`/blogs/specBlog/${data[0].title}`} className='hbt-l-btn justify-content-center align-items-center my-1' style={{width:"55%", textDecoration:"none", height:"50px", border:"1px solid #024786", borderRadius:"24px", color:"#024786"}}>
+              Read More
+          </Link>
         </div>
         <Link to={`/blogs/specBlog/${data[0].title}`} className="hbt-right justify-content-end align-items-center" style={{ flexBasis: "20%", height: "100%", width: "100%" }}>
           <svg style={{cursor:"pointer"}} width="55" height="54" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
