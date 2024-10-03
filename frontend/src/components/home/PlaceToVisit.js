@@ -177,7 +177,7 @@ const PlaceToVisit = () => {
                         </div>
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
                         <Link to={{ pathname: `/visa/application/United Arab Emirates` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
                           <img src={Uae} alt="UAE" style={{ height: "100%", width: "100%", borderRadius: "5px" }} />
@@ -199,7 +199,7 @@ const PlaceToVisit = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide>
                       <div className='card-hover' style={{ height: "101%", width: "100%" }}>
                         <Link to={{ pathname: `/visa/application/Turkey` }} className="card country-card" style={{ width: "100%", height: "100%", background: "#fff", overflow: "hidden" }}>
