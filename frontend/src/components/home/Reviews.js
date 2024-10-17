@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../static/review.css'
 import blog1 from '../../static/assets/blogs/blog1_img1.jpg'
 import blog2 from '../../static/assets/blogs/blog2/blog2_img1.jpg'
+import blog3 from '../../static/assets/blogs/blog3/blog3_img1.png'
 import ReviewBox from './ReviewBox'
 // import img1 from '../../static/assets/instagram/img1.jpeg'
 // import img2 from '../../static/assets/instagram/img2.jpeg'
@@ -103,25 +104,25 @@ const Reviews = () => {
                   </div>
                 </div>
                 <div className="bmr-bottom d-flex justify-content-center align-items-center flex-column" style={{ height: "100%", width: "100%", borderRadius: "15px", border: "1px solid #000" }}>
-                  <div style={{ flexBasis: "60%", height: "100%", width: "100%", backgroundImage: `url("${blog2}")`, backgroundSize:"cover", backgroundPosition:"top", borderRadius:"15px" }}>
+                  <div style={{ flexBasis: "60%", height: "100%", width: "100%", backgroundImage: `url("${blog3}")`, backgroundSize:"cover", backgroundPosition:"top", borderRadius:"15px" }}>
                     {/* <img src={blog2} alt="" style={{ width: "100%", height: "253px", borderRadius: "15px" }} /> */}
                   </div>
                   <div style={{ flexBasis: "40%", height: "100%", width: "100%" }}>
                     <div className="bmcr-bottom d-flex justify-content-between align-items-center py-4 px-3" style={{ flexBasis: "22%", height: "100%", width: "100%", overflow: "none" }}>
                       <div className="bmcr-b-left mx-1 d-flex justify-content-between align-items-start" style={{ flexBasis: "80%", height: "100%", width: "100%" }}>
-                        <h4 style={{ fontFamily: "Clash Display", fontWeight: "500" }}>The Complete List of E-visa Destinations for Indian Passport Holders</h4>
+                        <h4 style={{ fontFamily: "Clash Display", fontWeight: "500" }}>10 Essential Tripsy Tips for Guilt-Free Sustainable Travel</h4>
                         {/* <div className='d-flex justify-content-between align-items-start flex-row' style={{ width: "50%" }}>
                           <p className='py-2 mx-1' style={{ backgroundColor: "rgba(243, 236, 230, 1)", borderRadius: "30px" }}>Travel</p>
                           <p className='py-2' style={{ backgroundColor: "rgba(243, 236, 230, 1)", borderRadius: "30px" }}>Nature</p>
                           <p className='py-2 mx-1' style={{ backgroundColor: "rgba(243, 236, 230, 1)", borderRadius: "30px" }}>Environmental</p>
                         </div> */}
                       </div>
-                      <Link to="/blogs/specBlog/The Complete List of E-visa Destinations for Indian Passport Holders" className="bmcl-b-right mx-1 d-flex justify-content-center align-items-center" style={{ flexBasis: "20%", height: "100%", width: "100%",  }}>
+                      <Link to="/blogs/specBlog/10 Essential Tripsy Tips for Guilt-Free Sustainable Travel" className="bmcl-b-right mx-1 d-flex justify-content-center align-items-center" style={{ flexBasis: "20%", height: "100%", width: "100%",  }}>
                         <svg style={{ cursor: "pointer" }} width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="27" cy="27" r="25.875" stroke="#024786" stroke-width="2.25" />
                           <path d="M38.3961 27.8301C38.8545 27.3716 38.8545 26.6284 38.3961 26.1699L30.9253 18.6992C30.4669 18.2407 29.7236 18.2407 29.2652 18.6992C28.8067 19.1576 28.8067 19.9009 29.2652 20.3593L35.9058 27L29.2652 33.6407C28.8067 34.0991 28.8067 34.8424 29.2652 35.3008C29.7236 35.7593 30.4669 35.7593 30.9253 35.3008L38.3961 27.8301ZM16.4355 28.1739H37.566V25.8261H16.4355V28.1739Z" fill="#024786" />
                         </svg>
-                        <Link to="/blogs/specBlog/The Complete List of E-visa Destinations for Indian Passport Holders" style={{textDecoration:"none"}}>Read More</Link>
+                        <Link to="/blogs/specBlog/10 Essential Tripsy Tips for Guilt-Free Sustainable Travel" style={{textDecoration:"none"}}>Read More</Link>
                         
                       </Link>
                     </div>
