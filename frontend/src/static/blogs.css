@@ -56,7 +56,19 @@
     height: 750px;
 }
 
+.blog2-sec3 .bs3-img{
+    width: 80%;
+}
+
+.blog2-sec3{
+    height: 1050px;
+}
+
 .blog-sec2{
+    height: 750px;
+}
+
+.blog2-sec2{
     height: 750px;
 }
 
@@ -172,6 +184,17 @@
 
 .blog-sec2{
     height: 850px;
+}
+
+.blog2-sec3 .bs3-img{
+    width: 100%;
+}
+
+.blog2-sec3{
+    height: 1500px;
+}
+.blog2-sec2{
+    height: 1030px;
 }
 
 .bs2-img{
