@@ -45,6 +45,7 @@ import BlogState from './context/Blogs/BlogState';
 import Blog2 from './components/blogs/BlogsSpec/Blog2';
 import Blog3 from './components/blogs/BlogsSpec/Blog3';
 import Blog4 from './components/blogs/BlogsSpec/Blog4';
+import Blog5 from './components/blogs/BlogsSpec/Blog5';
 
 const App = () => {
 
@@ -129,6 +130,7 @@ const App = () => {
                     <Route exact path="/blogs/specBlog/The Complete List of E-visa Destinations for Indian Passport Holders" index element={<Blog2 />} />
                     <Route exact path="/blogs/specBlog/10 Essential Tripsy Tips for Guilt-Free Sustainable Travel" index element={<Blog3/>} />
                     <Route exact path="/blogs/specBlog/How to Travel on a Budget and Still Have Fun" index element={<Blog4/>} />
+                    <Route exact path="/blogs/specBlog/Travel Hacks" index element={<Blog5/>} />
                     <Route exact path="/payment" index element={<PaymentInterface />} />
                     <Route exact path="/policy" index element={<PrivacyPol />} />
                     <Route exact path="/terms" index element={<TermAndCondition />} />
