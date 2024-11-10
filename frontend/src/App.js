@@ -46,6 +46,7 @@ import Blog2 from './components/blogs/BlogsSpec/Blog2';
 import Blog3 from './components/blogs/BlogsSpec/Blog3';
 import Blog4 from './components/blogs/BlogsSpec/Blog4';
 import Blog5 from './components/blogs/BlogsSpec/Blog5';
+import Blog6 from './components/blogs/BlogsSpec/Blog6';
 
 const App = () => {
 
@@ -131,6 +132,7 @@ const App = () => {
                     <Route exact path="/blogs/specBlog/10 Essential Tripsy Tips for Guilt-Free Sustainable Travel" index element={<Blog3/>} />
                     <Route exact path="/blogs/specBlog/How to Travel on a Budget and Still Have Fun" index element={<Blog4/>} />
                     <Route exact path="/blogs/specBlog/Travel Hacks" index element={<Blog5/>} />
+                    <Route exact path="/blogs/specBlog/Tripsy Adventures with Your Furry Friends" index element={<Blog6/>} />
                     <Route exact path="/payment" index element={<PaymentInterface />} />
                     <Route exact path="/policy" index element={<PrivacyPol />} />
                     <Route exact path="/terms" index element={<TermAndCondition />} />
